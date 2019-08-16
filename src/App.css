@@ -1,33 +1,28 @@
-.App {
+.container {
+  width: 960px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user-card a {
+  text-decoration: none;
+  color: #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user {
+  margin: 3rem;
+  width: 80%;
+  border: 3px solid rgb(170, 170, 170);
+  border-radius: 7px;
+  background: rgba(222, 222, 222, 0.3);
+}
+
+.user p {
+  text-transform: lowercase;
 }
