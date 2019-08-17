@@ -6,13 +6,11 @@
 
 🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
-# 1️⃣ Career Endorsement Tracker App
+# Career Endorsement Tracker App
 
-1️⃣ You can find the deployed project at [Netlify](https://labs15.netlify.com/).
+You can find the deployed project at [Netlify](https://labs15.netlify.com/).
 
-## 4️⃣ Contributors
-
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
+## Contributors
 
 |                                                                                        [Isaac Houle](https://github.com/clem9281)                                                                                        |                                                                                      [Adam Mathieson](https://github.com/adammathieson)                                                                                       |                                                                                      [Hunter Raffety](https://github.com/hunterraffety)                                                                                       |                                                                                  [Leilani Schimmelfennig](https://github.com/lschimm)                                                                                   |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -22,8 +20,6 @@
 
 <br>
 <br>
-
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
 |                                                                                        [Dan Sherman](https://github.com/shrmn)                                                                                        |                                      [Mikis Woodwinter](https://github.com/miikis)                                      |                                  [Tico S. Thepsourinthone](https://github.com/ticotheps)                                  |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
