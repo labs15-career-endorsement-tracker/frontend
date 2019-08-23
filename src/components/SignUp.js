@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-const Register = () => {
+const SignUp = () => {
     const [user, setUser] = useState({
             first_name: '', 
             last_name: '', 
@@ -9,6 +9,8 @@ const Register = () => {
             email: '', 
             password: ''
         })
+
+        
     
     return (
         <form>
@@ -23,4 +25,4 @@ const Register = () => {
     )
 }
 
-export default Register
+export default SignUp
