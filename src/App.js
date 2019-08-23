@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import axios from "axios"
 import "./App.css"
 
+import SignUp from "./components/SignUp"
+
 export default class App extends Component {
   state = {
     users: []
@@ -38,6 +40,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
+        <SignUp />
       </div>
     )
   }

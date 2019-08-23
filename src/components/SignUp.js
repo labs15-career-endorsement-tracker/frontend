@@ -2,25 +2,61 @@ import React, {useState} from 'react'
 
 
 const SignUp = () => {
-    const [user, setUser] = useState({
-            first_name: '', 
-            last_name: '', 
-            track_id: 1, 
-            email: '', 
-            password: ''
+    const [newUser, setNewUser] = useState({
+            first_name: '',
+            last_name: '',
+            track_id: 1,
+            email: '',
+            password: '',
+            confirm_password: ''
         })
 
-        
-    
+    const newUserHandler = e => {
+        setNewUser({
+            ...newUser,
+            [e.target.name]:e.target.value
+        })
+    }
+
     return (
         <form>
+            <h2>Sign Up</h2>
             <input
                 name='first_name'
-                value={user.first_name}
-                type={Text}
-                onChange={userHandler}
+                value={newUser.first_name}
+                type='text'
+                onChange={newUserHandler}
                 placeholder='First Name'
             />
+             <input
+                name='last_name'
+                value={newUser.last_name}
+                type='{Text}'
+                onChange={newUserHandler}
+                placeholder='Last Name'
+            />
+             <input
+                name='email'
+                value={newUser.first_name}
+                type='text'
+                onChange={newUserHandler}
+                placeholder='Email'
+            />
+             <input
+                name='password'
+                value={newUser.password}
+                type='text'
+                onChange={newUserHandler}
+                placeholder='Password'
+            />
+            <input
+                name='confirm_password'
+                value={newUser.confirm_password}
+                type='text'
+                onChange={newUserHandler}
+                placeholder='Confirm Password'
+            />
+            
         </form>
     )
 }
