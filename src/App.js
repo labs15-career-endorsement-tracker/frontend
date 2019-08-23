@@ -11,7 +11,7 @@ export default class App extends Component {
 
   componentDidMount() {
     axios
-      .get("/api/v0.1.1/users")
+      .get("/api/v0/users")
       .then(res => {
         const userData = res.data[0]
         this.setState({ users: userData })
