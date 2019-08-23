@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, useState } from "react"
 import axios from "axios"
 import "./App.css"
 
@@ -9,7 +9,7 @@ export default class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://career-endorsement-api.herokuapp.com/api/v0.1.1/users")
+      .get("/api/v0.1.1/users")
       .then(res => {
         const userData = res.data[0]
         this.setState({ users: userData })

@@ -4,8 +4,8 @@
     command = "yarn build"
 
 [[redirects]]
-    from = "https://career-endorsement-api.herokuapp.com/*"
-    to = "api/v0.1.1/users"
+    from = "/api/*"
+    to = "https://career-endorsement-api.herokuapp.com/api/:splat"
     status = 200
     
 [[redirects]]
