@@ -37,7 +37,7 @@ const SignUp = () => {
             />
              <input
                 name='email'
-                value={newUser.first_name}
+                value={newUser.email}
                 type='text'
                 onChange={newUserHandler}
                 placeholder='Email'
