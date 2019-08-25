@@ -62,6 +62,7 @@ const SignUp = () => {
                 onChange={newUserHandler}
                 placeholder='Confirm Password'
             />
+            <button>Sign Up</button>
             
             
         </form>
