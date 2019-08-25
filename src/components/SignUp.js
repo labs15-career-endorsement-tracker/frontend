@@ -5,13 +5,13 @@ const SignUp = () => {
     const [newUser, setNewUser] = useState({
             first_name: '',
             last_name: '',
-            track_id: 1,
+            track_id: 0,
             email: '',
             password: '',
             confirm_password: ''
         })
 
-    const newUserHandler = e => {
+        const newUserHandler = e => {
         setNewUser({
             ...newUser,
             [e.target.name]:e.target.value
@@ -35,12 +35,13 @@ const SignUp = () => {
                 onChange={newUserHandler}
                 placeholder='Last Name'
             />
-            <label>
-                Select your track:
-                 <select value={newUser.track_id}>
+            <select 
+                value={newUser.track_id} 
+                name='track_id' 
+                onChange={newUserHandler}>
+                    <option value={0} >Select Track:</option>
                     <option value={1} >Web Development</option>
-                </select>
-            </label>
+            </select>
              <input
                 name='email'
                 value={newUser.email}
