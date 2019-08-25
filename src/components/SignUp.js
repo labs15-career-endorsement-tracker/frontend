@@ -35,6 +35,12 @@ const SignUp = () => {
                 onChange={newUserHandler}
                 placeholder='Last Name'
             />
+            <label>
+                Select your track:
+                 <select value={newUser.track_id}>
+                    <option value={1} >Web Development</option>
+                </select>
+            </label>
              <input
                 name='email'
                 value={newUser.email}
@@ -56,6 +62,7 @@ const SignUp = () => {
                 onChange={newUserHandler}
                 placeholder='Confirm Password'
             />
+            
             
         </form>
     )
