@@ -33,7 +33,7 @@ const Login = () => {
         type="password"
         value={creds.password}
       />
-      <button>Register</button>
+      <button>Login</button>
     </form>
   )
 }
