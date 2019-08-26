@@ -9,10 +9,10 @@ export default class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get("https://career-endorsement-api.herokuapp.com/api/v0.1.1/users")
       .then(res => {
-        const users = res.data
-        this.setState({ users })
+        const userData = res.data[0]
+        this.setState({ users: userData })
       })
       .catch(err => {
         console.log(err)
@@ -20,13 +20,24 @@ export default class App extends Component {
   }
 
   render() {
+    let user = this.state.users
     return (
       <div className="container">
-        {this.state.users.map(i => (
-          <div key={i.id} className="user-card">
-            <h1>{i.name}</h1>
+        <h1>Hello World</h1>
+        <div className="user-card">
+          <div key={user.id} className="user-card">
+            <h3>Backend API</h3>
+            <a href="#" target="_blank">
+              https://career-endorsement-api.herokuapp.com/
+            </a>
+            <div className="user">
+              <h3>
+                {user.first_name} {user.last_name}
+              </h3>
+              <p>{user.email}</p>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     )
   }

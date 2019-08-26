@@ -1,0 +1,14 @@
+[build]
+    base = "."
+    publish = "./build"
+    command = "yarn build"
+
+[[redirects]]
+    from = "https://career-endorsement-api.herokuapp.com/*"
+    to = "api/v0.1.1/users"
+    status = 200
+    
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
