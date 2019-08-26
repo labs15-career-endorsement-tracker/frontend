@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import axios from "axios"
 
+import "../styles/login.css"
+
 const Login = () => {
   const useLoginForm = () => {
     const [creds, setCreds] = useState({})
@@ -34,23 +36,27 @@ const Login = () => {
   const { creds, handleSubmit, handleChange } = useLoginForm()
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        name="email"
-        onChange={handleChange}
-        placeholder="email address"
-        type="text"
-        value={creds.email}
-      />
-      <input
-        name="password"
-        onChange={handleChange}
-        placeholder="password"
-        type="password"
-        value={creds.password}
-      />
-      <button>Login</button>
-    </form>
+    <div className="form-container">
+      <h1>ENDRSD</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="email"
+          onChange={handleChange}
+          placeholder="email address"
+          type="text"
+          value={creds.email}
+        />
+        <input
+          name="password"
+          onChange={handleChange}
+          placeholder="password"
+          type="password"
+          value={creds.password}
+        />
+        <button>Login</button>
+        <p className="forgot">Forgot password?</p>
+      </form>
+    </div>
   )
 }
 
