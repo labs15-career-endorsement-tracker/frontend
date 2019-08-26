@@ -1,34 +1,50 @@
 import React, { useState } from "react"
+import axios from "axios"
 
 const Login = () => {
-  const [creds, setLogin] = useState({
-    email: "",
-    password: ""
-  })
-
-  const inputHandler = e => {
-    setLogin({
-      ...creds,
-      [e.target.name]: e.target.value
-    })
+  const useLoginForm = () => {
+    const [creds, setCreds] = useState({})
+    const handleSubmit = e => {
+      if (e) {
+        e.preventDefault()
+        axios
+          .post("/api/v0/login", creds)
+          .then(res => {
+            console.log(creds, res)
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      }
+    }
+    const handleChange = e => {
+      e.persist()
+      setCreds(creds => ({
+        ...creds,
+        [e.target.name]: e.target.value
+      }))
+    }
+    return {
+      handleSubmit,
+      handleChange,
+      creds
+    }
   }
 
-  const handleSubmit = e => {
-    e.preventDefault()
-  }
+  const { creds, handleSubmit, handleChange } = useLoginForm()
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         name="email"
-        onChange={inputHandler}
+        onChange={handleChange}
         placeholder="email address"
         type="text"
         value={creds.email}
       />
       <input
         name="password"
-        onChange={inputHandler}
+        onChange={handleChange}
         placeholder="password"
         type="password"
         value={creds.password}

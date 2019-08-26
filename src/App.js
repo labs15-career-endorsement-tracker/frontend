@@ -29,7 +29,11 @@ export default class App extends Component {
         <div className="user-card">
           <div key={user.id} className="user-card">
             <h3>Backend API</h3>
-            <a href="#" target="_blank">
+            <a
+              href="https://career-endorsement-api.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://career-endorsement-api.herokuapp.com/
             </a>
             <div className="user">
