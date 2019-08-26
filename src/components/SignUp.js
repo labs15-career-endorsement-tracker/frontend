@@ -55,8 +55,8 @@ const SignUp = () => {
                 placeholder='Last Name'
             />
             <select 
-                value={newUser.track_id} 
                 name='track_id' 
+                value={newUser.track_id} 
                 onChange={newUserHandler}>
                     <option value={0} >Select Track:</option>
                     <option value={1} >Web Development</option>
@@ -71,7 +71,7 @@ const SignUp = () => {
              <input
                 name='password'
                 value={newUser.password}
-                type='text'
+                type='password'
                 onChange={newUserHandler}
                 placeholder='Password'
             />
