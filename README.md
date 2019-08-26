@@ -42,7 +42,7 @@ You can find the deployed project at [Netlify](https://labs15.netlify.com/).
 
 ## Project Overview
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+1️⃣ [Trello Board](https://trello.com/b/T9bFSxcX)
 
 1️⃣ [Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
 
