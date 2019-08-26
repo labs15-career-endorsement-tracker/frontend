@@ -30,7 +30,7 @@ const SignUp = () => {
             confirm_password: newUser.confirm_password
         }
         axios
-            .post(, userInfo)
+            .post("https://career-endorsement-api.herokuapp.com/api/v0.1.1/users", userInfo)
             .then(res => {
                 console.log(res)
             })
@@ -38,25 +38,28 @@ const SignUp = () => {
         }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form noValidate onSubmit={handleSubmit}>
             <h2>Sign Up</h2>
             <input
                 name='first_name'
                 value={newUser.first_name}
                 type='text'
+                noValidate
                 onChange={newUserHandler}
                 placeholder='First Name'
             />
              <input
                 name='last_name'
                 value={newUser.last_name}
-                type='{Text}'
+                type='text'
+                noValidate
                 onChange={newUserHandler}
                 placeholder='Last Name'
             />
             <select 
                 name='track_id' 
-                value={newUser.track_id} 
+                value={newUser.track_id}
+                noValidate
                 onChange={newUserHandler}>
                     <option value={0} >Select Track:</option>
                     <option value={1} >Web Development</option>
@@ -64,7 +67,8 @@ const SignUp = () => {
              <input
                 name='email'
                 value={newUser.email}
-                type='text'
+                type='email'
+                noValidate
                 onChange={newUserHandler}
                 placeholder='Email'
             />
@@ -72,6 +76,7 @@ const SignUp = () => {
                 name='password'
                 value={newUser.password}
                 type='password'
+                noValidate
                 onChange={newUserHandler}
                 placeholder='Password'
             />
@@ -79,6 +84,7 @@ const SignUp = () => {
                 name='confirm_password'
                 value={newUser.confirm_password}
                 type='text'
+                noValidate
                 onChange={newUserHandler}
                 placeholder='Confirm Password'
             />
