@@ -1,17 +1,11 @@
 import React, {useState} from 'react'
-<<<<<<< HEAD
-// import axios from 'axios'
 
 const emailRegex = RegExp(
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     )
-=======
->>>>>>> d5d5aaf9144eee9b9f64a9eaaad326636b3b1621
-
 
 const SignUp = () => {
     const [newUser, setNewUser] = useState({
-<<<<<<< HEAD
         first_name: '',
         last_name: '',
         track_id: 0,
@@ -75,16 +69,8 @@ const SignUp = () => {
         const valid = validate()
         if (valid) {
             console.log(newUser)
-        // axios
-        //     .post("https://endrsd-api-staging.herokuapp.com/api/v0/users", newUser
-        //     .then(res => {
-        //         console.log(res)
-        //     })
-        //     .catch(err => console.log(err))
 
         setNewUser({  
-=======
->>>>>>> d5d5aaf9144eee9b9f64a9eaaad326636b3b1621
             first_name: '',
             last_name: '',
             track_id: 0,
@@ -92,7 +78,6 @@ const SignUp = () => {
             password: '',
             confirm_password: ''
         })
-<<<<<<< HEAD
         setFormError({   
             first_name_error: '',
             last_name_error: '',
@@ -106,24 +91,11 @@ const SignUp = () => {
 
     return (
         <form noValidate onSubmit={handleSubmit}>
-=======
-
-        const newUserHandler = e => {
-        setNewUser({
-            ...newUser,
-            [e.target.name]:e.target.value
-        })
-    }
-
-    return (
-        <form>
->>>>>>> d5d5aaf9144eee9b9f64a9eaaad326636b3b1621
             <h2>Sign Up</h2>
             <input
                 name='first_name'
                 value={newUser.first_name}
                 type='text'
-<<<<<<< HEAD
                 noValidate
                 onChange={newUserHandler}
                 placeholder='First Name'
@@ -142,26 +114,10 @@ const SignUp = () => {
                 name='track_id'
                 value={newUser.track_id}
                 noValidate
-=======
-                onChange={newUserHandler}
-                placeholder='First Name'
-            />
-             <input
-                name='last_name'
-                value={newUser.last_name}
-                type='{Text}'
-                onChange={newUserHandler}
-                placeholder='Last Name'
-            />
-            <select 
-                value={newUser.track_id} 
-                name='track_id' 
->>>>>>> d5d5aaf9144eee9b9f64a9eaaad326636b3b1621
                 onChange={newUserHandler}>
                     <option value={0} >Select Track:</option>
                     <option value={1} >Web Development</option>
             </select>
-<<<<<<< HEAD
             <span>{formError.track_id_error}</span>
             <input
                 name='email'
@@ -191,32 +147,6 @@ const SignUp = () => {
             />
             <span>{formError.confirm_password_error}</span>
             <button>Sign Up</button>
-=======
-             <input
-                name='email'
-                value={newUser.email}
-                type='text'
-                onChange={newUserHandler}
-                placeholder='Email'
-            />
-             <input
-                name='password'
-                value={newUser.password}
-                type='text'
-                onChange={newUserHandler}
-                placeholder='Password'
-            />
-            <input
-                name='confirm_password'
-                value={newUser.confirm_password}
-                type='text'
-                onChange={newUserHandler}
-                placeholder='Confirm Password'
-            />
-            <button>Sign Up</button>
-            
-            
->>>>>>> d5d5aaf9144eee9b9f64a9eaaad326636b3b1621
         </form>
     )
 }
