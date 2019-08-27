@@ -1,6 +1,4 @@
 import React from "react"
-import React, { Component } from "react"
-import axios from "axios"
 import { Route } from 'react-router-dom'
 
 import "./App.css"
@@ -14,7 +12,7 @@ const App = () => {
     <div className="container">
       <Navigation />
       <Login />
-      <SignUp />
+      <Route path='/sign-up' component={<SignUp />} />
     </div>
   )
 }
