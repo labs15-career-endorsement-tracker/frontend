@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios"
+import { Route } from 'react-router-dom'
 import "./App.css"
 
 import SignUp from "./components/SignUp"
@@ -40,7 +41,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-        <SignUp />
+        <Route path='/sign-up' />
       </div>
     )
   }
