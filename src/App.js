@@ -1,4 +1,8 @@
 import React from "react"
+import React, { Component } from "react"
+import axios from "axios"
+import { Route } from 'react-router-dom'
+
 import "./App.css"
 
 import SignUp from "./components/SignUp"
@@ -13,7 +17,6 @@ const App = () => {
       <SignUp />
     </div>
   )
-
 }
 
 export default App
