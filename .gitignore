@@ -8,6 +8,13 @@
 /.pnp
 .pnp.js
 
+# vs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 # testing
 /coverage
 
@@ -15,6 +22,7 @@
 /build
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local
