@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios"
+import { Route } from 'react-router-dom'
 import "./App.css"
 
 export default class App extends Component {
@@ -38,6 +39,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
+        <Route path='/sign-up' />
       </div>
     )
   }
