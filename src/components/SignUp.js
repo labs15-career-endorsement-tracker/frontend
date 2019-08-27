@@ -118,8 +118,8 @@ const SignUp = () => {
                 placeholder='Last Name'
             />
             <span>{formError.last_name_error}</span>
-            <select 
-                name='track_id' 
+            <select
+                name='track_id'
                 value={newUser.track_id}
                 noValidate
                 onChange={newUserHandler}>
