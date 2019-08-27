@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { userInfo } from 'os';
 // import axios from 'axios'
 
 const emailRegex = RegExp(
@@ -78,6 +77,7 @@ const SignUp = () => {
         //         console.log(res)
         //     })
         //     .catch(err => console.log(err))
+
         setNewUser({  
             first_name: '',
             last_name: '',
@@ -109,7 +109,7 @@ const SignUp = () => {
                 placeholder='First Name'
             />
             <span>{formError.first_name_error}</span>
-             <input
+            <input
                 name='last_name'
                 value={newUser.last_name}
                 type='text'
@@ -127,7 +127,7 @@ const SignUp = () => {
                     <option value={1} >Web Development</option>
             </select>
             <span>{formError.track_id_error}</span>
-             <input
+            <input
                 name='email'
                 value={newUser.email}
                 type='email'
@@ -136,7 +136,7 @@ const SignUp = () => {
                 placeholder='Email'
             />
             <span>{formError.email_error}</span>
-             <input
+            <input
                 name='password'
                 value={newUser.password}
                 type='password'
