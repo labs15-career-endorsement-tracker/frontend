@@ -12,7 +12,8 @@ const Login = () => {
         axios
           .post("/api/v0/login", creds)
           .then(res => {
-            console.log(creds, res)
+            localStorage.setItem("token", res.data.token)
+            console.log(creds, res.data)
           })
           .catch(err => {
             console.log(err)
