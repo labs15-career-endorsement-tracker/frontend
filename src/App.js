@@ -1,18 +1,18 @@
 import React from "react"
-import { Route } from 'react-router-dom'
+import { Route } from "react-router-dom"
 
 import "./App.css"
 
 import SignUp from "./components/SignUp"
-import Login from "./components/login"
-import Navigation from "./components/navigation"
+import Login from "./components/Login"
+import Navigation from "./components/Navigation"
 
 const App = () => {
   return (
     <div className="container">
       <Navigation />
       <Login />
-      <Route path='/sign-up' component={<SignUp />} />
+      <Route path="/sign-up" component={<SignUp />} />
     </div>
   )
 }
