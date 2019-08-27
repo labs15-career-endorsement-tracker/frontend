@@ -37,23 +37,27 @@ const Login = () => {
 
   return (
     <div className="form-container">
-      <h1>ENDRSD</h1>
+      <h1 className="brand">ENDRSD</h1>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="email">email address</label>
         <input
           name="email"
           onChange={handleChange}
           placeholder="email address"
           type="text"
           value={creds.email}
+          required
         />
+        <label htmlFor="password">password</label>
         <input
           name="password"
           onChange={handleChange}
           placeholder="password"
           type="password"
           value={creds.password}
+          required
         />
-        <button>Login</button>
+        <button className="btn">Login</button>
         <p className="forgot">Forgot password?</p>
       </form>
     </div>
