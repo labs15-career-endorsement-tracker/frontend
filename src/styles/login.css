@@ -18,20 +18,19 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
-
-  /* min-height: 300px; */
 }
 
 input {
+  font-family: "Roboto", sans-serif;
   margin: 0.4rem;
   padding: 0.5rem;
-  width: 65%;
+  width: 100%;
   border-radius: 5px;
   border: 2px solid lightgray;
 }
 
 button {
+  font-family: "Roboto", sans-serif;
   width: 70%;
   padding: 0.75rem;
   border-radius: 7px;
@@ -39,23 +38,29 @@ button {
   background: #19ae9f;
   color: #ffffff;
   font-weight: 800;
-  margin-top: 1.5rem;
+  margin: 1.5rem;
 }
 
 h1 {
   color: #19ae9f;
   font-weight: 300;
-  margin-bottom: 5rem;
-}
-
-input {
-  margin: 1rem;
 }
 
 .error-container {
-  margin: 2rem;
+  font-family: "Roboto", sans-serif;
+  min-height: 50px;
 }
 
-.text-input {
-  padding: 1rem;
+.label {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding: 3rem;
+}
+
+.input-feedback {
+  color: red;
+  font-weight: 800;
 }

@@ -10,8 +10,9 @@ import "../styles/login.css"
 const Login = () => {
   return (
     <div className="form-container">
-      <h1 className="brand">ENDRSD</h1>
-
+      <div className="brand">
+        <h1>ENDRSD</h1>
+      </div>
       <Formik
         initialValues={{ email: "", password: "" }}
         onSubmit={(values, { setSubmitting }) => {
@@ -84,9 +85,11 @@ const Login = () => {
                     : "text-input"
                 }
               />
-              {errors.password && touched.password && (
-                <div className="input-feedback">{errors.password}</div>
-              )}
+              <div className="error-container">
+                {errors.password && touched.password && (
+                  <div className="input-feedback">{errors.password}</div>
+                )}
+              </div>
               <button type="submit" disabled={isSubmitting}>
                 Log In
               </button>
