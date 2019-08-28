@@ -9,6 +9,11 @@ ul {
   justify-content: flex-end;
 }
 
-li {
+.link {
   padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
