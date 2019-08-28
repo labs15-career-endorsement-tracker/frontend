@@ -7,7 +7,6 @@ const emailRegex = RegExp(
     )
 
 const SignUp = (inProgress) => {
-    console.log(inProgress)
     const [newUser, setNewUser] = useState({
         first_name: '',
         last_name: '',
@@ -24,7 +23,6 @@ const SignUp = (inProgress) => {
         password_error: '',
         confirm_password_error: ''
     })
-    console.log()
 
         const newUserHandler = e => {
         setNewUser({
@@ -70,32 +68,40 @@ const SignUp = (inProgress) => {
 
     const handleSubmit = e => {
         e.preventDefault()
+        const userData = {
+            first_name: newUser.first_name,
+            last_name: newUser.last_name,
+            track_id: newUser.track_id,
+            email: newUser.email,
+            password: newUser.password
+        }
         const valid = validate()
         if (valid) {
-            console.log(newUser)
+            createUser(userData)
 
-        setNewUser({  
-            first_name: '',
-            last_name: '',
-            track_id: 0,
-            email: '',
-            password: '',
-            confirm_password: ''
-        })
-        setFormError({   
-            first_name_error: '',
-            last_name_error: '',
-            track_id_error: '',
-            email_error: '',
-            password_error: '',
-            confirm_password_error: ''
-        })
-        }
+            setNewUser({  
+                first_name: '',
+                last_name: '',
+                track_id: 0,
+                email: '',
+                password: '',
+                confirm_password: ''
+        
+            })
+            setFormError({   
+                first_name_error: '',
+                last_name_error: '',
+                track_id_error: '',
+                email_error: '',
+                password_error: '',
+                confirm_password_error: ''
+            })
+      }
     }
 
     return (
         <form noValidate onSubmit={handleSubmit}>
-            <h2>{inProgress ? 'Creating User...' : 'Sign Up'}</h2>
+            <h2>Sign Up</h2>
             <input
                 name='first_name'
                 value={newUser.first_name}
@@ -119,8 +125,8 @@ const SignUp = (inProgress) => {
                 value={newUser.track_id}
                 noValidate
                 onChange={newUserHandler}>
-                    <option value={0} >Select Track:</option>
-                    <option value={1} >Web Development</option>
+                    <option value={0}>Select Track:</option>
+                    <option value={1}>Web Development</option>
             </select>
             <span>{formError.track_id_error}</span>
             <input
