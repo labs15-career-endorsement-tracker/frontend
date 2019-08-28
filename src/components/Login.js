@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import { Formik } from "formik"
@@ -8,6 +8,15 @@ import "react-toastify/dist/ReactToastify.min.css"
 import "../styles/index.scss"
 
 const Login = () => {
+  const [error, setError] = useState({
+    message: ""
+  })
+
+  const handleError = err => {
+    setError(err)
+    alert(err)
+  }
+
   return (
     <div className="form-container">
       <div className="brand">
@@ -16,6 +25,7 @@ const Login = () => {
       <Formik
         initialValues={{ email: "", password: "" }}
         onSubmit={(values, { setSubmitting }) => {
+          setSubmitting(true)
           axios
             .post("/api/v0/login", values)
             .then(res => {
@@ -24,6 +34,7 @@ const Login = () => {
             })
             .catch(err => {
               console.log(err)
+              handleError(err)
             })
         }}
         validationSchema={Yup.object().shape({
