@@ -16,15 +16,30 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 80%;
 }
 
 input {
   font-family: "Roboto", sans-serif;
   margin: 0.4rem;
-  padding: 0.5rem;
+  padding: 0.75rem;
   width: 100%;
-  border-radius: 5px;
-  border: 2px solid lightgray;
+  border-radius: 5px 5px 0 0;
+  width: 70%;
+  border: 0;
+  border-bottom: 3px solid #19ae9f;
+  &:focus {
+    outline: none;
+  }
+}
+
+.error {
+  border-bottom: 2px solid red;
+}
+
+#toast {
+  position: absolute;
+  left: 500px;
 }
 
 button {
@@ -48,6 +63,7 @@ h1 {
 .error-container {
   font-family: "Roboto", sans-serif;
   min-height: 50px;
+  width: 50%;
 }
 
 .label {
