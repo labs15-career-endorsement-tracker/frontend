@@ -1,40 +1,36 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import { ToastContainer, toast } from "react-toastify"
 import { Formik } from "formik"
+import Notifications, { notify } from "react-notify-toast"
 import * as Yup from "yup"
 
-import "react-toastify/dist/ReactToastify.min.css"
 import "../styles/index.scss"
 
 const Login = () => {
-  const [error, setError] = useState({
-    message: ""
-  })
-
   const handleError = err => {
-    setError(err)
-    alert(err)
+    notify.show(err, "error", 3000)
   }
 
   return (
     <div className="form-container">
       <div className="brand">
+        <Notifications />
         <h1>ENDRSD</h1>
       </div>
       <Formik
         initialValues={{ email: "", password: "" }}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
           setSubmitting(true)
           axios
             .post("/api/v0/login", values)
             .then(res => {
               localStorage.setItem("token", res.data.token)
-              console.log(res.data)
+              resetForm()
             })
             .catch(err => {
-              console.log(err)
-              handleError(err)
+              setSubmitting(false)
+              handleError(err.response.data.message)
+              resetForm()
             })
         }}
         validationSchema={Yup.object().shape({
