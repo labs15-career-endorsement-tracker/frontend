@@ -5,15 +5,16 @@ export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS'
 export const SIGNUP_FAILURE = 'SIGNUP_FAILURE'
 
 export const createUser = newUser => dispatch => {
+    console.log(newUser)
     dispatch({
         type: SIGNUP_IN_PROGRESS
     })
     return axios
-        .post('https://localhost:5000/api/v0/users', newUser)
+        .post('http://localhost:5000/api/v0/users', newUser)
         .then(res => {
             console.log(res)
             localStorage.setItem('token', res.data.token)
-            // localStorage.setItem('userId', res.data.user.id)
+            localStorage.setItem('userId', res.data.useId)
             dispatch({
                 type: SIGNUP_SUCCESS
             })

@@ -6,11 +6,11 @@ const emailRegex = RegExp(
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     )
 
-const SignUp = (inProgress) => {
+const SignUp = (props) => {
     const [newUser, setNewUser] = useState({
         first_name: '',
         last_name: '',
-        track_id: 0,
+        tracks_id: 0,
         email: '',
         password: '',
         confirm_password: ''
@@ -18,7 +18,7 @@ const SignUp = (inProgress) => {
     const [formError, setFormError] = useState({
         first_name_error: '',
         last_name_error: '',
-        track_id_error: '',
+        tracks_id_error: '',
         email_error: '',
         password_error: '',
         confirm_password_error: ''
@@ -34,7 +34,7 @@ const SignUp = (inProgress) => {
     const validate = () => {
         let first_name_error = ''
         let last_name_error = ''
-        let track_id_error = ''
+        let tracks_id_error = ''
         let email_error = ''
         let password_error = ''
         let confirm_password_error = ''
@@ -45,8 +45,8 @@ const SignUp = (inProgress) => {
         if (!newUser.last_name) {
             last_name_error = "Last name is required"
         }
-        if (newUser.track_id === 0) {
-            track_id_error = "Please select a track"
+        if (newUser.tracks_id === 0) {
+            tracks_id_error = "Please select a track"
         }
         if (!emailRegex.test(newUser.email)) {
             email_error = "Must be a valid email address"
@@ -58,8 +58,8 @@ const SignUp = (inProgress) => {
             confirm_password_error = "Password must match"
         }
 
-        if (first_name_error || last_name_error || track_id_error || email_error || password_error || confirm_password_error) {
-            setFormError({ first_name_error, last_name_error, track_id_error, email_error, password_error, confirm_password_error })
+        if (first_name_error || last_name_error || tracks_id_error || email_error || password_error || confirm_password_error) {
+            setFormError({ first_name_error, last_name_error, tracks_id_error, email_error, password_error, confirm_password_error })
             return false
         }
 
@@ -71,18 +71,20 @@ const SignUp = (inProgress) => {
         const userData = {
             first_name: newUser.first_name,
             last_name: newUser.last_name,
-            track_id: newUser.track_id,
+            tracks_id: newUser.tracks_id,
             email: newUser.email,
             password: newUser.password
         }
+        console.log(userData)
         const valid = validate()
         if (valid) {
-            createUser(userData)
+            props.createUser(userData)
+    
 
             setNewUser({  
                 first_name: '',
                 last_name: '',
-                track_id: 0,
+                tracks_id: 0,
                 email: '',
                 password: '',
                 confirm_password: ''
@@ -91,7 +93,7 @@ const SignUp = (inProgress) => {
             setFormError({   
                 first_name_error: '',
                 last_name_error: '',
-                track_id_error: '',
+                tracks_id_error: '',
                 email_error: '',
                 password_error: '',
                 confirm_password_error: ''
@@ -121,14 +123,14 @@ const SignUp = (inProgress) => {
             />
             <span>{formError.last_name_error}</span>
             <select
-                name='track_id'
-                value={newUser.track_id}
+                name='tracks_id'
+                value={newUser.tracks_id}
                 noValidate
                 onChange={newUserHandler}>
                     <option value={0}>Select Track:</option>
                     <option value={1}>Web Development</option>
             </select>
-            <span>{formError.track_id_error}</span>
+            <span>{formError.tracks_id_error}</span>
             <input
                 name='email'
                 value={newUser.email}
