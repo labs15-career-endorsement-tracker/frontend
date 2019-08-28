@@ -29,8 +29,11 @@ const Login = () => {
         validationSchema={Yup.object().shape({
           email: Yup.string()
             .email()
-            .required("Required"),
-          password: Yup.string().required("Required")
+            .required("Please enter a valid email address"),
+          password: Yup.string()
+            .min(8, "Your password must be more than 8 characters")
+            .max(16, "Your password must be less than than 16 characters")
+            .required("Please enter your password")
         })}
       >
         {props => {
