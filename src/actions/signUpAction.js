@@ -9,18 +9,19 @@ export const createUser = newUser => dispatch => {
     type: SIGNUP_IN_PROGRESS
   })
   return axios
-    .post("https://endrsd-api-staging.herokuapp.com/api/v0/users", newUser)
+    .post("http://localhost:5000/api/v0/users", newUser)
     .then(res => {
       console.log(res)
       localStorage.setItem("token", res.data.token)
-      // localStorage.setItem('userId', res.data.user.id)
+      localStorage.setItem("userId", res.data.userId)
       dispatch({
         type: SIGNUP_SUCCESS
-      }).catch(err =>
-        dispatch({
-          type: SIGNUP_FAILURE,
-          payload: err
-        })
-      )
+      })
     })
+    .catch(err =>
+      dispatch({
+        type: SIGNUP_FAILURE,
+        payload: err
+      })
+    )
 }
