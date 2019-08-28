@@ -46,7 +46,6 @@ You can find the deployed project at [Netlify](https://labs15.netlify.com/).
 
 1️⃣ [Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
 
-
 🚫 Replace lorem ipsum with a description of your project
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
