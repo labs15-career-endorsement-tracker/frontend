@@ -5,7 +5,7 @@ import { Formik } from "formik"
 import * as Yup from "yup"
 
 import "react-toastify/dist/ReactToastify.min.css"
-import "../styles/login.css"
+import "../styles/index.scss"
 
 const Login = () => {
   return (
