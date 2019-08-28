@@ -123,8 +123,12 @@ const SignUp = () => {
                 value={newUser.track_id}
                 noValidate
                 onChange={newUserHandler}>
-                    <option value={0} >Select Track:</option>
-                    <option value={1} >Web Development</option>
+                    <option value={0}>Select track:</option>
+                    {tracks.map(track => {
+                        return (
+                        <option key={track.id} value={track.id}>{track.title}</option>
+                        )
+                    })}
             </select>
             <span>{formError.track_id_error}</span>
             <input
