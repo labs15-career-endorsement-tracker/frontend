@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 
 const emailRegex = RegExp(
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -21,6 +22,13 @@ const SignUp = () => {
         password_error: '',
         confirm_password_error: ''
     })
+    const [tracks, setTracks] = useState([])
+
+    useEffect(() => {
+        axios
+          .get('http://localhost:5000/api/v0/tracks')
+          .then(res => setTracks(res.data))
+      }, [])
 
         const newUserHandler = e => {
         setNewUser({
