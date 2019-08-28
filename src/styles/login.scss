@@ -1,5 +1,5 @@
 .form-container {
-  width: 600px;
+  width: 450px;
   height: auto;
   background: white;
   border-right: 2px solid lightgray;
@@ -12,43 +12,54 @@
 }
 
 form {
+  label {
+    color: #215c59;
+    font-weight: 800;
+    width: 85%;
+    text-align: left;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
+  width: 85%;
+  font-family: "Space Mono";
+  text-align: left;
 }
 
 input {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
+  color: #215c59;
+  font-size: 1rem;
+  font-weight: 900;
   margin: 0.4rem;
   padding: 0.75rem;
   width: 100%;
   border-radius: 5px 5px 0 0;
-  width: 70%;
+  width: 85%;
   border: 0;
-  border-bottom: 3px solid #19ae9f;
+  border-bottom: 4px solid #215c59;
+  text-align: center;
   &:focus {
     outline: none;
   }
 }
 
 .error {
-  border-bottom: 2px solid red;
-}
-
-#toast {
-  position: absolute;
-  left: 500px;
+  border-bottom: 4px solid red;
 }
 
 button {
-  font-family: "Roboto", sans-serif;
-  width: 70%;
-  padding: 0.75rem;
-  border-radius: 7px;
+  font-family: "Space Mono", monospace;
+  width: 50%;
+  padding: 1rem;
+  box-shadow: 1px 1px solid black;
   border: 0;
-  background: #19ae9f;
+  background: linear-gradient(
+    135deg,
+    rgba(53, 196, 189, 1) 0%,
+    rgba(50, 161, 156, 1) 100%
+  );
   color: #ffffff;
   font-weight: 800;
   margin: 1.5rem;
@@ -56,26 +67,31 @@ button {
 }
 
 h1 {
-  color: #19ae9f;
-  font-weight: 300;
+  font-family: "Space Mono", monospace;
+  color: #215c59;
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 1.9rem;
+}
+
+.brand {
+  width: 85%;
 }
 
 .error-container {
   font-family: "Roboto", sans-serif;
   min-height: 50px;
-  width: 50%;
+  width: 85%;
+  font-size: 0.75rem;
+  font-weight: 800;
 }
 
 .label {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-size: 3.2rem;
-  padding: 3rem;
-}
-
 .input-feedback {
   color: red;
+  width: 100%;
   font-weight: 800;
 }

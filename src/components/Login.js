@@ -59,11 +59,11 @@ const Login = () => {
           return (
             <form onSubmit={handleSubmit}>
               <label htmlFor="email" style={{ display: "block" }}>
-                email address
+                Email Address
               </label>
               <input
                 id="email"
-                placeholder="Enter your email"
+                placeholder="you@email.com"
                 type="text"
                 value={values.email}
                 onChange={handleChange}
@@ -80,7 +80,7 @@ const Login = () => {
                 )}
               </div>
               <label htmlFor="password" style={{ display: "block" }}>
-                password
+                Password
               </label>
               <input
                 id="password"
