@@ -3,6 +3,8 @@ import { connect } from "react-redux"
 import { createUser } from "../actions"
 import axios from "axios"
 
+import '../styles/index.scss'
+
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 )
@@ -122,72 +124,74 @@ const SignUp = props => {
   }
 
   return (
-    <form noValidate onSubmit={handleSubmit}>
-      <h2>Sign Up</h2>
-      <input
-        name="first_name"
-        value={newUser.first_name}
-        type="text"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="First Name"
-      />
-      <span>{formError.first_name_error}</span>
-      <input
-        name="last_name"
-        value={newUser.last_name}
-        type="text"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Last Name"
-      />
-      <span>{formError.last_name_error}</span>
-      <select
-        name="tracks_id"
-        value={newUser.tracks_id}
-        noValidate
-        onChange={newUserHandler}
-      >
-        <option value={0}>Select track:</option>
-        {tracks.map(track => {
-          return (
-            <option key={track.id} value={(track.id)}>
-              {track.title}
-            </option>
-          )
-        })}
-      </select>
-      <span>{formError.track_id_error}</span>
-      <input
-        name="email"
-        value={newUser.email}
-        type="email"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Email"
-      />
-      <span>{formError.email_error}</span>
-      <input
-        name="password"
-        value={newUser.password}
-        type="password"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Password"
-      />
-      <span>{formError.password}</span>
-      <input
-        name="confirm_password"
-        value={newUser.confirm_password}
-        type="password"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Confirm Password"
-      />
-      <span>{formError.confirm_password_error}</span>
-      <button>Sign Up</button>
-    </form>
-  )
+    <div className='form-container'>
+      <form noValidate onSubmit={handleSubmit}>
+        <h2>Sign Up</h2>
+        <input
+          name="first_name"
+          value={newUser.first_name}
+          type="text"
+          noValidate
+          onChange={newUserHandler}
+          placeholder="First Name"
+        />
+        <span>{formError.first_name_error}</span>
+        <input
+          name="last_name"
+          value={newUser.last_name}
+          type="text"
+          noValidate
+          onChange={newUserHandler}
+          placeholder="Last Name"
+        />
+        <span>{formError.last_name_error}</span>
+        <select
+          name="tracks_id"
+          value={newUser.tracks_id}
+          noValidate
+          onChange={newUserHandler}
+        >
+          <option value={0}>Select track:</option>
+          {tracks.map(track => {
+            return (
+              <option key={track.id} value={(track.id)}>
+                {track.title}
+              </option>
+            )
+          })}
+        </select>
+        <span>{formError.track_id_error}</span>
+        <input
+          name="email"
+          value={newUser.email}
+          type="email"
+          noValidate
+          onChange={newUserHandler}
+          placeholder="Email"
+        />
+        <span>{formError.email_error}</span>
+        <input
+          name="password"
+          value={newUser.password}
+          type="password"
+          noValidate
+          onChange={newUserHandler}
+          placeholder="Password"
+        />
+        <span>{formError.password_error}</span>
+        <input
+          name="confirm_password"
+          value={newUser.confirm_password}
+          type="password"
+          noValidate
+          onChange={newUserHandler}
+          placeholder="Confirm Password"
+        />
+        <span>{formError.confirm_password_error}</span>
+        <button>Sign Up</button>
+      </form>
+    </div>
+    )
 }
 
 const mapStateToProps = state => {
