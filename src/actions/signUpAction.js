@@ -18,11 +18,11 @@ export const createUser = newUser => dispatch => {
             dispatch({
                 type: SIGNUP_SUCCESS
             })
-            .catch(err => 
+    })
+    .catch(err => 
                 dispatch({
                     type: SIGNUP_FAILURE,
                     payload: err
             }) 
         )
-    })
 }
