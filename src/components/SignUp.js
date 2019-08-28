@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
+import { connect } from 'react-redux'
+import { createUser } from '../actions'
 
 const emailRegex = RegExp(
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     )
 
-const SignUp = () => {
+const SignUp = (inProgress) => {
+    console.log(inProgress)
     const [newUser, setNewUser] = useState({
         first_name: '',
         last_name: '',
@@ -21,6 +24,7 @@ const SignUp = () => {
         password_error: '',
         confirm_password_error: ''
     })
+    console.log()
 
         const newUserHandler = e => {
         setNewUser({
@@ -38,19 +42,19 @@ const SignUp = () => {
         let confirm_password_error = ''
 
         if (!newUser.first_name) {
-            first_name_error = "Field is required"
+            first_name_error = "First Name is required"
         }
         if (!newUser.last_name) {
-            last_name_error = "Field is required"
+            last_name_error = "Last name is required"
         }
         if (newUser.track_id === 0) {
-            track_id_error = "Field is required"
+            track_id_error = "Please select a track"
         }
         if (!emailRegex.test(newUser.email)) {
-            email_error = "Must be valid email address"
+            email_error = "Must be a valid email address"
         }
-        if (newUser.password.length < 8) {
-            password_error = "Password must be at least 8 characters"
+        if (newUser.password.length < 8 || newUser.password.length > 16) {
+            password_error = "Password must be 8 to 16 characters"
         }
         if (newUser.confirm_password !== newUser.password) {
             confirm_password_error = "Password must match"
@@ -91,7 +95,7 @@ const SignUp = () => {
 
     return (
         <form noValidate onSubmit={handleSubmit}>
-            <h2>Sign Up</h2>
+            <h2>{inProgress ? 'Creating User...' : 'Sign Up'}</h2>
             <input
                 name='first_name'
                 value={newUser.first_name}
@@ -136,7 +140,7 @@ const SignUp = () => {
                 onChange={newUserHandler}
                 placeholder='Password'
             />
-            <span>{formError.password}</span>
+            <span>{formError.password_error}</span>
             <input
                 name='confirm_password'
                 value={newUser.confirm_password}
@@ -151,4 +155,13 @@ const SignUp = () => {
     )
 }
 
-export default SignUp
+const mapStateToProps = state => {
+    return {
+        inProgress: state.signUpReducer.inProgress
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    { createUser }
+)(SignUp)
