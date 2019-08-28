@@ -1,54 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from "react"
-||||||| merged common ancestors
-import React, {useState} from 'react'
-=======
 import React, { useState } from "react"
 import { connect } from "react-redux"
 import { createUser } from "../actions"
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 )
 
-<<<<<<< HEAD
-const SignUp = () => {
-  const [newUser, setNewUser] = useState({
-    first_name: "",
-    last_name: "",
-    track_id: 0,
-    email: "",
-    password: "",
-    confirm_password: ""
-  })
-  const [formError, setFormError] = useState({
-    first_name_error: "",
-    last_name_error: "",
-    track_id_error: "",
-    email_error: "",
-    password_error: "",
-    confirm_password_error: ""
-  })
-||||||| merged common ancestors
-const SignUp = () => {
-    const [newUser, setNewUser] = useState({
-        first_name: '',
-        last_name: '',
-        track_id: 0,
-        email: '',
-        password: '',
-        confirm_password: ''
-    })
-    const [formError, setFormError] = useState({
-        first_name_error: '',
-        last_name_error: '',
-        track_id_error: '',
-        email_error: '',
-        password_error: '',
-        confirm_password_error: ''
-    })
-=======
 const SignUp = props => {
   const [newUser, setNewUser] = useState({
     first_name: "",
@@ -73,31 +30,7 @@ const SignUp = props => {
       [e.target.name]: e.target.value
     })
   }
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
 
-<<<<<<< HEAD
-  const newUserHandler = e => {
-    setNewUser({
-      ...newUser,
-      [e.target.name]: e.target.value
-    })
-  }
-||||||| merged common ancestors
-        const newUserHandler = e => {
-        setNewUser({
-            ...newUser,
-            [e.target.name]:e.target.value
-        })
-    }
-
-    const validate = () => {
-        let first_name_error = ''
-        let last_name_error = ''
-        let track_id_error = ''
-        let email_error = ''
-        let password_error = ''
-        let confirm_password_error = ''
-=======
   const validate = () => {
     let first_name_error = ""
     let last_name_error = ""
@@ -124,36 +57,7 @@ const SignUp = props => {
     if (newUser.confirm_password !== newUser.password) {
       confirm_password_error = "Password must match"
     }
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
 
-<<<<<<< HEAD
-  const validate = () => {
-    let first_name_error = ""
-    let last_name_error = ""
-    let track_id_error = ""
-    let email_error = ""
-    let password_error = ""
-    let confirm_password_error = ""
-||||||| merged common ancestors
-        if (!newUser.first_name) {
-            first_name_error = "Field is required"
-        }
-        if (!newUser.last_name) {
-            last_name_error = "Field is required"
-        }
-        if (newUser.track_id === 0) {
-            track_id_error = "Field is required"
-        }
-        if (!emailRegex.test(newUser.email)) {
-            email_error = "Must be valid email address"
-        }
-        if (newUser.password.length < 8) {
-            password_error = "Password must be at least 8 characters"
-        }
-        if (newUser.confirm_password !== newUser.password) {
-            confirm_password_error = "Password must match"
-        }
-=======
     if (
       first_name_error ||
       last_name_error ||
@@ -172,58 +76,10 @@ const SignUp = props => {
       })
       return false
     }
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
 
-<<<<<<< HEAD
-    if (!newUser.first_name) {
-      first_name_error = "Field is required"
-    }
-    if (!newUser.last_name) {
-      last_name_error = "Field is required"
-    }
-    if (newUser.track_id === 0) {
-      track_id_error = "Field is required"
-    }
-    if (!emailRegex.test(newUser.email)) {
-      email_error = "Must be valid email address"
-    }
-    if (newUser.password.length < 8) {
-      password_error = "Password must be at least 8 characters"
-    }
-    if (newUser.confirm_password !== newUser.password) {
-      confirm_password_error = "Password must match"
-    }
-||||||| merged common ancestors
-        if (first_name_error || last_name_error || track_id_error || email_error || password_error || confirm_password_error) {
-            setFormError({ first_name_error, last_name_error, track_id_error, email_error, password_error, confirm_password_error })
-            return false
-        }
-=======
     return true
   }
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
 
-<<<<<<< HEAD
-    if (
-      first_name_error ||
-      last_name_error ||
-      track_id_error ||
-      email_error ||
-      password_error ||
-      confirm_password_error
-    ) {
-      setFormError({
-        first_name_error,
-        last_name_error,
-        track_id_error,
-        email_error,
-        password_error,
-        confirm_password_error
-      })
-      return false
-||||||| merged common ancestors
-        return true
-=======
   const handleSubmit = e => {
     e.preventDefault()
     const userData = {
@@ -232,64 +88,12 @@ const SignUp = props => {
       tracks_id: newUser.tracks_id,
       email: newUser.email,
       password: newUser.password
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
     }
     console.log(userData)
     const valid = validate()
     if (valid) {
       props.createUser(userData)
 
-<<<<<<< HEAD
-    return true
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    const valid = validate()
-    if (valid) {
-      console.log(newUser)
-
-      setNewUser({
-        first_name: "",
-        last_name: "",
-        track_id: 0,
-        email: "",
-        password: "",
-        confirm_password: ""
-      })
-      setFormError({
-        first_name_error: "",
-        last_name_error: "",
-        track_id_error: "",
-        email_error: "",
-        password_error: "",
-        confirm_password_error: ""
-      })
-||||||| merged common ancestors
-    const handleSubmit = e => {
-        e.preventDefault()
-        const valid = validate()
-        if (valid) {
-            console.log(newUser)
-
-        setNewUser({  
-            first_name: '',
-            last_name: '',
-            track_id: 0,
-            email: '',
-            password: '',
-            confirm_password: ''
-        })
-        setFormError({   
-            first_name_error: '',
-            last_name_error: '',
-            track_id_error: '',
-            email_error: '',
-            password_error: '',
-            confirm_password_error: ''
-        })
-        }
-=======
       setNewUser({
         first_name: "",
         last_name: "",
@@ -306,12 +110,7 @@ const SignUp = props => {
         password_error: "",
         confirm_password_error: ""
       })
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
     }
-<<<<<<< HEAD
-  }
-||||||| merged common ancestors
-=======
   }
 
   return (
@@ -376,137 +175,11 @@ const SignUp = props => {
     </form>
   )
 }
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
 
-<<<<<<< HEAD
-  return (
-    <form noValidate onSubmit={handleSubmit}>
-      <h2>Sign Up</h2>
-      <input
-        name="first_name"
-        value={newUser.first_name}
-        type="text"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="First Name"
-      />
-      <span>{formError.first_name_error}</span>
-      <input
-        name="last_name"
-        value={newUser.last_name}
-        type="text"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Last Name"
-      />
-      <span>{formError.last_name_error}</span>
-      <select
-        name="track_id"
-        value={newUser.track_id}
-        noValidate
-        onChange={newUserHandler}
-      >
-        <option value={0}>Select Track:</option>
-        <option value={1}>Web Development</option>
-      </select>
-      <span>{formError.track_id_error}</span>
-      <input
-        name="email"
-        value={newUser.email}
-        type="email"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Email"
-      />
-      <span>{formError.email_error}</span>
-      <input
-        name="password"
-        value={newUser.password}
-        type="password"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Password"
-      />
-      <span>{formError.password}</span>
-      <input
-        name="confirm_password"
-        value={newUser.confirm_password}
-        type="password"
-        noValidate
-        onChange={newUserHandler}
-        placeholder="Confirm Password"
-      />
-      <span>{formError.confirm_password_error}</span>
-      <button>Sign Up</button>
-    </form>
-  )
-||||||| merged common ancestors
-    return (
-        <form noValidate onSubmit={handleSubmit}>
-            <h2>Sign Up</h2>
-            <input
-                name='first_name'
-                value={newUser.first_name}
-                type='text'
-                noValidate
-                onChange={newUserHandler}
-                placeholder='First Name'
-            />
-            <span>{formError.first_name_error}</span>
-            <input
-                name='last_name'
-                value={newUser.last_name}
-                type='text'
-                noValidate
-                onChange={newUserHandler}
-                placeholder='Last Name'
-            />
-            <span>{formError.last_name_error}</span>
-            <select
-                name='track_id'
-                value={newUser.track_id}
-                noValidate
-                onChange={newUserHandler}>
-                    <option value={0} >Select Track:</option>
-                    <option value={1} >Web Development</option>
-            </select>
-            <span>{formError.track_id_error}</span>
-            <input
-                name='email'
-                value={newUser.email}
-                type='email'
-                noValidate
-                onChange={newUserHandler}
-                placeholder='Email'
-            />
-            <span>{formError.email_error}</span>
-            <input
-                name='password'
-                value={newUser.password}
-                type='password'
-                noValidate
-                onChange={newUserHandler}
-                placeholder='Password'
-            />
-            <span>{formError.password}</span>
-            <input
-                name='confirm_password'
-                value={newUser.confirm_password}
-                type='password'
-                noValidate
-                onChange={newUserHandler}
-                placeholder='Confirm Password'
-            />
-            <span>{formError.confirm_password_error}</span>
-            <button>Sign Up</button>
-        </form>
-    )
-=======
 const mapStateToProps = state => {
   return {
     inProgress: state.signUpReducer.inProgress
   }
->>>>>>> e5d08017d292e19dfd346d582bb86e6e426ab93f
 }
 
 export default connect(
