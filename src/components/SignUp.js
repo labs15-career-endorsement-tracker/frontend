@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import { createUser } from "../actions"
+import axios from "axios"
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -23,6 +24,7 @@ const SignUp = props => {
     password_error: "",
     confirm_password_error: ""
   })
+  const [tracks, setTracks] = useState([])
 
   const newUserHandler = e => {
     setNewUser({
@@ -30,6 +32,12 @@ const SignUp = props => {
       [e.target.name]: e.target.value
     })
   }
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/v0/tracks")
+      .then(res => setTracks(res.data))
+  }, [])
 
   const validate = () => {
     let first_name_error = ""
@@ -135,15 +143,21 @@ const SignUp = props => {
       />
       <span>{formError.last_name_error}</span>
       <select
-        name="tracks_id"
-        value={newUser.tracks_id}
+        name="track_id"
+        value={newUser.track_id}
         noValidate
         onChange={newUserHandler}
       >
-        <option value={0}>Select Track:</option>
-        <option value={1}>Web Development</option>
+        <option value={0}>Select track:</option>
+        {tracks.map(track => {
+          return (
+            <option key={track.id} value={track.id}>
+              {track.title}
+            </option>
+          )
+        })}
       </select>
-      <span>{formError.tracks_id_error}</span>
+      <span>{formError.track_id_error}</span>
       <input
         name="email"
         value={newUser.email}
@@ -161,7 +175,7 @@ const SignUp = props => {
         onChange={newUserHandler}
         placeholder="Password"
       />
-      <span>{formError.password_error}</span>
+      <span>{formError.password}</span>
       <input
         name="confirm_password"
         value={newUser.confirm_password}
