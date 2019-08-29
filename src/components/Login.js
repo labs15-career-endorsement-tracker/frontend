@@ -19,7 +19,7 @@ const Login = props => {
   }
 
   return (
-    <div className="form-container">
+    <div className="login-container">
       <div className="warning-container">
         {error.errorCode && error.errorMessage ? (
           <div className="warned">
