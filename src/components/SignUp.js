@@ -28,6 +28,7 @@ const SignUp = props => {
   })
   const [tracks, setTracks] = useState([])
   const [serverError, setServerError] = useState({ message: '', name: '', statusCode: ''})
+  const [isServerError, setIsServerError] = useState(false)
 
   const newUserHandler = e => {
     setNewUser({
@@ -44,7 +45,8 @@ const SignUp = props => {
 
   useEffect(() => {
     setServerError(props.serverError)
-  }, [props.serverError])
+    setIsServerError(props.isServerError)
+  }, [props.serverError, props.isServerError])
   // console.log(serverError.response)
   
 
@@ -131,7 +133,7 @@ const SignUp = props => {
 
   return (
     <div className='form-con-wrapper'>
-        <div className={serverError ? 'server-error active' : 'server-error active'}>
+        <div className={isServerError ? 'server-error active' : 'server-error inactive'}>
           <p>Server Error:</p>
           <p>Type: {serverError.name}</p>
           <p>Code: {serverError.statusCode}</p>
@@ -238,7 +240,8 @@ const SignUp = props => {
 const mapStateToProps = state => {
   return {
     inProgress: state.signUpReducer.inProgress,
-    serverError: state.signUpReducer.serverError
+    serverError: state.signUpReducer.serverError,
+    isServerError: state.signUpReducer.isServerError
   }
 }
 
