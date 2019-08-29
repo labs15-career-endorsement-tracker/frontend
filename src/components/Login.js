@@ -1,6 +1,5 @@
 import React from "react"
 import axios from "axios"
-import { ToastContainer, toast } from "react-toastify"
 import { Formik } from "formik"
 import * as Yup from "yup"
 
@@ -41,14 +40,11 @@ const Login = () => {
             values,
             touched,
             errors,
-            dirty,
             isSubmitting,
             handleChange,
             handleBlur,
-            handleSubmit,
-            handleReset
+            handleSubmit
           } = props
-
           return (
             <form onSubmit={handleSubmit}>
               <label htmlFor="email" style={{ display: "block" }}>
