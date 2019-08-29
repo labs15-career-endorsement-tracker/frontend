@@ -1,20 +1,34 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
 import { Formik } from "formik"
-import Notifications, { notify } from "react-notify-toast"
 import * as Yup from "yup"
 
 import "../styles/index.scss"
 
 const Login = () => {
+  const [error, setError] = useState({
+    errorCode: "",
+    errorMessage: ""
+  })
+
   const handleError = err => {
-    notify.show(err, "error", 3000)
+    setError({
+      errorCode: err.response.data.statusCode,
+      errorMessage: err.response.data.message
+    })
   }
 
   return (
     <div className="form-container">
+      <div className="warning-container">
+        {error.errorCode && error.errorMessage ? (
+          <div className="warned">
+            <h2>Oh no. :/ {error.errorCode}</h2>
+            <h6>Server says... {error.errorMessage}!</h6>
+          </div>
+        ) : null}
+      </div>
       <div className="brand">
-        <Notifications />
         <h1>ENDRSD</h1>
       </div>
       <Formik
@@ -29,7 +43,7 @@ const Login = () => {
             })
             .catch(err => {
               setSubmitting(false)
-              handleError(err.response.data.message)
+              handleError(err)
               resetForm()
             })
         }}
