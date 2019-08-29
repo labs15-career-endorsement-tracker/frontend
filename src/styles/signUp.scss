@@ -14,7 +14,11 @@
 }
 
 .title {
+    margin-left: 1em;
+}
 
+.sub-title {
+    font-size: .85rem;
 }
 
 .form-input-wrap {
@@ -29,12 +33,14 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    text-align-last: center;
 }
 
 .form-input {
   font-family: "Roboto", sans-serif;
-//   margin: 0.4rem;
-//   padding: 0.5rem;
+  text-align: center;
+  margin: 0.4rem;
+  padding: 0.5rem;
   width: 100%;
   border: none;
 }

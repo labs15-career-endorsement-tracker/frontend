@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import { createUser } from "../actions"
 import axios from "axios"
+import { Link } from 'react-router-dom'
 
 import '../styles/index.scss'
 
@@ -143,7 +144,8 @@ const SignUp = props => {
         <form 
           noValidate 
           onSubmit={handleSubmit}>
-          <h2 className ='title'>Sign Up</h2>
+          <h2 className='title'>Sign Up</h2>
+          <span className='title sub-title'>Already have an account? <Link to='/'>Login</Link></span>
           <div className='form-input-wrap'>
             <label className='form-label'>First Name<span className='form-error'>{formError.first_name_error}</span></label>
             <input
@@ -153,6 +155,7 @@ const SignUp = props => {
             type="text"
             noValidate
             onChange={newUserHandler}
+            placeholder='First Name'
           />
           </div>
           
@@ -165,6 +168,7 @@ const SignUp = props => {
             type="text"
             noValidate
             onChange={newUserHandler}
+            placeholder='Last Name'
           />
           </div>
           
@@ -178,7 +182,7 @@ const SignUp = props => {
             noValidate
             onChange={newUserHandler}
           >
-            <option value={0}></option>
+            <option value={0}>Select Track:</option>
               {tracks.map(track => {
                 return (
                   <option key={track.id} value={(track.id)}>
@@ -198,6 +202,7 @@ const SignUp = props => {
             type="email"
             noValidate
             onChange={newUserHandler}
+            placeholder='Email'
           />
           </div>
           
@@ -210,6 +215,7 @@ const SignUp = props => {
             type="password"
             noValidate
             onChange={newUserHandler}
+            placeholder='Password'
           />
           </div>
           
@@ -222,6 +228,7 @@ const SignUp = props => {
             type="password"
             noValidate
             onChange={newUserHandler}
+            placeholder='Confirm Password'
           />
           </div>
           
