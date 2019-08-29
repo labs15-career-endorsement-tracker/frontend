@@ -4,18 +4,7 @@ import { Link } from "react-router-dom"
 import "../styles/index.scss"
 
 const Navigation = () => {
-  return (
-    <nav className="nav">
-      <ul className="links">
-        <Link to="/" className="link">
-          Login
-        </Link>
-        <Link to="/sign-up" className="link">
-          Sign Up
-        </Link>
-      </ul>
-    </nav>
-  )
+  return <nav className="nav"></nav>
 }
 
 export default Navigation
