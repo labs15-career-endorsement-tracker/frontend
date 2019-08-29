@@ -1,66 +1,66 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-.form-container {
-  width: 400px;
-  height: auto;
-  margin: 0 auto;
-  border: 2px solid lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 500px;
-  font-family: "Roboto", sans-serif;
-}
+// .form-container {
+//   width: 400px;
+//   height: auto;
+//   margin: 0 auto;
+//   border: 2px solid lightgray;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   min-height: 500px;
+//   font-family: "Roboto", sans-serif;
+// }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+// form {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+// }
 
-input {
-  font-family: "Roboto", sans-serif;
-  margin: 0.4rem;
-  padding: 0.5rem;
-  width: 100%;
-  border-radius: 5px;
-  border: 2px solid lightgray;
-}
+// input {
+//   font-family: "Roboto", sans-serif;
+//   margin: 0.4rem;
+//   padding: 0.5rem;
+//   width: 100%;
+//   border-radius: 5px;
+//   border: 2px solid lightgray;
+// }
 
-button {
-  font-family: "Roboto", sans-serif;
-  width: 70%;
-  padding: 0.75rem;
-  border-radius: 7px;
-  border: 0;
-  background: #19ae9f;
-  color: #ffffff;
-  font-weight: 800;
-  margin: 1.5rem;
-}
+// button {
+//   font-family: "Roboto", sans-serif;
+//   width: 70%;
+//   padding: 0.75rem;
+//   border-radius: 7px;
+//   border: 0;
+//   background: #19ae9f;
+//   color: #ffffff;
+//   font-weight: 800;
+//   margin: 1.5rem;
+// }
 
-h1 {
-  color: #19ae9f;
-  font-weight: 300;
-}
+// h1 {
+//   color: #19ae9f;
+//   font-weight: 300;
+// }
 
-.error-container {
-  font-family: "Roboto", sans-serif;
-  min-height: 50px;
-}
+// .error-container {
+//   font-family: "Roboto", sans-serif;
+//   min-height: 50px;
+// }
 
-.label {
-  font-family: "Roboto", sans-serif;
-}
+// .label {
+//   font-family: "Roboto", sans-serif;
+// }
 
-h1 {
-  font-size: 3.2rem;
-  padding: 3rem;
-}
+// h1 {
+//   font-size: 3.2rem;
+//   padding: 3rem;
+// }
 
-.input-feedback {
-  color: red;
-  font-weight: 800;
-}
+// .input-feedback {
+//   color: red;
+//   font-weight: 800;
+// }

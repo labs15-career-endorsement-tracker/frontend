@@ -1,68 +1,79 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-.form-container {
-  max-width: 500px;
-  height: auto;
-  margin: 0 auto;
-  border: 2px solid lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 500px;
-  font-family: "Roboto", sans-serif;
+.form-con-wrapper {
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid $invalid;
+}
+.signUp-form-container {
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
 }
 
-.form-inuput-wrap {
-    border-bottom: 2px solid lightgrey;
+.title {
+
+}
+
+.form-input-wrap {
+    margin: 2em 0em;
+    border-bottom: 2px solid $lightgrey;
 }
 
 #selector {
-    border: none;
-    border-bottom: 1px solid black;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .form-input {
   font-family: "Roboto", sans-serif;
-  margin: 0.4rem;
-  padding: 0.5rem;
+//   margin: 0.4rem;
+//   padding: 0.5rem;
   width: 100%;
   border: none;
-  border-bottom: 2px solid lightgray;
 }
 
-button {
-  font-family: "Roboto", sans-serif;
-  width: 70%;
-  padding: 0.75rem;
-  border-radius: 7px;
-  border: 0;
-  background: #19ae9f;
-  color: #ffffff;
-  font-weight: 800;
-  margin: 1.5rem;
+.form-label {
+    font-family: "Roboto", sans-serif;
+}
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    // border: 1px solid blue;
+    margin: 3em 0;
+}
+.submit-btn{
+    font-family: "Roboto", sans-serif;
+    width: 70%;
+    padding: .85em;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 0 .1em #003326;
+    color: $light-font;
+    font-size: 1.3rem;
+    background-image: linear-gradient(
+        45deg,
+        #00cc99,
+        #00b386,
+        #009973,
+        #008060,
+        #00664d,
+        #004d39
+    );
 }
 
-h1 {
-  color: #19ae9f;
-  font-weight: 300;
-}
+// .error-container {
+//     font-family: "Roboto", sans-serif;
+//     min-height: 50px;
+// }
 
-.error-container {
-  font-family: "Roboto", sans-serif;
-  min-height: 50px;
-}
-
-.label {
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  font-size: 3.2rem;
-  padding: 3rem;
-}
-
-.input-feedback {
-  color: red;
-  font-weight: 800;
+.form-error {
+    font-size: 1rem;
+    color: $invalid;
 }

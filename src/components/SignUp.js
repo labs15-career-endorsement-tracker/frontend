@@ -50,24 +50,23 @@ const SignUp = props => {
     let confirm_password_error = ""
 
     if (!newUser.first_name) {
-      first_name_error = "First Name is required"
+      first_name_error = " is required"
     }
     if (!newUser.last_name) {
-      last_name_error = "Last name is required"
+      last_name_error = " is required"
     }
     if (newUser.tracks_id === 0) {
-      tracks_id_error = "Please select a track"
+      tracks_id_error = " Please select a track"
     }
     if (!emailRegex.test(newUser.email)) {
-      email_error = "Must be a valid email address"
+      email_error = " address must be valid"
     }
     if (newUser.password.length < 8 || newUser.password.length > 16) {
-      password_error = "Password must be 8 to 16 characters"
+      password_error = " must be 8 to 16 characters"
     }
     if (newUser.confirm_password !== newUser.password) {
-      confirm_password_error = "Password must match"
+      confirm_password_error = " must match"
     }
-
     if (
       first_name_error ||
       last_name_error ||
@@ -124,94 +123,102 @@ const SignUp = props => {
   }
 
   return (
-    <div className='form-container'>
-      <form noValidate onSubmit={handleSubmit}>
-        <h2 className ='form-title' >Sign Up</h2>
-        <div className='form-input-wrap'>
-          <input
-          className='form-input'
-          name="first_name"
-          value={newUser.first_name}
-          type="text"
-          noValidate
-          onChange={newUserHandler}
-          placeholder="First Name"
-        />
-        </div>
-        <span className='form-error'>{formError.first_name_error}</span>
-        <div className='form-input-wrap'>
-          <input
-          className='form-input'
-          name="last_name"
-          value={newUser.last_name}
-          type="text"
-          noValidate
-          onChange={newUserHandler}
-          placeholder="Last Name"
-        />
-        </div>
-        <span className='form-error'>{formError.last_name_error}</span>
-        <div className='form-input-wrap'>
-          <select
-          id='selector'
-          className='form-input'
-          name="tracks_id"
-          value={newUser.tracks_id}
-          noValidate
-          onChange={newUserHandler}
-        >
-          <option value={0}>Select track:</option>
-            {tracks.map(track => {
-              return (
-                <option key={track.id} value={(track.id)}>
-                  {track.title}
-                </option>
-              )
-            })}
-          </select>
-        </div>
-        <span className='form-error'>{formError.tracks_id_error}</span>
-        <div className='form-input-wrap'>
-          <input
-          className='form-input'
-          name="email"
-          value={newUser.email}
-          type="email"
-          noValidate
-          onChange={newUserHandler}
-          placeholder="Email"
-        />
-        </div>
-        <span className='form-error'>{formError.email_error}</span>
-        <div className='form-input-wrap'>
-          <input
-          className='form-input'
-          name="password"
-          value={newUser.password}
-          type="password"
-          noValidate
-          onChange={newUserHandler}
-          placeholder="Password"
-        />
-        </div>
-        <span className='form-error'>{formError.password_error}</span>
-        <div className='form-input-wrap'>
-          <input
-          className='form-input'
-          name="confirm_password"
-          value={newUser.confirm_password}
-          type="password"
-          noValidate
-          onChange={newUserHandler}
-          placeholder="Confirm Password"
-        />
-        </div>
-        <span className='form-error'>{formError.confirm_password_error}</span>
-        <div className='form-btn'>
-          <button>Sign Up</button>
-        </div>
-      </form>
+    <div className='form-con-wrapper'>
+        <div className='signUp-form-container'>
+        <form 
+          noValidate 
+          onSubmit={handleSubmit}>
+          <h2 className ='title' >Sign Up</h2>
+          <div className='form-input-wrap'>
+            <label className='form-label'>First Name<span className='form-error'>{formError.first_name_error}</span></label>
+            <input
+            className='form-input'
+            name="first_name"
+            value={newUser.first_name}
+            type="text"
+            noValidate
+            onChange={newUserHandler}
+          />
+          </div>
+          
+          <div className='form-input-wrap'>
+            <label className='form-label'>Last Name<span className='form-error'>{formError.last_name_error}</span></label>
+            <input
+            className='form-input'
+            name="last_name"
+            value={newUser.last_name}
+            type="text"
+            noValidate
+            onChange={newUserHandler}
+          />
+          </div>
+          
+          <div className='form-input-wrap'>
+            <label className='form-label'>Select track<span className='form-error'>{formError.tracks_id_error}</span></label>
+            <select
+            id='selector'
+            className='form-input'
+            name="tracks_id"
+            value={newUser.tracks_id}
+            noValidate
+            onChange={newUserHandler}
+          >
+            <option value={0}></option>
+              {tracks.map(track => {
+                return (
+                  <option key={track.id} value={(track.id)}>
+                    {track.title}
+                  </option>
+                )
+              })}
+            </select>
+          </div>
+          
+          <div className='form-input-wrap'>
+            <label className='form-label'>Email<span className='form-error'>{formError.email_error}</span></label>
+            <input
+            className='form-input'
+            name="email"
+            value={newUser.email}
+            type="email"
+            noValidate
+            onChange={newUserHandler}
+          />
+          </div>
+          
+          <div className='form-input-wrap'>
+            <label className='form-label'>Password<span className='form-error'>{formError.password_error}</span></label>
+            <input
+            className='form-input'
+            name="password"
+            value={newUser.password}
+            type="password"
+            noValidate
+            onChange={newUserHandler}
+          />
+          </div>
+          
+          <div className='form-input-wrap'>
+            <label className='form-label'>Confirm Password<span className='form-error'>{formError.confirm_password_error}</span></label>
+            <input
+            className='form-input'
+            name="confirm_password"
+            value={newUser.confirm_password}
+            type="password"
+            noValidate
+            onChange={newUserHandler}
+          />
+          </div>
+          
+          <div className='form-btn'>
+            <div className='btn-wrapper'>
+              <button className='submit-btn'>Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+    
     )
 }
 
