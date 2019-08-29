@@ -21,7 +21,7 @@ export const createUser = newUser => dispatch => {
     .catch(err =>
       dispatch({
         type: SIGNUP_FAILURE,
-        payload: err
+        payload: err.response.data
       })
     )
 }

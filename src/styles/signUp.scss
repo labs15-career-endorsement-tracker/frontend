@@ -68,10 +68,25 @@
     );
 }
 
-// .error-container {
-//     font-family: "Roboto", sans-serif;
-//     min-height: 50px;
-// }
+.server-error {
+    margin: 1em auto;
+    font-family: "Roboto", sans-serif;
+    width: 80%;
+    border: 1px solid white;
+    flex-direction: column;
+    padding: 1em;
+    background: red;
+}
+
+
+.active {
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
+
 
 .form-error {
     font-size: 1rem;

@@ -2,7 +2,7 @@ import { SIGNUP_IN_PROGRESS, SIGNUP_SUCCESS, SIGNUP_FAILURE } from "../actions"
 
 const initialState = {
   inProgress: false,
-  serverError: ""
+  serverError: {}
 }
 
 export const signUpReducer = (state = initialState, action) => {

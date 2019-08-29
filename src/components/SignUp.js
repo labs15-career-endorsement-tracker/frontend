@@ -27,6 +27,7 @@ const SignUp = props => {
     confirm_password_error: ""
   })
   const [tracks, setTracks] = useState([])
+  const [serverError, setServerError] = useState({ message: '', name: '', statusCode: ''})
 
   const newUserHandler = e => {
     setNewUser({
@@ -40,6 +41,12 @@ const SignUp = props => {
       .get("http://localhost:5000/api/v0/tracks")
       .then(res => setTracks(res.data))
   }, [])
+
+  useEffect(() => {
+    setServerError(props.serverError)
+  }, [props.serverError])
+  // console.log(serverError.response)
+  
 
   const validate = () => {
     let first_name_error = ""
@@ -124,11 +131,17 @@ const SignUp = props => {
 
   return (
     <div className='form-con-wrapper'>
+        <div className={serverError ? 'server-error active' : 'server-error active'}>
+          <p>Server Error:</p>
+          <p>Type: {serverError.name}</p>
+          <p>Code: {serverError.statusCode}</p>
+          <p>Message: {serverError.message}</p>
+        </div>
         <div className='signUp-form-container'>
         <form 
           noValidate 
           onSubmit={handleSubmit}>
-          <h2 className ='title' >Sign Up</h2>
+          <h2 className ='title'>Sign Up</h2>
           <div className='form-input-wrap'>
             <label className='form-label'>First Name<span className='form-error'>{formError.first_name_error}</span></label>
             <input
@@ -224,7 +237,8 @@ const SignUp = props => {
 
 const mapStateToProps = state => {
   return {
-    inProgress: state.signUpReducer.inProgress
+    inProgress: state.signUpReducer.inProgress,
+    serverError: state.signUpReducer.serverError
   }
 }
 
