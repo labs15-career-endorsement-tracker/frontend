@@ -143,15 +143,15 @@ const SignUp = props => {
       />
       <span>{formError.last_name_error}</span>
       <select
-        name="track_id"
-        value={newUser.track_id}
+        name="tracks_id"
+        value={newUser.tracks_id}
         noValidate
         onChange={newUserHandler}
       >
         <option value={0}>Select track:</option>
         {tracks.map(track => {
           return (
-            <option key={track.id} value={track.id}>
+            <option key={track.id} value={(track.id)}>
               {track.title}
             </option>
           )
