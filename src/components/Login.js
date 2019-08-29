@@ -116,7 +116,7 @@ const Login = props => {
                 )}
               </div>
               <button type="submit" disabled={isSubmitting}>
-                Log In
+                Sign In
               </button>
             </form>
           )
