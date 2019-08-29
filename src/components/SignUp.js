@@ -126,8 +126,10 @@ const SignUp = props => {
   return (
     <div className='form-container'>
       <form noValidate onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
-        <input
+        <h2 className ='form-title' >Sign Up</h2>
+        <div className='form-input-wrap'>
+          <input
+          className='form-input'
           name="first_name"
           value={newUser.first_name}
           type="text"
@@ -135,8 +137,11 @@ const SignUp = props => {
           onChange={newUserHandler}
           placeholder="First Name"
         />
-        <span>{formError.first_name_error}</span>
-        <input
+        </div>
+        <span className='form-error'>{formError.first_name_error}</span>
+        <div className='form-input-wrap'>
+          <input
+          className='form-input'
           name="last_name"
           value={newUser.last_name}
           type="text"
@@ -144,24 +149,31 @@ const SignUp = props => {
           onChange={newUserHandler}
           placeholder="Last Name"
         />
-        <span>{formError.last_name_error}</span>
-        <select
+        </div>
+        <span className='form-error'>{formError.last_name_error}</span>
+        <div className='form-input-wrap'>
+          <select
+          id='selector'
+          className='form-input'
           name="tracks_id"
           value={newUser.tracks_id}
           noValidate
           onChange={newUserHandler}
         >
           <option value={0}>Select track:</option>
-          {tracks.map(track => {
-            return (
-              <option key={track.id} value={(track.id)}>
-                {track.title}
-              </option>
-            )
-          })}
-        </select>
-        <span>{formError.track_id_error}</span>
-        <input
+            {tracks.map(track => {
+              return (
+                <option key={track.id} value={(track.id)}>
+                  {track.title}
+                </option>
+              )
+            })}
+          </select>
+        </div>
+        <span className='form-error'>{formError.tracks_id_error}</span>
+        <div className='form-input-wrap'>
+          <input
+          className='form-input'
           name="email"
           value={newUser.email}
           type="email"
@@ -169,8 +181,11 @@ const SignUp = props => {
           onChange={newUserHandler}
           placeholder="Email"
         />
-        <span>{formError.email_error}</span>
-        <input
+        </div>
+        <span className='form-error'>{formError.email_error}</span>
+        <div className='form-input-wrap'>
+          <input
+          className='form-input'
           name="password"
           value={newUser.password}
           type="password"
@@ -178,8 +193,11 @@ const SignUp = props => {
           onChange={newUserHandler}
           placeholder="Password"
         />
-        <span>{formError.password_error}</span>
-        <input
+        </div>
+        <span className='form-error'>{formError.password_error}</span>
+        <div className='form-input-wrap'>
+          <input
+          className='form-input'
           name="confirm_password"
           value={newUser.confirm_password}
           type="password"
@@ -187,8 +205,11 @@ const SignUp = props => {
           onChange={newUserHandler}
           placeholder="Confirm Password"
         />
-        <span>{formError.confirm_password_error}</span>
-        <button>Sign Up</button>
+        </div>
+        <span className='form-error'>{formError.confirm_password_error}</span>
+        <div className='form-btn'>
+          <button>Sign Up</button>
+        </div>
       </form>
     </div>
     )

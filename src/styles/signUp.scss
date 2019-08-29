@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 .form-container {
-  width: 400px;
+  max-width: 500px;
   height: auto;
   margin: 0 auto;
   border: 2px solid lightgray;
@@ -13,20 +13,22 @@
   font-family: "Roboto", sans-serif;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.form-inuput-wrap {
+    border-bottom: 2px solid lightgrey;
 }
 
-input {
+#selector {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.form-input {
   font-family: "Roboto", sans-serif;
   margin: 0.4rem;
   padding: 0.5rem;
   width: 100%;
-  border-radius: 5px;
-  border: 2px solid lightgray;
+  border: none;
+  border-bottom: 2px solid lightgray;
 }
 
 button {
