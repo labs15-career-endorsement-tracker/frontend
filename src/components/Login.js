@@ -23,8 +23,8 @@ const Login = props => {
       <div className="warning-container">
         {error.errorCode && error.errorMessage ? (
           <div className="warned">
-            <h2>Oh no. :/ {error.errorCode}</h2>
-            <h6>Server says... {error.errorMessage}!</h6>
+            <h2>Status {error.errorCode}</h2>
+            <h6>{error.errorMessage}. Please try again.</h6>
           </div>
         ) : null}
       </div>
