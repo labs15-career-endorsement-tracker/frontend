@@ -16,10 +16,13 @@
 .title {
     margin-left: .5em;
     font-size: 1.5rem;
+    font-family: "Space Mono";
+    color: $form-label;
 }
 
 .sub-title {
     font-size: .85rem;
+    font-family: "Lato"
 }
 
 .form-input-wrap {
@@ -39,7 +42,7 @@
 }
 
 .form-input {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   text-align: center;
   height: 3em;
   width: 100%;
@@ -47,7 +50,8 @@
 }
 
 .form-label {
-    font-family: "Roboto", sans-serif;
+    font-family: "Space Mono", sans-serif;
+    color: $form-label;
 }
 .btn-wrapper {
     display: flex;
@@ -63,6 +67,7 @@
     box-shadow: 0 0 .1em #003326;
     color: $light-font;
     font-size: 1.3rem;
+    cursor: pointer;
     background-image: linear-gradient(
         45deg,
         #00cc99,
