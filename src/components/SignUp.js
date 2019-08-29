@@ -144,8 +144,10 @@ const SignUp = props => {
         <form 
           noValidate 
           onSubmit={handleSubmit}>
-          <h2 className='title'>Sign Up</h2>
-          <span className='title sub-title'>Already have an account? <Link to='/'>Login</Link></span>
+          <div className='title'>
+            <h1>Sign Up</h1>
+            <span className='sub-title'>Already have an account? <Link to='/'>Login</Link></span>
+          </div>
           <div className='form-input-wrap'>
             <label className='form-label'>First Name<span className='form-error'>{formError.first_name_error}</span></label>
             <input

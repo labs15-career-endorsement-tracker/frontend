@@ -4,7 +4,7 @@
     max-width: 500px;
     height: auto;
     margin: 0 auto;
-    border: 2px solid $invalid;
+
 }
 .signUp-form-container {
     margin: 0 1em;
@@ -14,7 +14,8 @@
 }
 
 .title {
-    margin-left: 1em;
+    margin-left: .5em;
+    font-size: 1.5rem;
 }
 
 .sub-title {
@@ -22,7 +23,7 @@
 }
 
 .form-input-wrap {
-    margin: 2em 0em;
+    margin: 3em 0em;
     border-bottom: 2px solid $lightgrey;
 }
 
@@ -34,13 +35,13 @@
     -moz-box-shadow: none;
     box-shadow: none;
     text-align-last: center;
+    height: 3em;
 }
 
 .form-input {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  margin: 0.4rem;
-  padding: 0.5rem;
+  height: 3em;
   width: 100%;
   border: none;
 }
@@ -51,7 +52,6 @@
 .btn-wrapper {
     display: flex;
     justify-content: center;
-    // border: 1px solid blue;
     margin: 3em 0;
 }
 .submit-btn{
