@@ -1,28 +1,51 @@
-import React from "react"
+import React, { useState } from "react"
 import axios from "axios"
 import { Formik } from "formik"
 import * as Yup from "yup"
 
-import "react-toastify/dist/ReactToastify.min.css"
 import "../styles/index.scss"
 
-const Login = () => {
+const Login = props => {
+  const [error, setError] = useState({
+    errorCode: "",
+    errorMessage: ""
+  })
+
+  const handleError = err => {
+    setError({
+      errorCode: err.response.data.statusCode,
+      errorMessage: err.response.data.message
+    })
+  }
+
   return (
     <div className="form-container">
+      <div className="warning-container">
+        {error.errorCode && error.errorMessage ? (
+          <div className="warned">
+            <h2>Status {error.errorCode}</h2>
+            <h6>{error.errorMessage}. Please try again.</h6>
+          </div>
+        ) : null}
+      </div>
       <div className="brand">
         <h1>ENDRSD</h1>
       </div>
       <Formik
         initialValues={{ email: "", password: "" }}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          setSubmitting(true)
           axios
             .post("/api/v0/login", values)
             .then(res => {
               localStorage.setItem("token", res.data.token)
-              console.log(res.data)
+              resetForm()
+              props.history.push("/profile")
             })
             .catch(err => {
-              console.log(err)
+              setSubmitting(false)
+              handleError(err)
+              resetForm()
             })
         }}
         validationSchema={Yup.object().shape({
@@ -48,11 +71,11 @@ const Login = () => {
           return (
             <form onSubmit={handleSubmit}>
               <label htmlFor="email" style={{ display: "block" }}>
-                email address
+                Email Address
               </label>
               <input
                 id="email"
-                placeholder="Enter your email"
+                placeholder="you@email.com"
                 type="text"
                 value={values.email}
                 onChange={handleChange}
@@ -69,7 +92,7 @@ const Login = () => {
                 )}
               </div>
               <label htmlFor="password" style={{ display: "block" }}>
-                password
+                Password
               </label>
               <input
                 id="password"
@@ -90,7 +113,7 @@ const Login = () => {
                 )}
               </div>
               <button type="submit" disabled={isSubmitting}>
-                Log In
+                Sign In
               </button>
             </form>
           )

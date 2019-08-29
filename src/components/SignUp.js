@@ -151,7 +151,7 @@ const SignUp = props => {
         <option value={0}>Select track:</option>
         {tracks.map(track => {
           return (
-            <option key={track.id} value={(track.id)}>
+            <option key={track.id} value={track.id}>
               {track.title}
             </option>
           )
