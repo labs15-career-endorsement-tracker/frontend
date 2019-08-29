@@ -5,7 +5,8 @@ import * as Yup from "yup"
 
 import "../styles/index.scss"
 
-const Login = () => {
+const Login = (props) => {
+  console.log('********-****', props)
   const [error, setError] = useState({
     errorCode: "",
     errorMessage: ""
@@ -40,8 +41,10 @@ const Login = () => {
             .then(res => {
               localStorage.setItem("token", res.data.token)
               resetForm()
+              props.history.push('/profile')
             })
             .catch(err => {
+              console.log('**************', err.response.data)
               setSubmitting(false)
               handleError(err)
               resetForm()
