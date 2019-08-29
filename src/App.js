@@ -6,7 +6,7 @@ import "./styles/index.scss"
 import SignUp from "./components/SignUp"
 import Login from "./components/Login"
 import Navigation from "./components/Navigation"
-import Dashboard from "./components/Dashboard"
+import Profile from "./components/Profile"
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
       <Navigation />
       <Route exact path="/" component={Login} />
       <Route path="/sign-up" component={SignUp} />
-      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/profile" component={Profile} />
     </div>
   )
 }
