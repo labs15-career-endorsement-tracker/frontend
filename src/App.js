@@ -1,33 +1,18 @@
-import React, { Component } from "react"
-import axios from "axios"
-import "./App.css"
+import React from "react"
+import { Route } from "react-router-dom"
 
-export default class App extends Component {
-  state = {
-    users: []
-  }
+import "./styles/index.scss"
 
-  componentDidMount() {
-    axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      .then(res => {
-        const users = res.data
-        this.setState({ users })
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
+import SignUp from "./components/SignUp"
+import Login from "./components/Login"
 
-  render() {
-    return (
-      <div className="container">
-        {this.state.users.map(i => (
-          <div key={i.id} className="user-card">
-            <h1>{i.name}</h1>
-          </div>
-        ))}
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div className="container">
+      <Route exact path="/" component={Login} />
+      <Route path="/sign-up" component={SignUp} />
+    </div>
+  )
 }
+
+export default App
