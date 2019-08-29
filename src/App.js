@@ -5,12 +5,10 @@ import "./styles/index.scss"
 
 import SignUp from "./components/SignUp"
 import Login from "./components/Login"
-import Navigation from "./components/Navigation"
 
 const App = () => {
   return (
     <div className="container">
-      <Navigation />
       <Route exact path="/" component={Login} />
       <Route path="/sign-up" component={SignUp} />
     </div>
