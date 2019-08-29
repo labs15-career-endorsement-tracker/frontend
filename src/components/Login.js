@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import axios from "axios"
 import { Formik } from "formik"
 import * as Yup from "yup"
 
 import "../styles/index.scss"
 
-const Login = (props) => {
-  console.log('********-****', props)
+const Login = props => {
   const [error, setError] = useState({
     errorCode: "",
     errorMessage: ""
@@ -41,10 +40,9 @@ const Login = (props) => {
             .then(res => {
               localStorage.setItem("token", res.data.token)
               resetForm()
-              props.history.push('/profile')
+              props.history.push("/profile")
             })
             .catch(err => {
-              console.log('**************', err.response.data)
               setSubmitting(false)
               handleError(err)
               resetForm()
