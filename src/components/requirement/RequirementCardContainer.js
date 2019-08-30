@@ -11,7 +11,7 @@ const RequirementCardContainer = (props) => {
     name: "",
     statusCode: ""
   })
-  console.log(requirements)
+  console.log(requirements.map(req => req.id))
   
   useEffect(()=> {
     props.getRequirements()
@@ -26,6 +26,9 @@ const RequirementCardContainer = (props) => {
   return (
     <div className="requirement-card-container">
         <h1>Requirements</h1>
+        {/* {requirements.map(reg => 
+          <ReqCard key={reg.id} reg={reg} />
+        )} */}
     </div>
   )
 }
