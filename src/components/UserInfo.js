@@ -14,9 +14,13 @@ const UserInfo = () => {
             })
     }, [])
 
+    const todayDate = new Date().toDateString()
+    console.log(todayDate)
+
     return (
         <div className='userInfo-container'>
-            <h1>Welcome dude who's name is... {user.first_name}</h1>
+            <span className='date'>{todayDate}</span>
+            <h2 className='welcome-msg'>Let's get to work {user.first_name}</h2>
         </div>
     )
 }
