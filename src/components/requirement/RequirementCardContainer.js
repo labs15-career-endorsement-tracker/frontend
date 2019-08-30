@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react"
 
-import ReqCard from './ReqCard'
+import ReqCard from "./ReqCard"
 
-import { getRequirements } from '../../actions'
-import { connect } from 'react-redux'
+import { getRequirements } from "../../actions"
+import { connect } from "react-redux"
 
-const RequirementCardContainer = (props) => {
-
+const RequirementCardContainer = props => {
   const [requirements, setRequirements] = useState([])
   const [isServerError, setIsServerError] = useState(false)
   const [serverError, setServerError] = useState({
@@ -14,8 +13,8 @@ const RequirementCardContainer = (props) => {
     name: "",
     statusCode: ""
   })
-  
-  useEffect(()=> {
+
+  useEffect(() => {
     props.getRequirements()
   }, [])
 
@@ -27,16 +26,16 @@ const RequirementCardContainer = (props) => {
 
   return (
     <div className="requirement-card-container">
-        <div className='component-title'>
-          <h1>Requirements</h1>
+      <div className="component-title">
+        <h1>Requirements</h1>
+      </div>
+      <div className="req-card-area">
+        <div className="req-card">
+          {requirements.map(reg => (
+            <ReqCard key={reg.id} requirement={reg} />
+          ))}
         </div>
-        <div className='req-card-area'>
-          <div className='req-card'>
-            {requirements.map(reg => 
-              <ReqCard key={reg.id} requirement={reg} />
-            )}
-          </div>
-        </div>
+      </div>
     </div>
   )
 }
@@ -51,6 +50,6 @@ const mapStateToProps = state => {
 }
 
 export default connect(
-  mapStateToProps, 
+  mapStateToProps,
   { getRequirements }
 )(RequirementCardContainer)

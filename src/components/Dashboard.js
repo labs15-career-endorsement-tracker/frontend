@@ -1,6 +1,6 @@
 import React from "react"
 import UserInfo from "./UserInfo"
-import RequirementCardContainer from "./requirement/RequirementCardContainer";
+import RequirementCardContainer from "./requirement/RequirementCardContainer"
 
 const Dashboard = () => {
   return (
