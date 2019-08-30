@@ -2,8 +2,10 @@ import React, { useState } from "react"
 import axios from "axios"
 import { Formik } from "formik"
 import * as Yup from "yup"
+import { Link } from "react-router-dom";
 
 import "../styles/index.scss"
+import { domainToASCII } from "url";
 
 const Login = props => {
   const [error, setError] = useState({
@@ -21,16 +23,21 @@ const Login = props => {
   return (
     <div className="wrapper">
       <div className="login-container">
+        <div className="brand">
+          <h1>ENDRSD</h1>
+        </div>
         <div className="warning-container">
           {error.errorCode && error.errorMessage ? (
             <div className="warned">
               <h2>Status {error.errorCode}</h2>
               <h6>{error.errorMessage}. Please try again.</h6>
             </div>
-          ) : null}
-        </div>
-        <div className="brand">
-          <h1>ENDRSD</h1>
+          ) :
+            <div className="welcome">
+              <h2>Welcome back!</h2>
+              <h6>Don't have an account yet? <Link to="/sign-up"> Create an account</Link></h6>
+            </div>
+          }
         </div>
         <Formik
           initialValues={{ email: "", password: "" }}
