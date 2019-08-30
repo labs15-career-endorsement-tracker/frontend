@@ -5,7 +5,7 @@ import "../styles/index"
 const Dropdown = props => {
   return (
     <div className="dropdown-container">
-      <span></span>
+      <span>Logout</span>
     </div>
   )
 }
