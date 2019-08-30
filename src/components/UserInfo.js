@@ -6,10 +6,15 @@ const UserInfo = () => {
 
   useEffect(() => {
     const userId = localStorage.getItem("userId")
-    axios.get("http://localhost:5000/api/v0/users").then(res => {
-      const filtUser = res.data.filter(user => user.id === parseInt(userId))
-      setUser(filtUser[0])
-    })
+
+    if (userId) {
+      axios.get("http://localhost:5000/api/v0/users").then(res => {
+        const filtUser = res.data.filter(user => user.id === parseInt(userId))
+        setUser(filtUser[0])
+      })
+    } else {
+      return null
+    }
   }, [])
 
   const todayDate = new Date().toDateString()
