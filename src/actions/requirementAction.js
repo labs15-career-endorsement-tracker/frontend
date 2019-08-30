@@ -6,7 +6,7 @@ export const REQUIREMENT_FETCH_FAILURE = "REQUIREMENT_FETCH_FAILURE"
 
 
 export const getRequirements = () => dispatch => {
-    
+
     (function() {
         const token = localStorage.getItem('token');
         if (token) {
@@ -14,7 +14,7 @@ export const getRequirements = () => dispatch => {
         } else {
             axios.defaults.headers.common['Authorization'] = null;
             /*if setting null does not remove `Authorization` header then try     
-              delete axios.defaults.headers.common['Authorization'];
+            delete axios.defaults.headers.common['Authorization'];
             */
         }
     })();
