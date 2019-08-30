@@ -33,6 +33,5 @@ export const getRequirements = () => dispatch => {
       dispatch({
         type: REQUIREMENT_FETCH_FAILURE,
         payload: err.response.data
-      })
-    )
+      }))
 }
