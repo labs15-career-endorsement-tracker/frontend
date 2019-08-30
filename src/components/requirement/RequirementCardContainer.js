@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import ReqCard from "./ReqCard"
 
-import { getRequirements } from "../../actions"
+import { getRequirements, getStepsByTaskId } from "../../actions"
 import { connect } from "react-redux"
 
 const RequirementCardContainer = props => {
@@ -32,7 +32,7 @@ const RequirementCardContainer = props => {
       <div className="req-card-area">
         <div className="req-card">
           {requirements.map(reg => (
-            <ReqCard key={reg.id} requirement={reg} />
+            <ReqCard key={reg.id} requirement={reg} getStepsByTaskId={props.getStepsByTaskId}/>
           ))}
         </div>
       </div>
@@ -51,5 +51,8 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { getRequirements }
+  { 
+    getRequirements,
+    getStepsByTaskId
+  }
 )(RequirementCardContainer)

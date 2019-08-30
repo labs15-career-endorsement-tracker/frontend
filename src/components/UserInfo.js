@@ -13,7 +13,7 @@ const UserInfo = () => {
         setUser(filtUser[0])
       })
     } else {
-      return null
+      return
     }
   }, [])
 
