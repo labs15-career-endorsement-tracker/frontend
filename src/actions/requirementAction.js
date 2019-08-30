@@ -10,7 +10,7 @@ export const getRequirements = () => dispatch => {
     (function() {
         const token = localStorage.getItem('token');
         if (token) {
-            axios.defaults.headers.common['Authorization'] = token;
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
         } else {
             axios.defaults.headers.common['Authorization'] = null;
             /*if setting null does not remove `Authorization` header then try     
@@ -26,10 +26,10 @@ export const getRequirements = () => dispatch => {
         .get("http://localhost:5000/api/v0/requirements")
         .then(res => {
             console.log(res)
-            // dispatch({
-            //     type:REQUIREMENT_FETCH_SUCCESS,
-            //     payload: res.data
-            // })
+            dispatch({
+                type:REQUIREMENT_FETCH_SUCCESS,
+                payload: res.data
+            })
         })
         .catch(err =>
             dispatch({
