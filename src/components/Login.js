@@ -121,6 +121,9 @@ const Login = props => {
           }}
         </Formik>
       </div>
+      <div className="right-container">
+        <span></span>
+      </div>
     </div>
   )
 }

@@ -9,6 +9,7 @@
 #104753
 #F2F2F2
 #D2BCEA
+#062913
 
 Font: Barlow Condensed
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
@@ -16,18 +17,21 @@ Font: Barlow Condensed
 */
 
 .wrapper {
+  display: flex;
   width: 100%;
   height: 100vh;
-  background: white url("../img/bg.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.right-container {
+  width: 60%;
+  height: 100vh;
+  background: url("../img/bg.png");
+  background-size: cover;
 }
 
 .login-container {
-  width: 450px;
+  width: 40%;
   height: 100vh;
-  border-right: 2px solid lightgray;
   background: white;
   display: flex;
   justify-content: center;
