@@ -40,8 +40,9 @@ const Login = props => {
               .post("/api/v0/login", values)
               .then(res => {
                 localStorage.setItem("token", res.data.token)
+                localStorage.setItem("userId", res.data.userId)
                 resetForm()
-                props.history.push("/profile")
+                props.history.push("/")
               })
               .catch(err => {
                 setSubmitting(false)
