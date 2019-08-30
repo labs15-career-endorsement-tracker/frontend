@@ -147,7 +147,7 @@ const SignUp = props => {
             onSubmit={handleSubmit}>
             <div className='title'>
               <h1>Sign Up</h1>
-              <span className='sub-title'>Already have an account? <Link to='/'>Login</Link></span>
+              <span className='sub-title'>Already have an account? <Link to='/login'>Login</Link></span>
             </div>
             <div className='form-input-wrap'>
               <label className='form-label'>First Name<span className='form-error'>{formError.first_name_error}</span></label>
