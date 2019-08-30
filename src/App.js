@@ -5,7 +5,7 @@ import "./styles/index.scss"
 
 import SignUp from "./components/SignUp"
 import Login from "./components/Login"
-import Dashboard from './components/Dashboard'
+import Dashboard from "./components/Dashboard"
 
 const App = () => {
   return (
