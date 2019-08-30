@@ -75,23 +75,18 @@ Font: Barlow Condensed
       h2 {
         color: #104753;
         font-family: "Barlow Condensed";
-        font-style: normal;
         font-weight: 600;
-        font-size: 32px;
-        line-height: 38px;
+        font-size: 2.5rem;
+        padding: .2rem;
       }
       h6 {
-        font-family: Lato;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 1.8rem;
       }
     }
     form {
       label {
         color: #215c59;
-        font-weight: 800;
+        font-weight: 600;
         width: 85%;
         text-align: left;
       }
@@ -100,7 +95,8 @@ Font: Barlow Condensed
       justify-content: center;
       flex-direction: column;
       width: 85%;
-      font-family: "Space Mono";
+      font-family: "Barlow Condensed";
+      font-size: 1.2rem;
       text-align: left;
     }
     input {
@@ -124,18 +120,21 @@ Font: Barlow Condensed
       border-bottom: 4px solid red;
     }
     button {
-      font-family: "Space Mono", monospace;
+      font-family: "Barlow Condensed";
       width: 50%;
       padding: 1rem;
       box-shadow: 1px 1px solid black;
       border: 0;
       background: linear-gradient(
-        135deg,
-        rgba(53, 196, 189, 1) 0%,
-        rgba(50, 161, 156, 1) 100%
-      );
+        90deg,
+       #57EC75 0%,
+       #20CD8A 100%);
+       border-radius: 5px;
       color: #ffffff;
-      font-weight: 800;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      font-size: 1.8rem;
       margin: 1.5rem;
       cursor: pointer;
     }
@@ -152,19 +151,17 @@ Font: Barlow Condensed
       }
     }
     .error-container {
-      font-family: "Roboto", sans-serif;
       min-height: 50px;
       width: 85%;
       font-size: 0.75rem;
       font-weight: 800;
     }
-    .label {
-      font-family: "Roboto", sans-serif;
-    }
     .input-feedback {
+      font-family: "Barlow Condensed";
+      font-size: 1.2rem;
+      font-weight: 300;
       color: red;
       width: 100%;
-      font-weight: 800;
     }
   }
 
