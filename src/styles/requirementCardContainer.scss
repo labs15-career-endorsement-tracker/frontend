@@ -1,0 +1,20 @@
+.requirement-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // border: 1px solid red;
+
+    .component-title {
+        padding: 1em;
+    }
+
+    .req-card-area {
+        padding: 1em;
+    }
+
+    .req-card {
+        // border: 1px solid blue;
+        display: flex;
+        justify-content: space-around;
+    }
+}

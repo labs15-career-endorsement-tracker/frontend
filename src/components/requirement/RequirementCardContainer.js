@@ -27,10 +27,16 @@ const RequirementCardContainer = (props) => {
 
   return (
     <div className="requirement-card-container">
-        <h1>Requirements</h1>
-        {requirements.map(reg => 
-          <ReqCard key={reg.id} requirement={reg} />
-        )}
+        <div className='component-title'>
+          <h1>Requirements</h1>
+        </div>
+        <div className='req-card-area'>
+          <div className='req-card'>
+            {requirements.map(reg => 
+              <ReqCard key={reg.id} requirement={reg} />
+            )}
+          </div>
+        </div>
     </div>
   )
 }
