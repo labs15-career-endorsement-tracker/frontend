@@ -15,6 +15,7 @@ Font: Barlow Condensed
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
 
 */
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,700,900&display=swap');
 
 .wrapper {
   display: flex;
@@ -60,7 +61,21 @@ Font: Barlow Condensed
     }
   }
   .welcome {
-  
+    h2 {
+      color: #104753;
+      font-family: "Barlow Condensed";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38px;
+    }
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
   form {
     label {
@@ -114,15 +129,16 @@ Font: Barlow Condensed
     cursor: pointer;
   }
   h1 {
-    font-family: "Space Mono", monospace;
+    font-family: "Barlow Condensed";
     color: #215c59;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
     padding: 1.9rem;
     margin: 0.5rem;
   }
   .brand {
-    width: 85%;
+    // width: 85%;
+    display: flex;
   }
   .error-container {
     font-family: "Roboto", sans-serif;
