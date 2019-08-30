@@ -114,22 +114,23 @@ const SignUp = props => {
     if (valid) {
       props.createUser(userData)
 
-      setNewUser({
-        first_name: "",
-        last_name: "",
-        tracks_id: 0,
-        email: "",
-        password: "",
-        confirm_password: ""
-      })
-      setFormError({
-        first_name_error: "",
-        last_name_error: "",
-        tracks_id_error: "",
-        email_error: "",
-        password_error: "",
-        confirm_password_error: ""
-      })
+      // setNewUser({
+      //   first_name: "",
+      //   last_name: "",
+      //   tracks_id: 0,
+      //   email: "",
+      //   password: "",
+      //   confirm_password: ""
+      // })
+      // setFormError({
+      //   first_name_error: "",
+      //   last_name_error: "",
+      //   tracks_id_error: "",
+      //   email_error: "",
+      //   password_error: "",
+      //   confirm_password_error: ""
+      // })
+      props.history.push("/")
     }
   }
 
