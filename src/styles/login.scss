@@ -9,6 +9,7 @@
   flex-direction: column;
   min-height: 500px;
   font-family: "Roboto", sans-serif;
+
   .warning-container {
     width: 85%;
     margin: 1rem;
@@ -29,6 +30,12 @@
     }
   }
   form {
+    label {
+      color: #215c59;
+      font-weight: 800;
+      width: 85%;
+      text-align: left;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,48 +43,42 @@
     width: 85%;
     font-family: "Space Mono";
     text-align: left;
-    label {
-      color: #215c59;
-      font-weight: 800;
-      width: 85%;
-      text-align: left;
-    }
-    input {
-      font-family: "Lato", sans-serif;
-      color: #215c59;
-      font-size: 1rem;
-      font-weight: 900;
-      margin: 0.4rem;
-      padding: 0.75rem;
-      width: 100%;
-      border-radius: 5px 5px 0 0;
-      width: 85%;
-      border: 0;
-      border-bottom: 4px solid #215c59;
-      text-align: center;
-      &:focus {
-        outline: none;
-      }
-    }
-    button {
-      font-family: "Space Mono", monospace;
-      width: 50%;
-      padding: 1rem;
-      box-shadow: 1px 1px solid black;
-      border: 0;
-      background: linear-gradient(
-        135deg,
-        rgba(53, 196, 189, 1) 0%,
-        rgba(50, 161, 156, 1) 100%
-      );
-      color: #ffffff;
-      font-weight: 800;
-      margin: 1.5rem;
-      cursor: pointer;
+  }
+  input {
+    font-family: "Lato", sans-serif;
+    color: #215c59;
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 0.4rem;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    width: 85%;
+    border: 0;
+    border-bottom: 4px solid #215c59;
+    text-align: center;
+    &:focus {
+      outline: none;
     }
   }
   .error {
     border-bottom: 4px solid red;
+  }
+  button {
+    font-family: "Space Mono", monospace;
+    width: 50%;
+    padding: 1rem;
+    box-shadow: 1px 1px solid black;
+    border: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(53, 196, 189, 1) 0%,
+      rgba(50, 161, 156, 1) 100%
+    );
+    color: #ffffff;
+    font-weight: 800;
+    margin: 1.5rem;
+    cursor: pointer;
   }
   h1 {
     font-family: "Space Mono", monospace;
@@ -87,7 +88,6 @@
     padding: 1.9rem;
     margin: 0.5rem;
   }
-
   .brand {
     width: 85%;
   }
@@ -98,11 +98,9 @@
     font-size: 0.75rem;
     font-weight: 800;
   }
-
   .label {
     font-family: "Roboto", sans-serif;
   }
-
   .input-feedback {
     color: red;
     width: 100%;
