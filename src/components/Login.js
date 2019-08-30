@@ -2,10 +2,9 @@ import React, { useState } from "react"
 import axios from "axios"
 import { Formik } from "formik"
 import * as Yup from "yup"
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom"
 
 import "../styles/index.scss"
-import { domainToASCII } from "url";
 
 const Login = props => {
   const [error, setError] = useState({
@@ -32,12 +31,17 @@ const Login = props => {
               <h2>Status {error.errorCode}</h2>
               <h6>{error.errorMessage}. Please try again.</h6>
             </div>
-          ) :
+          ) : (
             <div className="welcome">
               <h2>Welcome back!</h2>
-              <h6>Don't have an account yet? <Link to="/sign-up"> Create an account</Link></h6>
+              <p>
+                Don't have an account yet?{" "}
+                <Link to="/sign-up" className="sign-up">
+                  Create an account
+                </Link>
+              </p>
             </div>
-          }
+          )}
         </div>
         <Formik
           initialValues={{ email: "", password: "" }}
@@ -79,12 +83,12 @@ const Login = props => {
             } = props
             return (
               <form onSubmit={handleSubmit}>
-                <label htmlFor="email" style={{ display: "block" }}>
+                <label htmlFor="Email" style={{ display: "block" }}>
                   Email Address
                 </label>
                 <input
                   id="email"
-                  placeholder="you@email.com"
+                  placeholder="your email address"
                   type="text"
                   value={values.email}
                   onChange={handleChange}
