@@ -10,8 +10,8 @@ import Dashboard from "./components/Dashboard"
 const App = () => {
   return (
     <>
-      <Route exact path="/" component={Dashboard} />
       <div className="container">
+        <Route exact path="/" component={Dashboard} />
         <Route path="/login" component={Login} />
         <Route path="/sign-up" component={SignUp} />
       </div>
