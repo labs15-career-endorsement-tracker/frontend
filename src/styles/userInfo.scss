@@ -1,4 +1,19 @@
 .userInfo-container {
-    display: none;
+    display: flex;
     margin: 0 auto;
+
+    .dateAndGreet {
+        padding: 1em;
+        border: 1px solid red;
+        font-family: "Barlow";
+    }
+
+    .date {
+        font-size: 1rem;
+        margin-bottom: 1em;
+    }
+
+    .welcome-msg {
+        font-size: 1.5rem;
+    }
 }

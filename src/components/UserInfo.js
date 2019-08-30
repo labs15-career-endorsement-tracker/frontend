@@ -19,8 +19,10 @@ const UserInfo = () => {
 
     return (
         <div className='userInfo-container'>
-            <span className='date'>{todayDate}</span>
-            <h2 className='welcome-msg'>Let's get to work {user.first_name}</h2>
+            <div className='dateAndGreet'>
+                <div className='date'>{todayDate}</div>
+                <h2 className='welcome-msg'>Welcome back, {user.first_name}<br/> LET'S GET ENDRSR!</h2>
+            </div>
         </div>
     )
 }

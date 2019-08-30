@@ -4,7 +4,6 @@ import { createUser } from "../actions"
 import axios from "axios"
 import { Link } from 'react-router-dom'
 
-import '../styles/index.scss'
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
