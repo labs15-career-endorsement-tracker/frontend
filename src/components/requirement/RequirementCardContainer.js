@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react"
+
+import ReqCard from './ReqCard'
+
 import { getRequirements } from '../../actions'
 import { connect } from 'react-redux'
 
@@ -11,7 +14,6 @@ const RequirementCardContainer = (props) => {
     name: "",
     statusCode: ""
   })
-  console.log(requirements.map(req => req.id))
   
   useEffect(()=> {
     props.getRequirements()
@@ -26,9 +28,9 @@ const RequirementCardContainer = (props) => {
   return (
     <div className="requirement-card-container">
         <h1>Requirements</h1>
-        {/* {requirements.map(reg => 
-          <ReqCard key={reg.id} reg={reg} />
-        )} */}
+        {requirements.map(reg => 
+          <ReqCard key={reg.id} requirement={reg} />
+        )}
     </div>
   )
 }
