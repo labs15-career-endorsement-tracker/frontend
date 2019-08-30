@@ -4,7 +4,7 @@ import UserInfo from './UserInfo'
 const Dashboard = () => {
 
     return (
-        <div>
+        <div className='dash-container'>
             <UserInfo />
         </div>
     )
