@@ -12,9 +12,8 @@ const UserInfo = () => {
         const filtUser = res.data.filter(user => user.id === parseInt(userId))
         setUser(filtUser[0])
       })
-    } else {
-      return
-    }
+    } 
+      
   }, [])
 
   const todayDate = new Date().toDateString()
