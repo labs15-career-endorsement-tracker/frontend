@@ -1,105 +1,141 @@
-import React from "react"
+import React, { useState } from "react"
 import axios from "axios"
-import { ToastContainer, toast } from "react-toastify"
 import { Formik } from "formik"
 import * as Yup from "yup"
+import { NavLink as Link } from "react-router-dom"
 
-import "react-toastify/dist/ReactToastify.min.css"
 import "../styles/index.scss"
 
-const Login = () => {
-  return (
-    <div className="form-container">
-      <div className="brand">
-        <h1>ENDRSD</h1>
-      </div>
-      <Formik
-        initialValues={{ email: "", password: "" }}
-        onSubmit={(values, { setSubmitting }) => {
-          axios
-            .post("/api/v0/login", values)
-            .then(res => {
-              localStorage.setItem("token", res.data.token)
-              console.log(res.data)
-            })
-            .catch(err => {
-              console.log(err)
-            })
-        }}
-        validationSchema={Yup.object().shape({
-          email: Yup.string()
-            .email()
-            .required("Please enter a valid email address"),
-          password: Yup.string()
-            .min(8, "Your password must be more than 8 characters")
-            .max(16, "Your password must be less than than 16 characters")
-            .required("Please enter your password")
-        })}
-      >
-        {props => {
-          const {
-            values,
-            touched,
-            errors,
-            dirty,
-            isSubmitting,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            handleReset
-          } = props
+const Login = props => {
+  const [error, setError] = useState({
+    errorCode: "",
+    errorMessage: ""
+  })
 
-          return (
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="email" style={{ display: "block" }}>
-                email address
-              </label>
-              <input
-                id="email"
-                placeholder="Enter your email"
-                type="text"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className={
-                  errors.email && touched.email
-                    ? "text-input error"
-                    : "text-input"
-                }
-              />
-              <div className="error-container">
-                {errors.email && touched.email && (
-                  <div className="input-feedback">{errors.email}</div>
-                )}
-              </div>
-              <label htmlFor="password" style={{ display: "block" }}>
-                password
-              </label>
-              <input
-                id="password"
-                placeholder="password"
-                type="password"
-                value={values.password}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className={
-                  errors.password && touched.password
-                    ? "text-input error"
-                    : "text-input"
-                }
-              />
-              <div className="error-container">
-                {errors.password && touched.password && (
-                  <div className="input-feedback">{errors.password}</div>
-                )}
-              </div>
-              <button type="submit" disabled={isSubmitting}>
-                Log In
-              </button>
-            </form>
-          )
-        }}
-      </Formik>
+  const handleError = err => {
+    setError({
+      errorCode: err.response.data.statusCode,
+      errorMessage: err.response.data.message
+    })
+  }
+
+  return (
+    <div className="wrapper">
+      <div className="login-container">
+        <div className="brand">
+          <h1>ENDRSD</h1>
+        </div>
+        <div className="warning-container">
+          {error.errorCode && error.errorMessage ? (
+            <div className="warned">
+              <h2>Status {error.errorCode}</h2>
+              <h6>{error.errorMessage}. Please try again.</h6>
+            </div>
+          ) : (
+            <div className="welcome">
+              <h2>Welcome back!</h2>
+              <p>
+                Don't have an account yet?{" "}
+                <Link to="/sign-up" className="sign-up">
+                  Create an account
+                </Link>
+              </p>
+            </div>
+          )}
+        </div>
+        <Formik
+          initialValues={{ email: "", password: "" }}
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            setSubmitting(true)
+            axios
+              .post("/api/v0/login", values)
+              .then(res => {
+                localStorage.setItem("token", res.data.token)
+                localStorage.setItem("userId", res.data.userId)
+                resetForm()
+                props.history.push("/")
+              })
+              .catch(err => {
+                setSubmitting(false)
+                handleError(err)
+                resetForm()
+              })
+          }}
+          validationSchema={Yup.object().shape({
+            email: Yup.string()
+              .email()
+              .required("Please enter a valid email address"),
+            password: Yup.string()
+              .min(8, "Your password must be more than 8 characters")
+              .max(16, "Your password must be less than than 16 characters")
+              .required("Please enter your password")
+          })}
+        >
+          {props => {
+            const {
+              values,
+              touched,
+              errors,
+              isSubmitting,
+              handleChange,
+              handleBlur,
+              handleSubmit
+            } = props
+            return (
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="Email" style={{ display: "block" }}>
+                  Email Address
+                </label>
+                <input
+                  id="email"
+                  placeholder="your email address"
+                  type="text"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={
+                    errors.email && touched.email
+                      ? "text-input error"
+                      : "text-input"
+                  }
+                />
+                <div className="error-container">
+                  {errors.email && touched.email && (
+                    <div className="input-feedback">{errors.email}</div>
+                  )}
+                </div>
+                <label htmlFor="password" style={{ display: "block" }}>
+                  Password
+                </label>
+                <input
+                  id="password"
+                  placeholder="password"
+                  type="password"
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={
+                    errors.password && touched.password
+                      ? "text-input error"
+                      : "text-input"
+                  }
+                />
+                <div className="error-container">
+                  {errors.password && touched.password && (
+                    <div className="input-feedback">{errors.password}</div>
+                  )}
+                </div>
+                <button type="submit" disabled={isSubmitting}>
+                  Sign In
+                </button>
+              </form>
+            )
+          }}
+        </Formik>
+      </div>
+      <div className="right-container">
+        <span></span>
+      </div>
     </div>
   )
 }

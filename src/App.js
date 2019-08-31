@@ -5,17 +5,17 @@ import "./styles/index.scss"
 
 import SignUp from "./components/SignUp"
 import Login from "./components/Login"
-import Navigation from "./components/Navigation"
-import Profile from "./components/Profile"
+import Dashboard from "./components/Dashboard"
 
 const App = () => {
   return (
-    <div className="container">
-      <Navigation />
-      <Route exact path="/" component={Login} />
-      <Route path="/sign-up" component={SignUp} />
-      <Route path="/profile" component={Profile} />
-    </div>
+    <>
+      <div className="container">
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/login" component={Login} />
+        <Route path="/sign-up" component={SignUp} />
+      </div>
+    </>
   )
 }
 

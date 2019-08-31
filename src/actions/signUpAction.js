@@ -9,7 +9,7 @@ export const createUser = newUser => dispatch => {
     type: SIGNUP_IN_PROGRESS
   })
   return axios
-    .post("http://localhost:5000/api/v0/users", newUser)
+    .post("users", newUser)
     .then(res => {
       console.log(res)
       localStorage.setItem("token", res.data.token)
@@ -21,7 +21,7 @@ export const createUser = newUser => dispatch => {
     .catch(err =>
       dispatch({
         type: SIGNUP_FAILURE,
-        payload: err
+        payload: err.response.data
       })
     )
 }
