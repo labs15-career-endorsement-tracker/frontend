@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import { createUser } from "../actions"
-import axios from "axios"
 import { Link } from "react-router-dom"
+
+import { getTracks } from "../api"
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -41,9 +42,7 @@ const SignUp = props => {
   }
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/v0/tracks")
-      .then(res => setTracks(res.data))
+    getTracks().then(tracks => setTracks(tracks))
   }, [])
 
   useEffect(() => {
