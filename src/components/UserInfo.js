@@ -24,8 +24,8 @@ const UserInfo = () => {
       <div className="dateAndGreet">
         <div className="date">{todayDate}</div>
         <h2 className="welcome-msg">
-          Welcome back, {user.first_name}
-          <br /> LET'S GET ENDRSR!
+          Welcome back, {user.first_name}.
+          <br /> LET'S GET ENDRSD!
         </h2>
       </div>
     </div>
