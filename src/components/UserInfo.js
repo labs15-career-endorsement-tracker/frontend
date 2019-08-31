@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from "react"
-import axios from "axios"
+
+import { getUserById } from "../api"
 
 const UserInfo = () => {
   const [user, setUser] = useState({ first_name: "" })
 
   useEffect(() => {
+    const token = localStorage.getItem("token")
     const userId = localStorage.getItem("userId")
 
-    if (userId) {
-      axios.get("http://localhost:5000/api/v0/users").then(res => {
-        const filtUser = res.data.filter(user => user.id === parseInt(userId))
-        setUser(filtUser[0])
-      })
-    } else {
-      return null
-    }
+    getUserById(token, userId)
+      .then(user => setUser(user))
+      .catch(err => console.log(err.response))
   }, [])
 
   const todayDate = new Date().toDateString()
