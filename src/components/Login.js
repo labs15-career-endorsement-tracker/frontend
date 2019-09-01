@@ -1,10 +1,11 @@
 import React, { useState } from "react"
-import axios from "axios"
 import { Formik } from "formik"
 import * as Yup from "yup"
 import { NavLink as Link } from "react-router-dom"
 
 import "../styles/index.scss"
+
+import { loginUser } from "../api"
 
 const Login = props => {
   const [error, setError] = useState({
@@ -47,11 +48,10 @@ const Login = props => {
           initialValues={{ email: "", password: "" }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setSubmitting(true)
-            axios
-              .post("/api/v0/login", values)
-              .then(res => {
-                localStorage.setItem("token", res.data.token)
-                localStorage.setItem("userId", res.data.userId)
+            loginUser(values)
+              .then(({ token, userId }) => {
+                localStorage.setItem("token", token)
+                localStorage.setItem("userId", userId)
                 resetForm()
                 props.history.push("/")
               })

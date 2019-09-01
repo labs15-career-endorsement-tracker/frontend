@@ -1,4 +1,4 @@
-import axios from "axios"
+import { addUser } from "../api"
 
 export const SIGNUP_IN_PROGRESS = "SIGNUP_IN_PROGRESS"
 export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS"
@@ -8,12 +8,10 @@ export const createUser = newUser => dispatch => {
   dispatch({
     type: SIGNUP_IN_PROGRESS
   })
-  return axios
-    .post("users", newUser)
-    .then(res => {
-      console.log(res)
-      localStorage.setItem("token", res.data.token)
-      localStorage.setItem("userId", res.data.userId)
+  return addUser(newUser)
+    .then(({ token, userId }) => {
+      localStorage.setItem("token", token)
+      localStorage.setItem("userId", userId)
       dispatch({
         type: SIGNUP_SUCCESS
       })
