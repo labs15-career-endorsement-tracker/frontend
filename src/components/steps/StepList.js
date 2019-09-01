@@ -5,7 +5,7 @@ const StepList = () => {
         <div>
             <h1>Steps to complete</h1>
         </div>
-    );
+    )
 }
 
 export default StepList;
