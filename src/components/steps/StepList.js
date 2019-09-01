@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux'
 
+import Step from './Step'
+
 
 const StepList = props => {
     const [steps, setSteps] = useState([])
-    console.log(steps)
 
     useEffect(() => {
         setSteps(props.stepsByTask)
     }, [props.stepsByTask])
     return (
-        <div>
-            <h1>Steps to complete</h1>
+        <div className='steps-list-container'>
+            <h1 className='title'>Steps to complete</h1>
+            <div className='step-list'>
+                {steps.map(step => (
+                    <Step key={step.id} step={step} />
+                ))}
+            </div>
         </div>
     )
 }
