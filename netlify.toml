@@ -6,7 +6,6 @@
 [[redirects]]
     from = "/api/*"
     to = "API_URL_PLACEHOLDER/api/:splat"
-    status = 200
     
 [[redirects]]
     from = "/*"
