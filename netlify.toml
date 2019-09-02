@@ -1,7 +1,7 @@
 [build]
     base = "."
     publish = "./build"
-    command = "sed -i s/API_URL_PLACEHOLDER/$API_BASE_URL/g netlify.toml && yarn build"
+    command = "sed -i s/API_URL_PLACEHOLDER/$REACT_APP_API_BASE_URL/g netlify.toml && yarn build"
 
 [[redirects]]
     from = "/api/*"
