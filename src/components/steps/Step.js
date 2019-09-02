@@ -1,23 +1,20 @@
 import React from 'react';
 import { CheckMark } from './CheckMark'
 
-
-   
-   // which makes this reusable component for other views
    
    const Step = props => {
        console.log(props)
        return (
-           <>
+           <div className='each-step'>
             <div className='check-box'>
                 <div className={props.isComplete ? 'complete' : 'incomplete' }>
                     <CheckMark />
                 </div>
             </div>
-            <div className='step'>{
+            <div className='description'>{
                 props.step.steps_description
             }</div>
-        </>
+        </div>
     )
 }
 

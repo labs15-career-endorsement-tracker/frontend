@@ -11,7 +11,7 @@ const StepList = props => {
         setSteps(props.stepsByTask)
     }, [props.stepsByTask])
     return (
-        <div className='steps-list-container'>
+        <div className='step-list-container'>
             <h1 className='title'>Steps to complete</h1>
             <div className='step-list'>
                 {steps.map(step => (
