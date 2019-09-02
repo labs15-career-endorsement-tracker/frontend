@@ -1,7 +1,11 @@
 import axios from "axios"
 
+import { configureBaseUrl } from "./utils"
+
+const { REACT_APP_STAGE, REACT_APP_LOCAL_API_PORT } = process.env
+
 const axiosConfig = {
-  baseURL: "/api/v0/"
+  baseURL: configureBaseUrl(REACT_APP_STAGE, REACT_APP_LOCAL_API_PORT)
 }
 
 export const request = () => axios.create({ ...axiosConfig })
