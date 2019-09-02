@@ -1,11 +1,16 @@
 [build]
     base = "."
-    publish = "./build"
-    command = "sed -i s/API_URL_PLACEHOLDER/$REACT_APP_API_BASE_URL/g netlify.toml && yarn build"
+    publish = "build"
+    command = "REACT_APP_STAGE=staging yarn build"
 
-[[redirects]]
-    from = "/api/*"
-    to = "API_URL_PLACEHOLDER/api/:splat"
+[context.production]
+    command = "REACT_APP_STAGE=production yarn build"
+
+[context.deploy-preview]
+    command = "REACT_APP_STAGE=staging yarn build"
+
+[context.branch-deploy]
+    command = "REACT_APP_STAGE=staging yarn build"
     
 [[redirects]]
     from = "/*"
