@@ -1,0 +1,14 @@
+[build]
+    base = "."
+    publish = "./build"
+    command = "sed -i s/API_URL_PLACEHOLDER/${API_BASE_URL}/g netlify.toml && yarn build"
+
+[[redirects]]
+    from = "/api/*"
+    to = "API_URL_PLACEHOLDER/api/:splat"
+    status = 200
+    
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
