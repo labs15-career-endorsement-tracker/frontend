@@ -4,23 +4,23 @@
 
 # Lambda School
 
-<p align="center">
-    
-</p>
-<br>
-<br>
-_Cohort_: Labs15 <br>
-_Original Project Title_: The 'Career Endorsement Tracker' Project <br>
-_Updated Project Title_: The 'ENDRSD' Project <br>
-_Project Build Dates_: 08/05/19 - 09/27/19
+Cohort: Labs15 <br>
+Original Project Title: The 'Career Endorsement Tracker' Project <br>
+Updated Project Title: The 'ENDRSD' Project <br>
+Project Build Dates: 08/05/19 - 09/27/19
+
 <br>
 <br>
 
 # The 'ENDRSD' Project
 
 <p align="center">
-  <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
+    <a href="https://labs15.netlify.com/">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
+    </a>
 </p>
+
+<br>
 <br>
 You can find the deployed project at [![Netlify Status](https://api.netlify.com/api/v1/badges/79378335-8381-4e64-b9e9-5d895c0aa041/deploy-status)](https://app.netlify.com/sites/labs15/deploys)
 
