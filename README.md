@@ -1,5 +1,8 @@
-# Lambda Labs15: ENDRSD - Career Endorsement Tracker (Front-End Repo)
+# LAMBDA LABS15: Career Endorsement Tracker (Front-End Repo)
 
+# ENDRSD
+
+[<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />]
 You can find the deployed project at [Netlify](https://labs15.netlify.com/).
 
 ## Contributors
