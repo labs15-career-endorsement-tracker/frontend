@@ -19,4 +19,8 @@ export {
   getStepsByTaskId
 } from "./stepAction"
 
-export { toggleStepCompleteApi } from './stepAction'
+export {
+  TOGGLE_STEP_START,
+  TOGGLE_COMPLETE,
+  toggleStepCompleteApi 
+} from './stepAction'

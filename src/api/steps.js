@@ -6,8 +6,9 @@ export const getSteps = async (authToken, taskId) => {
 }
 
 export const toggleStepComplete = async (authToken, taskId, stepId, isComplete) => {
-    console.log('api: ', isComplete, typeof isComplete)
-    const { data } = await requestWithAuth(authToken).put(`requirements/${taskId}/steps/${stepId}`, isComplete)
+
+    const { data } = await requestWithAuth(authToken).put(`requirements/${taskId}/steps/${stepId}`, {"is_complete": isComplete})
+
     return data
     
 }

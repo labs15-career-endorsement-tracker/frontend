@@ -1,4 +1,4 @@
-import { STEP_FETCH_IN_PROGRESS, STEP_FETCH_SUCCESS, STEP_FETCH_FAILURE} from '../actions'
+import { STEP_FETCH_IN_PROGRESS, STEP_FETCH_SUCCESS, STEP_FETCH_FAILURE, TOGGLE_COMPLETE } from '../actions'
 
 const initialState = {
     inProgress: false,
@@ -18,6 +18,11 @@ export const stepReducer = (state = initialState, action) => {
             return {
                 ...state,
                 inProgress: false,
+                stepsByTask: action.payload
+            }
+        case TOGGLE_COMPLETE:
+            return {
+                ...state,
                 stepsByTask: action.payload
             }
         case STEP_FETCH_FAILURE:
