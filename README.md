@@ -2,7 +2,9 @@
 
 # ENDRSD App
 
-<img src="https://res.cloudinary.com/endrsd/image/upload/v1567545755/Screen_Shot_2019-09-03_at_5.19.08_PM_jcoe8w.png" width = "200" />
+<p align="center">
+  <img src="https://res.cloudinary.com/endrsd/image/upload/v1567545755/Screen_Shot_2019-09-03_at_5.19.08_PM_jcoe8w.png" alt="ENDRSD logo" width="500">
+</p>
 <br>
 You can find the deployed project at [Netlify](https://labs15.netlify.com/).
 
