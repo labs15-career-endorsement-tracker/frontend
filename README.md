@@ -22,7 +22,9 @@
 
 <br>
 <br>
-You can find the deployed project at [Netlify](https://labs15.netlify.com)
+You can find the deployed project at [<img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" width = "50" />](https://labs15.netlify.com)
+<br>
+<br>
 
 ## Contributors
 
