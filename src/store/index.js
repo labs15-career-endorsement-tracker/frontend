@@ -1,5 +1,15 @@
-import createStore from "./store"
-import history from "./history"
-import { loadFromLocalStorage, saveToLocalStorage } from "./local-storage"
+import { createStore, applyMiddleware } from "redux"
+import { composeWithDevTools } from "redux-devtools-extension"
+import promiseMiddleware from "redux-promise-middleware"
+import logger from "redux-logger"
 
-export { createStore, history, loadFromLocalStorage, saveToLocalStorage }
+const middleware = [promiseMiddleware]
+const composeEnhancers = composeWithDevTools({})
+
+if (process.env.NODE_ENV !== "production") {
+  middleware.push(logger)
+}
+
+export default reducers => {
+  return createStore(reducers, composeEnhancers(applyMiddleware(...middleware)))
+}

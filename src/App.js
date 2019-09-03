@@ -1,21 +1,21 @@
 import React from "react"
-import { Route, Switch } from "react-router-dom"
+import { Route } from "react-router-dom"
 
 import "./styles/index.scss"
 
-import SignUpForm from "./components/SignUpForm"
-import SignInForm from "./components/SignInForm"
+import SignUp from "./components/SignUp"
+import Login from "./components/Login"
 import Dashboard from "./components/Dashboard"
-import NotFound from "./components/NotFound"
 
 const App = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/sign-in" component={SignInForm} />
-      <Route path="/sign-up" component={SignUpForm} />
-      <Route component={NotFound}></Route>
-    </Switch>
+    <>
+      <div className="container">
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/login" component={Login} />
+        <Route path="/sign-up" component={SignUp} />
+      </div>
+    </>
   )
 }
 

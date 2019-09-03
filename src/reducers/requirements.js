@@ -27,3 +27,28 @@ export default (state = initialState, { type, payload }) => {
       return state
   }
 }
+
+// export const requirementReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case REQUIREMENT_FETCH_IN_PROGRESS:
+//       return {
+//         ...state,
+//         inProgress: true
+//       }
+//     case REQUIREMENT_FETCH_SUCCESS:
+//       return {
+//         ...state,
+//         inProgress: false,
+//         requirements: action.payload
+//       }
+//     case REQUIREMENT_FETCH_FAILURE:
+//       return {
+//         ...state,
+//         inProgress: false,
+//         isServerError: true,
+//         serverError: action.payload
+//       }
+//     default:
+//       return state
+//   }
+// }
