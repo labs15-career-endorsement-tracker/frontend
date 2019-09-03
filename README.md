@@ -19,10 +19,15 @@
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
     </a>
 </p>
+<p align="center">
+    Demo the project by clicking the `ENDRSD` logo above.
+<p>
 
 <br>
 <br>
-You can find the deployed project at [<img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" width = "50" />](https://labs15.netlify.com)
+<p align="center">
+ Find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 10px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
+<p>
 <br>
 <br>
 
