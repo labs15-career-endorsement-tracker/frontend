@@ -2,7 +2,7 @@
 
 # ENDRSD App
 
-<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />
+<img src="https://res.cloudinary.com/endrsd/image/upload/v1567545755/Screen_Shot_2019-09-03_at_5.19.08_PM_jcoe8w.png" width = "200" />
 <br>
 You can find the deployed project at [Netlify](https://labs15.netlify.com/).
 
