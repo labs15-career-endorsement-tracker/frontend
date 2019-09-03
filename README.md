@@ -5,9 +5,9 @@
 # Lambda School
 
 **Cohort**: Labs15 <br>
+**Project Build Dates**: 08/05/19 - 09/27/19 <br>
 **Original Project Title**: The 'Career Endorsement Tracker' Project <br>
 **Revised Project Title**: The 'ENDRSD' Project <br>
-**Project Build Dates**: 08/05/19 - 09/27/19
 
 <br>
 <br>
@@ -22,7 +22,7 @@
 
 <br>
 <br>
-You can find the deployed project at [![Netlify Status](https://api.netlify.com/api/v1/badges/79378335-8381-4e64-b9e9-5d895c0aa041/deploy-status)](https://app.netlify.com/sites/labs15/deploys)
+You can find the deployed project at [Netlify](https://labs15.netlify.com)
 
 ## Contributors
 
