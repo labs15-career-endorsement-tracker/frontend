@@ -1,26 +1,25 @@
-export {
-  SIGNUP_IN_PROGRESS,
-  SIGNUP_SUCCESS,
-  SIGNUP_FAILURE,
-  createUser
-} from "./signUpAction"
+import { createAsyncAction } from "redux-promise-middleware-actions"
 
-export {
-  REQUIREMENT_FETCH_IN_PROGRESS,
-  REQUIREMENT_FETCH_SUCCESS,
-  REQUIREMENT_FETCH_FAILURE,
+import { addUser, getRequirements, getSteps } from "../api"
+
+export const createUser = createAsyncAction("CREATE_USER", addUser)
+
+export const fetchRequirements = createAsyncAction(
+  "FETCH_REQUIREMENTS",
   getRequirements
-} from "./requirementAction"
+)
+
+
+export const getStepsByTaskId = createAsyncAction("FETCH_STEPS", getSteps)
 
 export {
   STEP_FETCH_IN_PROGRESS,
   STEP_FETCH_SUCCESS,
   STEP_FETCH_FAILURE,
-  getStepsByTaskId
+  // getStepsByTaskId
 } from "./stepAction"
 
 export {
-  TOGGLE_STEP_START,
   TOGGLE_COMPLETE,
   toggleStepCompleteApi
 } from "./stepAction"
