@@ -1,13 +1,12 @@
-@import "./reset.scss";
-@import "./globals.scss";
-@import "./variables.scss";
-@import "./mixins.scss";
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700|Lato:400,700&display=swap");
 
-@import "./login.scss";
-@import "./signUp.scss";
-@import "./userInfo.scss";
-@import "./dashboard.scss";
-@import "./requirementCardContainer.scss";
-@import "./requirementCard.scss";
+
+@import "~reset-css/sass/reset";
+
+@import "./user-info.scss";
+@import "./requirement-card-container.scss";
+@import "./requirement-card.scss";
 @import "./stepList.scss";
-@import "./app.scss";
+
+@import "base";
+

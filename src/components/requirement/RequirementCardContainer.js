@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react"
 
 import ReqCard from "./ReqCard"
 
-import { getRequirements, getStepsByTaskId } from "../../actions"
+import { fetchRequirements, getStepsByTaskId } from "../../actions"
+import { loadFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
 const RequirementCardContainer = props => {
@@ -15,7 +16,8 @@ const RequirementCardContainer = props => {
   })
 
   useEffect(() => {
-    props.getRequirements()
+    const { token } = loadFromLocalStorage("auth")
+    props.fetchRequirements(token)
   }, [])
 
   useEffect(() => {
@@ -55,8 +57,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {
-    getRequirements,
-    getStepsByTaskId
-  }
+  { fetchRequirements, getStepsByTaskId }
 )(RequirementCardContainer)

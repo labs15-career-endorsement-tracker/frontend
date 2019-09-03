@@ -1,0 +1,30 @@
+@import "variables";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-stack-body;
+  font-size: 1.6rem;
+  color: $black;
+  background-color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-stack-heading;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}

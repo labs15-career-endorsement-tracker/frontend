@@ -1,10 +1,10 @@
 import { combineReducers } from "redux"
-import { signUpReducer } from "./signUpReducer"
-import { requirementReducer } from "./requirementReducer"
+
+import requirementReducer from "./requirements"
 import { stepReducer } from "./stepsReducer"
 
+
 export default combineReducers({
-  signUpReducer,
   requirementReducer,
   stepReducer
 })

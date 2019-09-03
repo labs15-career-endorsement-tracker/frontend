@@ -1,28 +1,28 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
+import { Router } from "react-router-dom"
+import { Provider } from "react-redux"
+import { toast } from "react-toastify"
+
+import "react-toastify/dist/ReactToastify.css"
 import "./styles/index.scss"
+
+import { createStore, history } from "./store"
+import rootReducer from "./reducers"
 
 import App from "./App"
 
-import { BrowserRouter as Router } from "react-router-dom"
-import { Provider } from "react-redux"
-import { createStore, applyMiddleware, compose } from "redux"
-import thunk from "redux-thunk"
-import logger from "redux-logger"
-import rootReducer from "./reducers"
+toast.configure({
+  autoClose: 5000,
+  draggable: false
+})
 
-const store = createStore(
-  rootReducer,
-  compose(
-    applyMiddleware(thunk, logger),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
-)
+const store = createStore(rootReducer)
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <Router history={history}>
       <App />
     </Router>
   </Provider>,

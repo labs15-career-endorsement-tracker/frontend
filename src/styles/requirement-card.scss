@@ -1,0 +1,11 @@
+.requirement-card {
+  padding: 1em;
+  border: 1px solid lightgrey;
+  max-width: 30%;
+  font-family: "Barlow";
+
+  .title {
+    font-size: 1.2rem;
+    padding-bottom: 1em;
+  }
+}
