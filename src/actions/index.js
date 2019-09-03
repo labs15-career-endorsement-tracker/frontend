@@ -1,13 +1,10 @@
-export {
-  SIGNUP_IN_PROGRESS,
-  SIGNUP_SUCCESS,
-  SIGNUP_FAILURE,
-  createUser
-} from "./signUpAction"
+import { createAsyncAction } from "redux-promise-middleware-actions"
 
-export {
-  REQUIREMENT_FETCH_IN_PROGRESS,
-  REQUIREMENT_FETCH_SUCCESS,
-  REQUIREMENT_FETCH_FAILURE,
+import { addUser, getRequirements } from "../api"
+
+export const createUser = createAsyncAction("CREATE_USER", addUser)
+
+export const fetchRequirements = createAsyncAction(
+  "FETCH_REQUIREMENTS",
   getRequirements
-} from "./requirementAction"
+)
