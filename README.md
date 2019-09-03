@@ -18,7 +18,7 @@ _Project Build Dates_: 08/05/19 - 09/27/19
   <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
 </p>
 <br>
-You can find the deployed project at [Netlify](https://labs15.netlify.com/).
+You can find the deployed project at [![Netlify Status](https://api.netlify.com/api/v1/badges/79378335-8381-4e64-b9e9-5d895c0aa041/deploy-status)](https://app.netlify.com/sites/labs15/deploys)
 
 ## Contributors
 
