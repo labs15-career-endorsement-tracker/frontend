@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+
+.form-btn {
+  display: block;
+  font-family: $font-stack-meta;
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  line-height: 2.9rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #57ec75 0%, #20cd8a 100%);
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: $white;
+  width: 65%;
+  margin: 3.2rem auto 1.6rem;
+  padding: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 150ms;
+  outline: none;
+
+  @media screen and (min-width: $breakpoint-small) {
+    width: 40%;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    width: 40%;
+  }
+}
+
+.form-btn:hover {
+  transform: scale(1.1) skewX(-5deg);
+}
+
+.form-btn:active {
+  transform: scale(1) skewX(0deg);
+}

@@ -1,7 +1,6 @@
 import React from "react"
 
 const ReqCard = ({ requirement }) => {
-  console.log(requirement)
   return (
     <div className="requirement-card">
       <h2 className="title">{requirement.title}</h2>
