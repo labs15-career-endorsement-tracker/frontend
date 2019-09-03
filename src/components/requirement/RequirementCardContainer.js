@@ -32,7 +32,11 @@ const RequirementCardContainer = props => {
       <div className="req-card-area">
         <div className="req-card">
           {requirements.map(reg => (
-            <ReqCard key={reg.id} requirement={reg} getStepsByTaskId={props.getStepsByTaskId}/>
+            <ReqCard
+              key={reg.id}
+              requirement={reg}
+              getStepsByTaskId={props.getStepsByTaskId}
+            />
           ))}
         </div>
       </div>
@@ -51,7 +55,7 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { 
+  {
     getRequirements,
     getStepsByTaskId
   }

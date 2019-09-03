@@ -1,39 +1,40 @@
 .step-list-container {
-    border: 1px solid grey;
-    font-family: "Barlow";
+  border: 1px solid grey;
+  font-family: "Barlow";
 
-    .title {
-        font-size: 1.5rem;
-        padding: 1em;
-    }
+  .title {
+    font-size: 1.5rem;
+    padding: 1em;
+  }
 
-    .step-list {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid blue;
-        padding: 1em 1em 0 1em;
-    }
+  .step-list {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 0 1em;
+  }
 
-    .each-step {
-        display: flex;
-        margin-bottom: 1em;
-        border: 1px solid red;
-    }
+  .each-step {
+    display: flex;
+    margin-bottom: 1em;
+  }
 
-    .check-box {
+  .check-box {
     border: 4px solid grey;
     border-radius: 4px;
-    width: 38px;
+    min-width: 38px;
     height: 38px;
     margin-right: 1em;
-    }
+  }
 
-    .description {
-    
-    }
+  #check {
+    //   display: none;
+  }
 
-    .incomplete {
-        // display: none;
-    }
+  .complete {
+      display: block;
+  }
+
+  .incomplete {
+    display: none;
+  }
 }
-

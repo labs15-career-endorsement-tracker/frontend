@@ -4,4 +4,12 @@ import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
 import { getSteps, toggleStepComplete } from "./steps"
 
-export { loginUser, addUser, getUserById, getTracks, getRequirements, getSteps, toggleStepComplete }
+export {
+  loginUser,
+  addUser,
+  getUserById,
+  getTracks,
+  getRequirements,
+  getSteps,
+  toggleStepComplete
+}
