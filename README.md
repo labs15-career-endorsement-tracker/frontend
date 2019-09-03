@@ -4,10 +4,10 @@
 
 # Lambda School
 
-Cohort: Labs15 <br>
-Original Project Title: The 'Career Endorsement Tracker' Project <br>
-Updated Project Title: The 'ENDRSD' Project <br>
-Project Build Dates: 08/05/19 - 09/27/19
+**Cohort**: Labs15 <br>
+**Original Project Title**: The 'Career Endorsement Tracker' Project <br>
+**Revised Project Title**: The 'ENDRSD' Project <br>
+**Project Build Dates**: 08/05/19 - 09/27/19
 
 <br>
 <br>
