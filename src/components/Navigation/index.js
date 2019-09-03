@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
 import Logo from "../lib/Logo"
+import Percentage from "../lib/Percentage"
 
 import "./index.scss"
 
@@ -16,6 +17,7 @@ const Navigation = () => {
   return (
     <nav className="nav_wrapper">
       <Logo />
+      <Percentage />
       <div className="user_info">
         <div className="user">
           <p className="user_full_name">
@@ -24,7 +26,9 @@ const Navigation = () => {
           <p className="user_track">Full Stack Web</p>
         </div>
         <div className="user_button">
-          <span></span>
+          <span>
+            <i class="far fa-angle-down fa-3x"></i>
+          </span>
         </div>
       </div>
     </nav>
