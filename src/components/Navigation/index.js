@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import Logo from "../lib/Logo"
 import Percentage from "../lib/Percentage"
+import Dropdown from "../Dropdown"
 
 import "./index.scss"
 
@@ -26,9 +27,7 @@ const Navigation = () => {
           <p className="user_track">Full Stack Web</p>
         </div>
         <div className="user_button">
-          <span>
-            <i class="far fa-angle-down fa-3x"></i>
-          </span>
+          <Dropdown />
         </div>
       </div>
     </nav>
