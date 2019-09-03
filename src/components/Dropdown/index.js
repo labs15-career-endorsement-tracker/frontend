@@ -1,7 +1,6 @@
 import React from "react"
 
-// import "../styles/index"
-
+import "./index.scss"
 
 const Dropdown = props => {
   return (
@@ -9,7 +8,7 @@ const Dropdown = props => {
       <button onclick="dropdown()" class="dropdown_button">
         <i class="far fa-angle-down fa-3x"></i>
       </button>
-      <div className="dropdown_content">Logout</div>
+      <div className="dropdown_content"><p>Logout</p></div>
     </div>
   )
 }
