@@ -1,18 +1,22 @@
 import React from 'react';
 import { CheckMark } from './CheckMark'
+import { toggleStepCompleteApi } from '../../actions'
 
    
-   const Step = props => {
-       console.log(props)
+   const Step = ({step}) => {
+       console.log(step)
        return (
            <div className='each-step'>
             <div className='check-box'>
-                <div className={props.isComplete ? 'complete' : 'incomplete' }>
+                <div 
+                    className={step.is_complete ? 'complete' : 'incomplete'} 
+                    onClick={() => toggleStepCompleteApi(step.tasks_id, step.id, step.is_complete)}
+                    >
                     <CheckMark />
                 </div>
             </div>
             <div className='description'>{
-                props.step.steps_description
+                step.steps_description
             }</div>
         </div>
     )

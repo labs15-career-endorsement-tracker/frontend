@@ -18,3 +18,5 @@ export {
   STEP_FETCH_FAILURE,
   getStepsByTaskId
 } from "./stepAction"
+
+export { toggleStepCompleteApi } from './stepAction'
