@@ -1,6 +1,13 @@
-# LAMBDA LABS15: Career Endorsement Tracker
+# Lambda School
 
-# ENDRSD App
+<img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" align="right"
+     title="Lambda School Logo" width="250">
+
+Cohort: Labs15
+Original Project Title: The 'Career Endorsement Tracker' Project
+Updated Project Title: The 'ENDRSD' Project
+
+# The 'ENDRSD' Project
 
 <p align="center">
   <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="500">
