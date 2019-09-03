@@ -1,16 +1,19 @@
 # Lambda School
 
-<img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" align="right"
-     title="Lambda School Logo" width="250">
+<p align="center">
+    <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" alt="Lambda School Logo" width="300">
+</p>
 
-Cohort: Labs15
-Original Project Title: The 'Career Endorsement Tracker' Project
-Updated Project Title: The 'ENDRSD' Project
+_Cohort_: Labs15 <br>
+_Original Project Title_: The 'Career Endorsement Tracker' Project <br>
+_Updated Project Title_: The 'ENDRSD' Project
+<br>
+<br>
 
 # The 'ENDRSD' Project
 
 <p align="center">
-  <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="500">
+  <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="300">
 </p>
 <br>
 You can find the deployed project at [Netlify](https://labs15.netlify.com/).
