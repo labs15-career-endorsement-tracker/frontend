@@ -1,6 +1,7 @@
 import React from "react"
 import UserInfo from "./UserInfo"
 import RequirementCardContainer from "./requirement/RequirementCardContainer"
+import StepList from "./steps/StepList"
 import Navigation from "./Navigation"
 
 const Dashboard = () => {
@@ -9,6 +10,7 @@ const Dashboard = () => {
       <Navigation />
       <UserInfo />
       <RequirementCardContainer />
+      <StepList />
     </div>
   )
 }
