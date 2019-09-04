@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { loadAuthDataFromLocalStorage } from './../../store';
 import { connect } from "react-redux"
+import { loadAuthDataFromLocalStorage } from "./../../store"
+
 import ResourceCard from "./ResourceCard"
 
 import "../../styles/index.scss"
@@ -14,9 +15,7 @@ const ResourceCardContainer = props => {
 }
 
 const mapStateToProps = state => {
-  return {
-
-  }
+  return {}
 }
 
 export default connect(
