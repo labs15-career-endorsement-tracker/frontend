@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react"
-import axios from "axios"
+
+import "./index.scss"
+
+import { getUserById } from "../../api"
+import { loadAuthDataFromLocalStorage } from "../../store"
+
 import Logo from "../lib/Logo"
 import Percentage from "../lib/Percentage"
 import Dropdown from "../Dropdown"
 
-import "./index.scss"
-
 const Navigation = () => {
-  const [user, setUser] = useState({ first_name: "" })
+  const [user, setUser] = useState({ first_name: "Loading.." })
+
   useEffect(() => {
-    const userId = localStorage.getItem("userId")
-    axios.get("http://localhost:5000/api/v0/users").then(res => {
-      const filtUser = res.data.filter(user => user.id === parseInt(userId))
-      setUser(filtUser[0])
-    })
+    const { token, userId } = loadAuthDataFromLocalStorage()
+    getUserById(token, userId).then(user => setUser(user))
   }, [])
+
   return (
     <nav className="nav_wrapper">
       <Logo />
