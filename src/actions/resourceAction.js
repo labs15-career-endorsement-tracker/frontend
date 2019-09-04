@@ -1,27 +1,27 @@
 import { getRequirements } from "../api"
-import { loadAuthDataFromLocalStorage } from './../store';
+import { loadAuthDataFromLocalStorage } from "./../store"
 
 export const RESOURCE_FETCH_IN_PROGRESS = "RESOURCE_FETCH_IN_PROGRESS"
 export const RESOURCE_FETCH_SUCCESS = "RESOURCE_FETCH_SUCCESS"
 export const RESOURCE_FETCH_FAILURE = "RESOURCE_FETCH_FAILURE"
 
-const { token, userId } = loadAuthDataFromLocalStorage()
+const { token } = loadAuthDataFromLocalStorage()
 
 export const getResourcesByRequirementId = reqId => dispatch => {
-    dispatch({
-        type: RESOURCE_FETCH_IN_PROGRESS
+  dispatch({
+    type: RESOURCE_FETCH_IN_PROGRESS
+  })
+  return getRequirements(token, reqId)
+    .then(resources => {
+      dispatch({
+        type: RESOURCE_FETCH_SUCCESS,
+        payload: resources
+      })
     })
-    return getRequirements(token, reqId)
-        .then(resources => {
-            dispatch({
-                type: RESOURCE_FETCH_SUCCESS,
-                payload: resources
-            })
-        })
-        .catch(err =>
-            dispatch({
-                type: RESOURCE_FETCH_FAILURE,
-                payload: err.response.data
-            }))
+    .catch(err =>
+      dispatch({
+        type: RESOURCE_FETCH_FAILURE,
+        payload: err.response.data
+      })
+    )
 }
-
