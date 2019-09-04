@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import ReqCard from "./ReqCard"
 
 import { fetchRequirements, fetchSteps } from "../../actions"
-import { loadFromLocalStorage } from "../../store"
+import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
 const RequirementCardContainer = props => {
@@ -16,7 +16,7 @@ const RequirementCardContainer = props => {
   })
 
   useEffect(() => {
-    const { token } = loadFromLocalStorage("auth")
+    const { token } = loadAuthDataFromLocalStorage()
     props.fetchRequirements(token)
   }, [])
 
