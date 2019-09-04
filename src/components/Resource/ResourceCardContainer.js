@@ -11,9 +11,7 @@ const ResourceCardContainer = props => {
       <div className="component-title">
         <h1>Resources</h1>
       </div>
-      <div className="resource-card">
-        <ResourceCard />
-      </div>
+      <ResourceCard />
     </div>
   )
 }
