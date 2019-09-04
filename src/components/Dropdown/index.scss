@@ -1,0 +1,31 @@
+.dropdown-container {
+  .dropdown-button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    margin: 1rem;
+    min-width: 120px;
+    overflow: auto;
+    padding: 1.5rem;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+    border-left: 2px solid green;
+    text-align: center;
+    .logout {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      cursor: pointer;
+      .logout-text {
+        padding-left: 1rem;
+      }
+    }
+  }
+  .show {
+    display: block;
+  }
+}
