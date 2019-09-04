@@ -1,5 +1,5 @@
 import React from "react"
-import { history } from "../../store"
+import { history } from "../../../store"
 import "./index.scss"
 
 const Dropdown = () => {

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
-import axios from "axios"
 import Logo from "../lib/Logo"
 import Percentage from "../lib/Percentage"
-import Dropdown from "../Dropdown"
+import Dropdown from "../lib/Dropdown"
 import { loadFromLocalStorage } from "../../store"
 import { getUserById } from "../../api"
 
