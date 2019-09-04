@@ -4,6 +4,12 @@
 
 # The 'ENDRSD' Project
 
+![MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+![React](https://img.shields.io/badge/React-v16.9.0-blue.svg)
+![Redux](https://img.shields.io/badge/Redux-v4.0.4-orange.svg)
+![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](https://labs15.netlify.com/)
+
 <p align="center">
     <a href="https://labs15.netlify.com/">
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
@@ -22,12 +28,6 @@
 
 <br>
 <br>
-
-![MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-![React](https://img.shields.io/badge/React-v16.9.0-blue.svg)
-![Redux](https://img.shields.io/badge/Redux-v4.0.4-orange.svg)
-![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](https://labs15.netlify.com/)
 
 ## Project Overview
 
