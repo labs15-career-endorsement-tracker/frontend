@@ -5,11 +5,12 @@ import Percentage from "../lib/Percentage"
 import Dropdown from "../Dropdown"
 
 import "./index.scss"
+import { loadFromLocalStorage } from "../../store"
 
 const Navigation = () => {
   const [user, setUser] = useState({ first_name: "" })
   useEffect(() => {
-    const userId = localStorage.getItem("userId")
+    const { token, userId } = loadFromLocalStorage("auth")
     axios.get("http://localhost:5000/api/v0/users").then(res => {
       const filtUser = res.data.filter(user => user.id === parseInt(userId))
       setUser(filtUser[0])
