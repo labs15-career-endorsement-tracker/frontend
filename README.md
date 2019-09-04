@@ -28,13 +28,11 @@
 <br>
 <br>
 
-![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
-![React](https://img.shields.io/badge/react-v16.9.0-blue.svg)
-![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-🚫 more info on using badges [here](https://github.com/badges/shields)
+![MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+![React](https://img.shields.io/badge/React-v16.9.0-blue.svg)
+![Redux](https://img.shields.io/badge/Redux-v4.0.4-orange.svg)
+![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](https://labs15.netlify.com/)
 
 ## Project Overview
 
