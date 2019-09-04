@@ -9,9 +9,6 @@
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
     </a>
 </p>
-<p align="center">
-    Demo the project by clicking the `ENDRSD` logo above or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
-<p>
 
 <br>
 
@@ -34,11 +31,13 @@
 
 ## Project Overview
 
-[Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
-
-[Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
-
 "ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
+
+Demo the project by clicking the ENDRSD logo (above the "Contributors" section) or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
+
+[ENDRSD Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
+
+[ENDRSD Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
 
 ### Key Features
 
