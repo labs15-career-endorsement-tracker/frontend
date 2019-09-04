@@ -19,7 +19,7 @@ const Navigation = () => {
   return (
     <nav className="nav_wrapper">
       <Logo />
-      <Percentage />
+      <Percentage progress={user.progress}/>
       <div className="user_info">
         <div className="user">
           <p className="user_full_name">
