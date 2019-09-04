@@ -1,3 +1,5 @@
+import { history } from "../store"
+
 export const saveToLocalStorage = (key, data) => {
   try {
     const dataString = JSON.stringify(data)
@@ -16,4 +18,15 @@ export const loadFromLocalStorage = key => {
     //   TODO: Dispatch this error
     console.log(error)
   }
+}
+
+export const loadAuthDataFromLocalStorage = () => {
+  const authData = loadFromLocalStorage("auth")
+
+  if (!authData || !authData.token || !authData.userId) {
+    history.push("/sign-in")
+    return { token: null, userId: null }
+  }
+
+  return authData
 }
