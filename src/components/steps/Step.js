@@ -1,10 +1,9 @@
 import React from "react"
 import { CheckMark } from "./svg/CheckMark"
-import { loadFromLocalStorage } from '../../store'
-
+import { loadFromLocalStorage } from "../../store"
 
 const Step = ({ step, toggle }) => {
-const {token} = loadFromLocalStorage('auth')
+  const { token } = loadFromLocalStorage("auth")
 
   return (
     <div className="each-step">

@@ -17,11 +17,7 @@ const StepList = props => {
       <h1 className="title">Steps to complete</h1>
       <div className="step-list">
         {steps.map(step => (
-          <Step
-            key={step.id}
-            step={step}
-            toggle={props.toggleStep}
-          />
+          <Step key={step.id} step={step} toggle={props.toggleStep} />
         ))}
       </div>
     </div>

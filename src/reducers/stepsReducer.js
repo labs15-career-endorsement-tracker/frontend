@@ -1,7 +1,4 @@
-import {
-  fetchSteps,
-  toggleStep
-} from "../actions"
+import { fetchSteps, toggleStep } from "../actions"
 
 const initialState = {
   inProgress: false,
@@ -10,7 +7,7 @@ const initialState = {
   stepsByTask: []
 }
 
-export const stepReducer = (state = initialState, { type, payload}) => {
+export const stepReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case fetchSteps.pending.toString():
       return {
@@ -31,20 +28,20 @@ export const stepReducer = (state = initialState, { type, payload}) => {
         serverError: payload
       }
     case toggleStep.pending.toString:
-        return {
-            ...state,
-        }
+      return {
+        ...state
+      }
     case toggleStep.fulfilled.toString():
-        return {
-            ...state,
-            stepsByTask: payload
-        }
+      return {
+        ...state,
+        stepsByTask: payload
+      }
     case toggleStep.rejected.toString():
-        return {
-            ...state,
-            isServerError: true,
-            serverError: payload
-        }
+      return {
+        ...state,
+        isServerError: true,
+        serverError: payload
+      }
     default:
       return state
   }

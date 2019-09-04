@@ -9,13 +9,6 @@ export const fetchRequirements = createAsyncAction(
   getRequirements
 )
 
-export const fetchSteps = createAsyncAction(
-  "FETCH_STEPS",
-  getSteps
-)
+export const fetchSteps = createAsyncAction("FETCH_STEPS", getSteps)
 
-export const toggleStep = createAsyncAction(
-  "TOGGLE_STEP",
-  toggleStepComplete
-)
-
+export const toggleStep = createAsyncAction("TOGGLE_STEP", toggleStepComplete)
