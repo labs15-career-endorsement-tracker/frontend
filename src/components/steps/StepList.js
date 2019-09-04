@@ -16,7 +16,7 @@ const StepList = props => {
 
   return (
     <div className="step-list-container">
-      <StepGauge steps={steps}/>
+      <StepGauge steps={steps} />
       <h1 className="title">Steps to complete</h1>
       <div className="step-list">
         {steps.map(step => (

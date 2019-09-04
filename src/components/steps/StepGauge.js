@@ -1,25 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react"
 
-const StepGauge = ({steps}) => {
-    const [gaugeSegments, setGaugeSegments] = useState(null)
-    const [gaugeFill, setGaugeFill] = useState(null)
-    console.log(steps)
+import "./index.scss"
 
-    useEffect(() => {
-        setGaugeSegments(steps.length)
-        setGaugeFill((steps.filter(step => step.is_complete === true)).length)
-    }, [steps])
-    
-    console.log(gaugeSegments, gaugeFill)
-    return (
-        <div className='gauge-container'>
-            <div
-                className='gauge-fill'
-                >
+const StepGauge = ({ steps }) => {
+  const [totalSteps, setTotalSteps] = useState(null)
+  const [stepsComplete, setStepsComplete] = useState(null)
+  console.log(steps)
 
-            </div>
-        </div>
-    );
+  useEffect(() => {
+    setTotalSteps(steps.length)
+    setStepsComplete(steps.filter(step => step.is_complete === true).length)
+  }, [steps])
+
+  const getTaskProgress = () => {
+    console.log(Math.round((stepsComplete / totalSteps) * 100).toString())
+    return Math.round((stepsComplete / totalSteps) * 100).toString()
+  }
+
+  const gaugeStyle = {
+    width: getTaskProgress() + "%"
+  }
+
+  console.log(totalSteps, stepsComplete)
+  return (
+    <div className="gauge-container">
+      <div className="gauge-fill" style={gaugeStyle}></div>
+    </div>
+  )
 }
 
-export default StepGauge;
+export default StepGauge
