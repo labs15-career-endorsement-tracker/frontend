@@ -188,4 +188,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend readme here*) for details on the backend of our project.
+See [Backend Documentation](https://github.com/labs15-career-endorsement-tracker/backend/blob/master/README.md) for details on the backend of our project.
