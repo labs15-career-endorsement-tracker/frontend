@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react"
 
 import { getUserById } from "../api"
-import { loadFromLocalStorage } from "../store"
+import { loadAuthDataFromLocalStorage } from "../store"
 
 const UserInfo = () => {
   const [user, setUser] = useState({ first_name: "" })
 
   useEffect(() => {
-    const { token, userId } = loadFromLocalStorage("auth")
+    const { token, userId } = loadAuthDataFromLocalStorage()
 
     getUserById(token, userId)
       .then(user => setUser(user))
