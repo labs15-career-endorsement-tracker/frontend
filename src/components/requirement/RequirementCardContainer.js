@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import ReqCard from "./ReqCard"
 
+
 import { fetchRequirements, fetchSteps } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
@@ -33,11 +34,13 @@ const RequirementCardContainer = props => {
       </div>
       <div className="req-card-area">
         <div className="req-card">
+          
           {requirements.map(reg => (
             <ReqCard
               key={reg.id}
               requirement={reg}
               fetchSteps={props.fetchSteps}
+              steps={props.steps}
             />
           ))}
         </div>
