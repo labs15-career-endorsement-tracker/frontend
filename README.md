@@ -42,34 +42,33 @@
 
 "ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
 
-### 4️⃣ Key Features
+### Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- Uses an authenticated dashboard to show students a list of their career endorsement requirements, which are tailored to each individual student's progress
+- Allows students to access static resources, such as Airtable links and lecture videos
+- Allows students to track their progress towards getting endorsed
+- Provides gamification mechanisms to incentivize students to actively participate in the endorsement process
+- Allows students to continue working on an incomplete requirement, where they previously left off
+- Allows students to set SMART (Specific, Measurable, Attainable, Relevant and Timely) goals
 
-## 1️⃣ Tech Stack
+## Tech Stack
 
 ### Front end built using:
 
-#### _Front end framework goes here_
+#### React.js, React Hooks, & Redux
 
-🚫 Why did you choose this framework?
-
-- point one
-- point two
-- point three
-- point four
+- It comes with a good supply of documentation, tutorials, and training resources because of the well established community around it.
+- The use of components allows for modularity for faster, more efficient development.
+- Components can contain their own logic and controls.
+- Testing with React.js is very straight-forward and comes with great documentation.
 
 🚫List the rest of the front end features and libraries in the same format as the framework above.
 
-#### Front end deployed to `🚫insert service here`
+#### Front end deployed to `Netlify`
 
-#### [Back end](🚫link to back end repo here) built using:
+#### [Back end](https://github.com/labs15-career-endorsement-tracker/backend) built using:
 
-#### 🚫 back end framework goes here
+#### Node.js, Express.js, KNEX, PostgreSQL, Bcrypt.js
 
 - point one
 - point two
