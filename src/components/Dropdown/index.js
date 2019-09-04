@@ -2,26 +2,24 @@ import React from "react"
 
 import "./index.scss"
 
-const Dropdown = props => {
+const Dropdown = () => {
   const triggerDropdown = () => {
     document.getElementById("logoutPanel").classList.toggle("show")
-    console.log("test")
   }
 
   const triggerLogout = () => {
-    localStorage.removeItem("auth")
+    // localStorage.removeItem("auth")
+    console.log("triggered logout")
   }
-
-  window.onclick = e => {}
 
   return (
     <div className="dropdown-container">
-      <button onClick={triggerDropdown} class="dropdown-button">
+      <button onClick={triggerDropdown} className="dropdown-button">
         <i class="far fa-angle-down fa-3x"></i>
       </button>
       <div id="logoutPanel" className="dropdown-content">
         <div className="logout" onClick={triggerLogout}>
-          <i class="fad fa-sign-out"></i>
+          <i className="fad fa-sign-out"></i>
           <p className="logout-text">Logout</p>
         </div>
       </div>
