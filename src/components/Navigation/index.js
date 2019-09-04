@@ -4,10 +4,9 @@ import "./index.scss"
 
 import { getUserById } from "../../api"
 import { loadAuthDataFromLocalStorage } from "../../store"
-
 import Logo from "../lib/Logo"
 import Percentage from "../lib/Percentage"
-import Dropdown from "../Dropdown"
+import Dropdown from "../lib/Dropdown"
 
 const Navigation = () => {
   const [user, setUser] = useState({ first_name: "Loading.." })
@@ -26,7 +25,7 @@ const Navigation = () => {
           <p className="user_full_name">
             {user.first_name} {user.last_name}
           </p>
-          <p className="user_track">Full Stack Web</p>
+          <p className="user_track">{user.tracks_title}</p>
         </div>
         <div className="user_button">
           <Dropdown />
