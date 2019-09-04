@@ -9,6 +9,9 @@ import "../../styles/index.scss"
 const ResourceCardContainer = props => {
   return (
     <div className="resource-card-container">
+      <div className="component-title">
+        <h1>Resources</h1>
+      </div>
       <ResourceCard />
     </div>
   )
