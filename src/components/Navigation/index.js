@@ -25,9 +25,7 @@ const Navigation = () => {
           <p className="user_full_name">
             {user.first_name} {user.last_name}
           </p>
-          <p className="user_track">
-            {user.tracks_id} - {user.tracks_title}
-          </p>
+          <p className="user_track">{user.tracks_title}</p>
         </div>
         <div className="user_button">
           <Dropdown />
