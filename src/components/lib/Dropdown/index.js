@@ -15,7 +15,7 @@ const Dropdown = () => {
   return (
     <div className="dropdown-container">
       <button onClick={triggerDropdown} className="dropdown-button">
-        <i class="far fa-angle-down fa-3x"></i>
+        <i className="far fa-angle-down fa-3x"></i>
       </button>
       <div id="logoutPanel" className="dropdown-content">
         <div

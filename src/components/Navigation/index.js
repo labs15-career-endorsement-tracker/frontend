@@ -4,11 +4,13 @@ import Percentage from "../lib/Percentage"
 import Dropdown from "../lib/Dropdown"
 import { loadFromLocalStorage } from "../../store"
 import { getUserById } from "../../api"
+import { getTracks } from "../../api"
 
 import "./index.scss"
 
 const Navigation = () => {
   const [user, setUser] = useState({ first_name: "" })
+  const [userTrack, setUserTrack] = useState({})
 
   useEffect(() => {
     const { token, userId } = loadFromLocalStorage("auth")
@@ -27,7 +29,9 @@ const Navigation = () => {
           <p className="user_full_name">
             {user.first_name} {user.last_name}
           </p>
-          <p className="user_track">Full Stack Web</p>
+          <p className="user_track">
+            {user.tracks_id} - {user.tracks_title}
+          </p>
         </div>
         <div className="user_button">
           <Dropdown />
