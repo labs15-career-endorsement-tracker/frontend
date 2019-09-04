@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import ReqCard from "./ReqCard"
 
-import { fetchRequirements } from "../../actions"
+import { fetchRequirements, fetchSteps } from "../../actions"
 import { loadFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
@@ -34,7 +34,11 @@ const RequirementCardContainer = props => {
       <div className="req-card-area">
         <div className="req-card">
           {requirements.map(reg => (
-            <ReqCard key={reg.id} requirement={reg} />
+            <ReqCard
+              key={reg.id}
+              requirement={reg}
+              fetchSteps={props.fetchSteps}
+            />
           ))}
         </div>
       </div>
@@ -53,5 +57,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchRequirements }
+  { fetchRequirements, fetchSteps }
 )(RequirementCardContainer)
