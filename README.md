@@ -1,13 +1,8 @@
+<p align="right">
 <a href="https://lambdaschool.com/">
-    <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" title="Lambda School Logo" align="right" height="60">
+    <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" title="Lambda School Logo" width="200">
 </a>
-
-# Lambda School
-
-**Cohort**: Labs15 <br>
-**Project Build Dates**: 08/05/19 - 09/27/19 <br>
-**Original Project Title**: The 'Career Endorsement Tracker' Project <br>
-**Revised Project Title**: The 'ENDRSD' Project <br>
+<p/>
 
 <br>
 <br>
