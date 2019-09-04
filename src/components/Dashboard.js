@@ -3,7 +3,7 @@ import UserInfo from "./UserInfo"
 import RequirementCardContainer from "./requirement/RequirementCardContainer"
 import StepList from "./steps/StepList"
 import Navigation from "./Navigation"
-import ResourceCardContainer from "./ResourceCardContainer"
+import ResourceCardContainer from "./Resource/ResourceCardContainer"
 
 const Dashboard = () => {
   return (
