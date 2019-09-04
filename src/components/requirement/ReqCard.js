@@ -3,10 +3,10 @@ import { loadFromLocalStorage } from "../../store"
 
 import StepGauge from '../../components/steps/StepGauge'
 
-const ReqCard = ({ requirement, fetchSteps, steps }) => {
+const ReqCard = ({ requirement, fetchSteps }) => {
   return (
     <div className="requirement-card">
-      <StepGauge steps={steps}/>
+      <StepGauge requirement={requirement}/>
       <h2 className="title">{requirement.title}</h2>
       <p className="description">{requirement.tasks_description}</p>
       <div
