@@ -1,5 +1,5 @@
 import React from "react"
-
+import { history } from "../../store"
 import "./index.scss"
 
 const Dropdown = () => {
@@ -8,8 +8,8 @@ const Dropdown = () => {
   }
 
   const triggerLogout = () => {
-    // localStorage.removeItem("auth")
-    console.log("triggered logout")
+    localStorage.removeItem("auth")
+    history.push("/sign-in")
   }
 
   return (
