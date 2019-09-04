@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react"
-<<<<<<< HEAD
-=======
 
 import "./index.scss"
 
 import { getUserById } from "../../api"
 import { loadAuthDataFromLocalStorage } from "../../store"
-
->>>>>>> develop
 import Logo from "../lib/Logo"
 import Percentage from "../lib/Percentage"
 import Dropdown from "../lib/Dropdown"
-import { loadAuthDataFromLocalStorage } from "../../store"
-import { getUserById } from "../../api"
 
 const Navigation = () => {
   const [user, setUser] = useState({ first_name: "Loading.." })
