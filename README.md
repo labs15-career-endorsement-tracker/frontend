@@ -4,9 +4,6 @@
 </a>
 <p/>
 
-<br>
-<br>
-
 # The 'ENDRSD' Project
 
 <p align="center">
@@ -15,7 +12,7 @@
     </a>
 </p>
 <p align="center">
-    Demo the project by clicking the `ENDRSD` logo above or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 10px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
+    Demo the project by clicking the `ENDRSD` logo above or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
 <p>
 
 <br>
