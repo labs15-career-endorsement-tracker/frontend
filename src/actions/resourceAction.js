@@ -1,0 +1,1 @@
+import { getRequirements } from "../api"
