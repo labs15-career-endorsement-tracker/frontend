@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 
-import { toggleStepCompleteApi } from "../../actions"
+import { toggleStep } from "../../actions"
 
 import Step from "./Step"
 
@@ -20,7 +20,7 @@ const StepList = props => {
           <Step
             key={step.id}
             step={step}
-            toggle={props.toggleStepCompleteApi}
+            toggle={props.toggleStep}
           />
         ))}
       </div>
@@ -39,5 +39,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { toggleStepCompleteApi }
+  { toggleStep }
 )(StepList)

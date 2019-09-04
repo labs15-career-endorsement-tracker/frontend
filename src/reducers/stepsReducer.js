@@ -1,8 +1,6 @@
 import {
-  STEP_FETCH_IN_PROGRESS,
-  STEP_FETCH_SUCCESS,
-  STEP_FETCH_FAILURE,
-  TOGGLE_COMPLETE
+  fetchSteps,
+  toggleStep
 } from "../actions"
 
 const initialState = {
@@ -12,31 +10,41 @@ const initialState = {
   stepsByTask: []
 }
 
-export const stepReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case STEP_FETCH_IN_PROGRESS:
+export const stepReducer = (state = initialState, { type, payload}) => {
+  switch (type) {
+    case fetchSteps.pending.toString():
       return {
         ...state,
         inProgress: true
       }
-    case STEP_FETCH_SUCCESS:
+    case fetchSteps.fulfilled.toString():
       return {
         ...state,
         inProgress: false,
-        stepsByTask: action.payload
+        stepsByTask: payload
       }
-    case TOGGLE_COMPLETE:
-      return {
-        ...state,
-        stepsByTask: action.payload
-      }
-    case STEP_FETCH_FAILURE:
+    case fetchSteps.rejected.toString():
       return {
         ...state,
         inProgress: false,
         isServerError: true,
-        serverError: action.payload
+        serverError: payload
       }
+    case toggleStep.pending.toString:
+        return {
+            ...state,
+        }
+    case toggleStep.fulfilled.toString():
+        return {
+            ...state,
+            stepsByTask: payload
+        }
+    case toggleStep.rejected.toString():
+        return {
+            ...state,
+            isServerError: true,
+            serverError: payload
+        }
     default:
       return state
   }
