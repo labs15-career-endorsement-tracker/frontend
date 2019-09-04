@@ -15,11 +15,11 @@
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     border-left: 2px solid green;
     text-align: center;
+    cursor: pointer;
     .logout {
       display: flex;
       justify-content: space-around;
       width: 50%;
-      cursor: pointer;
       .logout-text {
         padding-left: 1rem;
       }
