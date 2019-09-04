@@ -37,7 +37,7 @@ const Percentage = ({ progress = 50 }) => {
           )
         }}
       </ProgressProvider>
-      <p className="progress_text">Overall Progress</p>
+      {/* <p className="progress_text">Overall Progress</p> */}
     </div>
   )
 }
