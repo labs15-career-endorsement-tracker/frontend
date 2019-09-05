@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from "react"
-import axios from "axios"
-import Logo from "../lib/Logo"
-import Percentage from "../lib/Percentage"
-import Dropdown from "../Dropdown"
 
 import "./index.scss"
 
+import { getUserById } from "../../api"
+import { loadAuthDataFromLocalStorage } from "../../store"
+import Logo from "../lib/Logo"
+import Percentage from "../lib/Percentage"
+import Dropdown from "../lib/Dropdown"
+
 const Navigation = () => {
-  const [user, setUser] = useState({ first_name: "" })
+  const [user, setUser] = useState({ first_name: "Loading.." })
+
   useEffect(() => {
-    const userId = localStorage.getItem("userId")
-    axios.get("http://localhost:5000/api/v0/users").then(res => {
-      const filtUser = res.data.filter(user => user.id === parseInt(userId))
-      setUser(filtUser[0])
-    })
+    const { token, userId } = loadAuthDataFromLocalStorage()
+    getUserById(token, userId).then(user => setUser(user))
   }, [])
+
   return (
     <nav className="nav_wrapper">
       <Logo />
-      <Percentage />
+      <Percentage progress={user.progress} />
       <div className="user_info">
         <div className="user">
           <p className="user_full_name">
             {user.first_name} {user.last_name}
           </p>
-          <p className="user_track">Full Stack Web</p>
+          <p className="user_track">{user.tracks_title}</p>
         </div>
         <div className="user_button">
           <Dropdown />

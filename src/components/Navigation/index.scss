@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  .logo {
+    width: 10%;
+  }
 }
 .user_info {
   display: flex;
@@ -27,7 +30,7 @@
     margin: 0.2rem;
   }
 }
-.logo {
+.nav_wrapper .logo {
   width: 10%;
   img {
     width: 100%;
