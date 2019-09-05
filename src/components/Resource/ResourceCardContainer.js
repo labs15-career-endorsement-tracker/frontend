@@ -20,7 +20,7 @@ const ResourceCardContainer = props => {
 
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
-    props.fetchResources(token)
+    props.fetchResources(token, 1)
   }, [])
 
   useEffect(() => {
@@ -32,16 +32,20 @@ const ResourceCardContainer = props => {
 
   return (
     <div className="temp-container">
-      <div className="resource-card-container">
-        <div className="resource-header">
-          <h1>Resources</h1>
+      {resources.map(res => (
+        <div className="resource-card-container">
+          <div className="resource-header">
+            <h1>Resources</h1>
+          </div>
+          <div className="resource-cards">
+            <ResourceCard
+              key={res.id}
+              requirement={res.id}
+              resources={res.resources}
+            />
+          </div>
         </div>
-        <div className="resource-cards">
-          {resources.map(res => (
-            <ResourceCard key={res.id} resources={res.resources} />
-          ))}
-        </div>
-      </div>
+      ))}
     </div>
   )
 }

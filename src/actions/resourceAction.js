@@ -11,9 +11,8 @@ export const getResources = reqId => dispatch => {
   dispatch({
     type: RESOURCE_FETCH_IN_PROGRESS
   })
-  return getRequirements(token, reqId)
+  return getResources(token, reqId)
     .then(resources => {
-      console.log(`Test from action ${resources}`)
       dispatch({
         type: RESOURCE_FETCH_SUCCESS,
         payload: resources
