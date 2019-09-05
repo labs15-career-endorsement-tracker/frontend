@@ -1,6 +1,14 @@
+@import './variables';
+
 .userInfo-container {
     margin: 0 auto;
-    
+    max-width: 100%;
+    display: flex;
+
+    @media screen and (min-width: $breakpoint-small) {
+      max-width: 85%;
+    }
+  
     
   .dateAndGreet {
     padding: 1em;
