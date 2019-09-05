@@ -11,7 +11,6 @@ import "../../styles/index.scss"
 
 const ResourceCardContainer = props => {
   const [resources, setResources] = useState([])
-  const [requirements, setRequirements] = useState([])
   const [resourceIsServerError, setResourceIsServerError] = useState(false)
   const [resourceServerError, setResourceServerError] = useState({
     message: "",
@@ -22,32 +21,17 @@ const ResourceCardContainer = props => {
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
     props.fetchResources(token)
-  })
+  }, [])
 
   useEffect(() => {
-    setRequirements(props.requirements)
     setResources(props.resources)
-    setResourceIsServerError(props.isServerError)
-    setResourceServerError(props.serverError)
-  }, [
-    props.requirements,
-    props.setResourceIsServerError,
-    props.setResourceServerError,
-    props.resources
-  ])
+    setResourceIsServerError(props.resourceIsServerError)
+    setResourceServerError(props.resourceServerError)
+  }, [props.resources, props.resourceServerError, props.resourceIsServerError])
 
   return (
     <div className="resource-card-container">
       <h1>Resources</h1>
-      <div className="resource-card">
-        {resources.map(req => (
-          <ResourceCard
-            key={req.id}
-            requirement={req.id}
-            resources={req.resources}
-          />
-        ))}
-      </div>
     </div>
   )
 }
