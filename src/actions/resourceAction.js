@@ -7,12 +7,13 @@ export const RESOURCE_FETCH_FAILURE = "RESOURCE_FETCH_FAILURE"
 
 const { token } = loadAuthDataFromLocalStorage()
 
-export const getResourcesByReqId = reqId => dispatch => {
+export const getResources = reqId => dispatch => {
   dispatch({
     type: RESOURCE_FETCH_IN_PROGRESS
   })
   return getRequirements(token, reqId)
     .then(resources => {
+      console.log("asldslksadklsadlkasdkl", resources)
       dispatch({
         type: RESOURCE_FETCH_SUCCESS,
         payload: resources

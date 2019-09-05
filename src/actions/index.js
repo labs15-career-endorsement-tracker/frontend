@@ -5,7 +5,7 @@ import {
   getRequirements,
   getSteps,
   toggleStepComplete,
-  getResourcesByReqId
+  getResources
 } from "../api"
 
 export const createUser = createAsyncAction("CREATE_USER", addUser)
@@ -15,11 +15,8 @@ export const fetchRequirements = createAsyncAction(
   getRequirements
 )
 
-export const fetchSteps = createAsyncAction("FETCH_STEPS", getSteps)
+export const fetchResources = createAsyncAction("FETCH_RESOURCES", getResources)
 
-export const fetchResources = createAsyncAction(
-  "FETCH_RESOURCES",
-  getResourcesByReqId
-)
+export const fetchSteps = createAsyncAction("FETCH_STEPS", getSteps)
 
 export const toggleStep = createAsyncAction("TOGGLE_STEP", toggleStepComplete)

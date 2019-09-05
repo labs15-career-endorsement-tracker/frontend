@@ -1,31 +1,31 @@
-import { fetchRequirements } from "../actions"
+import { fetchResources } from "../actions"
 
 const initialState = {
-  inProgress: false,
-  isServerError: false,
-  resourcesByReqId: [],
-  serverError: {}
+  resourceInProgress: false,
+  resourceIsServerError: false,
+  resources: [],
+  resourceServerError: {}
 }
 
 export const resourceReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case fetchRequirements.pending.toString():
+    case fetchResources.pending.toString():
       return {
         ...state,
-        inProgress: true
+        resourceInProgress: true
       }
-    case fetchRequirements.fulfilled.toString():
+    case fetchResources.fulfilled.toString():
       return {
         ...state,
-        inProgress: false,
-        resourcesByReqId: payload
+        resourcesInProgress: false,
+        resources: payload
       }
-    case fetchRequirements.rejected.toString():
+    case fetchResources.rejected.toString():
       return {
         ...state,
-        inProgress: false,
-        isServerError: true,
-        serverError: payload
+        resourceInProgress: false,
+        resourceIsServerError: true,
+        resourceServerError: payload
       }
     default:
       return state

@@ -3,7 +3,7 @@ import { addUser, getUserById } from "./users"
 import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
 import { getSteps, toggleStepComplete } from "./steps"
-import { getResourcesByReqId } from "./resources"
+import { getResources } from "./resources"
 
 export {
   loginUser,
@@ -13,5 +13,5 @@ export {
   getRequirements,
   getSteps,
   toggleStepComplete,
-  getResourcesByReqId
+  getResources
 }
