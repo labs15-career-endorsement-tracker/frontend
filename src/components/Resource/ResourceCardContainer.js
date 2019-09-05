@@ -33,7 +33,7 @@ const ResourceCardContainer = props => {
   return (
     <div className="resource-card-container">
       <h1>Resources</h1>
-      <div className="resource-card">
+      <div className="resource-cards">
         {resources.map(res => (
           <ResourceCard key={res.id} resources={res.resources} />
         ))}

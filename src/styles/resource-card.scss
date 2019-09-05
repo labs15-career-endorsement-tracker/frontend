@@ -1,11 +1,14 @@
 .resource-card {
-    margin: 3rem;
-    border: 1px solid rgb(81, 155, 161);
-    padding: 3rem;
+    // margin: 3rem;
+    // border: 1px solid rgb(81, 155, 161);
+    // padding: 3rem;
     .individual-resource {
-        width: 50%;
+        width: 100%;
         margin: 2rem;
-        border: 1px solid rgb(67, 149, 204);
+        border-top: 3px solid #E9EBEC;
         padding: 1rem;
+        .resource-url {
+            text-decoration-line: underline;
+        }
     }
 }

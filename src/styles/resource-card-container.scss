@@ -2,6 +2,11 @@
 
 .resource-card-container {
     margin: 3rem;
-    border: 1px solid rgb(73, 129, 163);
+    border-top: 6px solid rgb(73, 129, 163);
     padding: 3rem;
+    width: 50%;
+    h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
 }
