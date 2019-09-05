@@ -71,11 +71,26 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - Support for node.js is readily available because of the large and active community behind it.
 - Node.js is able to take advantage of caching things within the appliation memory for faster load times.
 
-#### Express.js, KNEX, PostgreSQL, bcrypt.js
+#### Express.js
 
-- Express.js makes web application with node.js fast and easy.
+- Express.js makes web application development with node.js fast and easy.
+- It is very easy to configure and customize express.js.
+- Express.js allows you to create a REST API server.
+- Allows you to define routes of your application based on HTTP methods and URLs.
 
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+#### PostgreSQL
+
+- PostgreSQL is a type of relational database that is open source and freely available for anyone to use.
+- SQL databases have a reputation for being more reliable because they have ben tried and tested longer than their NoSQL counterparts.
+- The source code for PostgreSQL was developed by a large community that has created numerous online resources for support.
+- The strongly-typed schemas with a SQL database leave very little room for errors.
+
+#### Knex.js
+
+- A SQL query builder that integrates well with a PostgreSQL database.
+- Allows for 'migragtions', which makes it easier to manage tables within the PostgreSQL database.
+- It can create sequential files with timestamps and even manage table alterations.
+- Allows for the creation of 'seeds', which can be used to consistently populate the database.
 
 # APIs
 
