@@ -19,6 +19,7 @@ const ResourceCard = props => {
       {props.resources.map(resource => (
         <div className="individual-resource" key={resource.id}>
           <div className="individual-resource-icon">
+<<<<<<< HEAD
             {renderIcon(resource.type)}
           </div>
           <div className="individual-resource-content">
@@ -26,6 +27,13 @@ const ResourceCard = props => {
               <a href={resource.url} target="_blank">
                 {resource.title}
               </a>
+=======
+            <i class="fab fa-google-drive fa-2x"></i>
+          </div>
+          <div className="individual-resource-content">
+            <p className="resource-url">
+              <a href={resource.url}>{resource.title}</a>
+>>>>>>> 688f4baf408bf4867ffd8bc7484ad21fd5e33c69
             </p>
           </div>
         </div>
