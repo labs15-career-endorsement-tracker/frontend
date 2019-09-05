@@ -32,6 +32,11 @@ const ResourceCardContainer = props => {
   return (
     <div className="resource-card-container">
       <h1>Resources</h1>
+      <div className="resource-card">
+        {resources.map(res => (
+          <ResourceCard key={res.id} requirement={res.id} resources={res.id} />
+        ))}
+      </div>
     </div>
   )
 }
