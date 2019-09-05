@@ -1,5 +1,4 @@
 import React from "react"
-import { loadAuthDataFromLocalStorage } from "./../../store"
 
 import "../../styles/index.scss"
 
@@ -8,7 +7,7 @@ const ResourceCard = props => {
   return (
     <div className="resource-card">
       {props.resources.map(resource => (
-        <div className="resource">
+        <div className="resource" key={resource.id}>
           <span>{resource.title}</span>
         </div>
       ))}

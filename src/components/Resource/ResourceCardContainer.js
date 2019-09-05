@@ -35,7 +35,7 @@ const ResourceCardContainer = props => {
       <h1>Resources</h1>
       <div className="resource-card">
         {resources.map(res => (
-          <ResourceCard resources={res.resources} />
+          <ResourceCard key={res.id} resources={res.resources} />
         ))}
       </div>
     </div>
