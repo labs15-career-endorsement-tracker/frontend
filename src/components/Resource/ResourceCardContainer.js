@@ -28,11 +28,11 @@ const ResourceCardContainer = props => {
 
 const mapStateToProps = state => {
   return {
-    inProgress: state.resourceReducer.inProgress
+    // inProgress: state.resourceReducer.inProgress
   }
 }
 
 export default connect(
   mapStateToProps,
-  { fetchRequirements, fetchResources }
+  { fetchRequirements }
 )(ResourceCardContainer)

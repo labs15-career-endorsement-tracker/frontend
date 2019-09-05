@@ -7,7 +7,7 @@ export const RESOURCE_FETCH_FAILURE = "RESOURCE_FETCH_FAILURE"
 
 const { token } = loadAuthDataFromLocalStorage()
 
-export const getResourcesByRequirementId = reqId => dispatch => {
+export const getResourcesByReqId = reqId => dispatch => {
   dispatch({
     type: RESOURCE_FETCH_IN_PROGRESS
   })

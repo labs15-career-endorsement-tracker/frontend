@@ -6,6 +6,5 @@ import { stepReducer } from "./stepsReducer"
 
 export default combineReducers({
   requirementReducer,
-  stepReducer,
-  resourceReducer
+  stepReducer
 })
