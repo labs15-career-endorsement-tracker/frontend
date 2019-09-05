@@ -4,15 +4,17 @@
     margin: 0 auto;
     max-width: 100%;
     display: flex;
+    justify-content: space-between;
+    background: $white;
+    padding: 2em;
+    box-shadow: .2em .2em .5em $shadow;
 
     @media screen and (min-width: $breakpoint-small) {
-      max-width: 85%;
+      max-width: 75%;
     }
   
-    
   .dateAndGreet {
-    padding: 1em;
-    font-family: "Barlow";
+    font-family: "Barlow Condensed";
 
     border: 1px solid blue;
   }
@@ -27,12 +29,26 @@
 
   .welcome-msg {
     font-size: 1.5rem;
+    font-weight: bold;
 
     border: 1px solid green;
   }
 
-  .progress-meter {
+  .first-name {
+    text-transform: capitalize;
+    color: $secondary;
+    font-size: 2rem;
+  }
 
+  .progress-meter {
     border: 1px solid red;
+  }
+
+  .percentage {
+    width: 25%;
+  }
+
+  .progress-label {
+    width: 100%;
   }
 }
