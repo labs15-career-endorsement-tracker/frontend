@@ -1,135 +1,118 @@
-# Career Endorsement Tracker App (Front-End Repo)
+<a href="https://lambdaschool.com/">
+    <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" title="Lambda School Logo" width="200" align="right">
+</a>
 
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
+# The 'ENDRSD' Project
 
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
+![MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+![React](https://img.shields.io/badge/React-v16.9.0-blue.svg)
+![Redux](https://img.shields.io/badge/Redux-v4.0.4-orange.svg)
+![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+[![GitHub issues](https://img.shields.io/github/issues/labs15-career-endorsement-tracker/frontend)](https://github.com/labs15-career-endorsement-tracker/frontend/issues)
+[![GitHub forks](https://img.shields.io/github/forks/labs15-career-endorsement-tracker/frontend)](https://github.com/labs15-career-endorsement-tracker/frontend/network)
+[![GitHub stars](https://img.shields.io/github/stars/labs15-career-endorsement-tracker/frontend)](https://github.com/labs15-career-endorsement-tracker/frontend/stargazers)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](https://labs15.netlify.com/)
 
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
+<p align="center">
+    <a href="https://labs15.netlify.com/">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
+    </a>
+</p>
 
-# 1️⃣ Title of project goes here
+<br>
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+## Contributors
 
-## 4️⃣ Contributors
-
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
-
-|                                                      [Student 1](https://github.com/)                                                       |                                                       [Student 2](https://github.com/)                                                        |                                                      [Student 3](https://github.com/)                                                       |                                                       [Student 4](https://github.com/)                                                        |                                                      [Student 5](https://github.com/)                                                       |
-| :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) |
-|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                                |                            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)                             |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)                           |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)                           |                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)                            |
-|                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |
+|                                                                                                                    [Isaac Houle](https://github.com/clem9281)                                                                                                                    |                                                                                                                  [Adam Mathieson](https://github.com/adammathieson)                                                                                                                   |                                                                                                                   [Hunter Raffety](https://hunterraffety.io/)                                                                                                                   |                                                                                                             [Leilani Schi- mmelfennig](https://github.com/lschimm)                                                                                                              |                                                                                                                 [Mikis Woodwinter](https://github.com/miikis)                                                                                                                  |                                                                                                              [Tico Thep- sourinthone](https://heytico.com)                                                                                                               |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://media.licdn.com/dms/image/C5603AQEMgyFhyy-WOw/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=sYDbGFkngXstWFpKYK3veQxx2eSmOkfAtJ3Jmm7tqu8" width= "110" height="auto" style="object-fit:cover; overflow:hidden;" />](https://github.com/clem9281) | [<img src="https://media.licdn.com/dms/image/C5603AQGhMHYDPQtOZw/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=jw_OgUvsXguHXEfLJMUZOWibUXYBuGuk6OUW0zdzSkc" width= "110" height="auto" style="object-fit:cover; overflow:hidden;" />](https://github.com/adammathieson) | [<img src="https://media.licdn.com/dms/image/C5603AQHMP_uLd-zA2w/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=7V72CSVPo8e5M0jpu5KdkOSaJxLGiJerdQbjKZXTwSk" width= "110" height="auto" style="object-fit:cover; overflow:hidden;"  />](https://hunterraffety.io/) | [<img src="https://media.licdn.com/dms/image/C4E03AQHAEef3W60uIA/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=XzXK-HRJNkINx4rnNRCRsMdMrc1eo6P6stF4RW2OqKM" width= "110" height="auto" style="object-fit:cover; overflow:hidden;" />](https://github.com/lschimm) | [<img src="https://media.licdn.com/dms/image/C5603AQGm-tCUYO3Pog/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=Mqz8GBXT-RvGmt5HynoQ9wBlvDOUyIv5eBexDfZPPME" width= "110" height="auto" style="object-fit:cover; overflow:hidden;" />](https://github.com/miikis) | [<img src="https://media.licdn.com/dms/image/C4E03AQGIjp9UmRoNXA/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=p2pz2FMpiP7p40p6E2RHNglAjRz3HJI-W3vOUHAESuA" width= "110" height="auto" style="object-fit:cover; overflow:hidden;" />](https://heytico.com) |
+|                                                                                              [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/clem9281)                                                                                               |                                                                                              [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/adammathieson)                                                                                               |                                                                                           [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/hunterraffety)                                                                                            |                                                                                              [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/lschimm)                                                                                               |                                                                                              [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/miikis)                                                                                               |                                                                                          [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/ticotheps)                                                                                          |
+|                                                                      [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/isaac-houle-090020174/)                                                                      |                                                                       [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/adam-mathieson-b92369128/)                                                                       |                                                                         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/huntersraffety/)                                                                         |                                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/leilani-schimmelfennig-707477116/)                                                                |                                                                            [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/miikis/)                                                                             |                                                                        [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/ticotheps/)                                                                        |
 
 <br>
 <br>
-
-🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
-
-![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
-![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
-![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-🚫 more info on using badges [here](https://github.com/badges/shields)
 
 ## Project Overview
 
-1️⃣ [Trello Board](https://trello.com/b/T9bFSxcX)
+"ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
 
-1️⃣ [Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
+Demo the project by clicking the ENDRSD logo (above the "Contributors" section) or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
 
-🚫 Replace lorem ipsum with a description of your project
+[ENDRSD Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+[ENDRSD Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Key Features
 
-### 4️⃣ Key Features
+- Uses an authenticated dashboard to show students a list of their career endorsement requirements, which are also specific to a student's track.
+- Allows students to access static resources, such as Airtable links and lecture videos.
+- Allows students to track their overall endorsement progress, as well as progress towards completing individual requirements.
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
-
-## 1️⃣ Tech Stack
+## Tech Stack
 
 ### Front end built using:
 
-#### _Front end framework goes here_
+#### React.js, React Hooks, & Redux
 
-🚫 Why did you choose this framework?
+- It comes with a good supply of documentation, tutorials, and training resources because of the well established community around it.
+- The use of components allows for modularity, leading to faster and more efficient development.
+- Components can house their own logic and controls.
+- Testing with React.js is very straight-forward and comes with great documentation.
 
-- point one
-- point two
-- point three
-- point four
+#### Front end deployed to `Netlify`
 
-🚫List the rest of the front end features and libraries in the same format as the framework above.
+#### [Back end](https://github.com/labs15-career-endorsement-tracker/backend) built using:
 
-#### Front end deployed to `🚫insert service here`
+#### Node.js
 
-#### [Back end](🚫link to back end repo here) built using:
+- Node.js offers easy scalability because it can handle a large number of simultaneous connections with high throughput.
+- Using node.js allows developers who are familiar with JavaScript, to develop both the client-side and server-side applications using a single programming language.
+- Node.js takes less time to learn because it utilizes an already popular client-side scripting language---JavaScript.
+- Support for node.js is readily available because of the large and active community behind it.
+- Node.js is able to take advantage of caching things within the appliation memory for faster load times.
 
-#### 🚫 back end framework goes here
+#### Express.js
 
-- point one
-- point two
-- point three
+- Express.js makes web application development with node.js fast and easy.
+- It is very easy to configure and customize express.js.
+- Express.js allows you to create a REST API server.
+- Allows you to define routes of your application based on HTTP methods and URLs.
 
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+#### PostgreSQL
+
+- PostgreSQL is a type of relational database that is open source and freely available for anyone to use.
+- SQL databases have a reputation for being more reliable because they have ben tried and tested longer than their NoSQL counterparts.
+- The source code for PostgreSQL was developed by a large community that has created numerous online resources for support.
+- The strongly-typed schemas with a SQL database leave very little room for errors.
+
+#### Knex.js
+
+- A SQL query builder that integrates well with a PostgreSQL database.
+- Allows for 'migragtions', which makes it easier to manage tables within the PostgreSQL database.
+- It can create sequential files with timestamps and even manage table alterations.
+- Allows for the creation of 'seeds', which can be used to consistently populate the database.
 
 # APIs
 
-## 2️⃣ Authentication API here
+## Authentication API here
 
 🚫Replace text below with a description of the API
 
 Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
 
-## 2️⃣ Payment API here
-
-🚫Replace text below with a description of the API
-
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
-
-## 3️⃣ Misc API here
+## Misc API here
 
 🚫Replace text below with a description of the API
 
 You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
 
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-When you do it your way you can go anywhere you choose. Let your heart take you to wherever you want to be. If I paint something, I don't want to have to explain what it is. A tree needs to be your friend if you're going to paint him. That's a son of a gun of a cloud. Even the worst thing we can do here is good.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-Volunteering your time; it pays you and your whole community fantastic dividends. Maybe there's a happy little waterfall happening over here. You can spend all day playing with mountains. We don't have to be committed. We are just playing here. You have freedom here. The only guide is your heart. It's cold, but it's beautiful.
-
-# 3️⃣ Environment Variables
+# Environment Variables
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
-🚫These are just examples, replace them with the specifics for your app
+    *  JWT_SECRET - this is your JSON web token secret, which can be any unique string of characters
 
-    *  REACT_APP_apiKey - this is your Google API key, which can be generated in the Google Cloud Console
-    *  REACT_APP_authDomain - when you set up your Firebase project, this information will be in the dashboard
-    *  REACT_APP_databaseURL - in the Firebase dashboard
-    *  REACT_APP_projectID - in the Firebase dashboard
-    *  REACT_APP_storageBucket - in the Firebase dashboard
-    *  REACT_APP_messagingSenderId - in the Firebase dashboard
-    *  REACT_APP_stripe_API - this is your public Stripe API key, generated in the Stripe dashboard
-    *  REACT_APP_backendURL - optional for your local development server
-    *  REACT_APP_clientid - this is the Stripe_connect clientID, generated in Stripe_connect settings
-    *  REACT_APP_stripe_plan - this is the ID for a second Stripe subscription plan, generated under Stripe products
-
-# 5️⃣ Content Licenses
+# Content Licenses
 
 🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
 
@@ -138,11 +121,11 @@ In order for the app to function correctly, the user must set up their own envir
 | doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
 | rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
 
-# 4️⃣ Testing
+# Testing
 
 🚫Document what you used for testing and why
 
-# 4️⃣ Installation Instructions
+# Installation Instructions
 
 🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
 
@@ -194,4 +177,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend readme here*) for details on the backend of our project.
+See [Backend Documentation](https://github.com/labs15-career-endorsement-tracker/backend/blob/master/README.md) for details on the backend of our project.
