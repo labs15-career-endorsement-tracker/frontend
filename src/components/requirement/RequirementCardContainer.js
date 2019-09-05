@@ -2,30 +2,21 @@ import React, { useState, useEffect } from "react"
 
 import ReqCard from "./ReqCard"
 
-
 import { fetchRequirements, fetchSteps } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
-const RequirementCardContainer = props => {
-  const [requirements, setRequirements] = useState([])
-  const [isServerError, setIsServerError] = useState(false)
-  const [serverError, setServerError] = useState({
-    message: "",
-    name: "",
-    statusCode: ""
-  })
+const RequirementCardContainer = ({requirements, fetchSteps, fetchRequirements }) => {
+  const [reqs, setReqs] = useState([])
 
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
-    props.fetchRequirements(token)
-  }, [])
+    fetchRequirements(token)
+  }, [fetchRequirements])
 
   useEffect(() => {
-    setRequirements(props.requirements)
-    setIsServerError(props.isServerError)
-    setServerError(props.serverError)
-  }, [props.requirements, props.isServerError, props.serverError])
+    setReqs(requirements)
+  }, [requirements])
 
   return (
     <div className="requirement-card-container">
@@ -35,11 +26,11 @@ const RequirementCardContainer = props => {
       <div className="req-card-area">
         <div className="req-card">
           
-          {requirements.map(reg => (
+          {reqs.map(reg => (
             <ReqCard
               key={reg.id}
               requirement={reg}
-              fetchSteps={props.fetchSteps}
+              fetchSteps={fetchSteps}
             />
           ))}
         </div>
@@ -52,8 +43,6 @@ const mapStateToProps = state => {
   return {
     inProgress: state.requirementReducer.inProgress,
     requirements: state.requirementReducer.requirements,
-    serverError: state.requirementReducer.serverError,
-    isServerError: state.requirementReducer.isServerError
   }
 }
 

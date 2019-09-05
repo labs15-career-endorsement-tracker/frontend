@@ -6,11 +6,8 @@ const Step = ({ step, toggle, fetchRequirements }) => {
   const { token } = loadFromLocalStorage("auth")
 
   const handleToggle = async () => {
-
-    
       await toggle(token, step.tasks_id, step.id, step.is_complete)
       await fetchRequirements(token)
-    
   }
 
   return (

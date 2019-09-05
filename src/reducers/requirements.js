@@ -13,10 +13,8 @@ export default (state = initialState, { type, payload }) => {
       return { ...state, inProgress: true }
 
     case fetchRequirements.fulfilled.toString():
-      console.log('fefasd')
       return { ...state, inProgress: false, requirements: payload }
       
-
     case fetchRequirements.rejected.toString():
       return {
         ...state,

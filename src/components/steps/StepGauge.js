@@ -11,10 +11,6 @@ const StepGauge = ({ requirement }) => {
         console.log(requirement.progress)
     }, [requirement.progress])
 
-  const getTaskProgress = () => {
-    return progress
-  }
-
   const gaugeStyle = {
     width: progress + "%"
   }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { connect } from "react-redux"
 
 // Functions
@@ -12,18 +12,12 @@ import Navigation from "./Navigation"
 
 const Dashboard = props => {
 
-  const [steps, setSteps] = useState([])
-  
-  useEffect(() => {
-    setSteps(props.stepsByTask)
-  }, [props.stepsByTask])
-
   return (
     <div className="dash-container">
       <Navigation />
       <UserInfo />
       <RequirementCardContainer />
-      <StepList steps={steps} toggle={props.toggleStep} fetchRequirements={props.fetchRequirements}/>
+      <StepList steps={props.stepsByTask} toggle={props.toggleStep} fetchRequirements={props.fetchRequirements}/>
     </div>
   )
 }
@@ -31,8 +25,6 @@ const Dashboard = props => {
 const mapStateToProps = state => {
   return {
     inProgress: state.stepReducer.inProgress,
-    serverError: state.stepReducer.serverError,
-    isServerError: state.stepReducer.isServerError,
     stepsByTask: state.stepReducer.stepsByTask
   }
 }
