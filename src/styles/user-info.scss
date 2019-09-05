@@ -1,15 +1,30 @@
 .userInfo-container {
+    margin: 0 auto;
+    
+    
   .dateAndGreet {
     padding: 1em;
     font-family: "Barlow";
+
+    border: 1px solid blue;
   }
 
   .date {
     font-size: 1rem;
     margin-bottom: 1em;
+
+    border: 1px solid pink;
+
   }
 
   .welcome-msg {
     font-size: 1.5rem;
+
+    border: 1px solid green;
+  }
+
+  .progress-meter {
+
+    border: 1px solid red;
   }
 }
