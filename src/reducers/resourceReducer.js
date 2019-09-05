@@ -1,8 +1,10 @@
 import { fetchRequirements } from "../actions"
 
 const initialState = {
-  inProgress: true,
-  resourcesByReqId: []
+  inProgress: false,
+  isServerError: false,
+  resourcesByReqId: [],
+  serverError: {}
 }
 
 export const resourceReducer = (state = initialState, { type, payload }) => {
@@ -20,7 +22,10 @@ export const resourceReducer = (state = initialState, { type, payload }) => {
       }
     case fetchRequirements.rejected.toString():
       return {
-        ...state
+        ...state,
+        inProgress: false,
+        isServerError: true,
+        serverError: payload
       }
     default:
       return state
