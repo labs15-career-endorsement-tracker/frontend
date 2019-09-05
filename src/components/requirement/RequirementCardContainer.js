@@ -40,7 +40,6 @@ const RequirementCardContainer = props => {
               key={reg.id}
               requirement={reg}
               fetchSteps={props.fetchSteps}
-              steps={props.steps}
             />
           ))}
         </div>
