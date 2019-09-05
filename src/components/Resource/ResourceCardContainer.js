@@ -31,12 +31,16 @@ const ResourceCardContainer = props => {
   }, [props.resources, props.resourceServerError, props.resourceIsServerError])
 
   return (
-    <div className="resource-card-container">
-      <h1>Resources</h1>
-      <div className="resource-cards">
-        {resources.map(res => (
-          <ResourceCard key={res.id} resources={res.resources} />
-        ))}
+    <div className="temp-container">
+      <div className="resource-card-container">
+        <div className="resource-header">
+          <h1>Resources</h1>
+        </div>
+        <div className="resource-cards">
+          {resources.map(res => (
+            <ResourceCard key={res.id} resources={res.resources} />
+          ))}
+        </div>
       </div>
     </div>
   )
