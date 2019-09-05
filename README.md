@@ -58,21 +58,21 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 #### React.js, React Hooks, & Redux
 
 - It comes with a good supply of documentation, tutorials, and training resources because of the well established community around it.
-- The use of components allows for modularity for faster, more efficient development.
-- Components can contain their own logic and controls.
+- The use of components allows for modularity, leading to faster and more efficient development.
+- Components can house their own logic and controls.
 - Testing with React.js is very straight-forward and comes with great documentation.
-
-🚫List the rest of the front end features and libraries in the same format as the framework above.
 
 #### Front end deployed to `Netlify`
 
 #### [Back end](https://github.com/labs15-career-endorsement-tracker/backend) built using:
 
-#### Node.js, Express.js, KNEX, PostgreSQL, Bcrypt.js
+#### Node.js, Express.js, KNEX, PostgreSQL, bcrypt.js
 
-- point one
-- point two
-- point three
+- Node.js offers easy scalability because it can handle a large number of simultaneous connections with high throughput.
+- Using node.js allows developers who are familiar with JavaScript, to develop both the client-side and server-side applications using a single programming language.
+- Node.js takes less time to learn because it utilizes an already popular client-side scripting language---JavaScript.
+- Support for node.js is readily available because of the large and active community behind it.
+- Node.js is able to take advantage of caching things within the appliation memory for faster load times.
 
 🚫 List the rest of the back end end features and libraries in the same format as the framework above
 
