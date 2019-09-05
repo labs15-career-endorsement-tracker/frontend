@@ -3,10 +3,15 @@ import { loadAuthDataFromLocalStorage } from "./../../store"
 
 import "../../styles/index.scss"
 
-const ResourceCard = () => {
+const ResourceCard = props => {
+  console.log(props)
   return (
     <div className="resource-card">
-      <span>Heeere ya' go~</span>
+      {props.resources.map(resource => (
+        <div className="resource">
+          <span>{resource.title}</span>
+        </div>
+      ))}
     </div>
   )
 }

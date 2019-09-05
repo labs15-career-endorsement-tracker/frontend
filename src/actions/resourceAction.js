@@ -13,7 +13,7 @@ export const getResources = reqId => dispatch => {
   })
   return getRequirements(token, reqId)
     .then(resources => {
-      console.log("asldslksadklsadlkasdkl", resources)
+      console.log(`Test from action ${resources}`)
       dispatch({
         type: RESOURCE_FETCH_SUCCESS,
         payload: resources
