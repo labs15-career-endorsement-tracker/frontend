@@ -7,8 +7,9 @@ const ResourceCard = props => {
   return (
     <div className="resource-card">
       {props.resources.map(resource => (
-        <div className="resource" key={resource.id}>
-          <a href={resource.url}>{resource.title}</a>
+        <div className="individual-resource" key={resource.id}>
+          <p><a href={resource.url}>{resource.title}</a></p>
+          <p>{resource.type}</p>
         </div>
       ))}
     </div>
