@@ -3,13 +3,12 @@ import React, { useState, useEffect } from "react"
 import "./index.scss"
 
 const StepGauge = ({ requirement }) => {
+  const [progress, setProgress] = useState("")
 
-  const [progress, setProgress] = useState('')
-
-    useEffect(() => {
-        setProgress(requirement.progress)
-        console.log(requirement.progress)
-    }, [requirement.progress])
+  useEffect(() => {
+    setProgress(requirement.progress)
+    console.log(requirement.progress)
+  }, [requirement.progress])
 
   const gaugeStyle = {
     width: progress + "%"
@@ -21,6 +20,5 @@ const StepGauge = ({ requirement }) => {
     </div>
   )
 }
-
 
 export default StepGauge

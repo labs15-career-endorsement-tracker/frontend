@@ -14,12 +14,16 @@ const StepList = props => {
       <h1 className="title">Steps to complete</h1>
       <div className="step-list">
         {steps.map(step => (
-          <Step key={step.id} step={step} toggle={props.toggle} fetchRequirements={props.fetchRequirements}/>
+          <Step
+            key={step.id}
+            step={step}
+            toggle={props.toggle}
+            fetchRequirements={props.fetchRequirements}
+          />
         ))}
       </div>
     </div>
   )
 }
-
 
 export default StepList

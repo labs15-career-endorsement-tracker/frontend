@@ -11,13 +11,16 @@ import StepList from "./steps/StepList"
 import Navigation from "./Navigation"
 
 const Dashboard = props => {
-
   return (
     <div className="dash-container">
       <Navigation />
       <UserInfo />
       <RequirementCardContainer />
-      <StepList steps={props.stepsByTask} toggle={props.toggleStep} fetchRequirements={props.fetchRequirements}/>
+      <StepList
+        steps={props.stepsByTask}
+        toggle={props.toggleStep}
+        fetchRequirements={props.fetchRequirements}
+      />
     </div>
   )
 }

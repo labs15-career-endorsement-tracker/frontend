@@ -1,12 +1,12 @@
 import React from "react"
 import { loadFromLocalStorage } from "../../store"
 
-import StepGauge from '../../components/steps/StepGauge'
+import StepGauge from "../../components/steps/StepGauge"
 
 const ReqCard = ({ requirement, fetchSteps, steps }) => {
   return (
     <div className="requirement-card">
-      <StepGauge steps={steps} requirement={requirement}/>
+      <StepGauge steps={steps} requirement={requirement} />
       <h2 className="title">{requirement.title}</h2>
       <p className="description">{requirement.tasks_description}</p>
       <div

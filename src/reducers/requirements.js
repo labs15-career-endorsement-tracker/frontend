@@ -14,7 +14,7 @@ export default (state = initialState, { type, payload }) => {
 
     case fetchRequirements.fulfilled.toString():
       return { ...state, inProgress: false, requirements: payload }
-      
+
     case fetchRequirements.rejected.toString():
       return {
         ...state,

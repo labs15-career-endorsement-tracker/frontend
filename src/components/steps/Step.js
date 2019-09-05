@@ -6,16 +6,13 @@ const Step = ({ step, toggle, fetchRequirements }) => {
   const { token } = loadFromLocalStorage("auth")
 
   const handleToggle = async () => {
-      await toggle(token, step.tasks_id, step.id, step.is_complete)
-      await fetchRequirements(token)
+    await toggle(token, step.tasks_id, step.id, step.is_complete)
+    await fetchRequirements(token)
   }
 
   return (
     <div className="each-step">
-      <div
-        className="check-box"
-        onClick={handleToggle}
-      >
+      <div className="check-box" onClick={handleToggle}>
         <div className={step.is_complete ? "complete" : "incomplete"}>
           <CheckMark />
         </div>
