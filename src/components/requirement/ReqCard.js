@@ -7,7 +7,7 @@ const ReqCard = ({ requirement, fetchSteps, steps }) => {
   return (
     <div className="requirement-card">
       <StepGauge steps={steps} requirement={requirement} />
-      <div className="title-area incomplete">
+      <div className={`title-area ${requirement.progress === 100 ? 'complete' : 'incomplete'}`}>
       <h2 className="title">{requirement.title}</h2>
       </div>
       {/* I was thinking this link could come out all together and the whole card should be a link to the next route */}

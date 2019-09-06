@@ -18,8 +18,11 @@
   }
   .incomplete {
     margin-top: 1rem;
+    background: #fbfeff;
   }
   .complete {
     margin-top: 0;
+    background: #add890;
+    padding-bottom: 1rem;
   }
 }

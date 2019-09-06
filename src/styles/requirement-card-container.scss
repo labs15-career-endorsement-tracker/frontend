@@ -1,16 +1,14 @@
 .requirement-card-container {
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
   justify-content: space-around;
   box-sizing: border-box;
-  // border: 1px solid red;
-  margin: 4rem 0;
+  margin: 4rem 1rem;
   .component-title {
     padding: 1em;
   }
   .req-card-area {
-    margin: 1em 0;
+    margin: 1em 0 2em;
     width: 100%;
     display: flex;
     @media (min-width: $breakpoint-small) {
@@ -20,7 +18,6 @@
       width: 30%;
     }
   }
-
   .req-card {
     // border: 1px solid blue;
     display: flex;
