@@ -3,10 +3,13 @@ import { loadFromLocalStorage } from "../../store"
 
 import StepGauge from "../../components/steps/StepGauge"
 
-const ReqCard = ({ requirement, fetchSteps, steps }) => {
+import {history} from "../../store"
+
+const ReqCard = ({ requirement, fetchSteps, steps, match }) => {
+ 
   return (
     <div className="requirement-card" onClick={() =>
-      fetchSteps(loadFromLocalStorage("auth").token, requirement.id)
+      history.push(`/requirements/${requirement.id}`)
     }>
       <StepGauge steps={steps} requirement={requirement} />
       <div className={`title-area ${requirement.progress === 100 ? 'complete' : 'incomplete'}`}>
