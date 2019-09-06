@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
+import { Route, Switch } from "react-router-dom"
 
 // Functions
 import { toggleStep, fetchRequirements } from "../actions"
@@ -9,18 +10,20 @@ import UserInfo from "./UserInfo"
 import RequirementCardContainer from "./requirement/RequirementCardContainer"
 import StepList from "./steps/StepList"
 import Navigation from "./Navigation"
+import RequirementDetails from "./RequirementDetails"
 
 const Dashboard = props => {
   return (
     <div className="dash-container">
       <Navigation />
       <UserInfo />
-      <RequirementCardContainer />
-      <StepList
-        steps={props.stepsByTask}
-        toggle={props.toggleStep}
-        fetchRequirements={props.fetchRequirements}
-      />
+      <Switch>
+        <Route path="/requirements/:id" component={RequirementDetails}></Route>
+        <Route
+          path="/requirements"
+          component={RequirementCardContainer}
+        ></Route>
+      </Switch>
     </div>
   )
 }
