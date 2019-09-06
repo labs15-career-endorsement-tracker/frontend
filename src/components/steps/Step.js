@@ -3,7 +3,6 @@ import { CheckMark } from "./svg/CheckMark"
 import { loadFromLocalStorage, loadAuthDataFromLocalStorage } from "../../store"
 
 const Step = ({ step, toggle, user, fetchUser }) => {
-  console.log(fetchUser)
   const { token } = loadFromLocalStorage("auth")
 
   const handleToggle = async () => {

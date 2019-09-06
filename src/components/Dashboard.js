@@ -16,8 +16,8 @@ import NotFound from "./NotFound"
 const Dashboard = props => {
   return (
     <div className="dash-container">
-      <Navigation />
-      <UserInfo fetchUser={props.fetchUser} user={props.user}/>
+      <Navigation fetchUser={props.fetchUser} user={props.user}/>
+      <UserInfo fetchUser={props.fetchUser} user={props.user} userInProgress={props.userInProgress}/>
       <Switch>
         <Route
           exact
@@ -35,7 +35,8 @@ const mapStateToProps = state => {
   return {
     inProgress: state.stepReducer.inProgress,
     stepsByTask: state.stepReducer.stepsByTask,
-    user: state.userReducer.user
+    user: state.userReducer.user,
+    userInProgress: state.userReducer.inProgress
   }
 }
 
