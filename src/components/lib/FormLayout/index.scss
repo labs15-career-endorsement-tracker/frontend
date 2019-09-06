@@ -1,0 +1,46 @@
+@import "../../../styles/variables";
+
+.l-two-column {
+  display: flex;
+}
+
+.l-two-column .left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 4.8rem 1.6rem 1.6rem;
+
+  @media screen and (min-width: $breakpoint-tiny) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    width: 40%;
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    padding: 4.8rem 3.2rem 3.2rem;
+  }
+
+  .logo img {
+    margin-bottom: 8.8rem;
+    width: 50%;
+  }
+}
+
+.l-two-column .right {
+  display: none;
+  width: 60%;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    display: block;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100vmax;
+  }
+}

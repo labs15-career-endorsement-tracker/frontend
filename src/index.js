@@ -1,12 +1,30 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "./index.css"
+
+import { Router } from "react-router-dom"
+import { Provider } from "react-redux"
+import { toast } from "react-toastify"
+
+import "react-toastify/dist/ReactToastify.css"
+import "./styles/index.scss"
+
+import { createStore, history } from "./store"
+import rootReducer from "./reducers"
+
 import App from "./App"
-import * as serviceWorker from "./serviceWorker"
 
-ReactDOM.render(<App />, document.getElementById("root"))
+toast.configure({
+  autoClose: 5000,
+  draggable: false
+})
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister()
+const store = createStore(rootReducer)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById("root")
+)

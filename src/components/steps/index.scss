@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+.gauge-container {
+  // border: 1px solid black;
+  height: 10px;
+  background: $light-green;
+  // border-radius: 50px;
+  .gauge-fill {
+    background: $dark-green;
+    height: 100%;
+    border-radius: 0px 100px 100px 0px;
+  }
+  .on-complete {
+    border-radius: 0;
+    box-shadow: 0;
+  }
+}

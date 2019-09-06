@@ -1,0 +1,33 @@
+@import "../../../styles/variables";
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.2rem;
+}
+
+.form-field label {
+  font-family: $font-stack-meta;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-field input {
+  font-family: $font-stack-body;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0.8rem 1.6rem 1.6rem;
+  background: transparent;
+  border-bottom: 0.4rem solid $black;
+  margin-bottom: 0.4rem;
+}
+
+.form-field .feedback {
+  font-family: $font-stack-body;
+  color: $color-error;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}

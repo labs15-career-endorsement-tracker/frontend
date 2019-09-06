@@ -1,0 +1,35 @@
+.dropdown-container {
+  .dropdown-button {
+    border: 0;
+    background: #fffdfd;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    background: #fffdfd;
+    position: absolute;
+    right: 10px;
+    margin: 1rem;
+    min-width: 150px;
+    overflow: auto;
+    padding: 1.5rem;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    border-left: 2px solid #c4e7d1;
+    text-align: center;
+    cursor: pointer;
+    .logout {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+    }
+    .fad {
+      margin-left: 1rem;
+    }
+    .logout-text {
+      margin-right: 1rem;
+    }
+  }
+  .show {
+    display: block;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+.nav_wrapper {
+  font-family: "Barlow Condensed";
+  color: #104753;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: $white;
+  margin-bottom: 3em;
+  .logo {
+    width: 10%;
+  }
+}
+.user_info {
+  display: flex;
+  align-items: center;
+  .user {
+    text-transform: capitalize;
+    text-align: right;
+    border-right: 4px solid #c4e7d1;
+    padding-right: 15px;
+    .user_full_name {
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    .user_track {
+      font-size: 1.2rem;
+    }
+  }
+  .user_button {
+    padding: 1rem;
+    margin: 0.2rem;
+  }
+}
+.nav_wrapper .logo {
+  width: 10%;
+  padding-left: 1em;
+  img {
+    width: 100%;
+  }
+}
