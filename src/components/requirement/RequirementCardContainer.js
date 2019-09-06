@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react"
 
 import ReqCard from "./ReqCard"
 
-import { fetchRequirements, fetchSteps } from "../../actions"
+import { fetchRequirements } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
 const RequirementCardContainer = ({
   requirements,
-  fetchSteps,
   fetchRequirements
 }) => {
   const [reqs, setReqs] = useState([])
@@ -42,5 +41,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchRequirements, fetchSteps }
+  { fetchRequirements }
 )(RequirementCardContainer)
