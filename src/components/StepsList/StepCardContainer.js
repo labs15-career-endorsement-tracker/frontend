@@ -61,7 +61,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect()
+export default connect(
   mapStateToProps,
   { fetchSteps }
 )(withRouter(StepCardContainer))
