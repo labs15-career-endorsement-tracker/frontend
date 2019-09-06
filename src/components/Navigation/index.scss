@@ -8,15 +8,11 @@
   justify-content: space-between;
   padding: 1rem;
   background: $white;
-  margin-bottom: .9em;
-  
+  margin-bottom: 0.9em;
   @media screen and(max-width: $breakpoint-medium) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .logo {
-      padding: none;
-    }
   }
   .logo {
     justify-content: center;
@@ -46,6 +42,6 @@
   }
   .user_button {
     padding: 1rem;
-    margin: 0.2rem;
+    margin-bottom: 0.2rem;
   }
 }
