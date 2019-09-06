@@ -36,7 +36,7 @@ const UserInfo = ({fetchUser, user, userInProgress}) => {
       <div className="meter-wrapper">
         <div className="meter-box">
           <div className="meter">
-            {!Object.keys(user).length ? "Loading..." : <Percentage progress={user.progress} />}
+            {!Object.keys(user).length ? <Percentage isLoading={true} /> : <Percentage progress={user.progress} isLoading={false} />}
           </div>
           <h4 className="progress-label">Overall Progress</h4>
         </div>
