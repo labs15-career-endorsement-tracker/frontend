@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from "react"
-import { useSelector } from "react-redux"
+import { useSelector, connect } from "react-redux"
 import { withRouter } from "react-router"
 
 import Step from "./Step"
-import { getRequirements } from "../../api"
-import { getSteps } from "../../api"
+import { toggleStep, fetchSteps } from "../../actions"
+// import { getRequirements } from "../../api"
+// import { getSteps } from "../../api"
 import { loadAuthDataFromLocalStorage } from "../../store"
 
-const StepList = props => {
-  console.log(props.match.params.id)
-  let test = Number(props.match.params.id)
+const StepList = ({fetchSteps, toggleStep, stepsByTask, match }) => {
+  console.log(match.params.id)
+  let test = Number(match.params.id)
 
   const [steps, setSteps] = useState([])
-  useEffect(() => {
-    getSteps(loadAuthDataFromLocalStorage().token, test).then(requirements => {
-      console.log(requirements)
-      setSteps(requirements)
-    })
-    // setSteps(props.steps)
-  }, [props.steps])
 
+  useEffect(() => {
+    const { token } = loadAuthDataFromLocalStorage()
+    fetchSteps(token, test)
+  }, [fetchSteps])
+
+  useEffect(() => {
+    setSteps(stepsByTask)
+  }, [stepsByTask])
   return (
     <div className="step-list-container">
       <h1 className="title">Steps to complete</h1>
@@ -28,8 +30,8 @@ const StepList = props => {
           <Step
             key={step.id}
             step={step}
-            toggle={props.toggle}
-            fetchRequirements={props.fetchRequirements}
+            toggle={toggleStep}
+            // fetchRequirements={props.fetchRequirements}
           />
         ))}
       </div>
@@ -37,4 +39,14 @@ const StepList = props => {
   )
 }
 
-export default withRouter(StepList)
+const mapStateToProps = state => {
+  return {
+    inProgress: state.stepReducer.inProgress,
+    stepsByTask: state.stepReducer.stepsByTask
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  { toggleStep, fetchSteps }
+)(withRouter(StepList))
