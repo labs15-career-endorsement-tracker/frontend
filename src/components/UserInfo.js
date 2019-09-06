@@ -31,15 +31,19 @@ const UserInfo = () => {
   return (
     <div className="userInfo-container">
       <div className="dateAndGreet">
+        <div className="date">{todayDate}</div>
         <h2 className="welcome-msg">{greeting()},</h2>
         <h2 className='first-name'>{user.first_name}</h2>
-        <div className="date">{todayDate}</div>
+        <p>Below are your requirements to be fully endorsed.</p>
       </div>
-      <div className='progress-meter'>
-        <Percentage progress={user.progress} />
-        <label className='progress-label'>Overall Progress</label>
+      <div className='meter-wrapper'>
+        <div className='meter-box'>
+          <div className='meter'>
+            <Percentage progress={user.progress} />
+          </div>
+          <h4 className='progress-label'>Overall Progress</h4>
+        </div>
       </div>
-      
     </div>
   )
 }
