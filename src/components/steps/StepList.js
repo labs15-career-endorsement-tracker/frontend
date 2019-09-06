@@ -1,26 +1,31 @@
 import React, { useState, useEffect } from "react"
-import { useSelector, connect } from "react-redux"
+import { connect } from "react-redux"
 import { withRouter } from "react-router"
 
 import Step from "./Step"
-import { toggleStep, fetchSteps } from "../../actions"
-// import { getRequirements } from "../../api"
-// import { getSteps } from "../../api"
+import { toggleStep, fetchSteps, fetchRequirements } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 
-const StepList = ({ fetchSteps, toggleStep, stepsByTask, match }) => {
-  let test = Number(match.params.id)
-
+const StepList = ({ fetchSteps, toggleStep, stepsByTask, match, fetchRequirements, stateRequirements }) => {
+  
   const [steps, setSteps] = useState([])
+  const [requirements, setRequirements] = useState([])
+  console.log(steps)
+  console.log(requirements)
 
+  const taskId = Number(match.params.id)
+  
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
-    fetchSteps(token, test)
-  }, [fetchSteps])
+    fetchSteps(token, taskId)
+    fetchRequirements(token)
+  }, [fetchSteps, taskId, fetchRequirements])
 
   useEffect(() => {
     setSteps(stepsByTask)
+    setRequirements(stateRequirements)
   }, [stepsByTask])
+
   return (
     <div className="step-list-container">
       <h1 className="title">Steps to complete</h1>
@@ -30,7 +35,6 @@ const StepList = ({ fetchSteps, toggleStep, stepsByTask, match }) => {
             key={step.id}
             step={step}
             toggle={toggleStep}
-            // fetchRequirements={props.fetchRequirements}
           />
         ))}
       </div>
@@ -41,11 +45,12 @@ const StepList = ({ fetchSteps, toggleStep, stepsByTask, match }) => {
 const mapStateToProps = state => {
   return {
     inProgress: state.stepReducer.inProgress,
-    stepsByTask: state.stepReducer.stepsByTask
+    stepsByTask: state.stepReducer.stepsByTask,
+    // stateRequirements: state.requirements.requirements
   }
 }
 
 export default connect(
   mapStateToProps,
-  { toggleStep, fetchSteps }
+  { toggleStep, fetchSteps, fetchRequirements }
 )(withRouter(StepList))
