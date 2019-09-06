@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 .nav_wrapper {
   font-family: "Barlow Condensed";
   color: #104753;
@@ -5,6 +6,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  background: $white;
+  margin-bottom: 3em;
   .logo {
     width: 10%;
   }
@@ -32,6 +35,7 @@
 }
 .nav_wrapper .logo {
   width: 10%;
+  padding-left: 1em;
   img {
     width: 100%;
   }
