@@ -10,12 +10,14 @@ import NotFound from "./components/NotFound"
 
 const App = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/sign-in" component={SignInForm} />
-      <Route path="/sign-up" component={SignUpForm} />
-      <Route component={NotFound}></Route>
-    </Switch>
+    <div className="test">
+      <Switch>
+        <Route exact path="/sign-in" component={SignInForm} />
+        <Route exact path="/sign-up" component={SignUpForm} />
+        <Dashboard />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
   )
 }
 
