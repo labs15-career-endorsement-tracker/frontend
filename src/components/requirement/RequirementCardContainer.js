@@ -24,16 +24,11 @@ const RequirementCardContainer = ({
 
   return (
     <div className="requirement-card-container">
-      <div className="component-title">
-        <h1>Requirements</h1>
-      </div>
-      <div className="req-card-area">
-        <div className="req-card">
-          {reqs.map(reg => (
-            <ReqCard key={reg.id} requirement={reg} fetchSteps={fetchSteps} />
-          ))}
+      {reqs.map(req => (
+        <div className="req-card-area">
+          <ReqCard key={req.id} requirement={req} />
         </div>
-      </div>
+      ))}
     </div>
   )
 }

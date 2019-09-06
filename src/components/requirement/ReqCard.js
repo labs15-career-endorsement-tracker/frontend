@@ -1,21 +1,29 @@
 import React from "react"
-import { loadFromLocalStorage } from "../../store"
 
 import StepGauge from "../../components/steps/StepGauge"
 
-const ReqCard = ({ requirement, fetchSteps, steps }) => {
+import { history } from "../../store"
+
+const ReqCard = ({ requirement }) => {
   return (
-    <div className="requirement-card">
-      <StepGauge steps={steps} requirement={requirement} />
-      <h2 className="title">{requirement.title}</h2>
-      <p className="description">{requirement.tasks_description}</p>
+    <div
+      className="requirement-card"
+      onClick={() => history.push(`/requirements/${requirement.id}`)}
+    >
+      <StepGauge requirement={requirement} />
       <div
-        className="view-steps"
-        onClick={() =>
-          fetchSteps(loadFromLocalStorage("auth").token, requirement.id)
-        }
+        className={`title-area ${
+          requirement.progress === 100 ? "complete" : "incomplete"
+        }`}
       >
-        View Steps
+        <h2
+          className={`title ${
+            requirement.progress === 100 ? "white-text" : ""
+          }`}
+        >
+          {requirement.progress === 100 && <i className="fas fa-check"></i>}
+          {requirement.title}
+        </h2>
       </div>
     </div>
   )

@@ -2,12 +2,11 @@ import React from "react"
 import { CheckMark } from "./svg/CheckMark"
 import { loadFromLocalStorage } from "../../store"
 
-const Step = ({ step, toggle, fetchRequirements }) => {
+const Step = ({ step, toggle }) => {
   const { token } = loadFromLocalStorage("auth")
 
   const handleToggle = async () => {
     await toggle(token, step.tasks_id, step.id, step.is_complete)
-    await fetchRequirements(token)
   }
 
   return (
