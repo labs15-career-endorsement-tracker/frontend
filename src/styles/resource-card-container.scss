@@ -1,5 +1,11 @@
 .temp-container {
   padding: 1rem;
+  @media screen and(max-width: $breakpoint-medium) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
   .resource-card-container {
     margin: 0 auto;
     margin-bottom: 10px;

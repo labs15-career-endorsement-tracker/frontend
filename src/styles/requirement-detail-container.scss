@@ -2,4 +2,9 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  @media screen and(max-width: $breakpoint-medium) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
