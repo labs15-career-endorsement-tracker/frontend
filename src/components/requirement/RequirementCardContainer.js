@@ -23,13 +23,11 @@ const RequirementCardContainer = ({
   }, [requirements])
 
   return (
-    
     <div className="requirement-card-container">
       {reqs.map(req => (
         <div className="req-card-area">
-          <ReqCard key={req.id} requirement={req}/>
+          <ReqCard key={req.id} requirement={req} />
         </div>
-        
       ))}
     </div>
   )
