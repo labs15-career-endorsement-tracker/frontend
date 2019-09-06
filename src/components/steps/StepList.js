@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from "react"
+import { useSelector } from "react-redux"
+import { withRouter } from "react-router"
 
 import Step from "./Step"
+import { getRequirements } from "../../api"
+import { getSteps } from "../../api"
+import { loadAuthDataFromLocalStorage } from "../../store"
 
 const StepList = props => {
-  const [steps, setSteps] = useState([])
+  console.log(props.match.params.id)
+  let test = Number(props.match.params.id)
 
+  const [steps, setSteps] = useState([])
   useEffect(() => {
-    setSteps(props.steps)
+    getSteps(loadAuthDataFromLocalStorage().token, test).then(requirements => {
+      console.log(requirements)
+      setSteps(requirements)
+    })
+    // setSteps(props.steps)
   }, [props.steps])
 
   return (
@@ -26,4 +37,4 @@ const StepList = props => {
   )
 }
 
-export default StepList
+export default withRouter(StepList)

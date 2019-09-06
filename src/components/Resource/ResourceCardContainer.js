@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import { fetchResources } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "./../../store"
+import { withRouter } from "react-router"
 
 // Components
 import ResourceCard from "./ResourceCard"
@@ -10,6 +11,8 @@ import ResourceCard from "./ResourceCard"
 import "../../styles/index.scss"
 
 const ResourceCardContainer = props => {
+  console.log(props.match.params.id)
+  const param = Number(props.match.params.id)
   const [resources, setResources] = useState([])
   const [resourceIsServerError, setResourceIsServerError] = useState(false)
   const [resourceServerError, setResourceServerError] = useState({
@@ -20,7 +23,7 @@ const ResourceCardContainer = props => {
 
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
-    props.fetchResources(token, 1)
+    props.fetchResources(token, param)
   }, [])
 
   useEffect(() => {
@@ -62,4 +65,6 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps,
   { fetchResources }
-)(ResourceCardContainer)
+)(withRouter(ResourceCardContainer))
+
+// export default ResourceCardContainer
