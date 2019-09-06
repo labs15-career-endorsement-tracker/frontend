@@ -6,10 +6,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    box-shadow: $card-shadow;
     height: 100%;
     width: 100%;
-    background: #fbfeff;
+    background: $white;
   }
   .title {
     font-size: 3rem;
@@ -26,11 +26,11 @@
   }
   .incomplete {
     margin-top: 1rem;
-    background: #fbfeff;
+    background: $white;
   }
   .complete {
     margin-top: 0;
-    background: #add890;
+    background: $dark-green;
     padding-bottom: 1rem;
   }
 }

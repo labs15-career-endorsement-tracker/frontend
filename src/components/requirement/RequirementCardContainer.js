@@ -6,8 +6,6 @@ import { fetchRequirements, fetchSteps } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
-import StepGauge from "../../components/steps/StepGauge"
-
 const RequirementCardContainer = ({
   requirements,
   fetchSteps,
