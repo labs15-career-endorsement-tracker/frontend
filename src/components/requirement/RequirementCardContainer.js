@@ -6,10 +6,7 @@ import { fetchRequirements } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
-const RequirementCardContainer = ({
-  requirements,
-  fetchRequirements
-}) => {
+const RequirementCardContainer = ({ requirements, fetchRequirements }) => {
   const [reqs, setReqs] = useState([])
 
   useEffect(() => {
