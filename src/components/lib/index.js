@@ -5,6 +5,7 @@ import SelectFormField from "./SelectFormField"
 import FormLayout from "./FormLayout"
 import Form from "./Form"
 import FormButton from "./FormButton"
+import StepItem from "./StepItem"
 
 export {
   FormField,
@@ -13,5 +14,6 @@ export {
   FormLayout,
   Form,
   Logo,
-  FormButton
+  FormButton,
+  StepItem
 }
