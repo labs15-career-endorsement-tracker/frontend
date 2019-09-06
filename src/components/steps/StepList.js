@@ -8,7 +8,7 @@ import { toggleStep, fetchSteps } from "../../actions"
 // import { getSteps } from "../../api"
 import { loadAuthDataFromLocalStorage } from "../../store"
 
-const StepList = ({fetchSteps, toggleStep, stepsByTask, match }) => {
+const StepList = ({ fetchSteps, toggleStep, stepsByTask, match }) => {
   console.log(match.params.id)
   let test = Number(match.params.id)
 
