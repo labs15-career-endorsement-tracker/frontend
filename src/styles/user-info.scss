@@ -1,25 +1,32 @@
 @import "./variables";
 
 .userInfo-container {
+  font-family: "Barlow Condensed", sans-serif;
+  align-items: center;
   margin: 2em auto;
   display: flex;
   justify-content: space-between;
   background: $white;
   padding: 2em;
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
-  min-width: 80%;
-  @media screen and (min-width: $breakpoint-small) {
-    max-width: 75%;
-  }
-
-  .dateAndGreet {
-    font-family: "Barlow Condensed";
-    max-width: 50%;
-    font-size: 2rem;
-
-    p {
-      font-family: Lato;
+  width: 80%;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 70%;
+    flex-direction: column;
+    .dateAndGreet {
+      margin: 3rem;
     }
+    .meter-wrapper {
+      margin: 3rem;
+    }
+    h4 {
+      font-size: 0.5rem;
+    }
+  }
+  p {
+    font-family: Lato;
+    font-size: 1.6rem;
+    line-height: 1.4;
   }
 
   .date {
@@ -28,36 +35,42 @@
   }
 
   .welcome-msg {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     font-weight: bold;
   }
 
   .first-name {
     text-transform: capitalize;
     color: $secondary;
-    font-size: 3.5rem;
+    font-weight: 800;
+    font-size: 4.4rem;
     padding-bottom: 0.5em;
   }
 
   .meter-wrapper {
     display: flex;
     justify-content: flex-end;
-    max-width: 40%;
-
-    @media screen and (min-width: $breakpoint-medium) {
-      max-width: 25%;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: $breakpoint-medium) {
+      width: 50%;
     }
   }
 
   .meter-box {
     display: flex;
     flex-direction: column;
-    // border: 1px solid yellow;
     justify-content: center;
+    align-items: center;
+    width: 70%;
   }
 
   .meter {
     margin: 0 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .percentage {
@@ -65,10 +78,17 @@
   }
 
   .progress-label {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-family: Lato;
     padding-top: 0.5em;
-    font-size: 2rem;
     align-self: center;
-    // border: 1px solid black;
+
+    h4 {
+      line-height: 2.2;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
   }
 }
