@@ -9,7 +9,6 @@ import { toggleStep, fetchSteps } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 
 const StepList = ({ fetchSteps, toggleStep, stepsByTask, match }) => {
-  console.log(match.params.id)
   let test = Number(match.params.id)
 
   const [steps, setSteps] = useState([])
