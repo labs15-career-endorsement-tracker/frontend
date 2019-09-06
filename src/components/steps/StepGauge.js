@@ -16,10 +16,7 @@ const StepGauge = ({ requirement }) => {
 
   return (
     <div className="gauge-container">
-      <div
-        className={`gauge-fill ${progress === 100 && "on-complete"}`}
-        style={gaugeStyle}
-      ></div>
+      <div className={`gauge-fill ${progress === 100 && 'on-complete'}`} style={gaugeStyle}></div>
     </div>
   )
 }
