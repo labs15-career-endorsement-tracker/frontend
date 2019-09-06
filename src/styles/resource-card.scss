@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+.resource-card {
+  background: #e9ebec;
+  .individual-resource {
+    display: flex;
+    margin: 3px 0;
+    background: #fbfeff;
+    padding: 2rem;
+    .individual-resource-icon {
+      padding: 1rem;
+      color: #104753;
+    }
+    .individual-resource-content {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      .resource-url {
+        font-family: "Lato", sans-serif;
+        text-decoration-line: underline;
+        a {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}

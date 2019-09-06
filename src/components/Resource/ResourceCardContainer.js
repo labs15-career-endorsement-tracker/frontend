@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
-// import { fetchResources } from "../../actions"
+import { fetchResources } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "./../../store"
 
 // Components
@@ -52,15 +52,11 @@ const ResourceCardContainer = props => {
 
 const mapStateToProps = state => {
   return {
-    // resourceInProgress: state.resourceReducer.resourceInProgress,
-    // resources: state.resourceReducer.resources,
-    // resourceServerError: state.resourceReducer.resourceServerError,
-    // resourceIsServerError: state.resourceReducer.resourceIsServerError
+    resourceInProgress: state.resourceReducer.resourceInProgress,
+    resources: state.resourceReducer.resources,
+    resourceServerError: state.resourceReducer.resourceServerError,
+    resourceIsServerError: state.resourceReducer.resourceIsServerError
   }
-}
-
-const fetchResources = () => {
-  console.log("nothing")
 }
 
 export default connect(

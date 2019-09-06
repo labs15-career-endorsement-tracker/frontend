@@ -1,6 +1,12 @@
 import { createAsyncAction } from "redux-promise-middleware-actions"
 
-import { addUser, getRequirements, getSteps, toggleStepComplete } from "../api"
+import {
+  addUser,
+  getRequirements,
+  getSteps,
+  toggleStepComplete,
+  getResources
+} from "../api"
 
 export const createUser = createAsyncAction("CREATE_USER", addUser)
 
@@ -9,10 +15,7 @@ export const fetchRequirements = createAsyncAction(
   getRequirements
 )
 
-export const fetchResources = createAsyncAction(
-  "FETCH_RESOURCES",
-  getRequirements
-)
+export const fetchResources = createAsyncAction("FETCH_RESOURCES", getResources)
 
 export const fetchSteps = createAsyncAction("FETCH_STEPS", getSteps)
 
