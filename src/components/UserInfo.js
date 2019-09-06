@@ -5,14 +5,11 @@ import { loadAuthDataFromLocalStorage } from "../store"
 
 import Percentage from "./lib/Percentage"
 
-const UserInfo = () => {
-  const [user, setUser] = useState({ first_name: "" })
+const UserInfo = ({fetchUser, user, userInProgress}) => {
 
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
-    getUserById(token, userId)
-      .then(user => setUser(user))
-      .catch(err => console.log(err.response))
+    fetchUser(token, userId)
   }, [])
 
   const greeting = () => {
@@ -30,13 +27,13 @@ const UserInfo = () => {
     <div className="userInfo-container">
       <div className="dateAndGreet">
         <h2 className="welcome-msg">{greeting()},</h2>
-        <h2 className="first-name">{user.first_name}</h2>
+        <h2 className="first-name">{!Object.keys(user).length ? "Loading..." : `${user.first_name}`}</h2>
         <p>Below are your requirements to be fully endorsed.</p>
       </div>
       <div className="meter-wrapper">
         <div className="meter-box">
           <div className="meter">
-            <Percentage progress={user.progress} />
+            {!Object.keys(user).length ? <Percentage isLoading={true} /> : <Percentage progress={user.progress} isLoading={false} />}
           </div>
         </div>
         <div className="progress-label">
