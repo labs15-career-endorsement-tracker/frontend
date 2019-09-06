@@ -8,7 +8,7 @@
   background: $white;
   padding: 2em;
   box-shadow: 0.2em 0.2em 0.5em $shadow;
-
+  min-width: 80%;
   @media screen and (min-width: $breakpoint-small) {
     max-width: 75%;
   }

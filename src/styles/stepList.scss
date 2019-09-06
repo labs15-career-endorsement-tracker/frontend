@@ -1,18 +1,23 @@
 @import "./variables";
 
 .step-list-container {
-  border: 1px solid grey;
-  font-family: "Barlow";
-
+  margin: 0 auto;
+  width: 55%;
+  margin-bottom: 10px;
+  border-top: 8px solid #104753;
+  background: #e9ebec;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+  margin: 1rem 1rem;
   .title {
-    font-size: 1.5rem;
-    padding: 1em;
+    font-size: 3.2rem;
+    font-weight: 800;
+    padding: 1.6rem;
   }
 
   .step-list {
     display: flex;
     flex-direction: column;
-    padding: 1em 1em 0 1em;
+    padding: 2rem 3rem;
   }
 
   .each-step {
