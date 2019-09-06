@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 .nav_wrapper {
+  width: 100%;
   font-family: "Barlow Condensed";
   color: #104753;
   display: flex;
@@ -8,13 +9,28 @@
   padding: 1rem;
   background: $white;
   margin-bottom: .9em;
+  
+  @media screen and(max-width: $breakpoint-medium) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      padding: none;
+    }
+  }
   .logo {
-    width: 10%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1em;
+    img {
+      height: 75px;
+    }
   }
 }
 .user_info {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
   .user {
     text-transform: capitalize;
     text-align: right;
@@ -31,12 +47,5 @@
   .user_button {
     padding: 1rem;
     margin: 0.2rem;
-  }
-}
-.nav_wrapper .logo {
-  width: 10%;
-  padding-left: 1em;
-  img {
-    width: 100%;
   }
 }
