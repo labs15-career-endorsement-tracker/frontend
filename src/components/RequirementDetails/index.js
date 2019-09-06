@@ -6,7 +6,7 @@ import ResourceCardContainer from "../Resource/ResourceCardContainer"
 const RequirementDetail = props => {
   const test = props.location.pathname
   return (
-    <div className="test">
+    <div className="requirement-detail-container">
       <StepList
         steps={["asdsdasdadasasd", "asdasdsad"]}
         toggle={() => console.log("hi")}
