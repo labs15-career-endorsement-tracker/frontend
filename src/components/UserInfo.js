@@ -5,14 +5,10 @@ import { loadAuthDataFromLocalStorage } from "../store"
 
 import Percentage from "./lib/Percentage"
 
-const UserInfo = () => {
-  const [user, setUser] = useState({ first_name: "" })
-
+const UserInfo = (props) => {
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
-    getUserById(token, userId)
-      .then(user => setUser(user))
-      .catch(err => console.log(err.response))
+    props.fetchUser(token, userId)
   }, [])
 
   const todayDate = new Date().toDateString()
@@ -33,13 +29,13 @@ const UserInfo = () => {
       <div className="dateAndGreet">
         <div className="date">{todayDate}</div>
         <h2 className="welcome-msg">{greeting()},</h2>
-        <h2 className="first-name">{user.first_name}</h2>
+        <h2 className="first-name">{props.user.first_name}</h2>
         <p>Below are your requirements to be fully endorsed.</p>
       </div>
       <div className="meter-wrapper">
         <div className="meter-box">
           <div className="meter">
-            <Percentage progress={user.progress} />
+            <Percentage progress={props.user.progress} />
           </div>
           <h4 className="progress-label">Overall Progress</h4>
         </div>
