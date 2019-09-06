@@ -1,18 +1,18 @@
-@import './variables';
+@import "./variables";
 
 .userInfo-container {
-    margin: 0 auto;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: $white;
-    padding: 2em;
-    box-shadow: .2em .2em .5em $shadow;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: $white;
+  padding: 2em;
+  box-shadow: 0.2em 0.2em 0.5em $shadow;
 
-    @media screen and (min-width: $breakpoint-small) {
-      max-width: 75%;
-    }
-  
+  @media screen and (min-width: $breakpoint-small) {
+    max-width: 75%;
+  }
+
   .dateAndGreet {
     font-family: "Barlow Condensed";
 
@@ -24,7 +24,6 @@
     margin-bottom: 1em;
 
     border: 1px solid pink;
-
   }
 
   .welcome-msg {
