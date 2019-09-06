@@ -15,6 +15,7 @@ const App = () => {
         <Route exact path="/sign-in" component={SignInForm} />
         <Route exact path="/sign-up" component={SignUpForm} />
         <Dashboard />
+        <Route component={NotFound} />
       </Switch>
     </div>
   )
