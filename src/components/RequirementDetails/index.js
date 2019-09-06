@@ -1,6 +1,6 @@
 import React from "react"
 
-// import StepList from "../steps/StepList"
+import StepList from "../steps/StepList"
 import ResourceCardContainer from "../Resource/ResourceCardContainer"
 import StepCardContainer from "../StepsList/StepCardContainer"
 

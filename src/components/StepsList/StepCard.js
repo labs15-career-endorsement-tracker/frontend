@@ -3,9 +3,9 @@ import React from "react"
 import "../../styles/index.scss"
 
 const StepCard = props => {
-  console.log("props from StepCard", props.steps)
-  const renderIcon = isComplete => {
-    switch (isComplete) {
+  console.log("props from step card", props.steps)
+  const renderIcon = type => {
+    switch (type) {
       case false:
         return <i className="far fa-square fa-2x"></i>
       case true:
@@ -18,13 +18,13 @@ const StepCard = props => {
   return (
     <div className="step-card">
       {props.steps.map(step => (
-        <div className="individual-step" key={step.stepId}>
+        <div className="individual-step" key={step.id}>
           <div className="individual-step-icon">
-            {renderIcon(step.isComplete)}
+            {renderIcon(step.is_complete)}
           </div>
 
           <div className="individual-steps-description">
-            <p className="resource-url">{step.steps_description}</p>
+            <p className="steps-description">{step.steps_description}</p>
           </div>
         </div>
       ))}
