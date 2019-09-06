@@ -1,3 +1,4 @@
+@import './variables';
 .temp-container {
   padding: 1rem;
   .resource-card-container {
@@ -11,7 +12,7 @@
     }
     .resource-header {
       font-family: "Barlow Condensed", sans-serif;
-      background: #fbfeff;
+      background: $white;
       padding: 15px;
       h1 {
         font-size: 3.2rem;

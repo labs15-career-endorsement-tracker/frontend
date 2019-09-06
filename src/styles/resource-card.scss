@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+// @import './variables';
 
 .resource-card {
   background: #e9ebec;
   .individual-resource {
     display: flex;
     margin: 3px 0;
-    background: #fbfeff;
+    background: $white;
     padding: 2rem;
     .individual-resource-icon {
       padding: 1rem;
