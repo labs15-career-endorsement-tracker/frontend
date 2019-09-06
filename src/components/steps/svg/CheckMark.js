@@ -1,21 +1,11 @@
 import React from "react"
 
+import '../index.scss'
+
 export const CheckMark = () => {
   return (
-    <svg
-      width="30"
-      height="30"
-      viewBox="0 0 802 809"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        id="check"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M294.355 760.701L78.878 494.729L119.098 461.683L290.702 703.685L627.621 70.2734L668.878 108.229L294.355 760.701Z"
-        fill="#18DC07"
-      />
+    <svg id="checkmark" width="35px" height="" viewBox="0 0 673 745" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fillRule="evenodd" clipRule="evenodd" d="M282.689 744.5L-0.000110618 438L90 290L282.689 529.5L563 2.13305e-06L672.334 124.799L282.689 744.5Z" fill="#18DC07"/>
     </svg>
   )
 }

@@ -1,3 +1,5 @@
+@import "./variables";
+
 .step-list-container {
   border: 1px solid grey;
   font-family: "Barlow";
@@ -24,10 +26,16 @@
     min-width: 38px;
     height: 38px;
     margin-right: 1em;
+    background: $light-green;
+  }
+  
+  #checkmark path {
+    
   }
 
   .complete {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .incomplete {
