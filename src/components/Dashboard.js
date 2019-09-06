@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Route, Switch } from "react-router-dom"
+import { Redirect, Route, Switch } from "react-router-dom"
 
 // Functions
 import { toggleStep, fetchRequirements } from "../actions"
@@ -11,6 +11,7 @@ import RequirementCardContainer from "./requirement/RequirementCardContainer"
 import StepList from "./steps/StepList"
 import Navigation from "./Navigation"
 import RequirementDetails from "./RequirementDetails"
+import NotFound from "./NotFound"
 
 const Dashboard = props => {
   return (
@@ -18,11 +19,13 @@ const Dashboard = props => {
       <Navigation />
       <UserInfo />
       <Switch>
-        <Route path="/requirements/:id" component={RequirementDetails}></Route>
         <Route
-          path="/requirements"
-          component={RequirementCardContainer}
+          exact
+          path="/requirements/:id"
+          component={RequirementDetails}
         ></Route>
+        <Route exact path="/" component={RequirementCardContainer}></Route>
+        <Route component={NotFound} />
       </Switch>
     </div>
   )
