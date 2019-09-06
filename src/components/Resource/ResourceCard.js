@@ -25,7 +25,7 @@ const ResourceCard = props => {
 
           <div className="individual-resource-content">
             <p className="resource-url">
-              <a href={resource.url} target="_blank">
+              <a href={resource.url} target="_blank" rel="noopener noreferrer">
                 {resource.title}
               </a>
             </p>

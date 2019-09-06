@@ -1,17 +1,16 @@
 import React from "react"
-import { loadFromLocalStorage } from "../../store"
 
 import StepGauge from "../../components/steps/StepGauge"
 
 import { history } from "../../store"
 
-const ReqCard = ({ requirement, fetchSteps, steps, match }) => {
+const ReqCard = ({ requirement }) => {
   return (
     <div
       className="requirement-card"
       onClick={() => history.push(`/requirements/${requirement.id}`)}
     >
-      <StepGauge steps={steps} requirement={requirement} />
+      <StepGauge requirement={requirement} />
       <div
         className={`title-area ${
           requirement.progress === 100 ? "complete" : "incomplete"
