@@ -1,11 +1,25 @@
 .requirement-card {
-  padding: 1em;
-  border: 1px solid lightgrey;
-  max-width: 30%;
+  // padding: 1em;
+  width: 100%;
   font-family: "Barlow";
-
+  .title-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    height: 100%;
+    width: 100%;
+    background: #fbfeff;
+  }
   .title {
-    font-size: 1.2rem;
-    padding-bottom: 1em;
+    font-size: 3rem;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  .incomplete {
+    margin-top: 1rem;
+  }
+  .complete {
+    margin-top: 0;
   }
 }

@@ -6,6 +6,8 @@ import { fetchRequirements, fetchSteps } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
+import StepGauge from "../../components/steps/StepGauge"
+
 const RequirementCardContainer = ({
   requirements,
   fetchSteps,
@@ -24,16 +26,11 @@ const RequirementCardContainer = ({
 
   return (
     <div className="requirement-card-container">
-      <div className="component-title">
-        <h1>Requirements</h1>
-      </div>
-      <div className="req-card-area">
-        <div className="req-card">
-          {reqs.map(reg => (
-            <ReqCard key={reg.id} requirement={reg} fetchSteps={fetchSteps} />
+              {reqs.map(reg => (
+              <div className="req-card-area">
+              <ReqCard key={reg.id} requirement={reg} fetchSteps={fetchSteps} />
+              </div>
           ))}
-        </div>
-      </div>
     </div>
   )
 }

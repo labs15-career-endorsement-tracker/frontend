@@ -1,10 +1,12 @@
 .gauge-container {
-  border: 1px solid black;
+  // border: 1px solid black;
   height: 10px;
-  border-radius: 50px;
+  background: #c4e7d1;
+  // border-radius: 50px;
 
   .gauge-fill {
-    background-color: rgb(24, 220, 7);
+    background: #add890;
     height: 100%;
+    border-radius: 0px 100px 100px 0px;
   }
 }
