@@ -5,7 +5,6 @@ import "./index.scss"
 import { getUserById } from "../../api"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import Logo from "../lib/Logo"
-import Percentage from "../lib/Percentage"
 import Dropdown from "../lib/Dropdown"
 
 const Navigation = () => {
@@ -19,7 +18,6 @@ const Navigation = () => {
   return (
     <nav className="nav_wrapper">
       <Logo />
-      <Percentage progress={user.progress} />
       <div className="user_info">
         <div className="user">
           <p className="user_full_name">
