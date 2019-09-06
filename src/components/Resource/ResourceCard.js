@@ -1,11 +1,5 @@
 import React from "react"
 
-<<<<<<< HEAD
-const ResourceCard = () => {
-  return (
-    <div>
-      <h1>Hiya</h1>
-=======
 import "../../styles/index.scss"
 
 const ResourceCard = props => {
@@ -38,7 +32,6 @@ const ResourceCard = props => {
           </div>
         </div>
       ))}
->>>>>>> 806bde80642762862c4c77bedd82eff7423bfb54
     </div>
   )
 }
