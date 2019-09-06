@@ -25,8 +25,8 @@ const RequirementCardContainer = ({
   return (
     <div className="requirement-card-container">
       {reqs.map(req => (
-        <div className="req-card-area">
-          <ReqCard key={req.id} requirement={req} />
+        <div key={req.id} className="req-card-area">
+          <ReqCard requirement={req} />
         </div>
       ))}
     </div>
