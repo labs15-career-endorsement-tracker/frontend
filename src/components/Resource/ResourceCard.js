@@ -3,7 +3,6 @@ import React from "react"
 import "../../styles/index.scss"
 
 const ResourceCard = props => {
-  console.log("props from resource card", props.resources)
   const renderIcon = type => {
     switch (type) {
       case "google_doc":

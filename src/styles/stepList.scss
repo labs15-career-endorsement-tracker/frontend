@@ -27,11 +27,12 @@
     height: 38px;
     margin-right: 1em;
     background: $light-green;
+    cursor: pointer;
   }
-  
-  #checkmark path {
-    
-  }
+
+  // #checkmark path {
+
+  // }
 
   .complete {
     display: flex;

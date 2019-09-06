@@ -11,7 +11,6 @@ import ResourceCard from "./ResourceCard"
 import "../../styles/index.scss"
 
 const ResourceCardContainer = props => {
-  console.log(props.match.params.id)
   const param = Number(props.match.params.id)
   const [resources, setResources] = useState([])
   const [resourceIsServerError, setResourceIsServerError] = useState(false)
@@ -30,7 +29,6 @@ const ResourceCardContainer = props => {
     setResources(props.resources)
     setResourceIsServerError(props.resourceIsServerError)
     setResourceServerError(props.resourceServerError)
-    console.log("resources", props.resources)
   }, [props.resources, props.resourceServerError, props.resourceIsServerError])
 
   return (
