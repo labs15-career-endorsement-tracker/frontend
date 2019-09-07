@@ -1,14 +1,13 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Redirect, Route, Switch } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 
 // Functions
-import { toggleStep, fetchRequirements, fetchUser } from "../actions"
+import { toggleStep, fetchRequirements } from "../actions"
 
 // Components
 import UserInfo from "./UserInfo"
 import RequirementCardContainer from "./requirement/RequirementCardContainer"
-import StepList from "./steps/StepList"
 import Navigation from "./Navigation"
 import RequirementDetails from "./RequirementDetails"
 import NotFound from "./NotFound"
@@ -16,8 +15,8 @@ import NotFound from "./NotFound"
 const Dashboard = props => {
   return (
     <div className="dash-container">
-      <Navigation fetchUser={props.fetchUser} user={props.user}/>
-      <UserInfo fetchUser={props.fetchUser} user={props.user} userInProgress={props.userInProgress}/>
+      <Navigation />
+      <UserInfo />
       <Switch>
         <Route
           exact
@@ -34,13 +33,11 @@ const Dashboard = props => {
 const mapStateToProps = state => {
   return {
     inProgress: state.stepReducer.inProgress,
-    stepsByTask: state.stepReducer.stepsByTask,
-    user: state.userReducer.user,
-    userInProgress: state.userReducer.inProgress
+    stepsByTask: state.stepReducer.stepsByTask
   }
 }
 
 export default connect(
   mapStateToProps,
-  { toggleStep, fetchRequirements, fetchUser }
+  { toggleStep, fetchRequirements }
 )(Dashboard)
