@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
 
-import { getUserById } from "../api"
-import { loadAuthDataFromLocalStorage } from "../store"
+import { fetchUser } from "../actions"
 
 import Percentage from "./lib/Percentage"
+import { loadAuthDataFromLocalStorage } from "../store"
 
 const UserInfo = () => {
-  const [user, setUser] = useState({ first_name: "" })
+  const user = useSelector(state => state.userReducer.user)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    const { token, userId } = loadAuthDataFromLocalStorage()
-    getUserById(token, userId)
-      .then(user => setUser(user))
-      .catch(err => console.log(err.response))
-  }, [])
+    const { userId, token } = loadAuthDataFromLocalStorage()
+    dispatch(fetchUser(token, userId))
+  }, [dispatch])
 
   const greeting = () => {
     const hour = new Date().getHours()

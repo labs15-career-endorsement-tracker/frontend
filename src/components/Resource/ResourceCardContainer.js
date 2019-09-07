@@ -13,23 +13,15 @@ import "../../styles/index.scss"
 const ResourceCardContainer = props => {
   const param = Number(props.match.params.id)
   const [resources, setResources] = useState([])
-  const [resourceIsServerError, setResourceIsServerError] = useState(false)
-  const [resourceServerError, setResourceServerError] = useState({
-    message: "",
-    name: "",
-    statusCode: ""
-  })
 
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
     props.fetchResources(token, param)
-  }, [])
+  }, [props, param])
 
   useEffect(() => {
     setResources(props.resources)
-    setResourceIsServerError(props.resourceIsServerError)
-    setResourceServerError(props.resourceServerError)
-  }, [props.resources, props.resourceServerError, props.resourceIsServerError])
+  }, [props.resources])
 
   return (
     <div className="temp-container">
@@ -50,9 +42,7 @@ const ResourceCardContainer = props => {
 const mapStateToProps = state => {
   return {
     resourceInProgress: state.resourceReducer.resourceInProgress,
-    resources: state.resourceReducer.resources,
-    resourceServerError: state.resourceReducer.resourceServerError,
-    resourceIsServerError: state.resourceReducer.resourceIsServerError
+    resources: state.resourceReducer.resources
   }
 }
 
@@ -60,5 +50,3 @@ export default connect(
   mapStateToProps,
   { fetchResources }
 )(withRouter(ResourceCardContainer))
-
-// export default ResourceCardContainer
