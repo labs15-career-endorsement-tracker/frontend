@@ -8,11 +8,7 @@ import "./index.scss"
 const RequirementDetail = props => {
   return (
     <div className="requirement-detail-container">
-      <StepList
-        steps={["asdsdasdadasasd", "asdasdsad"]}
-        toggle={() => console.log("hi")}
-        fetchRequirements={() => console.log("hey")}
-      />
+      <StepList />
       <ResourceCardContainer />
     </div>
   )

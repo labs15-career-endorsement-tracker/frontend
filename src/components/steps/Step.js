@@ -1,14 +1,12 @@
 import React from "react"
 import { CheckMark } from "./svg/CheckMark"
-import { loadFromLocalStorage, loadAuthDataFromLocalStorage } from "../../store"
+import { loadFromLocalStorage } from "../../store"
 
-const Step = ({ step, toggle, user, fetchUser }) => {
+const Step = ({ step, toggle }) => {
   const { token } = loadFromLocalStorage("auth")
 
   const handleToggle = async () => {
-    const { token } = loadAuthDataFromLocalStorage()
     await toggle(token, step.tasks_id, step.id, step.is_complete)
-    await fetchUser(token, user.id)
   }
 
   return (
