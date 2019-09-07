@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { withRouter } from "react-router"
 
 import Step from "./Step"
-import { toggleStep, fetchSteps, fetchRequirements } from "../../actions"
+import { toggleStep, fetchSteps, fetchUser } from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 
 const StepList = ({
@@ -11,43 +11,30 @@ const StepList = ({
   toggleStep,
   stepsByTask,
   match,
-  fetchRequirements,
-  requirementsArray
+  fetchUser
 }) => {
-  const [steps, setSteps] = useState([])
-  const [reqs, setReqs] = useState([])
-  const [task, setTask] = useState({})
+  const { token } = loadAuthDataFromLocalStorage()
+  let test = Number(match.params.id)
 
-  const taskId = Number(match.params.id)
+  const [steps, setSteps] = useState([])
 
   useEffect(() => {
-    const { token } = loadAuthDataFromLocalStorage()
-    fetchSteps(token, taskId)
-    fetchRequirements(token)
-  }, [fetchSteps, taskId, fetchRequirements])
+    fetchSteps(token, test)
+  }, [fetchSteps, test, token])
 
   useEffect(() => {
     setSteps(stepsByTask)
-    setReqs(requirementsArray)
-    const getTaskNameById = async () => {
-      let task = await reqs.filter(task => Number(task.id) === taskId).pop()
-      setTask(task)
-    }
-    getTaskNameById()
-  }, [stepsByTask, requirementsArray, reqs, taskId])
-
-  // getTaskNameById().then(res => console.log(res))
-
+  }, [stepsByTask])
   return (
     <div className="step-list-container">
-      <h1 className="title">{task ? task.title : ""}</h1>
+      <h1 className="title">Steps to complete</h1>
       <div className="step-list">
         {steps.map(step => (
           <Step
             key={step.id}
             step={step}
             toggle={toggleStep}
-            // fetchRequirements={props.fetchRequirements}
+            fetchUser={fetchUser}
           />
         ))}
       </div>
@@ -59,11 +46,11 @@ const mapStateToProps = state => {
   return {
     inProgress: state.stepReducer.inProgress,
     stepsByTask: state.stepReducer.stepsByTask,
-    requirementsArray: state.requirementReducer.requirements
+    user: state.userReducer.user
   }
 }
 
 export default connect(
   mapStateToProps,
-  { toggleStep, fetchSteps, fetchRequirements }
+  { toggleStep, fetchSteps, fetchUser }
 )(withRouter(StepList))
