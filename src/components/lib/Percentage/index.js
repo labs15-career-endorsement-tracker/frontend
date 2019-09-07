@@ -6,7 +6,7 @@ import ProgressProvider from "./ProgressProvider"
 
 import "./index.scss"
 
-const Percentage = ({ progress = 0, isLoading }) => {
+const Percentage = ({ progress = 50 }) => {
   return (
     <div className="percentage">
       <ProgressProvider
@@ -21,7 +21,7 @@ const Percentage = ({ progress = 0, isLoading }) => {
           return (
             <CircularProgressbar
               value={value}
-              text={isLoading ? "..." : `${roundedValue}%`}
+              text={`${roundedValue}%`}
               strokeWidth={12}
               styles={buildStyles({
                 // Text size

@@ -7,12 +7,12 @@ import { loadAuthDataFromLocalStorage } from "../../store"
 import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
 
-const Navigation = ({user, fetchUser}) => {
-  // const [user, setUser] = useState({ first_name: "Loading.." })
+const Navigation = () => {
+  const [user, setUser] = useState({ first_name: "Loading.." })
 
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
-    fetchUser(token, userId)
+    getUserById(token, userId).then(user => setUser(user))
   }, [])
 
   return (
@@ -21,7 +21,7 @@ const Navigation = ({user, fetchUser}) => {
       <div className="user_info">
         <div className="user">
           <p className="user_full_name">
-           {!Object.keys(user).length ? "Loading..." : `${user.first_name} ${user.last_name}`} 
+            {user.first_name} {user.last_name}
           </p>
           <p className="user_track">{user.tracks_title}</p>
         </div>
