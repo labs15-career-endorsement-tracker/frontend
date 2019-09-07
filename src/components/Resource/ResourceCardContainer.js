@@ -10,7 +10,7 @@ import ResourceCard from "./ResourceCard"
 // Styles
 import "../../styles/index.scss"
 
-const ResourceCardContainer = ({fetchResources, match, resourcesArray}) => {
+const ResourceCardContainer = ({ fetchResources, match, resourcesArray }) => {
   const param = Number(match.params.id)
   const [resources, setResources] = useState([])
 
