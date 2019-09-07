@@ -3,7 +3,12 @@ import { connect } from "react-redux"
 import { withRouter } from "react-router"
 
 import Step from "./Step"
-import { toggleStep, fetchSteps, fetchUser } from "../../actions"
+import {
+  toggleStep,
+  fetchSteps,
+  fetchRequirements,
+  fetchUser
+} from "../../actions"
 import { loadAuthDataFromLocalStorage } from "../../store"
 
 const StepList = ({
@@ -11,23 +16,33 @@ const StepList = ({
   toggleStep,
   stepsByTask,
   match,
-  fetchUser
+  fetchUser,
+  fetchRequirements,
+  requirements
 }) => {
   const { token } = loadAuthDataFromLocalStorage()
-  let test = Number(match.params.id)
-
+  const taskId = Number(match.params.id)
+  const requirement = requirements.find(req => Number(req.id) === taskId)
   const [steps, setSteps] = useState([])
 
   useEffect(() => {
-    fetchSteps(token, test)
-  }, [fetchSteps, test, token])
+    ;(async function() {
+      await fetchRequirements(token)
+    })()
+  }, [fetchRequirements, token])
+
+  useEffect(() => {
+    fetchSteps(token, taskId)
+  }, [fetchSteps, taskId, token])
 
   useEffect(() => {
     setSteps(stepsByTask)
   }, [stepsByTask])
   return (
     <div className="step-list-container">
-      <h1 className="title">Steps to complete</h1>
+      <h1 className="title">
+        {requirement ? requirement.title : "Steps to complete"}
+      </h1>
       <div className="step-list">
         {steps.map(step => (
           <Step
@@ -46,11 +61,12 @@ const mapStateToProps = state => {
   return {
     inProgress: state.stepReducer.inProgress,
     stepsByTask: state.stepReducer.stepsByTask,
-    user: state.userReducer.user
+    user: state.userReducer.user,
+    requirements: state.requirementReducer.requirements
   }
 }
 
 export default connect(
   mapStateToProps,
-  { toggleStep, fetchSteps, fetchUser }
+  { toggleStep, fetchSteps, fetchUser, fetchRequirements }
 )(withRouter(StepList))
