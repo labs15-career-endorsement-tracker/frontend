@@ -6,7 +6,7 @@ import ProgressProvider from "./ProgressProvider"
 
 import "./index.scss"
 
-const Percentage = ({ progress = 50 }) => {
+const Percentage = ({ progress = 0 }) => {
   return (
     <div className="percentage">
       <ProgressProvider
@@ -18,6 +18,7 @@ const Percentage = ({ progress = 50 }) => {
         {value => {
           // you have to round the value again here because of the way the animation increments it
           const roundedValue = Math.round(value)
+
           return (
             <CircularProgressbar
               value={value}
