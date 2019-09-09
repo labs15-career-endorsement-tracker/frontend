@@ -19,7 +19,9 @@
     </a>
 </p>
 
-![](endrsd_demo.gif)
+<p align="center">
+    <img src="endrsd_demo.gif" alt="GIF walk-through" width="600">
+</p>
 
 <br>
 
