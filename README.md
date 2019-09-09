@@ -23,6 +23,12 @@
     <img src="endrsd_demo.gif" alt="GIF walk-through" width="600">
 </p>
 
+## Project Overview
+
+"ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
+
+Demo the project by clicking the ENDRSD logo (above the "Contributors" section) or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
+
 <br>
 
 ## Contributors
@@ -36,17 +42,23 @@
 <br>
 <br>
 
-## Project Overview
-
-"ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
-
-Demo the project by clicking the ENDRSD logo (above the "Contributors" section) or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
-
 [ENDRSD Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-[ENDRSD Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
+<p align="center">
+    <a href="https://trello.com/b/hKTAKrBD/endrsd">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019708/endrsd_trello_jg6kdd.png" alt="ENDRSD Trello Board" width="400">
+    </a>
+</p>
 
-### Key Features
+[ENDRSD Release Canvas v1.0](https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842)
+
+<p align="center">
+    <a href="https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019704/release_canvas_1_sm4hdq.png" alt="ENDRSD Notion document release canvas v1.0" width="400">
+    </a>
+</p>
+
+## Key Features
 
 - Allow students to view a list of their track-specific career endorsement requirements via an authenticated dashboard
 - Allow students to track their overall endorsement progress, as well as progress towards completing individual requirements
