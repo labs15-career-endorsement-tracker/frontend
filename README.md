@@ -92,6 +92,15 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - It can create sequential files with timestamps and even manage table alterations.
 - Allows for the creation of 'seeds', which can be used to consistently populate the database.
 
+# Authentication
+
+#### JSON Web Tokens
+
+- A self-contained token which has authentication information, expiration information, and other user properties.
+- JWTs don't have sessions to manage (stateless).
+- No database table is required, which means fewer database queries.
+- Can be used across multiple services.
+
 # APIs
 
 ## Authentication API here
