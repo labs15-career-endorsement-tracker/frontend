@@ -6,8 +6,9 @@
     justify-content: center;
     align-items: center;
     box-shadow: $card-shadow;
-    height: calc(100% - 10px - 1rem);
+    height: calc(100% - 15px - 1rem);
     background: $white;
+    color: $new-dark-green;
     cursor: pointer;
     &:hover {
       animation: hoverEffect 0.3s;
@@ -32,7 +33,7 @@
   }
   .complete {
     margin-top: 0;
-    background: $dark-green;
+    background: $gradient;
     padding-bottom: 1rem;
   }
 }
