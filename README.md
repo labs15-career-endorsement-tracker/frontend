@@ -44,9 +44,9 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 
 ### Key Features
 
-- Uses an authenticated dashboard to show students a list of their career endorsement requirements, which are also specific to a student's track.
-- Allows students to access static resources, such as Airtable links and lecture videos.
-- Allows students to track their overall endorsement progress, as well as progress towards completing individual requirements.
+- Allow students to view a list of their track-specific career endorsement requirements via an authenticated dashboard
+- Allow students to track their overall endorsement progress, as well as progress towards completing individual requirements
+- Allow students to access static resources pertaining to specific endorsement tasks, such as Airtable forms and lecture videos
 
 ## Tech Stack
 
