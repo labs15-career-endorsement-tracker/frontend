@@ -5,24 +5,20 @@
   background: #e9ebec;
   .individual-resource {
     display: flex;
-    margin: 3px 0;
-    background: $white;
-    padding: 2rem;
-    .individual-resource-icon {
-      padding: 1rem;
-      color: #104753;
+    margin: 2px 0;
+    background: $resource-card-container-background;
+    padding: 1rem;
+    align-items: center;
+    color: $new-bright-green;
+    .fab,
+    .far {
+      padding: 0.5rem 1.5rem 0.5rem 3rem;
+      font-size: 2rem;
     }
-    .individual-resource-content {
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      .resource-url {
-        font-family: "Lato", sans-serif;
-        text-decoration-line: underline;
-        a {
-          font-weight: 800;
-        }
-      }
+    .resource-url {
+      font-family: "Lato", sans-serif;
+      text-decoration-line: underline;
+      font-weight: 800;
     }
   }
 }
