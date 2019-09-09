@@ -103,6 +103,9 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 
 #### Bcrypt.js
 
+- Protects against 'rainbow table attacks'.
+- Resistant to brute-force search attacks.
+
 # API Server URLs
 
 - [Local Server URL](https://localhost:5000/api/v1)
