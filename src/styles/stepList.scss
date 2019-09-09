@@ -5,7 +5,7 @@
   width: 70%;
   margin-bottom: 10px;
   // box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
-  margin: 1rem 1rem;
+  // margin: 1rem 1rem;
   @media screen and(max-width: $breakpoint-medium) {
     flex-direction: column;
     justify-content: center;
@@ -16,6 +16,7 @@
     font-size: 3.2rem;
     font-weight: 800;
     padding: 1.6rem;
+    color: $new-dark-green;
     i {
       padding-right: 1rem;
     }
@@ -50,6 +51,7 @@
     display: flex;
     margin-bottom: 1em;
     background: $new-background-gray;
+    color: $new-dark-bluegreen;
   }
 
   .check-box {
