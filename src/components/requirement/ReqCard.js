@@ -5,6 +5,7 @@ import StepGauge from "../../components/steps/StepGauge"
 import { history } from "../../store"
 
 const ReqCard = ({ requirement }) => {
+  console.log(requirement)
   return (
     <div
       className="requirement-card"
