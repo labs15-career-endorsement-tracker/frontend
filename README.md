@@ -63,6 +63,13 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 
 #### [Back end](https://github.com/labs15-career-endorsement-tracker/backend) built using:
 
+#### PostgreSQL
+
+- PostgreSQL is a type of relational database that is open source and freely available for anyone to use.
+- SQL databases have a reputation for being more reliable because they have been tried and tested longer than their NoSQL counterparts.
+- The source code for PostgreSQL was developed by a large community that has created numerous online resources for support.
+- The strongly-typed schemas with a SQL database leave very little room for errors.
+
 #### Node.js
 
 - Node.js offers easy scalability because it can handle a large number of simultaneous connections with high throughput.
@@ -77,13 +84,6 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - It is very easy to configure and customize express.js.
 - Express.js allows you to create a REST API server.
 - Allows you to define routes of your application based on HTTP methods and URLs.
-
-#### PostgreSQL
-
-- PostgreSQL is a type of relational database that is open source and freely available for anyone to use.
-- SQL databases have a reputation for being more reliable because they have been tried and tested longer than their NoSQL counterparts.
-- The source code for PostgreSQL was developed by a large community that has created numerous online resources for support.
-- The strongly-typed schemas with a SQL database leave very little room for errors.
 
 #### Knex.js
 
