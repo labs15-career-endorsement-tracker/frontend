@@ -10,6 +10,11 @@
     height: 100%;
     width: 100%;
     background: $white;
+    cursor: pointer;
+    &:hover {
+      animation: hoverEffect 0.3s;
+      animation-fill-mode: forwards;
+    }
   }
   .title {
     font-size: 3rem;
@@ -32,5 +37,14 @@
     margin-top: 0;
     background: $dark-green;
     padding-bottom: 1rem;
+  }
+}
+
+@keyframes hoverEffect {
+  0% {
+    box-shadow: $card-shadow;
+  }
+  100% {
+    box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.3);
   }
 }
