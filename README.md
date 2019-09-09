@@ -19,7 +19,7 @@
     </a>
 </p>
 
-![](https://res.cloudinary.com/endrsd/image/upload/v1568016934/demo_endrsd_r5aqgr.gif)
+![](endrsd_demo.gif)
 
 <br>
 
