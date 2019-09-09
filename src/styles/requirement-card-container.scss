@@ -1,27 +1,21 @@
 .requirement-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  box-sizing: border-box;
   margin: 0rem 1rem;
   width: 85%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2.5rem;
+  & * {
+    box-sizing: border-box;
+  }
+  @media screen and(min-width: $breakpoint-small) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and(min-width: $breakpoint-medium) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .component-title {
     padding: 1em;
-  }
-  .req-card-area {
-    margin: 1em 0 2em;
-    width: 100%;
-    display: flex;
-    @media (min-width: $breakpoint-small) {
-      width: 48%;
-    }
-    @media (min-width: $breakpoint-medium) {
-      width: 30%;
-    }
-  }
-  .req-card {
-    // border: 1px solid blue;
-    display: flex;
-    justify-content: space-around;
   }
 }
