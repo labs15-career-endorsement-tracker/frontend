@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import { withRouter } from "react-router"
+import { NavLink } from "react-router-dom"
 
 import Step from "./Step"
 import {
@@ -52,6 +53,13 @@ const StepList = ({
             fetchUser={fetchUser}
           />
         ))}
+        <div className="return-requirements-container">
+          <NavLink to="/" className="back-link">
+            <i className="fas fa-arrow-alt-left">
+              <span className="return-text">Return to requirements</span>
+            </i>
+          </NavLink>
+        </div>
       </div>
     </div>
   )

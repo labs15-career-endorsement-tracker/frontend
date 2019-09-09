@@ -20,6 +20,26 @@
     padding: 1.6rem;
   }
 
+  .return-requirements-container {
+    display: flex;
+    align-items: center;
+    .back-link {
+      padding: 1.6rem;
+      font-size: 1.6rem;
+      font-weight: 800;
+      i {
+        font-size: 2.8rem;
+        padding: 1.2rem;
+      }
+      .return-text {
+        font-family: "Barlow", sans-serif;
+        padding: 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+    }
+  }
+
   .step-list {
     display: flex;
     flex-direction: column;
