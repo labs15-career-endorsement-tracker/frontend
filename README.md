@@ -137,22 +137,17 @@ In order for the app to function correctly, the user must set up their own envir
 
 If no `REACT_APP_STAGE` environment variable is added to the `.env` file, the default local database on port 5000 will be utilized.
 
-# Testing
-
-🚫Document what you used for testing and why
-
 # Installation Instructions
 
 🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
 
 ## Other Scripts
 
-🚫replace these examples with your own
-
-    * typecheck - runs the TypeScript compiler
+    * format - formats code using 'Prettier' extension
     * build - creates a build of the application
     * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+    * test - runs tests in **tests** directory
+    * eject - copy the configuration files and dependencies into the project so you have full control over them
 
 # Contributing
 
