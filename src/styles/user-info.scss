@@ -9,9 +9,9 @@
   background: $white;
   padding: 2rem;
   box-shadow: $card-shadow;
-  width: 70%;
+  width: 76%;
   @media screen and (max-width: $breakpoint-medium) {
-    width: 70%;
+    width: 53%;
     flex-direction: column;
     .dateAndGreet {
       margin: 3rem;
