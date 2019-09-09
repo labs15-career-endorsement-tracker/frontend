@@ -6,9 +6,9 @@
   .individual-resource {
     display: flex;
     margin: 3px 0;
-    background: $white;
-    padding: 2rem;
-    color: $neon-green;
+    background: $resource-card-container-background;
+    padding: 1rem;
+    color: $new-bright-green;
     .individual-resource-icon {
       padding: 1rem;
     }

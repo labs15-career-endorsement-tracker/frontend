@@ -12,9 +12,14 @@ $secondary: #528b98;
 $color-error: #990e0e;
 $light-green: #c4e7d1;
 $dark-green: #add890;
-$new-dark-green: #236330;
-$neon-green: #29ad44;
 $card-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+
+// v2 styles
+$new-dark-green: #236330;
+$new-bright-green: #29ad44;
+$new-medium-gray: #e6ece7;
+$new-light-gray: #f2f2f2;
+$resource-card-container-background: #fbfeff;
 
 $breakpoint-tiny: 375px; // e.g. iPhone 6
 $breakpoint-small: 414px; // e.g. iPhone 6 Plus
