@@ -10,7 +10,7 @@
   .resource-card-container {
     margin: 0 auto;
     margin-bottom: 10px;
-    border-top: 8px solid #104753;
+    border-top: 8px solid $new-dark-green;
     background: #e9ebec;
     box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
     .resource-cards {
@@ -18,6 +18,7 @@
     }
     .resource-header {
       font-family: "Barlow Condensed", sans-serif;
+      color: $new-dark-green;
       background: $white;
       padding: 15px;
       h1 {
