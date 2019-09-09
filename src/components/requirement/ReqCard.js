@@ -21,8 +21,8 @@ const ReqCard = ({ requirement }) => {
             requirement.progress === 100 ? "white-text" : ""
           }`}
         >
-          {requirement.progress === 100 && <i className="fas fa-check"></i>}
           {requirement.title}
+          {requirement.progress === 100 && <div className="icon-circle"><i className="fas fa-check"></i></div>}
         </h2>
       </div>
     </div>

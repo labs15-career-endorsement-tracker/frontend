@@ -20,8 +20,21 @@
     text-align: center;
     padding: 4rem 1rem;
     font-weight: bold;
-    i {
-      padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .icon-circle {
+      padding: 0.5rem;
+      width: fit-content;
+      background: white;
+      margin-top: 1rem;
+      border-radius: 50%;
+      i {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
   .white-text {
