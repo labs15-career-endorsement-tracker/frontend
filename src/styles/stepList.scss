@@ -32,7 +32,7 @@
   }
 
   .check-box {
-    border: 4px solid #57EC75;
+    border: 4px solid #57ec75;
     border-radius: 4px;
     min-width: 38px;
     height: 38px;
@@ -40,16 +40,16 @@
     cursor: pointer;
   }
 
- .fa-check {
-   width: 100%;
-   color: $white;
-   font-size: 3.7rem;
-   text-align: center;
-   line-height: 1.1;
- }
+  .fa-check {
+    width: 100%;
+    color: $white;
+    font-size: 3.7rem;
+    text-align: center;
+    line-height: 1.1;
+  }
 
   .complete {
-    background: #57EC75;
+    background: #57ec75;
     height: 100%;
   }
 
