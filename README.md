@@ -137,15 +137,6 @@ In order for the app to function correctly, the user must set up their own envir
 
 If no `REACT_APP_STAGE` environment variable is added to the `.env` file, the default local database on port 5000 will be utilized.
 
-# Content Licenses
-
-🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
-
-| Image Filename | Source / Creator | License                                                                      |
-| -------------- | ---------------- | ---------------------------------------------------------------------------- |
-| doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
-| rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
-
 # Testing
 
 🚫Document what you used for testing and why
