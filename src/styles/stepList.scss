@@ -32,22 +32,28 @@
   }
 
   .check-box {
-    border: 4px solid grey;
+    border: 4px solid #104753;
     border-radius: 4px;
     min-width: 38px;
     height: 38px;
     margin-right: 1em;
-    background: $light-green;
     cursor: pointer;
   }
 
-  // #checkmark path {
+ .checkMark {
+   width: 100%;
+   color: rgb(0, 147, 30);
+   font-size: 3.7rem;
+ }
 
-  // }
+ .fa-check::after {
+   display: block;
+ }
 
   .complete {
     display: flex;
     justify-content: center;
+
   }
 
   .incomplete {

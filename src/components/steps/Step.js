@@ -13,7 +13,8 @@ const Step = ({ step, toggle, fetchUser }) => {
     <div className="each-step">
       <div className="check-box" onClick={handleToggle}>
         <div className={step.is_complete ? "complete" : "incomplete"}>
-          <CheckMark />
+          {/* <i className="fad fa-check-square"></i> */}
+          <i className="checkMark fad fa-check"></i>
         </div>
       </div>
       <div className="description">{step.steps_description}</div>
