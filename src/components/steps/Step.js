@@ -1,5 +1,4 @@
 import React from "react"
-import { CheckMark } from "./svg/CheckMark"
 import { loadAuthDataFromLocalStorage } from "../../store"
 
 const Step = ({ step, toggle, fetchUser }) => {
@@ -13,8 +12,7 @@ const Step = ({ step, toggle, fetchUser }) => {
     <div className="each-step">
       <div className="check-box" onClick={handleToggle}>
         <div className={step.is_complete ? "complete" : "incomplete"}>
-          {/* <i className="fad fa-check-square"></i> */}
-          <i className="checkMark fad fa-check"></i>
+          <i className="fas fa-check"></i>
         </div>
       </div>
       <div className="description">{step.steps_description}</div>
