@@ -17,6 +17,7 @@
     <a href="https://endrsd.com/">
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1568002293/new_logo_ltlpkr.png" alt="New ENDRSD logo" width="400">
     </a>
+    ![](https://res.cloudinary.com/endrsd/image/upload/v1568016934/demo_endrsd_r5aqgr.gif)
 </p>
 
 <br>
