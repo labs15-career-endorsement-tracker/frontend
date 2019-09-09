@@ -162,6 +162,10 @@ Lastly, run `yarn start` to create a build on your local machine that can be vie
 yarn start
 ```
 
+<p align="center">
+    <img src="https://res.cloudinary.com/endrsd/image/upload/v1568018944/local_host_xpzo9l.png" alt="GIF walk-through" width="600">
+</p>
+
 ## Other Scripts
 
     * format - formats code using 'Prettier' extension
