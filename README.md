@@ -59,7 +59,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - Components can house their own logic and controls.
 - Testing with React.js is very straight-forward and comes with great documentation.
 
-#### Front end deployed to `Netlify`
+#### Front end deployed to [Netlify](https://endrsd.com)
 
 #### [Back end](https://github.com/labs15-career-endorsement-tracker/backend) built using:
 
@@ -126,7 +126,16 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
-    *  JWT_SECRET - this is your JSON web token secret, which can be any unique string of characters
+    *  JWT_SECRET=<your-secret-here>
+            -This can be any unique string of characters.
+
+    *  REACT_APP_STAGE=staging
+            -This must be included in the .env to utilize the staging database.
+
+    *  REACT_APP_STAGE=production
+            -This must be included in the .env to utilize the production database.
+
+If no `REACT_APP_STAGE` environment variable is added to the `.env` file, the default local database on port 5000 will be utilized.
 
 # Content Licenses
 
