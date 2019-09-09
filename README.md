@@ -15,7 +15,7 @@
 
 <p align="center">
     <a href="https://labs15.netlify.com/">
-        <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568002293/new_logo_ltlpkr.png" alt="New ENDRSD logo" width="350">
     </a>
 </p>
 
