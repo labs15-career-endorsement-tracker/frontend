@@ -101,19 +101,23 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - No database table is required, which means fewer database queries.
 - Can be used across multiple services.
 
-# APIs
+#### Bcrypt.js
 
-## Authentication API here
+# API Server URLs
 
-🚫Replace text below with a description of the API
+- [Local Server URL](https://localhost:5000/api/v1)
+- [Staging Server URL](https://endrsd-api-staging.herokuapp.com/api/v1)
+- [Production Server URL](https://endrsd-api.herokuapp.com/api/v1)
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
+# API Endpoints
 
-## Misc API here
-
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
+- GET `/api/v1/users/:userId`
+- GET `/api/v1/tracks`
+- GET `/api/v1/requirements`
+- GET `api/v1/requirements/:requirementsId/steps`
+- POST `/api/v1/users`
+- POST `/api/v1/login`
+- PUT `/api/v1/requirements/:requirementsId/steps`
 
 # Environment Variables
 
