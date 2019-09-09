@@ -46,7 +46,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 
 <p align="center">
     <a href="https://trello.com/b/hKTAKrBD/endrsd">
-        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019708/endrsd_trello_jg6kdd.png" alt="ENDRSD Trello Board" width="400">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019708/endrsd_trello_jg6kdd.png" alt="ENDRSD Trello Board" width="500">
     </a>
 </p>
 
@@ -54,7 +54,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 
 <p align="center">
     <a href="https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842">
-        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019704/release_canvas_1_sm4hdq.png" alt="ENDRSD Notion document release canvas v1.0" width="400">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019704/release_canvas_1_sm4hdq.png" alt="ENDRSD Notion document release canvas v1.0" width="500">
     </a>
 </p>
 
