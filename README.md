@@ -88,7 +88,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 #### Knex.js
 
 - A SQL query builder that integrates well with a PostgreSQL database.
-- Allows for 'migragtions', which makes it easier to manage tables within the PostgreSQL database.
+- Allows for 'migrations', which makes it easier to manage tables within the PostgreSQL database.
 - It can create sequential files with timestamps and even manage table alterations.
 - Allows for the creation of 'seeds', which can be used to consistently populate the database.
 
