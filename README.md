@@ -143,7 +143,24 @@ If no `REACT_APP_STAGE` environment variable is added to the `.env` file, the de
 
 # Installation Instructions
 
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+After cloning this repo on to your local machine, use the package manager [yarn](https://yarnpkg.com/en/) to install all of the required dependencies for the ENDRSD app.
+
+```bash
+yarn install
+```
+
+When all of the proper dependencies have been installed, create a `.env` file that stores the `JWT_SECRET` and the `REACT_APP_STAGE` environment variables as shown above. This particular `.env` setup will allow you to immediately connect to the staging database instead of having to create a local database.
+
+```bash
+JWT_SECRET=<your-secret-here>
+REACT_APP_STAGE=staging
+```
+
+Lastly, run `yarn start` to create a build on your local machine that can be viewed at `http://localhost:3000`.
+
+```bash
+yarn start
+```
 
 ## Other Scripts
 
