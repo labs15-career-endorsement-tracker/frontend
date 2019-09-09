@@ -69,7 +69,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - Using node.js allows developers who are familiar with JavaScript, to develop both the client-side and server-side applications using a single programming language.
 - Node.js takes less time to learn because it utilizes an already popular client-side scripting language---JavaScript.
 - Support for node.js is readily available because of the large and active community behind it.
-- Node.js is able to take advantage of caching things within the appliation memory for faster load times.
+- Node.js is able to take advantage of caching things within the application memory for faster load times.
 
 #### Express.js
 
@@ -81,7 +81,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 #### PostgreSQL
 
 - PostgreSQL is a type of relational database that is open source and freely available for anyone to use.
-- SQL databases have a reputation for being more reliable because they have ben tried and tested longer than their NoSQL counterparts.
+- SQL databases have a reputation for being more reliable because they have been tried and tested longer than their NoSQL counterparts.
 - The source code for PostgreSQL was developed by a large community that has created numerous online resources for support.
 - The strongly-typed schemas with a SQL database leave very little room for errors.
 
