@@ -14,7 +14,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](https://endrsd.com/)
 
 <p align="center">
-    <a href="https://labs15.netlify.com/">
+    <a href="https://endrsd.com/">
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1568002293/new_logo_ltlpkr.png" alt="New ENDRSD logo" width="400">
     </a>
 </p>
