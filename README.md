@@ -2,7 +2,7 @@
     <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" title="Lambda School Logo" width="200" align="right">
 </a>
 
-# The 'ENDRSD' Project - Track your Endorsement Progress
+# The 'ENDRSD' Project
 
 ![MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 ![React](https://img.shields.io/badge/React-v16.9.0-blue.svg)
@@ -11,13 +11,23 @@
 [![GitHub issues](https://img.shields.io/github/issues/labs15-career-endorsement-tracker/frontend)](https://github.com/labs15-career-endorsement-tracker/frontend/issues)
 [![GitHub forks](https://img.shields.io/github/forks/labs15-career-endorsement-tracker/frontend)](https://github.com/labs15-career-endorsement-tracker/frontend/network)
 [![GitHub stars](https://img.shields.io/github/stars/labs15-career-endorsement-tracker/frontend)](https://github.com/labs15-career-endorsement-tracker/frontend/stargazers)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](https://labs15.netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](https://endrsd.com/)
 
 <p align="center">
-    <a href="https://labs15.netlify.com/">
-        <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546242/endrsd_logo_lodzmu.png" alt="ENDRSD logo" width="350">
+    <a href="https://endrsd.com/">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568002293/new_logo_ltlpkr.png" alt="New ENDRSD logo" width="400">
     </a>
 </p>
+
+<p align="center">
+    <img src="endrsd_demo.gif" alt="GIF walk-through" width="600">
+</p>
+
+## Project Overview
+
+"ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
+
+Demo the project by clicking the ENDRSD logo (above the "Contributors" section) or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
 
 <br>
 
@@ -32,21 +42,27 @@
 <br>
 <br>
 
-## Project Overview
-
-"ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
-
-Demo the project by clicking the ENDRSD logo (above the "Contributors" section) or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
-
 [ENDRSD Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-[ENDRSD Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
+<p align="center">
+    <a href="https://trello.com/b/hKTAKrBD/endrsd">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019708/endrsd_trello_jg6kdd.png" alt="ENDRSD Trello Board" width="500">
+    </a>
+</p>
 
-### Key Features
+[ENDRSD Release Canvas v1.0](https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842)
 
-- Uses an authenticated dashboard to show students a list of their career endorsement requirements, which are also specific to a student's track.
-- Allows students to access static resources, such as Airtable links and lecture videos.
-- Allows students to track their overall endorsement progress, as well as progress towards completing individual requirements.
+<p align="center">
+    <a href="https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019704/release_canvas_1_sm4hdq.png" alt="ENDRSD Notion document release canvas v1.0" width="500">
+    </a>
+</p>
+
+## Key Features
+
+- Allow students to view a list of their track-specific career endorsement requirements via an authenticated dashboard
+- Allow students to track their overall endorsement progress, as well as progress towards completing individual requirements
+- Allow students to access static resources pertaining to specific endorsement tasks, such as Airtable forms and lecture videos
 
 ## Tech Stack
 
@@ -59,9 +75,16 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - Components can house their own logic and controls.
 - Testing with React.js is very straight-forward and comes with great documentation.
 
-#### Front end deployed to `Netlify`
+#### Front end deployed to [Netlify](https://endrsd.com)
 
 #### [Back end](https://github.com/labs15-career-endorsement-tracker/backend) built using:
+
+#### PostgreSQL
+
+- PostgreSQL is a type of relational database that is open source and freely available for anyone to use.
+- SQL databases have a reputation for being more reliable because they have been tried and tested longer than their NoSQL counterparts.
+- The source code for PostgreSQL was developed by a large community that has created numerous online resources for support.
+- The strongly-typed schemas with a SQL database leave very little room for errors.
 
 #### Node.js
 
@@ -69,7 +92,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - Using node.js allows developers who are familiar with JavaScript, to develop both the client-side and server-side applications using a single programming language.
 - Node.js takes less time to learn because it utilizes an already popular client-side scripting language---JavaScript.
 - Support for node.js is readily available because of the large and active community behind it.
-- Node.js is able to take advantage of caching things within the appliation memory for faster load times.
+- Node.js is able to take advantage of caching things within the application memory for faster load times.
 
 #### Express.js
 
@@ -78,71 +101,100 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - Express.js allows you to create a REST API server.
 - Allows you to define routes of your application based on HTTP methods and URLs.
 
-#### PostgreSQL
-
-- PostgreSQL is a type of relational database that is open source and freely available for anyone to use.
-- SQL databases have a reputation for being more reliable because they have ben tried and tested longer than their NoSQL counterparts.
-- The source code for PostgreSQL was developed by a large community that has created numerous online resources for support.
-- The strongly-typed schemas with a SQL database leave very little room for errors.
-
 #### Knex.js
 
 - A SQL query builder that integrates well with a PostgreSQL database.
-- Allows for 'migragtions', which makes it easier to manage tables within the PostgreSQL database.
+- Allows for 'migrations', which makes it easier to manage tables within the PostgreSQL database.
 - It can create sequential files with timestamps and even manage table alterations.
 - Allows for the creation of 'seeds', which can be used to consistently populate the database.
 
-# APIs
+# Authentication
 
-## Authentication API here
+#### JSON Web Tokens
 
-🚫Replace text below with a description of the API
+- A self-contained token which has authentication information, expiration information, and other user properties.
+- JWTs don't have sessions to manage (stateless).
+- No database table is required, which means fewer database queries.
+- Can be used across multiple services.
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
+#### Bcrypt.js
 
-## Misc API here
+- Protects against 'rainbow table attacks'.
+- Resistant to brute-force search attacks.
 
-🚫Replace text below with a description of the API
+# API Server URLs
 
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
+- [Local Server URL](https://localhost:5000/api/v1)
+- [Staging Server URL](https://endrsd-api-staging.herokuapp.com/api/v1)
+- [Production Server URL](https://endrsd-api.herokuapp.com/api/v1)
+
+# API Endpoints
+
+- GET `/api/v1/users/:userId`
+- GET `/api/v1/tracks`
+- GET `/api/v1/requirements`
+- GET `api/v1/requirements/:requirementsId/steps`
+- POST `/api/v1/users`
+- POST `/api/v1/login`
+- PUT `/api/v1/requirements/:requirementsId/steps`
 
 # Environment Variables
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
-    *  JWT_SECRET - this is your JSON web token secret, which can be any unique string of characters
+    *  JWT_SECRET=<your-secret-here>
+            -This can be any unique string of characters.
 
-# Content Licenses
+    *  REACT_APP_STAGE=staging
+            -This must be included in the .env to utilize the staging database.
 
-🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
+    *  REACT_APP_STAGE=production
+            -This must be included in the .env to utilize the production database.
 
-| Image Filename | Source / Creator | License                                                                      |
-| -------------- | ---------------- | ---------------------------------------------------------------------------- |
-| doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
-| rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
-
-# Testing
-
-🚫Document what you used for testing and why
+If no `REACT_APP_STAGE` environment variable is added to the `.env` file, the default local database on port 5000 will be utilized.
 
 # Installation Instructions
 
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+After cloning this repo on to your local machine, use the package manager [yarn](https://yarnpkg.com/en/) to install all of the required dependencies for the ENDRSD app.
+
+```bash
+yarn install
+```
+
+When all of the proper dependencies have been installed, create a `.env` file that stores the `JWT_SECRET` and the `REACT_APP_STAGE` environment variables as shown above. This particular `.env` setup will allow you to immediately connect to the staging database instead of having to create a local database.
+
+```bash
+JWT_SECRET=<your-secret-here>
+REACT_APP_STAGE=staging
+```
+
+Lastly, run `yarn start` to create a build on your local machine that can be viewed at `http://localhost:3000`.
+
+```bash
+yarn start
+```
+
+<p align="center">
+    <img src="https://res.cloudinary.com/endrsd/image/upload/v1568018944/local_host_xpzo9l.png" alt="GIF walk-through" width="600">
+</p>
 
 ## Other Scripts
 
-🚫replace these examples with your own
-
-    * typecheck - runs the TypeScript compiler
+    * format - formats code using 'Prettier' extension
     * build - creates a build of the application
     * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+    * test - runs tests in **tests** directory
+    * eject - copy the configuration files and dependencies into the project so you have full control over them
 
 # Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
 Please note we have a [code of conduct](./CODE_OF_CONDUCT.md). Please follow it in all your interactions with the project.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Issue/Bug Request
 
