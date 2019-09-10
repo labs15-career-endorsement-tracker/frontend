@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@animated-burgers/burger-rotate@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@animated-burgers/burger-rotate/-/burger-rotate-1.1.2.tgz#2e21c830d63e6a0d7a2351fa7ec8a9e0dd964430"
+  integrity sha512-VNTIzf/eapZ3PVyLKq75JKBt9zPC44EbIhYrysOXWwcptTKT8MAotxjv9ejbvJk/pcorJe/Ru0x5k/4LWRpWkQ==
+  dependencies:
+    "@animated-burgers/burger" "^1.1.2"
+
+"@animated-burgers/burger@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@animated-burgers/burger/-/burger-1.1.2.tgz#a75f7147f9d4041b8bfd510e0097a1500c4fa009"
+  integrity sha512-hErU9dlOcEeYbmbhhngBMXSDtqOaXfFEnKoodfs6vCFWD8dVLMNVbFFpZ0eV7/Wa9kKTGLPeLtDeP0vWYAcY7w==
+
 "@babel/code-frame@7.5.5", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"
