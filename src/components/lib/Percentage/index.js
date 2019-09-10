@@ -10,14 +10,12 @@ import "./index.scss"
 const Percentage = ({ progress = 0 }) => {
   return (
     <div className="percentage">
-      {/* <div style={{'display': 'none'}}> */}
       <GradientSVG
         startColor="#57EC75"
         endColor="#20CD8A"
         idCSS={'progress-gradient'}
         rotation={90}
         />
-        {/* </div> */}
       <ProgressProvider
         valueStart={0}
         valueEnd={progress}
