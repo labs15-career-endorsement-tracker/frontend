@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react"
 
-import "./index.scss"
-
 const StepGauge = ({ requirement }) => {
   const [progress, setProgress] = useState("")
 

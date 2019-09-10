@@ -3,6 +3,9 @@ import { connect } from "react-redux"
 import { withRouter } from "react-router"
 import { NavLink } from "react-router-dom"
 import Step from "./Step"
+import Percentage from "../lib/Percentage"
+
+import "./styles/index.scss"
 import {
   toggleStep,
   fetchSteps,
@@ -29,7 +32,7 @@ const StepList = ({
     ;(async function() {
       await fetchRequirements(token)
     })()
-  }, [fetchRequirements, token])
+  }, [fetchRequirements, token, stepsByTask])
 
   useEffect(() => {
     fetchSteps(token, taskId)
@@ -38,12 +41,21 @@ const StepList = ({
   useEffect(() => {
     setSteps(stepsByTask)
   }, [stepsByTask])
+
   return (
     <div className="step-list-container">
-      <h1 className="title">
-        <i class="fas fa-ballot-check"></i>
-        {requirement ? requirement.title : "Steps to complete"}
-      </h1>
+      <div className="list-header">
+        <div className="icon-title">
+          <i className="fad fa-clipboard-list-check"></i>
+          <h1 className="title">
+            {requirement ? requirement.title : "Steps to complete"}
+          </h1>
+        </div>
+        <Percentage
+          className="CircularProgressBar-path"
+          progress={requirement ? requirement.progress : 0}
+        />
+      </div>
       <div className="step-list">
         {steps.map(step => (
           <Step
