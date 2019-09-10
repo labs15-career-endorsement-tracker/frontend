@@ -1,29 +1,34 @@
+// Typography
 $font-stack-heading: "Barlow Condensed", "Gill Sans", "Gill Sans MT", Calibri,
   "Trebuchet MS", sans-serif;
 $font-stack-body: Lato, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $font-stack-meta: "Barlow Condensed", "Gill Sans", "Gill Sans MT", Calibri,
   "Trebuchet MS", sans-serif;
 
-$black: #104753;
-$white: #fffdfd;
-$lightgrey: #e9edf0;
-$shadow: #4d4d4d;
-$secondary: #528b98;
-$color-error: #990e0e;
-$light-green: #c4e7d1;
-$dark-green: #add890;
-$card-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+// Colors - Neutral
+$black: #034310;
+$white: #fbfeff;
 
-// v2 styles
-$new-dark-bluegreen: #104753;
-$gradient: linear-gradient(93.88deg, #57ec75 1.9%, #20cd8a 100%);
-$new-dark-green: #236330;
-$new-bright-green: #29ad44;
-$new-medium-gray: #e6ece7;
-$new-light-gray: #f2f2f2;
-$new-background-gray: #fbfeff;
-$resource-card-container-background: #fbfeff;
+// Colors - Brand
+$green-100: #e6ece7;
+$green-200: #c4edcd;
+$green-300: #57ec75;
+$green-400: #29ad44;
+$green-500: #236330;
 
+// Colors - Semantic
+$error-100: #ffe8e8;
+$error-200: #e0bfbf;
+$error-300: #990e0e;
+
+// Colors - Gradients
+$gradient-green: linear-gradient(98.62deg, $green-300 1.9%, #20cd8a 100%);
+
+// Shadows
+$drop-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Breakpoints
 $breakpoint-tiny: 375px; // e.g. iPhone 6
 $breakpoint-small: 414px; // e.g. iPhone 6 Plus
 $breakpoint-medium: 768px; // e.g. iPad Portrait
