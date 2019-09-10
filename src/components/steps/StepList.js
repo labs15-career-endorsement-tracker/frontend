@@ -41,9 +41,11 @@ const StepList = ({
   return (
     <div className="step-list-container">
       <div className="list-header">
+      <i className="fad fa-clipboard-list-check"></i>
         <h1 className="title">
           {requirement ? requirement.title : "Steps to complete"}
         </h1>
+        
       </div>
       <div className="step-list">
         {steps.map(step => (
