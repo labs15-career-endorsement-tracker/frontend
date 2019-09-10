@@ -66,9 +66,12 @@ const StepList = ({
           />
         ))}
         <div className="return-requirements-container">
-          <NavLink to="/" className="back-link">
-            <span className="return-text">Return to requirements</span>
-          </NavLink>
+          <div className="return-box">
+            <NavLink to="/" className="back-link">
+              <i className="fad fa-long-arrow-left"></i>
+              <span className="return-text">Return to requirements</span>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>
