@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { fetchUser } from "../actions"
@@ -7,8 +7,10 @@ import Percentage from "./lib/Percentage"
 import { loadAuthDataFromLocalStorage } from "../store"
 
 const UserInfo = ({user}) => {
-  console.log(user)
-  // const user = useSelector(state => state.userReducer.user)
+  // const [progress, setProgress] = useState(0)
+  // useEffect(() => {
+  //   setProgress(user.progress)
+  // }, [user.progress])
   const greeting = () => {
     const hour = new Date().getHours()
     if (hour >= 3 && hour < 12) {

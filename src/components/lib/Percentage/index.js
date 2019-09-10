@@ -9,7 +9,7 @@ import "react-circular-progressbar/dist/styles.css"
 import "./index.scss"
 
 const Percentage = ({ progress = 0 }) => {
-  // const [userProgress, setUserProgress] = useState(0);
+  // const [userProgress, setUserProgress] = useState(progress);
   // useEffect(() => {
   //   setUserProgress(progress)
   // }, [progress])

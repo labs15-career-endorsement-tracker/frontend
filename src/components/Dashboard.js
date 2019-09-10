@@ -21,7 +21,7 @@ const Dashboard = ({requirements, user}) => {
     await dispatch(fetchUser(token, userId))
     await dispatch(fetchRequirements(token))
   }
-  
+
   useEffect((dispatch) => {
     fetchData()
   }, [dispatch])
