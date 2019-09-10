@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
   background: $white;
   margin-bottom: 0.9em;
   @media screen and(max-width: $breakpoint-medium) {
@@ -19,7 +19,8 @@
     align-items: center;
     padding-left: 1em;
     img {
-      height: 75px;
+      height: 50px;
+      max-width: 100%;
     }
   }
 }

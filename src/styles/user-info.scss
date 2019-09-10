@@ -1,6 +1,7 @@
 @import "./variables";
 
 .userInfo-container {
+  box-sizing: border-box;
   font-family: "Barlow Condensed", sans-serif;
   align-items: center;
   margin: 2rem auto;
@@ -9,15 +10,17 @@
   background: $white;
   padding: 2rem;
   box-shadow: $card-shadow;
-  width: 76%;
+  width: 80%;
+  max-width: 100%;
+  .dateAndGreet {
+    margin: 3rem;
+  }
   @media screen and (max-width: $breakpoint-medium) {
-    width: 63%;
-    flex-direction: column;
+    width: 100%;
+    // flex-direction: column;
     .dateAndGreet {
-      margin: 3rem;
-    }
-    .meter-wrapper {
-      margin: 3rem;
+      margin: 3rem 1rem;
+      width: 50%;
     }
     h4 {
       font-size: 0.5rem;
@@ -27,6 +30,10 @@
     font-family: Lato;
     font-size: 1.6rem;
     line-height: 1.4;
+    color: $new-dark-bluegreen;
+    .track {
+      font-weight: bold;
+    }
   }
 
   .date {
@@ -37,11 +44,12 @@
   .welcome-msg {
     font-size: 3.2rem;
     font-weight: bold;
+    color: $new-bright-green;
   }
 
   .first-name {
     text-transform: capitalize;
-    color: $secondary;
+    color: $new-dark-bluegreen;
     font-weight: 800;
     font-size: 4.4rem;
     padding-bottom: 0.5em;
