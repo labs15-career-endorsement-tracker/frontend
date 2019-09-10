@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 
-
 const StepGauge = ({ requirement }) => {
   const [progress, setProgress] = useState("")
 

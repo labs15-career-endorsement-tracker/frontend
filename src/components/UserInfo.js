@@ -31,7 +31,11 @@ const UserInfo = () => {
       <div className="dateAndGreet">
         <h2 className="welcome-msg">{greeting()},</h2>
         <h2 className="first-name">{user.first_name}</h2>
-        <p>Below are your <span className="track">{`${user.tracks_title} `}</span>requirements to be fully endorsed.</p>
+        <p>
+          Below are your{" "}
+          <span className="track">{`${user.tracks_title} `}</span>requirements
+          to be fully endorsed.
+        </p>
       </div>
       <div className="meter-wrapper">
         <div className="meter-box">

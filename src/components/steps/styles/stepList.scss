@@ -15,7 +15,7 @@
     align-items: center;
     width: 90%;
   }
-  
+
   .list-header {
     display: flex;
     align-items: center;
@@ -24,14 +24,14 @@
   }
 
   .icon-title {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
   }
 
   .fa-clipboard-list-check {
     color: $new-dark-green;
     font-size: 3.5rem;
-    padding-right: .3em;
+    padding-right: 0.3em;
   }
   .title {
     background: none;
@@ -45,13 +45,13 @@
   .percentage {
     width: 12%;
   }
-  
+
   .step-list {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-  
+
   .each-step {
     display: flex;
     background: $white;
@@ -80,7 +80,7 @@
     font-size: 2.5rem;
     text-align: center;
     @media screen and(min-width: $breakpoint-medium) {
-        font-size: 100%;
+      font-size: 100%;
     }
   }
 
