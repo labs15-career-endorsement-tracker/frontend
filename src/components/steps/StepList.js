@@ -41,6 +41,7 @@ const StepList = ({
   return (
     <div className="step-list-container">
       <h1 className="title">
+        <i class="fas fa-ballot-check"></i>
         {requirement ? requirement.title : "Steps to complete"}
       </h1>
       <div className="step-list">

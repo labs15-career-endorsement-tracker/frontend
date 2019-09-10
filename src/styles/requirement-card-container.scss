@@ -1,6 +1,6 @@
 .requirement-card-container {
   margin: 0rem 1rem;
-  width: 85%;
+  width: 79%;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
@@ -8,9 +8,11 @@
   grid-row-gap: 2.5rem;
   @media screen and(min-width: $breakpoint-small) {
     grid-template-columns: 1fr 1fr;
+    width: 73%;
   }
   @media screen and(min-width: $breakpoint-medium) {
     grid-template-columns: 1fr 1fr 1fr;
+    width: 79%;
   }
   .component-title {
     padding: 1em;
