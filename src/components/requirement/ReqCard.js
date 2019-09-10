@@ -23,10 +23,15 @@ const ReqCard = ({ requirement }) => {
           }`}
         >
           {requirement.title}
-          
         </h2>
-        {requirement.progress === 100 && <div className="icon-circle"><i className="fas fa-check"></i></div>}
-          {requirement.progress !== 100 && <p>{`${requirement.tasks_description.substring(0, 50).trim()}...`}</p>}
+        {requirement.progress === 100 && (
+          <div className="icon-circle">
+            <i className="fas fa-check"></i>
+          </div>
+        )}
+        {requirement.progress !== 100 && (
+          <p>{`${requirement.tasks_description.substring(0, 50).trim()}...`}</p>
+        )}
       </div>
     </div>
   )

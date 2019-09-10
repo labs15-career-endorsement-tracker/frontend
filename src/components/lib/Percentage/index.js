@@ -5,6 +5,7 @@ import { easeQuadInOut } from "d3-ease"
 import ProgressProvider from "./ProgressProvider"
 import GradientSVG from "../Gradient"
 
+import "react-circular-progressbar/dist/styles.css"
 import "./index.scss"
 
 const Percentage = ({ progress = 0 }) => {
@@ -13,9 +14,9 @@ const Percentage = ({ progress = 0 }) => {
       <GradientSVG
         startColor="#57EC75"
         endColor="#20CD8A"
-        idCSS={'progress-gradient'}
+        idCSS={"progress-gradient"}
         rotation={90}
-        />
+      />
       <ProgressProvider
         valueStart={0}
         valueEnd={progress}
@@ -38,8 +39,11 @@ const Percentage = ({ progress = 0 }) => {
                 pathTransition: "none",
                 // pathTransitionDuration: 0.5,
                 // Colors
-                // pathColor: value < 50 ? `#104753` : "#00931e",
-                textColor: "#236330"
+                // pathColor: 'value < 50 ? `#104753` : "#00931e"',
+                // textColor: value < 50 ? `#104753` : "#00931e"
+                pathColor: "#57EC75",
+                textColor: "#104753",
+                trailColor: "#c7ebd7"
               })}
             />
           )
