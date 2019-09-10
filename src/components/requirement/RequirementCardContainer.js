@@ -7,20 +7,9 @@ import { loadAuthDataFromLocalStorage } from "../../store"
 import { connect } from "react-redux"
 
 const RequirementCardContainer = ({ requirements, fetchRequirements }) => {
-  const [reqs, setReqs] = useState([])
-
-  useEffect(() => {
-    const { token } = loadAuthDataFromLocalStorage()
-    fetchRequirements(token)
-  }, [fetchRequirements])
-
-  useEffect(() => {
-    setReqs(requirements)
-  }, [requirements])
-
   return (
     <div className="requirement-card-container">
-      {reqs.map(req => (
+      {requirements.map(req => (
         <div key={req.id} className="req-card-area">
           <ReqCard requirement={req} />
         </div>

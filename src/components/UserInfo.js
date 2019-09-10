@@ -7,6 +7,7 @@ import Percentage from "./lib/Percentage"
 import { loadAuthDataFromLocalStorage } from "../store"
 
 const UserInfo = ({user}) => {
+  console.log(user)
   // const user = useSelector(state => state.userReducer.user)
   const greeting = () => {
     const hour = new Date().getHours()

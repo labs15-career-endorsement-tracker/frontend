@@ -11,7 +11,7 @@ const FullPageLoader = () => {
         color="#29AD44"
         height={100}
         width={100}
-        timeout={8000} //8 secs
+        // timeout={8000} //8 secs
      />
       </div>
   )

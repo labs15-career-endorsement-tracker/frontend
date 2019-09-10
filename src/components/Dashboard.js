@@ -13,28 +13,33 @@ import Navigation from "./Navigation"
 import RequirementDetails from "./RequirementDetails"
 import NotFound from "./NotFound"
 import FullPageLoader from "./lib/Loaders/fullPageLoader";
-const Dashboard = props => {
+const Dashboard = ({requirements, user}) => {
   const dispatch = useDispatch()
 
-  useEffect(() => {
+  const fetchData = async () => {
     const { userId, token } = loadAuthDataFromLocalStorage()
-    dispatch(fetchUser(token, userId))
+    await dispatch(fetchUser(token, userId))
+    await dispatch(fetchRequirements(token))
+  }
+  
+  useEffect((dispatch) => {
+    fetchData()
   }, [dispatch])
-
-  if (!Object.keys(props.user).length ) {
+  
+  if (!Object.keys(user).length || !requirements.length) {
     return <FullPageLoader />
   }
   return (
     <div className="dash-container">
-      <Navigation user={props.user}/>
-      <UserInfo user={props.user}/>
+      <Navigation user={user}/>
+      <UserInfo user={user}/>
       <Switch>
         <Route
           exact
           path="/requirements/:id"
           component={RequirementDetails}
         ></Route>
-        <Route exact path="/" component={RequirementCardContainer}></Route>
+        <Route exact path="/" render={props => <RequirementCardContainer {...props} requirements={requirements}/>}></Route>
         <Route component={NotFound} />
       </Switch>
     </div>

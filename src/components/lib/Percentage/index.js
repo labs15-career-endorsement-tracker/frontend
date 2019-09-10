@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 import { easeQuadInOut } from "d3-ease"
@@ -9,6 +9,10 @@ import "react-circular-progressbar/dist/styles.css"
 import "./index.scss"
 
 const Percentage = ({ progress = 0 }) => {
+  // const [userProgress, setUserProgress] = useState(0);
+  // useEffect(() => {
+  //   setUserProgress(progress)
+  // }, [progress])
   return (
     <div className="percentage">
       <GradientSVG
@@ -26,7 +30,6 @@ const Percentage = ({ progress = 0 }) => {
         {value => {
           // you have to round the value again here because of the way the animation increments it
           const roundedValue = Math.round(value)
-
           return (
             <CircularProgressbar
               value={value}
