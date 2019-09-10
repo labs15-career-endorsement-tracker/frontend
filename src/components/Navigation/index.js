@@ -8,7 +8,7 @@ import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
 
 const Navigation = () => {
-  const [user, setUser] = useState({ first_name: "Loading.." })
+  const [user, setUser] = useState({ first_name: "Loading...", last_name: "" })
 
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
@@ -21,7 +21,7 @@ const Navigation = () => {
       <div className="user_info">
         <div className="user">
           <p className="user_full_name">
-            {user.first_name} {user.last_name}
+            {user.first_name[0]} {user.last_name[0]}
           </p>
         </div>
         <div className="user_button">

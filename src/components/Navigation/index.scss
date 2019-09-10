@@ -41,8 +41,10 @@
     width: 75px;
     height: 75px;
     .user_full_name {
-      font-weight: 700;
-      font-size: 1.8rem;
+      font-weight: 600;
+      font-size: 3rem;
+      color: $white;
+      letter-spacing: -3px;
     }
     .user_track {
       font-size: 1.2rem;
