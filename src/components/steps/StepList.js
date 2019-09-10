@@ -51,10 +51,12 @@ const StepList = ({
             {requirement ? requirement.title : "Steps to complete"}
           </h1>
         </div>
-        <Percentage
-          className="CircularProgressBar-path"
+        {/* <div className="meter-container"> */}
+          <Percentage
           progress={requirement ? requirement.progress : 0}
-        />
+          />
+        {/* </div> */}
+        
       </div>
       <div className="step-list">
         {steps.map(step => (

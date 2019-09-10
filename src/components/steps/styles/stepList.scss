@@ -15,7 +15,7 @@
     align-items: center;
     width: 90%;
   }
-  
+
   .list-header {
     // border: 1px solid red;
     display: flex;
@@ -56,10 +56,16 @@
     }
   }
 
-  .percentage {
-    width: 12%;
+    .percentage {
+    width: 25%;
+    @media screen and(max-width: $breakpoint-large) {
+      width: 12%;
+    }
+    @media screen and(min-width: $breakpoint-large) {
+      max-width: 20%;
+    }
     @media screen and(max-width: $breakpoint-medium) {
-      width: 25%;
+      width: 30%;
     }
     @media screen and(max-width: $breakpoint-small) {
       width: 30%;
