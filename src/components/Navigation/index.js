@@ -8,11 +8,7 @@ import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
 
 const Navigation = () => {
-<<<<<<< HEAD
   const [user, setUser] = useState({ first_name: "Loading..", last_name: "" })
-=======
-  const [user, setUser] = useState({ first_name: "Loading...", last_name: "" })
->>>>>>> 339ceab2a2b2b58f848991cf0e4245158d65aec9
 
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
