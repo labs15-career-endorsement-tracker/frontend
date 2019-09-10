@@ -40,9 +40,11 @@ const StepList = ({
   }, [stepsByTask])
   return (
     <div className="step-list-container">
-      <h1 className="title">
-        {requirement ? requirement.title : "Steps to complete"}
-      </h1>
+      <div className="list-header">
+        <h1 className="title">
+          {requirement ? requirement.title : "Steps to complete"}
+        </h1>
+      </div>
       <div className="step-list">
         {steps.map(step => (
           <Step
