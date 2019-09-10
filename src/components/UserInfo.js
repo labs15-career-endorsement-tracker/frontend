@@ -6,15 +6,8 @@ import { fetchUser } from "../actions"
 import Percentage from "./lib/Percentage"
 import { loadAuthDataFromLocalStorage } from "../store"
 
-const UserInfo = () => {
-  const user = useSelector(state => state.userReducer.user)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    const { userId, token } = loadAuthDataFromLocalStorage()
-    dispatch(fetchUser(token, userId))
-  }, [dispatch])
-
+const UserInfo = ({user}) => {
+  // const user = useSelector(state => state.userReducer.user)
   const greeting = () => {
     const hour = new Date().getHours()
     if (hour >= 3 && hour < 12) {
