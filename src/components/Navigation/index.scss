@@ -7,28 +7,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
   background: $green-100;
-  margin-bottom: 0.9em;
+  height: 100px;
+  box-sizing: border-box;
+  position: relative;
   @media screen and(max-width: $breakpoint-medium) {
     justify-content: space-between;
     align-items: center;
   }
   @media screen and(max-width: $breakpoint-small) {
-    flex-direction: column;
     width: 100%;
     align-items: center;
-    justify-content: center;
+  }
+  .burger-container {
+    overflow: hidden;
+    padding-right: 2rem;
+    position: relative;
+    cursor: pointer;
+    .burger .burger-lines,
+    .burger .burger-lines:after,
+    .burger .burger-lines:before {
+      background-color: $green-400;
+      cursor: pointer;
+    }
+  }
+  .burger-flyout {
+    position: absolute;
+    top: 60px;
+    right: 0;
   }
   .logo {
     justify-content: center;
     align-items: center;
     padding-left: 1em;
-    @media screen and(max-width: $breakpoint-small) {
-      padding: 0;
-    }
     img {
-      height: 50px;
+      height: 30px;
       max-width: 100%;
     }
   }
@@ -36,7 +49,6 @@
 .user_info {
   display: flex;
   align-items: center;
-  padding-bottom: 10px;
   @media screen and(max-width: $breakpoint-medium) {
     width: 100%;
     justify-content: flex-end;
@@ -55,8 +67,8 @@
     border: 5px solid $white;
     border-radius: 50%;
     background: $green-500;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     @media screen and(max-width: $breakpoint-medium) {
       margin: 1rem;
       height: 30px;
@@ -71,8 +83,10 @@
       font-weight: 700;
       font-size: 3.2rem;
       color: $white;
+      position: relative;
+      bottom: 2px;
+      right: 1px;
       letter-spacing: -2px;
-      line-height: 0.8;
       @media screen and(max-width: $breakpoint-medium) {
         font-size: 2.6rem;
       }

@@ -1,6 +1,7 @@
 import React from "react"
 import { history } from "../../../store"
 import "./index.scss"
+import Flyout from "./Flyout"
 
 const Dropdown = () => {
   const triggerDropdown = () => {
@@ -17,16 +18,7 @@ const Dropdown = () => {
       <button onClick={triggerDropdown} className="dropdown-button">
         <i className="far fa-angle-down fa-3x"></i>
       </button>
-      <div id="logoutPanel" className="dropdown-content">
-        <div
-          className="logout"
-          onClick={triggerLogout}
-          onMouseOut={triggerDropdown}
-        >
-          <i className="fad fa-sign-out"></i>
-          <p className="logout-text">Logout</p>
-        </div>
-      </div>
+      <Flyout triggerDropdown={triggerDropdown} triggerLogout={triggerLogout} />
     </div>
   )
 }
