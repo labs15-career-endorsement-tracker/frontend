@@ -13,6 +13,7 @@ const UserInfo = ({user}) => {
       return "Good evening"
     }
   }
+
   return (
     <div className="userInfo-container">
       <div className="dateAndGreet">
