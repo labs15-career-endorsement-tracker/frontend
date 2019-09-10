@@ -5,6 +5,9 @@
   text-align: center;
   font-weight: bold;
   width: 8%;
+  .CircularProgressbar .CircularProgressbar-path {
+    stroke: url(#progress-gradient);
+  }
   @media screen and (min-width: $breakpoint-tiny) {
     width: 15%;
   }
