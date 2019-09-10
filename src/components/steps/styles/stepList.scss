@@ -105,20 +105,21 @@
   }
 
   .return-requirements-container {
-    display: flex;
-    align-items: center;
-    .back-link {
+
+    .return-box {
+      display: flex;
+      align-items: baseline;
       padding: 1.6rem;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: 800;
       i {
-        font-size: 2.8rem;
-        padding: 1.2rem;
+        padding-right: .5em;
       }
+
       .return-text {
         font-family: $font-stack-heading;
-        padding: 1rem;
-        font-size: 1.6rem;
+        // padding: 1rem;
+        // font-size: 1.6rem;
         font-weight: 700;
       }
     }
