@@ -1,11 +1,16 @@
 @import "./variables";
 .temp-container {
   padding: 1rem;
+  @media screen and(max-width: $breakpoint-large) {
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+  }
   @media screen and(max-width: $breakpoint-medium) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
   }
   .resource-card-container {
     margin: 0 auto;

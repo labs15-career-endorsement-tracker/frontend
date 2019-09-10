@@ -11,7 +11,7 @@
   box-shadow: $card-shadow;
   width: 76%;
   @media screen and (max-width: $breakpoint-medium) {
-    width: 68%;
+    width: 63%;
     flex-direction: column;
     .dateAndGreet {
       margin: 3rem;
