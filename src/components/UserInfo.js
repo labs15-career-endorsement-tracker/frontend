@@ -25,7 +25,7 @@ const UserInfo = () => {
       return "Good evening"
     }
   }
-  
+
   return (
     <div className="userInfo-container">
       <div className="dateAndGreet">
