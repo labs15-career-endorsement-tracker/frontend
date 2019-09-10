@@ -1,7 +1,7 @@
 @import "../../../styles/variables";
 
 .percentage {
-  font-family: Lato, "sans-serif";
+  font-family: $font-stack-body;
   text-align: center;
   font-weight: bold;
   width: 8%;
@@ -24,7 +24,7 @@
     // font-size: 2.1rem;
   }
   .progress_text {
-    font-family: "Barlow Condensed", "sans-serif";
+    font-family: $font-stack-heading;
     font-size: 1.2rem;
   }
 }

@@ -1,20 +1,22 @@
+@import "../../../styles/variables";
+
 .dropdown-container {
   .dropdown-button {
     border: 0;
-    background: #fffdfd;
+    background: $white;
     cursor: pointer;
   }
   .dropdown-content {
     display: none;
-    background: #fffdfd;
+    background: $white;
     position: absolute;
     right: 10px;
     margin: 1rem;
     min-width: 150px;
     overflow: auto;
     padding: 1.5rem;
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
-    border-left: 2px solid #c4e7d1;
+    box-shadow: $drop-shadow-lg;
+    border-left: 4px solid $green-300;
     text-align: center;
     cursor: pointer;
     .logout {

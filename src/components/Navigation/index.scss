@@ -1,8 +1,9 @@
 @import "../../styles/variables";
+
 .nav_wrapper {
   width: 100%;
-  font-family: "Barlow Condensed";
-  color: #104753;
+  font-family: $font-stack-heading;
+  color: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +32,7 @@
   .user {
     text-transform: capitalize;
     text-align: right;
-    border-right: 4px solid #c4e7d1;
+    border-right: 4px solid $green-500;
     padding-right: 15px;
     .user_full_name {
       font-weight: 700;
