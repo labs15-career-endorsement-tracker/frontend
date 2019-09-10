@@ -5,7 +5,6 @@ const StepGauge = ({ requirement }) => {
 
   useEffect(() => {
     setProgress(requirement.progress)
-    console.log(requirement.progress)
   }, [requirement.progress])
 
   const gaugeStyle = {

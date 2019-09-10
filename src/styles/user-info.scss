@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: $font-stack-heading;
   align-items: center;
-  margin: 2rem auto;
+  margin: 0 auto 2rem;
   display: flex;
   justify-content: space-between;
   background: $white;
@@ -17,7 +17,6 @@
   }
   @media screen and (max-width: $breakpoint-medium) {
     width: 100%;
-    // flex-direction: column;
     .dateAndGreet {
       margin: 3rem 1rem;
       width: 50%;
