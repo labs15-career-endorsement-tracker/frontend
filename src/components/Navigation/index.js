@@ -8,10 +8,12 @@ import { getUserById } from "../../api"
 import { loadAuthDataFromLocalStorage } from "../../store"
 import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
+import Flyout from "../lib/Dropdown/Flyout"
 
 const Navigation = props => {
   const [user, setUser] = useState({ first_name: "Loading..", last_name: "" })
   const [width, setWidth] = useState(window.innerWidth)
+  const [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
     getUserById(token, userId).then(user => setUser(user))
@@ -27,8 +29,8 @@ const Navigation = props => {
   return (
     <nav className="nav_wrapper">
       <Logo />
-      <Burger />
-      <div className="user_info">
+      
+      {width > 768 ? <div className="user_info">
         <div className="user">
           <p className="user_full_name">
             {user.first_name[0]} {user.last_name[0]}
@@ -37,7 +39,8 @@ const Navigation = props => {
         <div className="user_button">
           <Dropdown />
         </div>
-      </div>
+      </div> : <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />}
+      {isOpen && <Flyout />}
     </nav>
   )
 }
