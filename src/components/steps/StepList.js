@@ -52,11 +52,8 @@ const StepList = ({
           </h1>
         </div>
         {/* <div className="meter-container"> */}
-          <Percentage
-          progress={requirement ? requirement.progress : 0}
-          />
+        <Percentage progress={requirement ? requirement.progress : 0} />
         {/* </div> */}
-        
       </div>
       <div className="step-list">
         {steps.map(step => (

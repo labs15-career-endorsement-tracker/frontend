@@ -56,7 +56,7 @@
     }
   }
 
-    .percentage {
+  .percentage {
     width: 25%;
     @media screen and(max-width: $breakpoint-large) {
       width: 12%;
@@ -116,7 +116,6 @@
     @media screen and(max-width: $breakpoint-medium) {
       font-size: 2.7rem;
     }
-
   }
 
   .complete {
