@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { withRouter } from "react-router"
 import { NavLink } from "react-router-dom"
 import Step from "./Step"
+import Percentage from '../lib/Percentage'
 import {
   toggleStep,
   fetchSteps,
@@ -40,12 +41,14 @@ const StepList = ({
   }, [stepsByTask])
   return (
     <div className="step-list-container">
-      <div className="list-header">
-      <i className="fad fa-clipboard-list-check"></i>
-        <h1 className="title">
-          {requirement ? requirement.title : "Steps to complete"}
-        </h1>
-        
+      <div className ="list-header">
+        <div className="icon-title">
+        <i className="fad fa-clipboard-list-check"></i>
+          <h1 className="title">
+            {requirement ? requirement.title : "Steps to complete"}
+          </h1>
+        </div>
+      <Percentage />
       </div>
       <div className="step-list">
         {steps.map(step => (
