@@ -71,7 +71,8 @@
       font-weight: 700;
       font-size: 3.2rem;
       color: $white;
-      letter-spacing: -3px;
+      letter-spacing: -2px;
+      line-height: 0.8;
       @media screen and(max-width: $breakpoint-medium) {
         font-size: 2.6rem;
       }
