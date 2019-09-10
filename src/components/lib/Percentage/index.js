@@ -34,14 +34,12 @@ const Percentage = ({ progress = 0 }) => {
               strokeWidth={12}
               styles={buildStyles({
                 // Text size
-                textSize: "3.1rem",
+                textSize: "2.8rem",
                 // need this line in order to let d3-ease handle the transition animation
                 pathTransition: "none",
                 // pathTransitionDuration: 0.5,
                 // Colors
-                // pathColor: 'value < 50 ? `#104753` : "#00931e"',
-                // textColor: value < 50 ? `#104753` : "#00931e"
-                pathColor: "#57EC75",
+                // pathColor: "#57EC75",
                 textColor: "#104753",
                 trailColor: "#c7ebd7"
               })}
