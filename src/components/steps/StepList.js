@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom"
 import Step from "./Step"
 import Percentage from '../lib/Percentage'
 
+
 import './styles/index.scss'
 import {
   toggleStep,
@@ -51,7 +52,7 @@ const StepList = ({
             {requirement ? requirement.title : "Steps to complete"}
           </h1>
         </div>
-      <Percentage progress={requirement ? requirement.progress : 0}/>
+      <Percentage className="CircularProgressBar-path" progress={requirement ? requirement.progress : 0}/>
       </div>
       <div className="step-list">
         {steps.map(step => (

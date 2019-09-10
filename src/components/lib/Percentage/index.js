@@ -4,6 +4,7 @@ import "react-circular-progressbar/dist/styles.css"
 import { easeQuadInOut } from "d3-ease"
 import ProgressProvider from "./ProgressProvider"
 
+import 'react-circular-progressbar/dist/styles.css';
 import "./index.scss"
 
 const Percentage = ({ progress = 0 }) => {
@@ -31,8 +32,12 @@ const Percentage = ({ progress = 0 }) => {
                 pathTransition: "none",
                 // pathTransitionDuration: 0.5,
                 // Colors
-                pathColor: value < 50 ? `#104753` : "#00931e",
-                textColor: value < 50 ? `#104753` : "#00931e"
+                // pathColor: 'value < 50 ? `#104753` : "#00931e"',
+                // textColor: value < 50 ? `#104753` : "#00931e"
+                pathColor: '#57EC75',
+                textColor: '#104753',
+                trailColor: '#c7ebd7'
+
               })}
             />
           )
