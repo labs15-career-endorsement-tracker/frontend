@@ -4,6 +4,8 @@ import { withRouter } from "react-router"
 import { NavLink } from "react-router-dom"
 import Step from "./Step"
 import Percentage from '../lib/Percentage'
+
+import './styles/index.scss'
 import {
   toggleStep,
   fetchSteps,
