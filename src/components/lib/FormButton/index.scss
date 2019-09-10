@@ -1,6 +1,7 @@
 @import "../../../styles/variables";
 
 .form-btn {
+  border: none;
   display: block;
   font-family: $font-stack-meta;
   font-size: 2.4rem;
@@ -8,7 +9,7 @@
   letter-spacing: 0.8px;
   line-height: 2.9rem;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #57ec75 0%, #20cd8a 100%);
+  background: $gradient-green;
   box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   color: $white;

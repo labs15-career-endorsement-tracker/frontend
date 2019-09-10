@@ -1,22 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-// @import './variables';
-
 .resource-card {
-  background: #e9ebec;
+  background: $white;
   .individual-resource {
     display: flex;
     margin: 2px 0;
-    background: $resource-card-container-background;
+    background: $white;
     padding: 1rem;
     align-items: center;
-    color: $new-bright-green;
+    color: $green-400;
     .fab,
     .far {
       padding: 0.5rem 1.5rem 0.5rem 3rem;
       font-size: 2rem;
     }
     .resource-url {
-      font-family: "Lato", sans-serif;
+      font-family: $font-stack-body;
       text-decoration-line: underline;
       font-weight: 800;
     }

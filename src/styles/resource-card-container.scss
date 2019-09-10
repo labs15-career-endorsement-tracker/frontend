@@ -1,4 +1,5 @@
 @import "./variables";
+
 .temp-container {
   padding: 1rem;
   @media screen and(max-width: $breakpoint-large) {
@@ -15,9 +16,9 @@
   .resource-card-container {
     margin: 0 auto;
     margin-bottom: 10px;
-    border-top: 8px solid $new-dark-green;
-    background: #e9ebec;
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    border-top: 8px solid $green-500;
+    background: $white;
+    box-shadow: $drop-shadow-lg;
     @media screen and(max-width: $breakpoint-medium) {
       flex-direction: column;
       justify-content: center;
@@ -28,8 +29,8 @@
       width: 100%;
     }
     .resource-header {
-      font-family: "Barlow Condensed", sans-serif;
-      color: $new-dark-green;
+      font-family: $font-stack-heading;
+      color: $green-500;
       background: $white;
       padding: 2rem 1.5rem 2rem 3.5rem;
       h1 {

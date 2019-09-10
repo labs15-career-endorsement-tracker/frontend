@@ -1,21 +1,23 @@
+@import "../styles/variables";
+
 .requirement-card {
   height: 100%;
-  font-family: "Barlow";
+  font-family: $font-stack-heading;
   .title-area {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     align-content: center;
-    box-shadow: $card-shadow;
+    box-shadow: $drop-shadow-lg;
     height: calc(100% - 15px - 1rem);
     background: $white;
-    color: $new-dark-green;
+    color: $gradient-green;
     // padding: 4rem 1rem;
     cursor: pointer;
     p {
       padding: 2rem 1rem;
-      font-family: Lato;
+      font-family: $font-stack-body;
       font-style: normal;
       font-weight: bold;
       font-size: 1.6rem;
@@ -46,7 +48,7 @@
     border-radius: 50%;
     i {
       line-height: 1.1;
-      background: $gradient;
+      background: $gradient-green;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -60,14 +62,14 @@
   }
   .complete {
     margin-top: 0;
-    background: $gradient;
+    background: $gradient-green;
     padding-bottom: 1rem;
   }
 }
 
 @keyframes hoverEffect {
   0% {
-    box-shadow: $card-shadow;
+    box-shadow: $drop-shadow-lg;
   }
   100% {
     box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.3);
