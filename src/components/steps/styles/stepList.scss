@@ -26,6 +26,9 @@
   .icon-title {
     display: flex;
     align-items: center;
+    @media screen and(max-width: $breakpoint-small) {
+      width: 50%;
+    }
   }
 
   .fa-clipboard-list-check {
@@ -44,6 +47,12 @@
 
   .percentage {
     width: 12%;
+    @media screen and(max-width: $breakpoint-medium) {
+      width: 25%;
+    }
+    @media screen and(max-width: $breakpoint-small) {
+      width: 30%;
+    }
   }
 
   .step-list {
