@@ -31,6 +31,10 @@ const Navigation = props => {
     localStorage.removeItem("auth")
     history.push("/sign-in")
   }
+  const triggerDropdown = () => {
+    setTimeout(() => setIsOpen(false), 400)
+    
+  }
   return (
     <nav className="nav_wrapper">
       <Logo />
@@ -45,7 +49,7 @@ const Navigation = props => {
           <Dropdown />
         </div>
       </div> : <div className="burger-container"><Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} /> </div>}
-      {isOpen && <div className="burger-flyout"><Flyout triggerLogout={triggerLogout}/></div>}
+      {isOpen && <div className="burger-flyout"><Flyout triggerLogout={triggerLogout} triggerDropdown={triggerDropdown}/></div>}
     </nav>
   )
 }
