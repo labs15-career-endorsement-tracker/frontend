@@ -21,6 +21,7 @@ const Navigation = props => {
       return setWidth(window.innerWidth)
     }
     window.addEventListener("resize", handleResize)
+    if (width > 768) setIsOpen(false)
     return () => {
       window.removeEventListener("resize", handleResize)
     }
