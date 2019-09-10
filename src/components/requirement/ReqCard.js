@@ -5,6 +5,7 @@ import StepGauge from "../../components/steps/StepGauge"
 import { history } from "../../store"
 
 const ReqCard = ({ requirement }) => {
+  console.log(requirement)
   return (
     <div
       className="requirement-card"
@@ -21,9 +22,11 @@ const ReqCard = ({ requirement }) => {
             requirement.progress === 100 ? "white-text" : ""
           }`}
         >
-          {requirement.progress === 100 && <i className="fas fa-check"></i>}
           {requirement.title}
+          
         </h2>
+        {requirement.progress === 100 && <div className="icon-circle"><i className="fas fa-check"></i></div>}
+          {requirement.progress !== 100 && <p>{`${requirement.tasks_description.substring(0, 50).trim()}...`}</p>}
       </div>
     </div>
   )

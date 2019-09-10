@@ -1,9 +1,10 @@
 @import "../../styles/variables";
 .gauge-container {
-  height: 10px;
+  // border: 1px solid black;
+  height: 15px;
   background: $light-green;
   .gauge-fill {
-    background: $dark-green;
+    background: $gradient;
     height: 100%;
     border-radius: 0px 100px 100px 0px;
   }

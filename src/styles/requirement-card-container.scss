@@ -6,9 +6,6 @@
   grid-auto-rows: 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 2.5rem;
-  & * {
-    box-sizing: border-box;
-  }
   @media screen and(min-width: $breakpoint-small) {
     grid-template-columns: 1fr 1fr;
   }
