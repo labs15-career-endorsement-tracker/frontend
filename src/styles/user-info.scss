@@ -1,6 +1,7 @@
 @import "./variables";
 
 .userInfo-container {
+  box-sizing: border-box;
   font-family: "Barlow Condensed", sans-serif;
   align-items: center;
   margin: 2rem auto;
@@ -10,6 +11,7 @@
   padding: 2rem;
   box-shadow: $card-shadow;
   width: 76%;
+  max-width: 100%;
   .dateAndGreet {
     margin: 3rem;
   }
