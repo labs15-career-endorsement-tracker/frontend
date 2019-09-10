@@ -10,34 +10,45 @@
   padding: 1rem 0;
   background: $green-100;
   margin-bottom: 0.9em;
+  position: relative;
   @media screen and(max-width: $breakpoint-medium) {
     justify-content: space-between;
     align-items: center;
   }
   @media screen and(max-width: $breakpoint-small) {
-    flex-direction: column;
     width: 100%;
     align-items: center;
-    justify-content: center;
+  }
+  .burger-container {
+    overflow: hidden;
+    padding-right: 2rem;
+    position: relative;
+    cursor: pointer;
+    .burger .burger-lines,
+    .burger .burger-lines:after,
+    .burger .burger-lines:before {
+      background-color: $green-400;
+      cursor: pointer;
+    }
   }
   .burger-flyout {
     position: absolute;
     top: 40px;
     right: 0;
-    @media screen and(max-width: $breakpoint-small) {
-      top: 90px;
-      right: 40px;
-    }
+    // @media screen and(max-width: $breakpoint-small) {
+    //   top: 90px;
+    //   right: 40px;
+    // }
   }
   .logo {
     justify-content: center;
     align-items: center;
     padding-left: 1em;
-    @media screen and(max-width: $breakpoint-small) {
-      padding: 0;
-    }
+    // @media screen and(max-width: $breakpoint-small) {
+    //   padding: 0;
+    // }
     img {
-      height: 50px;
+      height: 30px;
       max-width: 100%;
     }
   }

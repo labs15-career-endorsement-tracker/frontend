@@ -44,7 +44,7 @@ const Navigation = props => {
         <div className="user_button">
           <Dropdown />
         </div>
-      </div> : <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />}
+      </div> : <div className="burger-container"><Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} /> </div>}
       {isOpen && <div className="burger-flyout"><Flyout triggerLogout={triggerLogout}/></div>}
     </nav>
   )
