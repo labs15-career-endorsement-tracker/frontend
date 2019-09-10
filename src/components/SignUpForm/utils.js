@@ -3,6 +3,9 @@ import { toast } from "react-toastify"
 import { addUser } from "../../api"
 import { history, saveToLocalStorage } from "../../store"
 
+import Loader from 'react-loader-spinner'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+
 export const handleSubmit = async (
   { firstName, lastName, email, password, track },
   { setSubmitting, resetForm }
@@ -37,7 +40,7 @@ export const handleSubmit = async (
 }
 
 export const formatTracks = arr => {
-  if (!arr || !arr.length) return []
+  if (!arr || !arr.length) return [{value: 0, label: 'Loading...'}]
   return arr.map(({ id, title }) => ({
     value: id,
     label: title
