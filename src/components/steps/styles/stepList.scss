@@ -54,6 +54,7 @@
   
   .each-step {
     display: flex;
+    background: $white;
     padding: 1.5em;
     margin-bottom: 1em;
     box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
@@ -78,16 +79,16 @@
     color: $white;
     font-size: 2.5rem;
     text-align: center;
-    line-height: 1.1;
     @media screen and(min-width: $breakpoint-medium) {
-      font-size: 100%;
+        font-size: 100%;
     }
   }
 
   .complete {
     background: #57ec75;
+    display: flex;
+    align-content: center;
     height: 100%;
-    width: 100%;
   }
 
   .incomplete {
