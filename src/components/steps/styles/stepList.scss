@@ -15,19 +15,24 @@
     align-items: center;
     width: 90%;
   }
-
+  
   .list-header {
+    // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0 0;
+    @media screen and (max-width: $breakpoint-small) {
+      flex-direction: column-reverse;
+    }
   }
 
   .icon-title {
+    // border: 1px solid blue;
     display: flex;
     align-items: center;
     @media screen and(max-width: $breakpoint-small) {
-      width: 50%;
+      width: 100%;
     }
   }
 
@@ -35,6 +40,9 @@
     color: $green-500;
     font-size: 3.5rem;
     padding-right: 0.3em;
+    @media screen and(max-width: $breakpoint-small) {
+      display: none;
+    }
   }
   .title {
     background: none;
@@ -43,6 +51,9 @@
     font-weight: 800;
     padding: 3rem 0;
     color: $green-500;
+    @media screen and(max-width: $breakpoint-small) {
+      padding-top: 0;
+    }
   }
 
   .percentage {
@@ -52,6 +63,7 @@
     }
     @media screen and(max-width: $breakpoint-small) {
       width: 30%;
+      align-self: flex-start;
     }
   }
 
@@ -67,6 +79,9 @@
     padding: 1.5em;
     margin-bottom: 1em;
     box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    @media screen and(max-width: $breakpoint-small) {
+      flex-direction: column-reverse;
+    }
   }
 
   .check-box {
