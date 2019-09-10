@@ -9,6 +9,7 @@ import { loadAuthDataFromLocalStorage } from "../../store"
 import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
 import Flyout from "../lib/Dropdown/Flyout"
+import {history} from "../../store"
 
 const Navigation = props => {
   const [user, setUser] = useState({ first_name: "Loading..", last_name: "" })
@@ -26,7 +27,10 @@ const Navigation = props => {
       window.removeEventListener("resize", handleResize)
     }
   }, [width])
-
+  const triggerLogout = () => {
+    localStorage.removeItem("auth")
+    history.push("/sign-in")
+  }
   return (
     <nav className="nav_wrapper">
       <Logo />
@@ -41,7 +45,7 @@ const Navigation = props => {
           <Dropdown />
         </div>
       </div> : <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />}
-      {isOpen && <Flyout />}
+      {isOpen && <div className="burger-flyout"><Flyout triggerLogout={triggerLogout}/></div>}
     </nav>
   )
 }

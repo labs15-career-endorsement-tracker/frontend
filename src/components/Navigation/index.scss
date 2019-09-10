@@ -20,6 +20,15 @@
     align-items: center;
     justify-content: center;
   }
+  .burger-flyout {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    @media screen and(max-width: $breakpoint-small) {
+      top: 90px;
+      right: 40px;
+    }
+  }
   .logo {
     justify-content: center;
     align-items: center;
