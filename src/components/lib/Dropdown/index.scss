@@ -1,9 +1,13 @@
 @import "../../../styles/variables";
 
 .dropdown-container {
+  i {
+    margin-left: 1rem;
+    color: $green-500;
+  }
   .dropdown-button {
     border: 0;
-    background: $white;
+    background: $green-100;
     cursor: pointer;
   }
   .dropdown-content {
@@ -24,9 +28,7 @@
       display: flex;
       justify-content: space-around;
     }
-    .fad {
-      margin-left: 1rem;
-    }
+
     .logout-text {
       margin-right: 1rem;
     }

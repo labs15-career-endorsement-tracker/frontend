@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
-  background: $white;
+  background: $green-100;
   margin-bottom: 0.9em;
   @media screen and(max-width: $breakpoint-medium) {
     flex-direction: column;
@@ -30,10 +30,16 @@
   align-items: center;
   padding-bottom: 10px;
   .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: capitalize;
     text-align: right;
-    border-right: 4px solid $green-500;
-    padding-right: 15px;
+    border: 5px solid $white;
+    border-radius: 50%;
+    background: $green-500;
+    width: 75px;
+    height: 75px;
     .user_full_name {
       font-weight: 700;
       font-size: 1.8rem;
