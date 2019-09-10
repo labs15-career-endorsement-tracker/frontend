@@ -1,6 +1,5 @@
 import React from "react"
 import { Animate } from "react-move"
-import Gradient from "../Gradient"
 
 const ProgressProvider = ({
   valueStart = 0,

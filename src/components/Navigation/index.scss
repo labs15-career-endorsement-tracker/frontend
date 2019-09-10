@@ -85,7 +85,8 @@
       color: $white;
       position: relative;
       bottom: 2px;
-      letter-spacing: -1px;
+      right: 1px;
+      letter-spacing: -2px;
       @media screen and(max-width: $breakpoint-medium) {
         font-size: 2.6rem;
       }
