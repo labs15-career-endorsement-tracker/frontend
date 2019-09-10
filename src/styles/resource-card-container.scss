@@ -4,13 +4,13 @@
   @media screen and(max-width: $breakpoint-large) {
     flex-direction: column;
     align-items: center;
-    width: 92%;
+    width: 100%;
   }
   @media screen and(max-width: $breakpoint-medium) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
   }
   .resource-card-container {
     margin: 0 auto;
@@ -22,7 +22,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 86%;
+      width: 90%;
     }
     .resource-cards {
       width: 100%;
