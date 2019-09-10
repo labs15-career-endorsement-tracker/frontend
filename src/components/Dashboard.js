@@ -1,5 +1,5 @@
 import React, {useEffect} from "react"
-import { connect , useDispatch} from "react-redux"
+import { connect, useDispatch } from "react-redux"
 import { Route, Switch } from "react-router-dom"
 
 // Functions
@@ -13,17 +13,13 @@ import Navigation from "./Navigation"
 import RequirementDetails from "./RequirementDetails"
 import NotFound from "./NotFound"
 import FullPageLoader from "./lib/Loaders/fullPageLoader";
-const Dashboard = ({requirements, user}) => {
+const Dashboard = ({requirements, user }) => {
   const dispatch = useDispatch()
-
-  const fetchData = async () => {
+  
+  useEffect(() => {
     const { userId, token } = loadAuthDataFromLocalStorage()
-    await dispatch(fetchUser(token, userId))
-    await dispatch(fetchRequirements(token))
-  }
-
-  useEffect((dispatch) => {
-    fetchData()
+    dispatch(fetchRequirements(token))
+    dispatch(fetchUser(token, userId))
   }, [dispatch])
   
   if (!Object.keys(user).length || !requirements.length) {

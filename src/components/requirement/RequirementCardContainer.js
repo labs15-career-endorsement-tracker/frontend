@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 
 import ReqCard from "./ReqCard"
-
-import { fetchRequirements } from "../../actions"
-import { loadAuthDataFromLocalStorage } from "../../store"
-import { connect } from "react-redux"
 
 const RequirementCardContainer = ({ requirements, fetchRequirements }) => {
   return (
@@ -18,14 +14,6 @@ const RequirementCardContainer = ({ requirements, fetchRequirements }) => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    inProgress: state.requirementReducer.inProgress,
-    requirements: state.requirementReducer.requirements
-  }
-}
 
-export default connect(
-  mapStateToProps,
-  { fetchRequirements }
-)(RequirementCardContainer)
+export default RequirementCardContainer
+

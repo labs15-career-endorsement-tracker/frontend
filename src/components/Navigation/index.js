@@ -3,9 +3,6 @@ import Burger from "@animated-burgers/burger-rotate"
 
 import "./index.scss"
 import "@animated-burgers/burger-rotate/dist/styles.css"
-
-import { getUserById } from "../../api"
-import { loadAuthDataFromLocalStorage } from "../../store"
 import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
 import Flyout from "../lib/Dropdown/Flyout"

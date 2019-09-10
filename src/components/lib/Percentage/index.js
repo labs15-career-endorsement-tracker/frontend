@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 import { easeQuadInOut } from "d3-ease"
@@ -9,10 +9,6 @@ import "react-circular-progressbar/dist/styles.css"
 import "./index.scss"
 
 const Percentage = ({ progress = 0 }) => {
-  // const [userProgress, setUserProgress] = useState(progress);
-  // useEffect(() => {
-  //   setUserProgress(progress)
-  // }, [progress])
   return (
     <div className="percentage">
       <GradientSVG
