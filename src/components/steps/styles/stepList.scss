@@ -19,7 +19,13 @@
   .list-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: $new-light-gray;
+  }
+
+  .icon-title {
+      display: flex;
+      align-items: center;
   }
 
   .fa-clipboard-list-check {
@@ -34,9 +40,11 @@
     font-weight: 800;
     padding: 3rem 0;
     color: $new-dark-green;
-    i {
-      padding-right: 1rem;
-    }
+  }
+
+  .percentage {
+    //   display: none;
+    width: 15%;
   }
   
   .step-list {

@@ -32,7 +32,7 @@ const StepList = ({
     ;(async function() {
       await fetchRequirements(token)
     })()
-  }, [fetchRequirements, token])
+  }, [fetchRequirements, token, stepsByTask])
 
   useEffect(() => {
     fetchSteps(token, taskId)
@@ -41,6 +41,7 @@ const StepList = ({
   useEffect(() => {
     setSteps(stepsByTask)
   }, [stepsByTask])
+
   return (
     <div className="step-list-container">
       <div className ="list-header">
@@ -50,7 +51,7 @@ const StepList = ({
             {requirement ? requirement.title : "Steps to complete"}
           </h1>
         </div>
-      <Percentage />
+      <Percentage progress={requirement ? requirement.progress : 0}/>
       </div>
       <div className="step-list">
         {steps.map(step => (
