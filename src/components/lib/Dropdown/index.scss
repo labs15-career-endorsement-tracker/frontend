@@ -24,13 +24,16 @@
 }
 .dropdown-container {
   i {
-    margin-left: 1rem;
+    // margin-left: 1rem;
     color: $green-500;
   }
   .dropdown-button {
     border: 0;
     background: $green-100;
     cursor: pointer;
+    &:focus {
+      outline: none;
+    }
   }
   .dropdown-content {
     display: none;
