@@ -7,7 +7,7 @@ const FullPageLoader = () => {
   return (
       <div  className="fullpage-loader">
         <Loader
-        type="Watch"
+        type="Triangle"
         color="#29AD44"
         height={100}
         width={100}
