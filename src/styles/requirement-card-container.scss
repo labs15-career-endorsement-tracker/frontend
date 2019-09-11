@@ -8,7 +8,7 @@
   grid-row-gap: 2.5rem;
   @media screen and(min-width: $breakpoint-small) {
     grid-template-columns: 1fr 1fr;
-    width: 73%;
+    width: 95%;
   }
   @media screen and(min-width: $breakpoint-medium) {
     grid-template-columns: 1fr 1fr 1fr;

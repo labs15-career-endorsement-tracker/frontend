@@ -14,16 +14,20 @@
     justify-content: center;
     align-items: center;
     width: 90%;
+    margin-right: 0;
   }
 
+  .step-description {
+    padding: 0 0.4rem 1rem;
+  }
   .list-header {
     // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0 0;
+    padding: 1rem 0 1rem;
     @media screen and (max-width: $breakpoint-small) {
-      flex-direction: column-reverse;
+      // flex-direction: column-reverse;
     }
   }
 
@@ -49,7 +53,7 @@
     color: $green-500;
     font-size: 3.2rem;
     font-weight: 800;
-    padding: 3rem 0;
+    // padding: 3rem 0;
     color: $green-500;
     @media screen and(max-width: $breakpoint-small) {
       padding-top: 0;
@@ -58,18 +62,16 @@
 
   .percentage {
     width: 25%;
+    max-width: 100px;
     @media screen and(max-width: $breakpoint-large) {
       width: 12%;
     }
-    @media screen and(min-width: $breakpoint-large) {
-      max-width: 20%;
-    }
     @media screen and(max-width: $breakpoint-medium) {
-      width: 30%;
+      width: 20%;
     }
     @media screen and(max-width: $breakpoint-small) {
       width: 30%;
-      align-self: flex-start;
+      // align-self: flex-start;
     }
   }
 
@@ -77,6 +79,9 @@
     display: flex;
     flex-direction: column;
     margin: 1rem 0 0;
+    // @media screen and(max-width: $breakpoint-small) {
+    //   margin: 0;
+    // }
   }
 
   .each-step {
