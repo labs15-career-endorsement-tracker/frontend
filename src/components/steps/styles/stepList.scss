@@ -23,7 +23,7 @@
     justify-content: space-between;
     padding: 1rem 0 0;
     @media screen and (max-width: $breakpoint-small) {
-      flex-direction: column-reverse;
+      // flex-direction: column-reverse;
     }
   }
 
