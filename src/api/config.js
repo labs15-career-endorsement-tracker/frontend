@@ -21,7 +21,7 @@ export const requestWithAuth = authToken => {
     if (error.response.status === 401) {
       history.push('/sign-in')
     }
-    return error
+    return Promise.reject(error)
   })
   return instance;
 }
