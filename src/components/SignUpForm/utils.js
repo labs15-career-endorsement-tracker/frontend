@@ -3,9 +3,6 @@ import { toast } from "react-toastify"
 import { addUser } from "../../api"
 import { history, saveToLocalStorage } from "../../store"
 
-import Loader from "react-loader-spinner"
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-
 export const handleSubmit = async (
   { firstName, lastName, email, password, track },
   { setSubmitting, resetForm }
