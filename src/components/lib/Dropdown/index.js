@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import { history } from "../../../store"
 import "./index.scss"
 import Flyout from "./Flyout"
@@ -16,10 +16,10 @@ const Dropdown = () => {
 
   return (
     <div className="dropdown-container">
-      <button onClick={() => {console.log('click');setIsOpen(!isOpen)}} className="dropdown-button">
+      <button onClick={() => setIsOpen(!isOpen)} className="dropdown-button">
         <i className="far fa-angle-down fa-3x"></i>
       </button>
-      <Flyout triggerDropdown={triggerDropdown} triggerLogout={triggerLogout} isOpen={isOpen}/>
+      <Flyout triggerDropdown={triggerDropdown} triggerLogout={triggerLogout} isOpen={isOpen} />
     </div>
   )
 }
