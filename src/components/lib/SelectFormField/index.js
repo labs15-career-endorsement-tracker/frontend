@@ -3,9 +3,6 @@ import { Field, ErrorMessage } from "formik"
 import Select from "react-select"
 import uuid from "uuid/v4"
 
-import Loader from "react-loader-spinner"
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-
 const styles = {
   control: provided => ({
     ...provided,

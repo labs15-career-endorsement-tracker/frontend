@@ -1,6 +1,6 @@
-import { request } from "./config"
+import { requestWithAuth } from "./config"
 
 export const loginUser = async userCreds => {
-  const { data } = await request().post("/login", userCreds)
+  const { data } = await requestWithAuth().post("/login", userCreds)
   return data
 }

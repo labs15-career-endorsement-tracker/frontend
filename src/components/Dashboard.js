@@ -22,7 +22,7 @@ const Dashboard = ({ requirements, user }) => {
     dispatch(fetchUser(token, userId))
   }, [dispatch])
 
-  if (!Object.keys(user).length || !requirements.length) {
+  if (!user || !Object.keys(user).length || !requirements.length) {
     return <FullPageLoader />
   }
   return (

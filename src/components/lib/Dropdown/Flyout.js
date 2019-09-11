@@ -1,11 +1,11 @@
 import React from "react"
 import "./index.scss"
 
-const Flyout = ({ triggerLogout, triggerDropdown }) => {
+const Flyout = ({ triggerLogout, triggerDropdown, isOpen }) => {
   return (
-    <div id="logoutPanel" className="dropdown-content">
+    <div id="logoutPanel" className={`dropdown-content ${isOpen && 'show'}`}>
       <div
-        className="logout"
+        className={`logout`}
         onClick={triggerLogout}
         onMouseOut={triggerDropdown}
       >
