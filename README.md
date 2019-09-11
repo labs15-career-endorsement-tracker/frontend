@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-    <img src="endrsd_demo.gif" alt="GIF walk-through" width="600">
+    <img src="hd_endrsd_demo.gif" alt="GIF walk-through" width="600">
 </p>
 
 ## Project Overview
