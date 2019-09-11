@@ -2,7 +2,7 @@ import React from "react"
 
 import Percentage from "./lib/Percentage"
 
-const UserInfo = ({user}) => {
+const UserInfo = ({ user }) => {
   const greeting = () => {
     const hour = new Date().getHours()
     if (hour >= 3 && hour < 12) {

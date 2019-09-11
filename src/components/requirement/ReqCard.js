@@ -26,12 +26,12 @@ const ReqCard = ({ requirement }) => {
         >
           {requirement.title}
           {requirement.progress === 100 && (
-          <div className="icon-circle">
-            <i className="fas fa-check"></i>
-          </div>
-        )}
+            <div className="icon-circle">
+              <i className="fas fa-check"></i>
+            </div>
+          )}
         </h2>
-        
+
         {/* {requirement.progress !== 100 && (
           <div className="requirement-description-container">
             <ReactTooltip

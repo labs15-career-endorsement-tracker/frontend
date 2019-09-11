@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import { Animate } from "react-move"
 
 const ProgressProvider = ({
@@ -14,18 +14,17 @@ const ProgressProvider = ({
   }, [valueEnd])
   return (
     <Animate
-    start={() => ({
-      value: valueStart
-    })}
-    update={() => ({
-      value: [isAnimated ? valueEnd : valueStart],
-      timing: {
-        duration: duration * 1000,
-        ease: easingFunction
-      }
-    })}
+      start={() => ({
+        value: valueStart
+      })}
+      update={() => ({
+        value: [isAnimated ? valueEnd : valueStart],
+        timing: {
+          duration: duration * 1000,
+          ease: easingFunction
+        }
+      })}
     >
-
       {({ value }) => children(value)}
     </Animate>
   )
