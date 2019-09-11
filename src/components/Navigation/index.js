@@ -8,7 +8,7 @@ import Dropdown from "../lib/Dropdown"
 import Flyout from "../lib/Dropdown/Flyout"
 import { history } from "../../store"
 
-const Navigation = ({user}) => {
+const Navigation = ({ user }) => {
   const [width, setWidth] = useState(window.innerWidth)
   const [isOpen, setIsOpen] = useState(false)
   useEffect(() => {

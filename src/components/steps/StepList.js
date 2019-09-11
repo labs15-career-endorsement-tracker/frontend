@@ -55,6 +55,9 @@ const StepList = ({
         <Percentage progress={requirement ? requirement.progress : 0} />
         {/* </div> */}
       </div>
+      <div className="step-description">
+        <p>{requirement.tasks_description}</p>
+      </div>
       <div className="step-list">
         {steps.map(step => (
           <Step

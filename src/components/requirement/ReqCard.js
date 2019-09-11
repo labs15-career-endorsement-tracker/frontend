@@ -1,4 +1,5 @@
 import React from "react"
+import ReactTooltip from "react-tooltip"
 
 import StepGauge from "../../components/steps/StepGauge"
 
@@ -20,17 +21,28 @@ const ReqCard = ({ requirement }) => {
           className={`title ${
             requirement.progress === 100 ? "white-text" : ""
           }`}
+          // data-tip
+          // data-for={requirement.title}
         >
           {requirement.title}
+          {requirement.progress === 100 && (
+            <div className="icon-circle">
+              <i className="fas fa-check"></i>
+            </div>
+          )}
         </h2>
-        {requirement.progress === 100 && (
-          <div className="icon-circle">
-            <i className="fas fa-check"></i>
+
+        {/* {requirement.progress !== 100 && (
+          <div className="requirement-description-container">
+            <ReactTooltip
+              id={requirement.title}
+              className="requirement-description-tooltip"
+              type="light"
+            >
+              <p className="requirement-description-text">{`${requirement.tasks_description}`}</p>
+            </ReactTooltip>
           </div>
-        )}
-        {requirement.progress !== 100 && (
-          <p>{`${requirement.tasks_description.substring(0, 50).trim()}...`}</p>
-        )}
+        )} */}
       </div>
     </div>
   )

@@ -14,6 +14,4 @@ const RequirementCardContainer = ({ requirements, fetchRequirements }) => {
   )
 }
 
-
 export default RequirementCardContainer
-
