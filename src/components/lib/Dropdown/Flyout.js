@@ -3,7 +3,7 @@ import "./index.scss"
 
 const Flyout = ({ triggerLogout, triggerDropdown, isOpen }) => {
   return (
-    <div id="logoutPanel" className={`dropdown-content ${isOpen && 'show'}`}>
+    <div id="logoutPanel" className={`dropdown-content ${isOpen && "show"}`}>
       <div
         className={`logout`}
         onClick={triggerLogout}

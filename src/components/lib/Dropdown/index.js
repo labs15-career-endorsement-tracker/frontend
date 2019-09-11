@@ -19,7 +19,11 @@ const Dropdown = () => {
       <button onClick={() => setIsOpen(!isOpen)} className="dropdown-button">
         <i className="far fa-angle-down fa-3x"></i>
       </button>
-      <Flyout triggerDropdown={triggerDropdown} triggerLogout={triggerLogout} isOpen={isOpen} />
+      <Flyout
+        triggerDropdown={triggerDropdown}
+        triggerLogout={triggerLogout}
+        isOpen={isOpen}
+      />
     </div>
   )
 }
