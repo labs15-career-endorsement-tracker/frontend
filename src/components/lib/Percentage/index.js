@@ -26,7 +26,6 @@ const Percentage = ({ progress = 0 }) => {
         {value => {
           // you have to round the value again here because of the way the animation increments it
           const roundedValue = Math.round(value)
-
           return (
             <CircularProgressbar
               value={value}
