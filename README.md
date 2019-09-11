@@ -2,7 +2,7 @@
     <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" title="Lambda School Logo" width="200" align="right">
 </a>
 
-# The 'ENDRSD' Project
+# The 'ENDRSD' Web App
 
 ![MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 ![React](https://img.shields.io/badge/React-v16.9.0-blue.svg)
