@@ -15,6 +15,9 @@
     align-items: center;
     width: 90%;
   }
+  @media screen and(max-width: $breakpoint-small) {
+    margin-right: 0;
+  }
 
   .step-description {
     padding: 0 0.4rem 1rem;
