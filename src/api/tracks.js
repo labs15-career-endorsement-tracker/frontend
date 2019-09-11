@@ -1,6 +1,6 @@
-import { request } from "./config"
+import { requestWithAuth } from "./config"
 
 export const getTracks = async () => {
-  const { data } = await request().get("/tracks")
+  const { data } = await requestWithAuth().get("/tracks")
   return data
 }
