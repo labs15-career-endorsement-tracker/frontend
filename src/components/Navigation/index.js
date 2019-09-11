@@ -3,21 +3,15 @@ import Burger from "@animated-burgers/burger-rotate"
 
 import "./index.scss"
 import "@animated-burgers/burger-rotate/dist/styles.css"
-
-import { getUserById } from "../../api"
-import { loadAuthDataFromLocalStorage } from "../../store"
 import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
 import Flyout from "../lib/Dropdown/Flyout"
 import { history } from "../../store"
 
-const Navigation = props => {
-  const [user, setUser] = useState({ first_name: "Loading..", last_name: "" })
+const Navigation = ({user}) => {
   const [width, setWidth] = useState(window.innerWidth)
   const [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
-    const { token, userId } = loadAuthDataFromLocalStorage()
-    getUserById(token, userId).then(user => setUser(user))
     const handleResize = () => {
       return setWidth(window.innerWidth)
     }
