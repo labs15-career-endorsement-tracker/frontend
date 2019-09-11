@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 import { withRouter } from "react-router"
-
+import { NavLink } from "react-router-dom"
 import Step from "./Step"
+import Percentage from "../lib/Percentage"
+
+import "./styles/index.scss"
 import {
   toggleStep,
   fetchSteps,
@@ -29,7 +32,7 @@ const StepList = ({
     ;(async function() {
       await fetchRequirements(token)
     })()
-  }, [fetchRequirements, token])
+  }, [fetchRequirements, token, stepsByTask])
 
   useEffect(() => {
     fetchSteps(token, taskId)
@@ -38,11 +41,23 @@ const StepList = ({
   useEffect(() => {
     setSteps(stepsByTask)
   }, [stepsByTask])
+
   return (
     <div className="step-list-container">
-      <h1 className="title">
-        {requirement ? requirement.title : "Steps to complete"}
-      </h1>
+      <div className="list-header">
+        <div className="icon-title">
+          <i className="fad fa-clipboard-list-check"></i>
+          <h1 className="title">
+            {requirement ? requirement.title : "Steps to complete"}
+          </h1>
+        </div>
+        {/* <div className="meter-container"> */}
+        <Percentage progress={requirement ? requirement.progress : 0} />
+        {/* </div> */}
+      </div>
+      <div className="step-description">
+        <p>{requirement.tasks_description}</p>
+      </div>
       <div className="step-list">
         {steps.map(step => (
           <Step
@@ -52,6 +67,14 @@ const StepList = ({
             fetchUser={fetchUser}
           />
         ))}
+        <div className="return-requirements-container">
+          <div className="return-box">
+            <NavLink to="/" className="back-link">
+              <i className="fad fa-long-arrow-left"></i>
+              <span className="return-text">Return to requirements</span>
+            </NavLink>
+          </div>
+        </div>
       </div>
     </div>
   )

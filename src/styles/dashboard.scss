@@ -1,9 +1,11 @@
 @import "./variables";
+
 .dash-container {
-  background: $lightgrey;
+  background: $green-100;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 300px;
+  max-width: 100%;
 }

@@ -1,32 +1,38 @@
 @import "./variables";
 
 .userInfo-container {
-  font-family: "Barlow Condensed", sans-serif;
+  box-sizing: border-box;
+  font-family: $font-stack-heading;
   align-items: center;
-  margin: 2em auto;
+  margin: 0 auto 2rem;
   display: flex;
   justify-content: space-between;
   background: $white;
-  padding: 2em;
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  box-shadow: $drop-shadow-lg;
   width: 80%;
+  max-width: 100%;
+  .dateAndGreet {
+    margin: 3rem;
+  }
   @media screen and (max-width: $breakpoint-medium) {
-    width: 70%;
-    flex-direction: column;
+    width: 100%;
     .dateAndGreet {
-      margin: 3rem;
-    }
-    .meter-wrapper {
-      margin: 3rem;
+      margin: 3rem 1rem;
+      width: 50%;
     }
     h4 {
       font-size: 0.5rem;
     }
   }
   p {
-    font-family: Lato;
+    font-family: $font-stack-body;
     font-size: 1.6rem;
     line-height: 1.4;
+    color: $green-500;
+    .track {
+      font-weight: bold;
+    }
   }
 
   .date {
@@ -37,11 +43,12 @@
   .welcome-msg {
     font-size: 3.2rem;
     font-weight: bold;
+    color: $green-400;
   }
 
   .first-name {
     text-transform: capitalize;
-    color: $secondary;
+    color: $green-500;
     font-weight: 800;
     font-size: 4.4rem;
     padding-bottom: 0.5em;
@@ -75,13 +82,14 @@
 
   .percentage {
     width: 100%;
+    max-width: 200px;
   }
 
   .progress-label {
     display: flex;
     justify-content: center;
     width: 100%;
-    font-family: Lato;
+    font-family: $font-stack-body;
     padding-top: 0.5em;
     align-self: center;
 

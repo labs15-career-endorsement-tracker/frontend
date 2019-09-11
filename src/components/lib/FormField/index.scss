@@ -21,13 +21,13 @@
   text-align: center;
   padding: 0.8rem 1.6rem 1.6rem;
   background: transparent;
-  border-bottom: 0.4rem solid $black;
+  border-bottom: 0.4rem solid $green-500;
   margin-bottom: 0.4rem;
 }
 
 .form-field .feedback {
   font-family: $font-stack-body;
-  color: $color-error;
+  color: $error-300;
   font-size: 1.4rem;
   line-height: 1.7rem;
 }

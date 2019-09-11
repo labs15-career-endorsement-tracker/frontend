@@ -37,7 +37,7 @@ export const handleSubmit = async (
 }
 
 export const formatTracks = arr => {
-  if (!arr || !arr.length) return []
+  if (!arr || !arr.length) return [{ value: 0, label: "Loading..." }]
   return arr.map(({ id, title }) => ({
     value: id,
     label: title

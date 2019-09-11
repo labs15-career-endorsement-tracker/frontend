@@ -20,10 +20,28 @@ const ReqCard = ({ requirement }) => {
           className={`title ${
             requirement.progress === 100 ? "white-text" : ""
           }`}
+          // data-tip
+          // data-for={requirement.title}
         >
-          {requirement.progress === 100 && <i className="fas fa-check"></i>}
           {requirement.title}
+          {requirement.progress === 100 && (
+            <div className="icon-circle">
+              <i className="fas fa-check"></i>
+            </div>
+          )}
         </h2>
+
+        {/* {requirement.progress !== 100 && (
+          <div className="requirement-description-container">
+            <ReactTooltip
+              id={requirement.title}
+              className="requirement-description-tooltip"
+              type="light"
+            >
+              <p className="requirement-description-text">{`${requirement.tasks_description}`}</p>
+            </ReactTooltip>
+          </div>
+        )} */}
       </div>
     </div>
   )

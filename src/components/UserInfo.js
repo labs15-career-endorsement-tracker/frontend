@@ -1,20 +1,8 @@
-import React, { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
-
-import { fetchUser } from "../actions"
+import React from "react"
 
 import Percentage from "./lib/Percentage"
-import { loadAuthDataFromLocalStorage } from "../store"
 
-const UserInfo = () => {
-  const user = useSelector(state => state.userReducer.user)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    const { userId, token } = loadAuthDataFromLocalStorage()
-    dispatch(fetchUser(token, userId))
-  }, [dispatch])
-
+const UserInfo = ({ user }) => {
   const greeting = () => {
     const hour = new Date().getHours()
     if (hour >= 3 && hour < 12) {
@@ -31,7 +19,11 @@ const UserInfo = () => {
       <div className="dateAndGreet">
         <h2 className="welcome-msg">{greeting()},</h2>
         <h2 className="first-name">{user.first_name}</h2>
-        <p>Below are your requirements to be fully endorsed.</p>
+        <p>
+          Below are your{" "}
+          <span className="track">{`${user.tracks_title} `}</span>requirements
+          to be fully endorsed.
+        </p>
       </div>
       <div className="meter-wrapper">
         <div className="meter-box">

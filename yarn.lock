@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@animated-burgers/burger-rotate@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@animated-burgers/burger-rotate/-/burger-rotate-1.1.2.tgz#2e21c830d63e6a0d7a2351fa7ec8a9e0dd964430"
+  integrity sha512-VNTIzf/eapZ3PVyLKq75JKBt9zPC44EbIhYrysOXWwcptTKT8MAotxjv9ejbvJk/pcorJe/Ru0x5k/4LWRpWkQ==
+  dependencies:
+    "@animated-burgers/burger" "^1.1.2"
+
+"@animated-burgers/burger@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@animated-burgers/burger/-/burger-1.1.2.tgz#a75f7147f9d4041b8bfd510e0097a1500c4fa009"
+  integrity sha512-hErU9dlOcEeYbmbhhngBMXSDtqOaXfFEnKoodfs6vCFWD8dVLMNVbFFpZ0eV7/Wa9kKTGLPeLtDeP0vWYAcY7w==
+
 "@babel/code-frame@7.5.5", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"
@@ -8613,6 +8625,14 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-loader-spinner@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-3.1.4.tgz#03ef24252f6802d6e85443c23b32c2e66973fe4d"
+  integrity sha512-pl7cvc1eZFwOoUW33BJnuR9TBcAS25SD15RFYecY9ikb8Kv+yFFmaITU6xg001Aw8HsNreAUsrIHozf2fNmIqQ==
+  dependencies:
+    babel-runtime "^6.26.0"
+    prop-types "^15.6.2"
+
 react-move@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/react-move/-/react-move-6.0.0.tgz#4d499aa121f38f4b23ef792538b3a68af16bb680"
@@ -8749,6 +8769,14 @@ react-toastify@^5.3.2:
     classnames "^2.2.6"
     prop-types "^15.7.2"
     react-transition-group "^2.6.1"
+
+react-tooltip@^3.11.1:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-3.11.1.tgz#7b4ce48ed26a46e996662b19a2afebbfd483513b"
+  integrity sha512-YCMVlEC2KuHIzOQhPplTK5jmBBwoL+PYJJdJKXj7M/h7oevupd/QSVq6z5U7/ehIGXyHsAqvwpdxexDfyQ0o3A==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.0"
 
 react-transition-group@^2.2.1, react-transition-group@^2.6.1:
   version "2.9.0"

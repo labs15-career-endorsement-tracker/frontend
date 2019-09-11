@@ -1,28 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-// @import './variables';
-
 .resource-card {
-  background: #e9ebec;
+  background: $white;
   .individual-resource {
     display: flex;
-    margin: 3px 0;
+    margin: 2px 0;
     background: $white;
-    padding: 2rem;
-    .individual-resource-icon {
-      padding: 1rem;
-      color: #104753;
+    padding: 1rem;
+    align-items: center;
+    color: $green-400;
+    .fab,
+    .far {
+      padding: 0.5rem 1.5rem 0.5rem 3rem;
+      font-size: 2rem;
     }
-    .individual-resource-content {
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      .resource-url {
-        font-family: "Lato", sans-serif;
-        text-decoration-line: underline;
-        a {
-          font-weight: 800;
-        }
-      }
+    .resource-url {
+      font-family: $font-stack-body;
+      text-decoration-line: underline;
+      font-weight: 800;
     }
   }
 }

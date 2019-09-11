@@ -21,7 +21,7 @@ const SignUpForm = ({ isSubmitting }) => {
   useEffect(() => {
     ;(async function() {
       const result = await getTracks()
-      setTracks(result)
+      setTimeout(() => setTracks(result), 3000)
     })()
   }, [])
 

@@ -1,7 +1,7 @@
-import { request, requestWithAuth } from "./config"
+import { requestWithAuth } from "./config"
 
 export const addUser = async userData => {
-  const { data } = await request().post("/users", userData)
+  const { data } = await requestWithAuth().post("/users", userData)
   return data
 }
 
