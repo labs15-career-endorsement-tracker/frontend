@@ -21,12 +21,8 @@ export const mapPropsToValues = ({
 })
 
 export const validationSchema = validateObject().shape({
-  firstName: validateString()
-    .min(3, "Your first name must be at least 3 characters")
-    .required("Please enter your first name"),
-  lastName: validateString()
-    .min(3, "Your first name must be at least 3 characters")
-    .required("Please enter your last name"),
+  firstName: validateString().required("Please enter your first name"),
+  lastName: validateString().required("Please enter your last name"),
   email: validateString()
     .email("Please enter a valid email address")
     .required("We need your email to verify it's really you"),
