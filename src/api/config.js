@@ -19,7 +19,7 @@ export const requestWithAuth = authToken => {
   instance.interceptors.response.use(
     response => response,
     error => {
-      if (error.response.status === 401) {
+      if (error.response && error.response.status === 401) {
         history.push("/sign-in")
       }
       return Promise.reject(error)
