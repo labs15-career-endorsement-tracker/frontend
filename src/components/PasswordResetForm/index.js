@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { withFormik } from "formik"
 
 import { mapPropsToValues, validationSchema } from "./schema"
@@ -8,28 +8,23 @@ import { handleSubmit } from "./utils"
 
 const ResetPasswordForm = ({ isSubmitting }) => {
   return (
-    <FormLayout>
-      <Form
-        title="Reset your password"
-        prompt="Forgot your password?"
-        redirectTo="/sign-in"
-        redirectText="Change password"
-      >
+    <FormLayout image={{ url: "", altText: "" }}>
+      <Form title="Reset your password" prompt="Enter a new password">
         <FormField
           type="password"
           name="password"
           labelText="Enter your password"
-          placeholderText="enter password"
+          placeholderText="enter new password"
         ></FormField>
         <FormField
           type="password"
           name="confirmPassword"
           labelText="Confirm your password"
-          placeholderText="re-enter password"
+          placeholderText="enter new password again"
         ></FormField>
       </Form>
       <FormButton disabled={isSubmitting} type="submit">
-        Reset password
+        Reset
       </FormButton>
     </FormLayout>
   )

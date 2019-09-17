@@ -12,7 +12,7 @@ export const mapPropsToValues = ({ password, confirmPassword }) => ({
 export const validationSchema = validateObject().shape({
   password: validateString()
     .min(8, "Your password must be more than 8 characters")
-    .max(128, "Your password must be less than 128 characters")
+    .max(255, "Your password must be less than 255 characters")
     .required("Please enter a new password"),
   confirmPassword: validateString().oneOf(
     [getRef("password"), null],
