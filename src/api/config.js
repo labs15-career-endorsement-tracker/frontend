@@ -15,12 +15,16 @@ export const requestWithAuth = authToken => {
     ...axiosConfig,
     headers: { Authorization: `Bearer ${authToken}` }
   })
-
   instance.interceptors.response.use(
     response => response,
     error => {
       if (error.response && error.response.status === 401) {
-        history.push("/sign-in")
+        if (history.location.pathname === "/reset-password") {
+          history.push("/sign-up")
+        }
+        else {
+          history.push("/sign-in")
+        }
       }
       return Promise.reject(error)
     }

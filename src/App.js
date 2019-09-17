@@ -8,6 +8,7 @@ import SignInForm from "./components/SignInForm"
 import Dashboard from "./components/Dashboard"
 import NotFound from "./components/NotFound"
 import PasswordResetForm from "./components/PasswordResetForm"
+import EmailForm from "./components/EmailForm"
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path="/sign-in" component={SignInForm} />
         <Route exact path="/sign-up" component={SignUpForm} />
         <Route path="/reset" component={PasswordResetForm} />
+        <Route exact path="/reset-password" component={EmailForm} />
         <Dashboard />
         <Route component={NotFound} />
       </Switch>

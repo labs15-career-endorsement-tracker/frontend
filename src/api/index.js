@@ -4,6 +4,7 @@ import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
 import { getSteps, toggleStepComplete } from "./steps"
 import { getResources } from "./resources"
+import { sendEmail } from "./sendEmail"
 
 export {
   loginUser,
@@ -14,5 +15,6 @@ export {
   getSteps,
   toggleStepComplete,
   getResources,
-  updateUserPassword
+  updateUserPassword,
+  sendEmail
 }
