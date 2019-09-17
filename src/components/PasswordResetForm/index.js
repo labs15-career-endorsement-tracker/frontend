@@ -1,12 +1,15 @@
 import React from "react"
 import { withFormik } from "formik"
-
+import queryString from "query-string"
 import { mapPropsToValues, validationSchema } from "./schema"
 
 import { FormLayout, Form, FormField, FormButton } from "../lib"
 import { handleSubmit } from "./utils"
+import { history } from "../../store"
 
 const ResetPasswordForm = ({ isSubmitting }) => {
+  const key = queryString.parse(history.location.search)
+  console.log(key.token)
   return (
     <FormLayout image={{ url: "", altText: "" }}>
       <Form title="Reset your password" prompt="Enter a new password">
