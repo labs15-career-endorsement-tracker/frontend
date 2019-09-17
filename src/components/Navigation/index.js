@@ -8,19 +8,8 @@ import Dropdown from "../lib/Dropdown"
 import Flyout from "../lib/Dropdown/Flyout"
 import { history } from "../../store"
 
-const Navigation = ({ user }) => {
-  const [width, setWidth] = useState(window.innerWidth)
-  const [isOpen, setIsOpen] = useState(false)
-  useEffect(() => {
-    const handleResize = () => {
-      return setWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", handleResize)
-    if (width > 768) setIsOpen(false)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [width])
+const Navigation = ({ user, width, isOpen, setIsOpen }) => {
+  
   const triggerLogout = () => {
     localStorage.removeItem("auth")
     history.push("/sign-in")
@@ -45,17 +34,17 @@ const Navigation = ({ user }) => {
         </div>
       ) : (
         <div className="burger-container">
-          <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />{" "}
+          <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         </div>
       )}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="burger-flyout">
           <Flyout
             triggerLogout={triggerLogout}
             triggerDropdown={triggerDropdown}
           />
         </div>
-      )}
+      )} */}
     </nav>
   )
 }
