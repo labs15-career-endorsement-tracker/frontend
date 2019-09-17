@@ -8,7 +8,9 @@ import { handleSubmit } from "./utils"
 
 import { FormLayout, Form, FormField, FormButton } from "../lib"
 
-const SignInForm = ({ isSubmitting }) => {
+import {Link} from "react-router-dom";
+
+const SignInForm = ({ isSubmitting, history, values }) => {
   return (
     <FormLayout
       image={{ url: heroImg, altText: "An alien hiding behind a planet." }}
@@ -33,6 +35,11 @@ const SignInForm = ({ isSubmitting }) => {
           placeholderText="e.g. Password1234!"
         ></FormField>
 
+        <Link to={{pathname: "/reset-password", state: {email: values.email}}}>Forgot Your Password?</Link>
+        {/* <button onClick={(e) => {
+          e.preventDefault();
+          history.push('/reset-password', {email: values.email})
+        }}>Forgot your password?</button> */}
         <FormButton disabled={isSubmitting} type="submit">
           Sign In!
         </FormButton>
