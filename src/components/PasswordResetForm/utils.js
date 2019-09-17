@@ -8,7 +8,6 @@ export const handleSubmit = async (values, { setSubmitting, resetForm }) => {
   try {
     const key = queryString.parse(history.location.search)
     const authToken = key.token
-    console.log(authToken, values)
     await updateUserPassword(authToken, values.password)
     resetForm()
     history.push("/sign-in")
