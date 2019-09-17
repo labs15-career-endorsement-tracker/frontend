@@ -1,5 +1,5 @@
 import { loginUser } from "./auth"
-import { addUser, getUserById } from "./users"
+import { addUser, getUserById, updateUserPassword } from "./users"
 import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
 import { getSteps, toggleStepComplete } from "./steps"
@@ -13,5 +13,6 @@ export {
   getRequirements,
   getSteps,
   toggleStepComplete,
-  getResources
+  getResources,
+  updateUserPassword
 }
