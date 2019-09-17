@@ -37,14 +37,14 @@ const Navigation = ({ user, width, isOpen, setIsOpen }) => {
           <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         </div>
       )}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="burger-flyout">
           <Flyout
             triggerLogout={triggerLogout}
             triggerDropdown={triggerDropdown}
           />
         </div>
-      )}
+      )} */}
     </nav>
   )
 }

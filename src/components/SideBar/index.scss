@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 main {
   height: 100%;
 }
@@ -7,7 +8,11 @@ main {
   height: 100%;
   width: 250px;
   position: absolute;
-  left: 0;
+  left: -250px;
   top: 0;
   z-index: 1;
+  transition: left 1s;
+}
+.show {
+  left: 0;
 }

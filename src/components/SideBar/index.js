@@ -9,15 +9,10 @@ import Flyout from "../lib/Dropdown/Flyout"
 import { history } from "../../store"
 
 const SideBar = ({ user , isOpen, setIsOpen, width}) => {
-if (width > 768) {
-  return <section className="sidebar">
+
+  return <section className={`sidebar ${(width > 768 || isOpen) && "show"}`}>
       
   </section>
-}
-  return (
-    <>
-    </>
-    
-  )
+
 }
 export default SideBar
