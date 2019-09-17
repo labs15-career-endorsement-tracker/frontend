@@ -1,18 +1,25 @@
 .requirement-card-container {
-  margin: 0rem 1rem;
-  width: 79%;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 2.5rem;
+  width: 95%;
+  margin: 0 auto;
+  box-sizing: border-box;
   @media screen and(min-width: $breakpoint-small) {
     grid-template-columns: 1fr 1fr;
-    width: 95%;
   }
   @media screen and(min-width: $breakpoint-medium) {
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 250px);
+    left: 250px;
+    margin: 0;
+    padding: 0 2rem;
+  }
+  @media screen and(min-width: $breakpoint-large) {
     grid-template-columns: 1fr 1fr 1fr;
-    width: 79%;
   }
   .component-title {
     padding: 1em;

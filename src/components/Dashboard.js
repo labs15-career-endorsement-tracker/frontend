@@ -13,6 +13,8 @@ import Navigation from "./Navigation"
 import RequirementDetails from "./RequirementDetails"
 import NotFound from "./NotFound"
 import FullPageLoader from "./lib/Loaders/fullPageLoader"
+import SideBar from "./SideBar"
+
 const Dashboard = ({ requirements, user }) => {
   const dispatch = useDispatch()
 
@@ -28,7 +30,9 @@ const Dashboard = ({ requirements, user }) => {
   return (
     <div className="dash-container">
       <Navigation user={user} />
-      <UserInfo user={user} />
+      <main>
+      <SideBar />
+      {/* <UserInfo user={user} /> */}
       <Switch>
         <Route
           exact
@@ -45,6 +49,7 @@ const Dashboard = ({ requirements, user }) => {
         
         <Route component={NotFound} />
       </Switch>
+      </main>
     </div>
   )
 }

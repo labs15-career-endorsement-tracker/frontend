@@ -45,7 +45,7 @@ const Navigation = ({ user }) => {
         </div>
       ) : (
         <div className="burger-container">
-          <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />{" "}
+          <Burger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         </div>
       )}
       {isOpen && (
