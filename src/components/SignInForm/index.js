@@ -8,6 +8,8 @@ import { handleSubmit } from "./utils"
 
 import { FormLayout, Form, FormField, FormButton } from "../lib"
 
+import {Link} from "react-router-dom";
+
 const SignInForm = ({ isSubmitting }) => {
   return (
     <FormLayout
@@ -36,6 +38,7 @@ const SignInForm = ({ isSubmitting }) => {
         <FormButton disabled={isSubmitting} type="submit">
           Sign In!
         </FormButton>
+        <Link to="/reset-password">Forgot Your Password?</Link>
       </Form>
     </FormLayout>
   )

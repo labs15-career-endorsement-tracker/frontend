@@ -42,6 +42,7 @@ const Dashboard = ({ requirements, user }) => {
             <RequirementCardContainer {...props} requirements={requirements} />
           )}
         ></Route>
+        
         <Route component={NotFound} />
       </Switch>
     </div>
