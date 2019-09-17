@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { connect, useDispatch } from "react-redux"
 import { Route, Switch } from "react-router-dom"
 
@@ -17,7 +17,18 @@ import SideBar from "./SideBar"
 
 const Dashboard = ({ requirements, user }) => {
   const dispatch = useDispatch()
-
+  const [width, setWidth] = useState(window.innerWidth)
+  const [isOpen, setIsOpen] = useState(false)
+  useEffect(() => {
+    const handleResize = () => {
+      return setWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", handleResize)
+    if (width > 768) setIsOpen(false)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [width])
   useEffect(() => {
     const { userId, token } = loadAuthDataFromLocalStorage()
     dispatch(fetchRequirements(token))
@@ -29,9 +40,9 @@ const Dashboard = ({ requirements, user }) => {
   }
   return (
     <div className="dash-container">
-      <Navigation user={user} />
+      <Navigation user={user} isOpen={isOpen} setIsOpen={setIsOpen} width={width}/>
       <main>
-      <SideBar />
+      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} width={width}/>
       {/* <UserInfo user={user} /> */}
       <Switch>
         <Route
