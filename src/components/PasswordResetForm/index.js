@@ -9,7 +9,7 @@ import { handleSubmit } from "./utils"
 
 const ResetPasswordForm = ({ isSubmitting }) => {
   const key = queryString.parse(history.location.search)
-  const authToken = key.token
+  const token = key.token
   return (
     <FormLayout image={{ url: "", altText: "" }}>
       <Form title="Reset your password" prompt="Enter a new password">

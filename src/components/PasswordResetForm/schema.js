@@ -4,9 +4,10 @@ import {
   ref as getRef
 } from "yup"
 
-export const mapPropsToValues = ({ password, confirmPassword }) => ({
+export const mapPropsToValues = ({ password, confirmPassword, token }) => ({
   password: password || "",
-  confirmPassword: confirmPassword || ""
+  confirmPassword: confirmPassword || "",
+  token: token || ""
 })
 
 export const validationSchema = validateObject().shape({
