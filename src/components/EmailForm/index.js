@@ -8,26 +8,15 @@ import { handleSubmit } from "./utils"
 
 import { FormLayout, Form, FormField, FormButton } from "../lib"
 
-import { Link } from "react-router-dom"
-
 import './index.scss'
 
 const EmailForm
   = (props) => {
-    if (props.location.state.sentEmail) {
-      return (
-        <FormLayout
-          image={{ url: heroImg, altText: "An alien hiding behind a planet." }}
-        >
-          <div className="email-success"><p>We have sent you a password reset email</p><Link to="/sign-in">Sign In</Link></div>
-
-        </FormLayout>
-      )
-    }
     return (
       <FormLayout
         image={{ url: heroImg, altText: "An alien hiding behind a planet." }}
       >
+        {props.location.state.sentEmail && <div className="email-success"><p>We have sent you a password reset email</p></div>}
         <Form
           title="Reset Password"
           prompt="Don't need to reset your password?"
