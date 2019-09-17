@@ -1,7 +1,7 @@
 import { object as validateObject, string as validateString } from "yup"
 
-export const mapPropsToValues = ({ email }) => ({
-  email: email || ""
+export const mapPropsToValues = ({ email, location }) => ({
+  email: location.state.email || ""
 })
 
 export const validationSchema = validateObject().shape({

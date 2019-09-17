@@ -9,7 +9,7 @@ import { handleSubmit } from "./utils"
 import { FormLayout, Form, FormField, FormButton } from "../lib"
 
 const EmailForm
- = ({ isSubmitting }) => {
+ = (props) => {
   return (
     <FormLayout
       image={{ url: heroImg, altText: "An alien hiding behind a planet." }}
@@ -27,7 +27,7 @@ const EmailForm
           labelText="Enter your email address"
           placeholderText="e.g. bob_ross@happylittlemistakes.com"
         ></FormField>
-        <FormButton disabled={isSubmitting} type="submit">
+        <FormButton type="submit">
           Submit
         </FormButton>
       </Form>
@@ -39,6 +39,6 @@ export default withFormik({
   mapPropsToValues,
   validationSchema,
   handleSubmit,
-  displayName: "Sign In"
+  displayName: "Forgot your password?"
 })(EmailForm
     )
