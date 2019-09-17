@@ -13,10 +13,9 @@ export const handleSubmit = async (
     const userData = {
       email,
     }
-    const { data} = await sendEmail(userData)
-    console.log(data)
-    resetForm()
-    // history.push("/")
+    await sendEmail(userData)
+    resetForm({email: ""})
+    history.push('/reset-password', {sentEmail: true})
   } catch (error) {
     const { status } = error.response
     switch (status) {
@@ -30,6 +29,5 @@ export const handleSubmit = async (
         toast(`Looks like our server just broke. Please try again later.`)
     }
   }
-
   setSubmitting(false)
 }
