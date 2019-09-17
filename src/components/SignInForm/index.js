@@ -35,10 +35,10 @@ const SignInForm = ({ isSubmitting }) => {
           placeholderText="e.g. Password1234!"
         ></FormField>
 
+        <Link to="/reset-password">Forgot Your Password?</Link>
         <FormButton disabled={isSubmitting} type="submit">
           Sign In!
         </FormButton>
-        <Link to="/reset-password">Forgot Your Password?</Link>
       </Form>
     </FormLayout>
   )

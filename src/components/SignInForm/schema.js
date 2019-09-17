@@ -7,5 +7,9 @@ export const mapPropsToValues = ({ email, password }) => ({
 export const validationSchema = validateObject().shape({
   email: validateString()
     .email("Please enter a valid email address")
-    .required("We need your email to verify it's really you")
+    .required("We need your email to verify it's really you"),
+  password: validateString()	
+    .min(8, "Your password must be more than 8 characters")	
+    .max(255, "Your password must be less than than 255 characters")	
+    .required("Please enter your password")
 })
