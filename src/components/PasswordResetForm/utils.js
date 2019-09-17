@@ -13,10 +13,19 @@ export const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     history.push("/sign-in")
   } catch (error) {
     const { status } = error.response
-    console.log(status)
     switch (status) {
+      case 404:
+        toast(
+          "Looks like we couldn't find that resource. Please try again later."
+        )
+        break
+      case 500:
+        toast(
+          "Looks like we couldn't understand the request. Please try again."
+        )
+        break
       default:
-        toast(`${status}`)
+        toast("Looks like our server just broke. Please try again.")
     }
   }
   setSubmitting(false)
