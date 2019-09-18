@@ -5,17 +5,29 @@ import "./index.scss"
 const SupportLinks = () => {
   return (
     <div className="support-link-icons">
-      <a class="twitter" href="https://twitter.com/getendrsd">
-        <i class="fab fa-twitter"></i>
+      <a
+        className="twitter"
+        href="https://twitter.com/getendrsd"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-twitter"></i>
       </a>
       <a
-        class="slack"
+        className="slack"
         href="https://lambdaschoolstudents.slack.com/messages/CN99JD9J5"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <i class="fab fa-slack"></i>
+        <i className="fab fa-slack"></i>
       </a>
-      <a class="email" href="mailto:labs15superteam@gmail.com">
-        <i class="far fa-envelope"></i>
+      <a
+        className="email"
+        href="mailto:labs15superteam@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="far fa-envelope"></i>
       </a>
     </div>
   )
