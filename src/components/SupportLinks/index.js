@@ -14,7 +14,7 @@ const SupportLinks = () => {
       >
         <i class="fab fa-slack"></i>
       </a>
-      <a class="email" href="">
+      <a class="email" href="mailto:labs15superteam@gmail.com">
         <i class="far fa-envelope"></i>
       </a>
     </div>
