@@ -2,25 +2,15 @@
 
 .userInfo-container {
   background: $black;
+  position: relative;
+  top: 100px;
   color: $white;
-  margin-top: 8rem;
   font-family: $font-stack-heading;
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
   width: 100%;
-  .dateAndGreet {
-    padding: 1rem;
-  }
   @media screen and (max-width: $breakpoint-medium) {
     width: 100%;
-    .dateAndGreet {
-      margin: 3rem 1rem;
-      width: 50%;
-    }
-    h4 {
-      font-size: 0.5rem;
-    }
   }
   p {
     font-family: $font-stack-body;
