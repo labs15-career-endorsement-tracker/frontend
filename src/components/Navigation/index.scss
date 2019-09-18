@@ -3,11 +3,11 @@
 .nav_wrapper {
   width: 100%;
   font-family: $font-stack-heading;
-  color: $black;
+  background: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: $green-100;
+  color: $green-100;
   height: 100px;
   box-sizing: border-box;
   position: relative;
