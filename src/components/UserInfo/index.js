@@ -1,6 +1,6 @@
 import React from "react"
 
-import Percentage from "./lib/Percentage"
+import Percentage from "../lib/Percentage"
 
 const UserInfo = ({ user }) => {
   const greeting = () => {
