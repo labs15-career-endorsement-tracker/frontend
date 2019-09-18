@@ -8,7 +8,9 @@ const Form = ({ children, ...rest }) => {
   return (
     <>
       <FormHeader {...rest}></FormHeader>
-      {(rest.instructions && rest.instructions.length) && <FormInstructions text={rest.instructions}/>}
+      {rest.instructions && rest.instructions.length && (
+        <FormInstructions text={rest.instructions} />
+      )}
       <FormikForm noValidate>{children}</FormikForm>
     </>
   )

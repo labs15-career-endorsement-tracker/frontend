@@ -7,5 +7,5 @@ export const mapPropsToValues = ({ email, location }) => ({
 export const validationSchema = validateObject().shape({
   email: validateString()
     .email("Please enter a valid email address")
-    .required("We need your email to verify it's really you"),
+    .required("We need your email to verify it's really you")
 })
