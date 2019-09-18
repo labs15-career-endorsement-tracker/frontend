@@ -1,5 +1,28 @@
+.each-step {
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: $breakpoint-large) {
+      flex-direction: row;
+    }
+    .form-field {
+      width: 100%;
+      margin: 0;
+    }
+    .form-btn {
+      width: 20%;
+      margin: 1rem auto;
+      @media screen and (min-width: $breakpoint-large) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
 .assignment-circle {
   i {
     font-size: 2.4rem;
+    margin: 1rem 3rem 0 0;
   }
 }

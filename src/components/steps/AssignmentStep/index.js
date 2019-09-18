@@ -25,7 +25,7 @@ const AssignmentStep = ({ }) => {
                     name="url"
                     labelText="Enter your assignment url"
                     placeholderText="e.g.  https://resume.creddle.io/resume/your-resume" />
-                <FormButton type="submit">Submit</FormButton>
+                <FormButton type="submit"><i className="fas fa-upload"></i></FormButton>
             </Form>
         </div>
     )
