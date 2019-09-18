@@ -6,7 +6,6 @@ import { history, saveToLocalStorage } from "../../store"
 export const handleSubmit = async (values, { setSubmitting, resetForm }) => {
   try {
     const { token, userId, isDefaultPassword } = await loginUser(values)
-    console.log(isDefaultPassword)
     saveToLocalStorage("auth", { token, userId })
     resetForm()
     history.push("/")
