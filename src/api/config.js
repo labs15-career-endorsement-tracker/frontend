@@ -21,8 +21,7 @@ export const requestWithAuth = authToken => {
       if (error.response && error.response.status === 401) {
         if (history.location.pathname === "/reset-password") {
           history.push("/sign-up")
-        }
-        else {
+        } else {
           history.push("/sign-in")
         }
       }

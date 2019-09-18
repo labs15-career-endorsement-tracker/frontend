@@ -8,7 +8,7 @@ import { handleSubmit } from "./utils"
 
 import { FormLayout, Form, FormField, FormButton } from "../lib"
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom"
 
 const SignInForm = ({ isSubmitting, history, values }) => {
   return (
@@ -35,7 +35,11 @@ const SignInForm = ({ isSubmitting, history, values }) => {
           placeholderText="e.g. Password1234!"
         ></FormField>
 
-        <Link to={{pathname: "/reset-password", state: {email: values.email}}}>Forgot Your Password?</Link>
+        <Link
+          to={{ pathname: "/reset-password", state: { email: values.email } }}
+        >
+          Forgot Your Password?
+        </Link>
         {/* <button onClick={(e) => {
           e.preventDefault();
           history.push('/reset-password', {email: values.email})
