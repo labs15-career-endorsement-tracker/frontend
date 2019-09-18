@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react"
 import React from "react"
-import Burger from "@animated-burgers/burger-rotate"
+// import Burger from "@animated-burgers/burger-rotate"
 
 import "./index.scss"
 import "@animated-burgers/burger-rotate/dist/styles.css"
