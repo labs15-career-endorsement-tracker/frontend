@@ -9,7 +9,7 @@ import { withFormik } from "formik"
 import { mapPropsToValues, validationSchema } from "./schema"
 import { handleSubmit } from "./utils"
 
-const AssignmentStep = ({ }) => {
+const AssignmentStep = () => {
     return (
         <div className="each-step">
             <div className="assignment-circle">
