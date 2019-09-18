@@ -4,6 +4,7 @@ import { withRouter } from "react-router"
 import { NavLink } from "react-router-dom"
 import Step from "./Step"
 import Percentage from "../lib/Percentage"
+import AssignmentStep from "./AssignmentStep"
 
 import "./styles/index.scss"
 import {
@@ -67,6 +68,7 @@ const StepList = ({
             fetchUser={fetchUser}
           />
         ))}
+        <AssignmentStep />
         <div className="return-requirements-container">
           <div className="return-box">
             <NavLink to="/" className="back-link">
