@@ -23,5 +23,3 @@ export const fetchSteps = createAsyncAction("FETCH_STEPS", getSteps)
 export const toggleStep = createAsyncAction("TOGGLE_STEP", toggleStepComplete)
 
 export const fetchUser = createAsyncAction("FETCH_USER", getUserById)
-
-
