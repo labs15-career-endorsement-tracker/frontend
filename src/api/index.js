@@ -1,10 +1,10 @@
 import { loginUser } from "./auth"
-import { addUser, getUserById } from "./users"
+import { addUser, getUserById, updateUserPassword } from "./users"
 import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
 import { getSteps, toggleStepComplete } from "./steps"
 import { getResources } from "./resources"
-import {sendEmail} from "./sendEmail"
+import { sendEmail } from "./sendEmail"
 
 export {
   loginUser,
@@ -15,5 +15,6 @@ export {
   getSteps,
   toggleStepComplete,
   getResources,
+  updateUserPassword,
   sendEmail
 }
