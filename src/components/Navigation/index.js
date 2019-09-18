@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+// import React, { useState, useEffect } from "react"
+import React from "react"
 import Burger from "@animated-burgers/burger-rotate"
 
 import "./index.scss"
@@ -9,7 +10,6 @@ import Flyout from "../lib/Dropdown/Flyout"
 import { history } from "../../store"
 
 const Navigation = ({ user, width, isOpen, setIsOpen }) => {
-  
   const triggerLogout = () => {
     localStorage.removeItem("auth")
     history.push("/sign-in")
