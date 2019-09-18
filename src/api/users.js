@@ -9,3 +9,8 @@ export const getUserById = async (authToken, userId) => {
   const { data } = await requestWithAuth(authToken).get(`/users/${userId}`)
   return data
 }
+
+export const updateUserPassword = async (authToken, password) => {
+  const { data } = await requestWithAuth(authToken).put("/users", { password })
+  return data
+}
