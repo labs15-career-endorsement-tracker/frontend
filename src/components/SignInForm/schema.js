@@ -2,7 +2,7 @@ import { object as validateObject, string as validateString } from "yup"
 
 export const mapPropsToValues = ({ email, password }) => ({
   email: email || "",
-  password: password|| ""
+  password: password || ""
 })
 
 export const validationSchema = validateObject().shape({
