@@ -7,7 +7,7 @@ import { toggleStep, fetchRequirements, fetchUser } from "../actions"
 import { loadAuthDataFromLocalStorage } from "../store"
 
 // Components
-import UserInfo from "./UserInfo"
+// import UserInfo from "./UserInfo"
 import RequirementCardContainer from "./requirement/RequirementCardContainer"
 import Navigation from "./Navigation"
 import RequirementDetails from "./RequirementDetails"
@@ -40,26 +40,34 @@ const Dashboard = ({ requirements, user }) => {
   }
   return (
     <div className="dash-container">
-      <Navigation user={user} isOpen={isOpen} setIsOpen={setIsOpen} width={width}/>
+      <Navigation
+        user={user}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        width={width}
+      />
       <main>
-      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} width={width}/>
-      {/* <UserInfo user={user} /> */}
-      <Switch>
-        <Route
-          exact
-          path="/requirements/:id"
-          component={RequirementDetails}
-        ></Route>
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <RequirementCardContainer {...props} requirements={requirements} />
-          )}
-        ></Route>
-        
-        <Route component={NotFound} />
-      </Switch>
+        <SideBar isOpen={isOpen} setIsOpen={setIsOpen} width={width} />
+        {/* <UserInfo user={user} /> */}
+        <Switch>
+          <Route
+            exact
+            path="/requirements/:id"
+            component={RequirementDetails}
+          ></Route>
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <RequirementCardContainer
+                {...props}
+                requirements={requirements}
+              />
+            )}
+          ></Route>
+
+          <Route component={NotFound} />
+        </Switch>
       </main>
     </div>
   )
