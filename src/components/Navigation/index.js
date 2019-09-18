@@ -7,16 +7,16 @@ import "@animated-burgers/burger-rotate/dist/styles.css"
 import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
 // import Flyout from "../lib/Dropdown/Flyout"
-import { history } from "../../store"
+// import { history } from "../../store"
 
 const Navigation = ({ user, width, isOpen, setIsOpen }) => {
-  const triggerLogout = () => {
-    localStorage.removeItem("auth")
-    history.push("/sign-in")
-  }
-  const triggerDropdown = () => {
-    setTimeout(() => setIsOpen(false), 400)
-  }
+  // const triggerLogout = () => {
+  //   localStorage.removeItem("auth")
+  //   history.push("/sign-in")
+  // }
+  // const triggerDropdown = () => {
+  //   setTimeout(() => setIsOpen(false), 400)
+  // }
   return (
     <nav className="nav_wrapper">
       <Logo />
