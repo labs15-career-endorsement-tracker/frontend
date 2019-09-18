@@ -1,7 +1,5 @@
 import { toast } from "react-toastify"
-// import { addUser } from "../../api"
 
-// import { history, saveToLocalStorage } from "../../store"
 import { history } from "../../store"
 
 import { sendEmail } from "../../api"

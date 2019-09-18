@@ -7,7 +7,6 @@ import { toggleStep, fetchRequirements, fetchUser } from "../actions"
 import { loadAuthDataFromLocalStorage } from "../store"
 
 // Components
-// import UserInfo from "./UserInfo"
 import RequirementCardContainer from "./requirement/RequirementCardContainer"
 import Navigation from "./Navigation"
 import RequirementDetails from "./RequirementDetails"
