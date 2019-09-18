@@ -12,8 +12,10 @@ import { handleSubmit } from "./utils"
 const AssignmentStep = () => {
     return (
         <div className="each-step">
-            <div className="assignment-circle">
-                <i className="fas fa-plus-circle"></i>
+            <div className="check-box">
+                <div className={"incomplete"}>
+                    <i className="fas fa-check"></i>
+                </div>
             </div>
 
             <Form noValidate
