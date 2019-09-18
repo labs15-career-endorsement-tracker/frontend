@@ -5,10 +5,14 @@ import { history, saveToLocalStorage } from "../../store"
 
 export const handleSubmit = async (values, { setSubmitting, resetForm }) => {
   try {
-    const { token, userId } = await loginUser(values)
+    const { token, userId, isDefaultPassword } = await loginUser(values)
+    console.log(isDefaultPassword)
     saveToLocalStorage("auth", { token, userId })
     resetForm()
     history.push("/")
+    if (isDefaultPassword) {
+      toast(`Please update your password.`)
+    }
   } catch (error) {
     const { status } = error.response
     switch (status) {
