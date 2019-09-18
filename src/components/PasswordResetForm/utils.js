@@ -5,9 +5,9 @@ import queryString from "query-string"
 import { history } from "../../store"
 
 export const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+  const key = queryString.parse(history.location.search)
+  const authToken = key.token
   try {
-    const key = queryString.parse(history.location.search)
-    const authToken = key.token
     await updateUserPassword(authToken, values.password)
     resetForm()
     history.push("/sign-in")
