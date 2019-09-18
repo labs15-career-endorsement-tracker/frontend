@@ -11,4 +11,5 @@ const SideBar = ({ user, isOpen, setIsOpen, width }) => {
     </section>
   )
 }
+
 export default SideBar
