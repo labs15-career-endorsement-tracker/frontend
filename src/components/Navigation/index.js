@@ -6,7 +6,7 @@ import "./index.scss"
 import "@animated-burgers/burger-rotate/dist/styles.css"
 import Logo from "../lib/Logo"
 import Dropdown from "../lib/Dropdown"
-import Flyout from "../lib/Dropdown/Flyout"
+// import Flyout from "../lib/Dropdown/Flyout"
 import { history } from "../../store"
 
 const Navigation = ({ user, width, isOpen, setIsOpen }) => {
