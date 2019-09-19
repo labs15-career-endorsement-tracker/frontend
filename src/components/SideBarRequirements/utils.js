@@ -1,11 +1,3 @@
-export const handleSubmit = () => {
+export const transition = () => {
   console.log("firing off")
-}
-
-export const formatRequirements = arr => {
-  if (!arr || !arr.length) return [{ value: 0, label: "Nothing..." }]
-  return arr.map(({ id, title }) => ({
-    value: id,
-    label: title
-  }))
 }

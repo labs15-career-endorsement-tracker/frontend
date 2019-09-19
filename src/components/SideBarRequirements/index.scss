@@ -1,4 +1,22 @@
-.sidebar-requirements-container {
-  margin-top: 10rem;
-  padding: 2rem;
+.sb-req-ctr {
+  position: relative;
+  top: 150px;
+  margin: 0.5rem;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  .sb-req-inner-ctr {
+    display: flex;
+    justify-content: space-between;
+  }
+  .req-ind-link {
+    margin: 1rem;
+  }
+  .req-link-inactive {
+    //
+  }
+  .req-link-active {
+    font-weight: 800;
+  }
 }
