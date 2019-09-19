@@ -46,8 +46,12 @@ const Dashboard = ({ requirements, user }) => {
         width={width}
       />
       <main>
-        <SideBar isOpen={isOpen} setIsOpen={setIsOpen} width={width} />
-        {/* <UserInfo user={user} /> */}
+        <SideBar
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          width={width}
+          user={user}
+        />
         <Switch>
           <Route
             exact

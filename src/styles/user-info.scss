@@ -1,35 +1,22 @@
 @import "./variables";
 
 .userInfo-container {
-  box-sizing: border-box;
+  background: $green-100;
+  position: relative;
+  top: 100px;
+  color: $black;
   font-family: $font-stack-heading;
-  align-items: center;
-  margin: 0 auto 2rem;
   display: flex;
-  justify-content: space-between;
-  background: $white;
-  padding: 2rem;
-  box-shadow: $drop-shadow-lg;
-  width: 80%;
-  max-width: 100%;
-  .dateAndGreet {
-    margin: 3rem;
-  }
+  justify-content: center;
+  width: 100%;
   @media screen and (max-width: $breakpoint-medium) {
     width: 100%;
-    .dateAndGreet {
-      margin: 3rem 1rem;
-      width: 50%;
-    }
-    h4 {
-      font-size: 0.5rem;
-    }
   }
   p {
     font-family: $font-stack-body;
     font-size: 1.6rem;
     line-height: 1.4;
-    color: $green-500;
+
     .track {
       font-weight: bold;
     }
@@ -43,12 +30,10 @@
   .welcome-msg {
     font-size: 3.2rem;
     font-weight: bold;
-    color: $green-400;
   }
 
   .first-name {
     text-transform: capitalize;
-    color: $green-500;
     font-weight: 800;
     font-size: 4.4rem;
     padding-bottom: 0.5em;
