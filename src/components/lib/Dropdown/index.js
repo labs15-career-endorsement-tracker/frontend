@@ -11,7 +11,7 @@ const Dropdown = () => {
 
   const triggerLogout = () => {
     localStorage.removeItem("auth")
-    history.push("/sign-in")
+    history.push("/auth/sign-in")
   }
 
   return (

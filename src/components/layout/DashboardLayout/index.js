@@ -1,0 +1,33 @@
+import React from "react"
+import { Switch, Route, Redirect } from "react-router-dom"
+
+import "./index.scss"
+
+import RequirementsList from "../../pages/RequirementsList"
+import RequirementDetails from "../../pages/RequirementDetails"
+import { DashboardHeader } from "../../lib"
+import { Sidebar } from "../../layout"
+
+const DashboardLayout = ({ match }) => {
+  return (
+    <div className="dashboard">
+      <DashboardHeader></DashboardHeader>
+      <Sidebar></Sidebar>
+      <main className="dashboard-content">
+        <Switch>
+          <Route
+            path={`${match.path}requirements/:id`}
+            component={RequirementDetails}
+          ></Route>
+          <Route
+            path={`${match.path}requirements`}
+            component={RequirementsList}
+          ></Route>
+          <Redirect to={`${match.path}requirements`}></Redirect>
+        </Switch>
+      </main>
+    </div>
+  )
+}
+
+export default DashboardLayout

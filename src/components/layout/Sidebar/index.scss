@@ -1,0 +1,11 @@
+.dashboard-sidebar {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    height: calc(100vh - 12rem);
+    padding: 1.6rem;
+  }
+}
