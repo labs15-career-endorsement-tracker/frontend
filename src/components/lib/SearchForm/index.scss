@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+
+.search-form {
+  form {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  .form-header {
+    display: none;
+  }
+  .form-field {
+    margin: 0;
+    width: 100%;
+
+    input {
+      border: 0.4rem solid $green-500;
+      border-bottom: none;
+    }
+  }
+  .form-btn {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    // bottom: 50%;
+    margin: 0;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    // border-bottom: 0.4rem solid $green-500;
+    border-radius: 0;
+    font-size: 1.6rem;
+    padding: 0;
+    color: $green-500;
+  }
+}
