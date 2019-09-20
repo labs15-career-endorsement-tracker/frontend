@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { loadAuthDataFromLocalStorage } from "../../../store"
 
+import "./index.scss"
+
 import { fetchUser, fetchRequirements } from "../../../actions"
 
 const MyAccount = () => {
@@ -18,17 +20,22 @@ const MyAccount = () => {
 
   return (
     <div className="myaccount-container">
-      <h1>My Account</h1>
-      <p>Update your account settings</p>
-      <p>
-        <span>First name</span> {user.first_name}
-      </p>
-      <p>
-        <span>Last name</span> {user.last_name}
-      </p>
-      <p>
-        <span>Track</span> {user.tracks_title}
-      </p>
+      <div className="account-text">
+        <h1>My Account</h1>
+        <p>Update your account settings</p>
+      </div>
+      <hr />
+      <div className="account-info">
+        <p>
+          <span className="information">First name</span> {user.first_name}
+        </p>
+        <p>
+          <span className="information">Last name</span> {user.last_name}
+        </p>
+        <p>
+          <span className="information">Track</span> {user.tracks_title}
+        </p>
+      </div>
     </div>
   )
 }
