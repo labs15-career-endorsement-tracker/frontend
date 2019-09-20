@@ -26,7 +26,7 @@ const SideBarRequirements = () => {
       </div>
       <div className="req-links">
         {requirements.map(req => (
-          <div className="req-ind-link">
+          <div className="req-ind-link" key={req.id}>
             <NavLink
               to={`/requirements/${req.id}`}
               activeClassName="req-link-active"
