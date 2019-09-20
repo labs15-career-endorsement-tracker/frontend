@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react"
 import {searchAll} from "../../../api"
 
+import uuid from "uuid/v4"
+
 import "./index.scss"
 
 const FindStudent = () => {
@@ -42,7 +44,8 @@ const FindStudent = () => {
                 <button className="search-btn"><i className="fas fa-search"></i></button>
             </form>
             <div>
-                {foundStudents.map(el => <div>{el.first_name}</div>)}
+                {/* the key here should ideally be the user id, but currently there is no id coming from the server*/}
+                {foundStudents.map(el => <div key={uuid()}>{el.first_name}</div>)}
             </div>
         </section>
     )
