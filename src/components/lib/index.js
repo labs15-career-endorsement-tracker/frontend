@@ -16,6 +16,7 @@ import RequirementStepList from "./RequirementStepList"
 import Percentage from "./Percentage"
 import AssignmentStep from "./AssignmentStep"
 import UserInfo from "./UserInfo"
+import SideBarRequirements from "./SideBarRequirements"
 
 export {
   FormField,
@@ -35,5 +36,6 @@ export {
   RequirementStepList,
   Percentage,
   AssignmentStep,
-  UserInfo
+  UserInfo,
+  SideBarRequirements
 }

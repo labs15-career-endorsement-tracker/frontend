@@ -1,10 +1,13 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-// import { transition } from "./utils"
+import { useSelector } from "react-redux"
 
 import "./index.scss"
 
-const SideBarRequirements = ({ requirements }) => {
+const SideBarRequirements = () => {
+  const requirements = useSelector(
+    state => state.requirementReducer.requirements
+  )
   const panel = document.querySelector(".req-links")
   const transition = () => {
     panel.classList.toggle("active")
