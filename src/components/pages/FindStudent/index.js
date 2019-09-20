@@ -23,8 +23,8 @@ const FindStudent = () => {
         setOnMount(false)
     }, [searchField])
     const search = async (searchText) => {
-        console.log({searchField})
         const data = await searchAll(searchField)
+        setFoundStudents(data)
         console.log(data)
     }
     const handleSubmit = async (e) => {
@@ -42,7 +42,7 @@ const FindStudent = () => {
                 <button className="search-btn"><i className="fas fa-search"></i></button>
             </form>
             <div>
-                Something
+                {foundStudents.map(el => <div>{el.first_name}</div>)}
             </div>
         </section>
     )
