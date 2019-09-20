@@ -51,6 +51,7 @@ const Dashboard = ({ requirements, user }) => {
           setIsOpen={setIsOpen}
           width={width}
           user={user}
+          requirements={requirements}
         />
         <Switch>
           <Route
