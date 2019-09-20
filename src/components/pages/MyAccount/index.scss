@@ -1,0 +1,55 @@
+@import "../../../styles/variables";
+
+.myaccount-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  line-height: 3.5rem;
+  .user-info-container {
+    display: flex;
+    justify-content: space-between;
+    .meter-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (max-width: $breakpoint-medium) {
+        width: 50%;
+      }
+      .meter-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+      }
+      .meter {
+        margin: 0 0.3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .percentage {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+    .account-text {
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+      }
+    }
+  }
+  .account-details {
+    width: 50%;
+    .labels {
+      width: 25%;
+    }
+    .content {
+      width: 75%;
+    }
+  }
+}

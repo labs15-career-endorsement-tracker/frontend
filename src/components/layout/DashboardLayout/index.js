@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom"
 
 import "./index.scss"
 
+import MyAccount from "../../pages/MyAccount"
 import RequirementsList from "../../pages/RequirementsList"
 import RequirementDetails from "../../pages/RequirementDetails"
 import { DashboardHeader } from "../../lib"
@@ -23,6 +24,7 @@ const DashboardLayout = ({ match }) => {
             path={`${match.path}requirements`}
             component={RequirementsList}
           ></Route>
+          <Route path={`${match.path}myaccount`} component={MyAccount}></Route>
           <Redirect to={`${match.path}requirements`}></Redirect>
         </Switch>
       </main>
