@@ -8,8 +8,8 @@ const SideBarRequirements = () => {
   const requirements = useSelector(
     state => state.requirementReducer.requirements
   )
-  const panel = document.querySelector(".req-links")
   const transition = () => {
+    const panel = document.querySelector(".req-links")
     panel.classList.toggle("active")
   }
 
@@ -17,16 +17,16 @@ const SideBarRequirements = () => {
     <aside>
       <div className="req-content">
         <div className="req-text">
-          <i class="fas fa-tasks-alt"></i>
+          <i className="fas fa-tasks-alt"></i>
           <p>Requirements</p>
         </div>
         <div className="icon" onClick={transition}>
-          <i class="far fa-angle-down"></i>
+          <i className="far fa-angle-down"></i>
         </div>
       </div>
       <div className="req-links">
         {requirements.map(req => (
-          <div className="req-ind-link">
+          <div className="req-ind-link" key={req.id}>
             <NavLink
               to={`/requirements/${req.id}`}
               activeClassName="req-link-active"

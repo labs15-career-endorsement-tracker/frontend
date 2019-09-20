@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 
 import "./index.scss"
 
-import { SupportLinks, UserInfo, SideBarRequirements } from "../../lib"
+import { SupportLinks, UserInfo, SideBarRequirements, Profile } from "../../lib"
 
 const Sidebar = () => {
   const user = useSelector(state => state.userReducer.user)
@@ -13,6 +13,7 @@ const Sidebar = () => {
       <UserInfo user={user}></UserInfo>
       <SupportLinks></SupportLinks>
       <SideBarRequirements></SideBarRequirements>
+      <Profile />
     </aside>
   )
 }

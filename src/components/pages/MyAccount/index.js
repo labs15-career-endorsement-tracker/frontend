@@ -1,0 +1,60 @@
+import React, { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { loadAuthDataFromLocalStorage } from "../../../store"
+import { NavLink } from "react-router-dom"
+
+import "./index.scss"
+
+import Percentage from "../../../components/lib/Percentage"
+
+import { fetchUser, fetchRequirements } from "../../../actions"
+
+const MyAccount = () => {
+  const dispatch = useDispatch()
+  const user = useSelector(state => state.userReducer.user)
+
+  useEffect(() => {
+    const { userId, token } = loadAuthDataFromLocalStorage()
+    dispatch(fetchRequirements(token))
+    dispatch(fetchUser(token, userId))
+  }, [dispatch])
+
+  console.log(`user`, user, user.is_admin)
+
+  return (
+    <div className="myaccount-container">
+      <div className="user-info-container">
+        <div className="account-text">
+          <h1>My Account</h1>
+          <p>Update your account settings</p>
+        </div>
+        <div className="meter-wrapper">
+          <div className="meter-box">
+            <div className="meter">
+              <Percentage progress={user.progress} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="account-info">
+        <table className="account-details">
+          <tr>
+            <td className="labels">First name</td>
+            <td className="content">{user.first_name}</td>
+          </tr>
+          <tr>
+            <td className="labels">Last name</td>
+            <td className="content">{user.last_name}</td>
+          </tr>
+          <tr>
+            <td className="labels">Track</td>
+            <td className="content">{user.tracks_title}</td>
+          </tr>
+        </table>
+        <NavLink to="/auth/reset-password">Change Password</NavLink>
+      </div>
+    </div>
+  )
+}
+
+export default MyAccount

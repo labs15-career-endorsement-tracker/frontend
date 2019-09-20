@@ -1,5 +1,14 @@
+@import "../../../styles/variables";
+
 .dashboard-sidebar {
   display: none;
+
+  .my-account-link {
+    color: $green-500;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 1rem;
+  }
 
   @media screen and (min-width: 768px) {
     display: flex;

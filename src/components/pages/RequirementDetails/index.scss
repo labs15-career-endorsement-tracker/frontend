@@ -2,10 +2,15 @@
 
 .requirement-detail-container {
   display: flex;
+<<<<<<< HEAD
   // width: calc(100% - 250px);
   justify-content: center;
   position: relative;
   padding: 0 2rem;
+=======
+  justify-content: center;
+  position: relative;
+>>>>>>> 593d5643a8f7fd1142826718e6e7d1fd57ed68df
   box-sizing: border-box;
   @media screen and(max-width: $breakpoint-medium) {
     flex-direction: column;
