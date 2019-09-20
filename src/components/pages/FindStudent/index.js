@@ -1,4 +1,10 @@
 import React from "react"
+
+import { withFormik } from "formik"
+
+import { mapPropsToValues, validationSchema } from "./schema"
+import { handleSubmit } from "./utils"
+
 import {SearchForm} from "../../lib";
 import "./index.scss"
 
@@ -39,4 +45,10 @@ const FindStudent = () => {
     )
 }
 
-export default FindStudent
+// export default FindStudent
+export default withFormik({
+    mapPropsToValues,
+    validationSchema,
+    handleSubmit,
+    displayName: "Forgot your password?"
+})(FindStudent)
