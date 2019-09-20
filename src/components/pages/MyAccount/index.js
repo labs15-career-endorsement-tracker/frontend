@@ -13,7 +13,9 @@ const MyAccount = () => {
     dispatch(fetchRequirements(token))
     dispatch(fetchUser(token, userId))
   }, [dispatch])
+
   console.log(`user`, user)
+
   return (
     <main>
       <h1>My Account</h1>

@@ -1,5 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
+import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
@@ -13,6 +14,7 @@ const Sidebar = () => {
       <UserInfo user={user}></UserInfo>
       <SupportLinks></SupportLinks>
       <SideBarRequirements></SideBarRequirements>
+      <NavLink to="/myaccount">My Account</NavLink>
     </aside>
   )
 }
