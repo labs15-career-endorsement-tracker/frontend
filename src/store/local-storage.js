@@ -24,7 +24,7 @@ export const loadAuthDataFromLocalStorage = () => {
   const authData = loadFromLocalStorage("auth")
 
   if (!authData || !authData.token || !authData.userId) {
-    history.push("/sign-in")
+    history.push("/auth/sign-in")
     return { token: null, userId: null }
   }
 

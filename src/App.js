@@ -3,25 +3,19 @@ import { Route, Switch } from "react-router-dom"
 
 import "./styles/index.scss"
 
-import SignUpForm from "./components/SignUpForm"
-import SignInForm from "./components/SignInForm"
-import Dashboard from "./components/Dashboard"
-import NotFound from "./components/NotFound"
-import PasswordResetForm from "./components/PasswordResetForm"
-import EmailForm from "./components/EmailForm"
+import NotFound from "./components/pages/NotFound"
+import FormLayout from "./components/layout/FormLayout"
+import DashboardLayout from "./components/layout/DashboardLayout"
 
 const App = () => {
   return (
-    <div className="test">
+    <>
       <Switch>
-        <Route exact path="/sign-in" component={SignInForm} />
-        <Route exact path="/sign-up" component={SignUpForm} />
-        <Route path="/reset" component={PasswordResetForm} />
-        <Route exact path="/reset-password" component={EmailForm} />
-        <Dashboard />
-        <Route component={NotFound} />
+        <Route path="/auth" component={FormLayout}></Route>
+        <Route path="/" component={DashboardLayout}></Route>
+        <Route component={NotFound}></Route>
       </Switch>
-    </div>
+    </>
   )
 }
 

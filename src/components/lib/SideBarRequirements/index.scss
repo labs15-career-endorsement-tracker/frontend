@@ -1,0 +1,65 @@
+@import "../../../styles/variables";
+
+aside {
+  font-family: $font-stack-heading;
+  position: relative;
+  top: 150px;
+  margin: 0.5rem;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.4rem;
+  .req-content {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    .req-text {
+      display: flex;
+      align-items: center;
+      font-weight: 800;
+      i {
+        font-size: 2rem;
+        padding: 1rem 0 1rem 1rem;
+      }
+      p {
+        padding: 1rem;
+      }
+    }
+    .icon {
+      cursor: pointer;
+    }
+  }
+  .req-ind-link {
+    margin-left: 3rem;
+    padding-left: 1.5rem;
+  }
+  .req-link-inactive {
+    //
+  }
+  .req-link-active {
+    font-weight: 800;
+  }
+  .req-links {
+    max-height: 0px;
+    overflow: hidden;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    line-height: 1.5;
+  }
+  .active {
+    min-height: 500px;
+    margin-bottom: 0.125rem;
+    opacity: 1;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+}

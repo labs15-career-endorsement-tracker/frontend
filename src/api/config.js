@@ -19,10 +19,10 @@ export const requestWithAuth = authToken => {
     response => response,
     error => {
       if (error.response && error.response.status === 401) {
-        if (history.location.pathname === "/reset-password") {
-          history.push("/sign-up")
+        if (history.location.pathname === "/auth/reset-password") {
+          history.push("/auth/sign-up")
         } else {
-          history.push("/sign-in")
+          history.push("/auth/sign-in")
         }
       }
       return Promise.reject(error)
