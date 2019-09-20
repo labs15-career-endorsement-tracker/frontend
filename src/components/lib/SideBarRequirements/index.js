@@ -8,8 +8,8 @@ const SideBarRequirements = () => {
   const requirements = useSelector(
     state => state.requirementReducer.requirements
   )
-  const panel = document.querySelector(".req-links")
   const transition = () => {
+    const panel = document.querySelector(".req-links")
     panel.classList.toggle("active")
   }
 
