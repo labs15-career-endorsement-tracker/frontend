@@ -2,12 +2,13 @@
 
 aside {
   font-family: $font-stack-heading;
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   font-size: 2.4rem;
   .req-content {
     display: flex;
+    width: 50%;
     align-items: center;
     height: 50px;
     display: flex;
@@ -31,9 +32,6 @@ aside {
   .req-ind-link {
     margin-left: 3rem;
     padding-left: 1.5rem;
-  }
-  .req-link-inactive {
-    //
   }
   .req-link-active {
     font-weight: 800;

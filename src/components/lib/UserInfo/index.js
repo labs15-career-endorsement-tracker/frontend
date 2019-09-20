@@ -19,9 +19,6 @@ const UserInfo = ({ user }) => {
       <div className="dateAndGreet">
         <h2 className="welcome-msg">{greeting()},</h2>
         <h2 className="first-name">{user.first_name}</h2>
-        <p>
-          <span className="track">{`${user.tracks_title} `}</span>
-        </p>
       </div>
     </div>
   )
