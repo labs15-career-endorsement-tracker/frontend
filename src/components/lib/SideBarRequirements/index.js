@@ -17,7 +17,7 @@ const SideBarRequirements = () => {
     <aside>
       <div className="req-content">
         <div className="req-text">
-          <i class="fas fa-tasks-alt"></i>
+          <i className="fas fa-tasks-alt"></i>
           <p>Requirements</p>
         </div>
         <div className="icon" onClick={transition}>
