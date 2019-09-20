@@ -5,6 +5,7 @@ import "./index.scss"
 
 import RequirementsList from "../../pages/RequirementsList"
 import RequirementDetails from "../../pages/RequirementDetails"
+import FindStudent from "../../pages/FindStudent"
 import { DashboardHeader } from "../../lib"
 import { Sidebar } from "../../layout"
 
@@ -22,6 +23,10 @@ const DashboardLayout = ({ match }) => {
           <Route
             path={`${match.path}requirements`}
             component={RequirementsList}
+          ></Route>
+          <Route
+            path={`${match.path}find-student`}
+            component={FindStudent}
           ></Route>
           <Redirect to={`${match.path}requirements`}></Redirect>
         </Switch>
