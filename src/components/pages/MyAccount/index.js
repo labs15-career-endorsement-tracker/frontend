@@ -17,7 +17,7 @@ const MyAccount = () => {
   console.log(`user`, user)
 
   return (
-    <main>
+    <div className="myaccount-container">
       <h1>My Account</h1>
       <p>Update your account settings</p>
       <hr />
@@ -30,7 +30,7 @@ const MyAccount = () => {
       <p>
         <span>Track</span> {user.tracks_title}
       </p>
-    </main>
+    </div>
   )
 }
 
