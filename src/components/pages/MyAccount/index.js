@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { loadAuthDataFromLocalStorage } from "../../../store"
+import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
@@ -36,15 +37,21 @@ const MyAccount = () => {
         </div>
       </div>
       <div className="account-info">
-        <p>
-          <span className="information">First name</span> {user.first_name}
-        </p>
-        <p>
-          <span className="information">Last name</span> {user.last_name}
-        </p>
-        <p>
-          <span className="information">Track</span> {user.tracks_title}
-        </p>
+        <table className="account-details">
+          <tr>
+            <td className="labels">First name</td>
+            <td className="content">{user.first_name}</td>
+          </tr>
+          <tr>
+            <td className="labels">Last name</td>
+            <td className="content">{user.last_name}</td>
+          </tr>
+          <tr>
+            <td className="labels">Track</td>
+            <td className="content">{user.tracks_title}</td>
+          </tr>
+        </table>
+        <NavLink to="/auth/reset-password">Change Password</NavLink>
       </div>
     </div>
   )
