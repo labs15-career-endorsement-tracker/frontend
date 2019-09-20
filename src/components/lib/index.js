@@ -17,7 +17,6 @@ import Percentage from "./Percentage"
 import AssignmentStep from "./AssignmentStep"
 import UserInfo from "./UserInfo"
 import SideBarRequirements from "./SideBarRequirements"
-import SearchForm from "./SearchForm"
 
 export {
   FormField,
@@ -38,6 +37,5 @@ export {
   Percentage,
   AssignmentStep,
   UserInfo,
-  SideBarRequirements,
-  SearchForm
+  SideBarRequirements
 }
