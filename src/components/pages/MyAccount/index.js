@@ -27,13 +27,13 @@ const MyAccount = () => {
       <hr />
       <div className="account-info">
         <p>
-          <span>First name</span> {user.first_name}
+          <span className="information">First name</span> {user.first_name}
         </p>
         <p>
-          <span>Last name</span> {user.last_name}
+          <span className="information">Last name</span> {user.last_name}
         </p>
         <p>
-          <span>Track</span> {user.tracks_title}
+          <span className="information">Track</span> {user.tracks_title}
         </p>
       </div>
     </div>
