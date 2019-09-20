@@ -5,6 +5,18 @@
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  flex-direction: column;
+  .account-text {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+  .account-info {
+  }
+
   @media screen and(max-width: $breakpoint-medium) {
     flex-direction: column;
     align-items: center;
