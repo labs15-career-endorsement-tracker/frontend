@@ -14,7 +14,9 @@ const Sidebar = () => {
       <UserInfo user={user}></UserInfo>
       <SupportLinks></SupportLinks>
       <SideBarRequirements></SideBarRequirements>
-      <NavLink to="/myaccount">My Account</NavLink>
+      <NavLink to="/myaccount" className="my-account-link">
+        <i class="fas fa-user-edit"></i> My Account
+      </NavLink>
     </aside>
   )
 }
