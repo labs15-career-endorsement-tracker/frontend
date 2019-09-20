@@ -5,36 +5,28 @@
   color: $black;
   font-family: $font-stack-heading;
   display: flex;
-  @media screen and (max-width: $breakpoint-medium) {
-    width: 100%;
-  }
   p {
     font-family: $font-stack-body;
     font-size: 1.6rem;
     line-height: 1.4;
-
     .track {
       font-weight: bold;
     }
   }
-
   .date {
     font-size: 2rem;
     margin-bottom: 1em;
   }
-
   .welcome-msg {
     font-size: 1.8rem;
     font-weight: bold;
   }
-
   .first-name {
     text-transform: capitalize;
     font-weight: 800;
     font-size: 4.4rem;
     padding-bottom: 0.5em;
   }
-
   .meter-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -45,7 +37,6 @@
       width: 50%;
     }
   }
-
   .meter-box {
     display: flex;
     flex-direction: column;
@@ -53,19 +44,16 @@
     align-items: center;
     width: 70%;
   }
-
   .meter {
     margin: 0 0.3em;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .percentage {
     width: 100%;
     max-width: 200px;
   }
-
   .progress-label {
     display: flex;
     justify-content: center;
@@ -73,7 +61,6 @@
     font-family: $font-stack-body;
     padding-top: 0.5em;
     align-self: center;
-
     h4 {
       line-height: 2.2;
       font-size: 1.8rem;

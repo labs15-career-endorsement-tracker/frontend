@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+
+.myaccount-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  @media screen and(max-width: $breakpoint-medium) {
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+  }
+  @media screen and(max-width: $breakpoint-medium) {
+    width: 100%;
+  }
+}
