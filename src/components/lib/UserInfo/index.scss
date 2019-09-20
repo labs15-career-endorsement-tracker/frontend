@@ -5,7 +5,6 @@
   color: $black;
   font-family: $font-stack-heading;
   display: flex;
-  width: 100%;
   @media screen and (max-width: $breakpoint-medium) {
     width: 100%;
   }
