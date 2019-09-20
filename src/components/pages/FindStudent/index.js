@@ -5,7 +5,7 @@ import { withFormik } from "formik"
 import { mapPropsToValues, validationSchema } from "./schema"
 import { handleSubmit } from "./utils"
 
-import {SearchForm} from "../../lib";
+import { SearchForm } from "../../lib";
 import "./index.scss"
 
 const tempStudents = [
@@ -37,10 +37,10 @@ const FindStudent = () => {
                 <p>Search for a student by name</p>
             </header>
             <SearchForm
-            name="search"
-            labelText=""
-            placeholderText="eg Bob"
-            
+                name="search"
+                labelText=""
+                placeholderText="eg Bob"
+                submitHandler={handleSubmit}
             ></SearchForm>
             <div>
                 Something
@@ -54,5 +54,5 @@ export default withFormik({
     mapPropsToValues,
     validationSchema,
     handleSubmit,
-    displayName: "Forgot your password?"
+    displayName: "Find a student"
 })(FindStudent)

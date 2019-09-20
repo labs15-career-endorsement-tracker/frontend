@@ -5,6 +5,7 @@ import { getRequirements } from "./requirements"
 import { getSteps, toggleStepComplete } from "./steps"
 import { getResources } from "./resources"
 import { sendEmail } from "./sendEmail"
+import {searchAll} from "./search"
 
 export {
   loginUser,
@@ -16,5 +17,6 @@ export {
   toggleStepComplete,
   getResources,
   updateUserPassword,
-  sendEmail
+  sendEmail,
+  searchAll
 }
