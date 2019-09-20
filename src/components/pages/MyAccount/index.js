@@ -13,10 +13,21 @@ const MyAccount = () => {
     dispatch(fetchRequirements(token))
     dispatch(fetchUser(token, userId))
   }, [dispatch])
-
+  console.log(`user`, user)
   return (
     <main>
-      <h1>{user.name}</h1>
+      <h1>My Account</h1>
+      <p>Update your account settings</p>
+      <hr />
+      <p>
+        <span>First name</span> {user.first_name}
+      </p>
+      <p>
+        <span>Last name</span> {user.last_name}
+      </p>
+      <p>
+        <span>Track</span> {user.tracks_title}
+      </p>
     </main>
   )
 }

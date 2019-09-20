@@ -2,12 +2,9 @@
 
 .userInfo-container {
   background: $green-100;
-  position: relative;
-  top: 100px;
   color: $black;
   font-family: $font-stack-heading;
   display: flex;
-  justify-content: center;
   width: 100%;
   @media screen and (max-width: $breakpoint-medium) {
     width: 100%;
