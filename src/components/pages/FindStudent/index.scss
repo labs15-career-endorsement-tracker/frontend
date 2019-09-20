@@ -23,6 +23,10 @@
       padding: 1rem 0;
       font-size: 1.6rem;
       border: none;
+      outline: none;
+      &:focus {
+        border: 0.2rem solid $green-500;
+      }
     }
     .search-btn {
       top: 1.1rem;
