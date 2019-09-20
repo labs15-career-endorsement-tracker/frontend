@@ -21,7 +21,7 @@ const SideBarRequirements = () => {
           <p>Requirements</p>
         </div>
         <div className="icon" onClick={transition}>
-          <i class="far fa-angle-down"></i>
+          <i className="far fa-angle-down"></i>
         </div>
       </div>
       <div className="req-links">
