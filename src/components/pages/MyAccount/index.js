@@ -20,7 +20,6 @@ const MyAccount = () => {
     <div className="myaccount-container">
       <h1>My Account</h1>
       <p>Update your account settings</p>
-      <hr />
       <p>
         <span>First name</span> {user.first_name}
       </p>

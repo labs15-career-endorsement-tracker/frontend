@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
-import { SupportLinks, UserInfo, SideBarRequirements } from "../../lib"
+import { SupportLinks, UserInfo, SideBarRequirements, Profile } from "../../lib"
 
 const Sidebar = () => {
   const user = useSelector(state => state.userReducer.user)
@@ -14,9 +14,7 @@ const Sidebar = () => {
       <UserInfo user={user}></UserInfo>
       <SupportLinks></SupportLinks>
       <SideBarRequirements></SideBarRequirements>
-      <NavLink to="/myaccount" className="my-account-link">
-        <i class="fas fa-user-edit"></i> My Account
-      </NavLink>
+      <Profile />
     </aside>
   )
 }
