@@ -4,15 +4,15 @@ import { Form, FormField, FormButton } from "../index"
 
 import './index.scss'
 
-const SearchForm = () => {
+const SearchForm = ({type="text", name, labelText, placeholderText}) => {
     return (
         <div className="search-form">
             <Form>
                 <FormField
                     type="text"
-                    name="search"
-                    labelText=""
-                    placeholderText="e.g. bob"
+                    name={name}
+                    labelText={labelText}
+                    placeholderText={placeholderText}
                 ></FormField>
                 <FormButton type="submit"><i className="fas fa-search"></i></FormButton>
             </Form>

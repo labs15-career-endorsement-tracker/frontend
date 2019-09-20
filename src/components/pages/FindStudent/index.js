@@ -37,6 +37,10 @@ const FindStudent = () => {
                 <p>Search for a student by name</p>
             </header>
             <SearchForm
+            name="search"
+            labelText=""
+            placeholderText="eg Bob"
+            
             ></SearchForm>
             <div>
                 Something
