@@ -1,54 +1,61 @@
-import React, {useEffect, useState} from "react"
-import {searchAll} from "../../../api"
+import React, { useEffect, useState } from "react"
+import { searchAll } from "../../../api"
+import { Debounce } from "react-throttle"
 
 import uuid from "uuid/v4"
 
 import "./index.scss"
 
 const FindStudent = () => {
-    const [onMount, setOnMount] = useState(true)
-    const [searchField, setSearch] = useState('')
-    const [typingTimeout, setTypingTimeout] = useState(0);
-    const [foundStudents, setFoundStudents] = useState([])
-    const handleChanges = e => {
-        setSearch(e.target.value)
-        
-    }
-    useEffect(() => {
-        // prevent call from being run on mount
-        if (!onMount) {
-            if (typingTimeout) {
-                clearTimeout(typingTimeout)
-            }
-            setTypingTimeout(setTimeout(() => search(), 400))
-        }
-        setOnMount(false)
-    }, [searchField])
-    const search = async (searchText) => {
-        const data = await searchAll(searchField)
-        setFoundStudents(data)
-        console.log(data)
-    }
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        search(searchField)
-    }
-    return (
-        <section className="find-student-page">
-            <header>
-                <h3>Find a Student</h3>
-                <p>Search for a student by name</p>
-            </header>
-            <form onSubmit={e => handleSubmit(e)}>
-                <input className="search" type="text" aria-label="Search" placeholder="eg. Bob" value={searchField} onChange={handleChanges}/>
-                <button className="search-btn"><i className="fas fa-search"></i></button>
-            </form>
-            <div>
-                {/* the key here should ideally be the user id, but currently there is no id coming from the server*/}
-                {foundStudents.map(el => <div key={uuid()}>{el.first_name}</div>)}
-            </div>
-        </section>
-    )
+  const [searchField, setSearchField] = useState("")
+  const [foundStudents, setFoundStudents] = useState([])
+
+  const handleChanges = e => {
+    console.log(e.target.value)
+    setSearchField(e.target.value)
+  }
+  const search = async searchText => {
+    const data = await searchAll(searchField)
+    setFoundStudents(data)
+  }
+
+  useEffect(() => {
+    search()
+  }, [searchField])
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    search(searchField)
+  }
+  return (
+    <section className="find-student-page">
+      <header>
+        <h3>Find a Student</h3>
+        <p>Search for a student by name</p>
+      </header>
+      <form onSubmit={e => handleSubmit(e)}>
+        <Debounce time="400" handler="onChange">
+          <input
+            className="search"
+            type="text"
+            aria-label="Search"
+            placeholder="eg. Bob"
+            onChange={handleChanges}
+          />
+        </Debounce>
+        <button className="search-btn">
+          <i className="fas fa-search"></i>
+        </button>
+      </form>
+      <div>
+        {foundStudents.map(({ first_name, last_name }) => (
+          <div key={uuid()}>
+            {first_name} {last_name}
+          </div>
+        ))}
+      </div>
+    </section>
+  )
 }
 
 export default FindStudent
