@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import { searchAll } from "../../../api"
 import { Debounce } from "react-throttle"
 
@@ -11,17 +11,17 @@ const FindStudent = () => {
   const [foundStudents, setFoundStudents] = useState([])
 
   const handleChanges = e => {
-    console.log(e.target.value)
     setSearchField(e.target.value)
   }
-  const search = async searchText => {
+
+  const search = useCallback(async () => {
     const data = await searchAll(searchField)
     setFoundStudents(data)
-  }
+  }, [searchField])
 
   useEffect(() => {
     search()
-  }, [searchField])
+  }, [searchField, search])
 
   const handleSubmit = async e => {
     e.preventDefault()
