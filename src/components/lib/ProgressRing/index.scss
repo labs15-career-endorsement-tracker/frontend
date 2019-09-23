@@ -14,11 +14,12 @@
   height: 100%;
 
   display: flex;
-
   justify-content: center;
   align-items: center;
   line-height: 100%;
   padding-left: 4px;
+
+  color: $white;
 }
 
 .progress-ring .progress-ring__content .progress-number {

@@ -28,11 +28,11 @@ const ProgressRing = ({
     <div className="progress-ring">
       <CircularProgressbarWithChildren
         value={progress}
-        strokeWidth={15}
+        strokeWidth={12}
         classes={{ root: progressId }}
         styles={{
           path: { stroke: `url(#${gradientId})`, strokeLinecap: "round" },
-          trail: { stroke: "#57EC75", strokeOpacity: 0.2 }
+          trail: { stroke: "#efffff", strokeOpacity: 0.2 }
         }}
       >
         <ProgressPercentage progressValue={progress}></ProgressPercentage>
