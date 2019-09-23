@@ -18,6 +18,7 @@ import AssignmentStep from "./AssignmentStep"
 import UserInfo from "./UserInfo"
 import SideBarRequirements from "./SideBarRequirements"
 import Profile from "./Profile"
+import StudentSearchResults from "./StudentSearchResults.js"
 
 export {
   FormField,
@@ -39,5 +40,6 @@ export {
   AssignmentStep,
   UserInfo,
   SideBarRequirements,
-  Profile
+  Profile,
+  StudentSearchResults
 }

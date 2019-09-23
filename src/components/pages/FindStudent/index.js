@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react"
 import { searchAll } from "../../../api"
 import { Debounce } from "react-throttle"
-
-import uuid from "uuid/v4"
+import { StudentSearchResults } from '../../lib'
 
 import "./index.scss"
 
@@ -48,11 +47,7 @@ const FindStudent = () => {
         </button>
       </form>
       <div>
-        {foundStudents.map(({ first_name, last_name }) => (
-          <div key={uuid()}>
-            {first_name} {last_name}
-          </div>
-        ))}
+       <StudentSearchResults foundStudents={foundStudents}/>
       </div>
     </section>
   )
