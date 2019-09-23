@@ -1,41 +1,20 @@
 .dashboard-header {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  padding: 2.4rem;
-  min-width: 32rem;
+  .logo {
+    margin: auto;
+    width: 50%;
+    padding: 2.4rem;
+    max-width: 20rem;
 
-  @media screen and (min-width: 520px) {
-    padding: 3.2rem;
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
+    @media screen and (min-width: 375px) {
+      width: 40%;
+    }
+
+    @media screen and (min-width: 375px) {
+      width: 30%;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
-
-  @media screen and (min-width: 768px) {
-    padding: 3.2rem 1.6rem;
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  nav {
-    position: absolute;
-    right: 3.2rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-.dashboard-header .logo {
-  display: block;
-  margin: auto;
-
-  @media screen and (min-width: 520px) {
-    margin: 0;
-  }
-}
-
-.dashboard-header .logo img {
-  width: 15rem;
 }
