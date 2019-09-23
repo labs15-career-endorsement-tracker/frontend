@@ -7,6 +7,7 @@ import RequirementsList from "../../pages/RequirementsList"
 import RequirementDetails from "../../pages/RequirementDetails"
 import FindStudent from "../../pages/FindStudent"
 import Forbidden from "../../pages/Forbidden"
+import StudentProfile from "../../pages/StudentProfile"
 import { DashboardHeader } from "../../lib"
 import { Sidebar } from "../../layout"
 import CoachRoute from "../../CoachRoute"
@@ -19,7 +20,7 @@ import "./index.scss"
 const DashboardLayout = ({ match }) => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
-  
+
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
 
@@ -48,6 +49,10 @@ const DashboardLayout = ({ match }) => {
             component={FindStudent}
           ></CoachRoute>
           <Route path={`${match.path}profile`} component={MyAccount}></Route>
+          <Route
+            path={`${match.path}student`}
+            component={StudentProfile}
+          ></Route>
           <Route path="/forbidden" component={Forbidden}></Route>
           <Redirect
             to={
