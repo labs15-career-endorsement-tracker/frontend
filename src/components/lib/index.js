@@ -19,6 +19,7 @@ import SidebarHeader from "./SidebarHeader"
 import ProgressRing from "./ProgressRing"
 import SidebarMenu from "./SidebarMenu"
 import MenuItem from "./MenuItem"
+import SearchResults from "./SearchResults"
 
 export {
   FormField,
@@ -41,5 +42,6 @@ export {
   SidebarHeader,
   ProgressRing,
   SidebarMenu,
-  MenuItem
+  MenuItem,
+  SearchResults
 }
