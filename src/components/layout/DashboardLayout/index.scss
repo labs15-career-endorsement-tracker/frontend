@@ -3,14 +3,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "header header header header header header"
+      "sidebar header header header header header"
       "sidebar content content content content content";
   }
 }
 
 .dashboard .dashboard-content {
   padding: 1.6rem;
-  min-width: 32rem;
   margin: auto;
 
   @media screen and (min-width: 480px) {

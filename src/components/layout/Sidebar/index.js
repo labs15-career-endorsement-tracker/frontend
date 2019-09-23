@@ -6,12 +6,14 @@ import {
   SupportLinks,
   SideBarRequirements,
   Profile,
-  SidebarHeader
+  SidebarHeader,
+  Logo
 } from "../../lib"
 
 const Sidebar = () => {
   return (
     <aside className="dashboard-sidebar">
+      <Logo></Logo>
       <SidebarHeader></SidebarHeader>
       <SupportLinks></SupportLinks>
       <SideBarRequirements></SideBarRequirements>
