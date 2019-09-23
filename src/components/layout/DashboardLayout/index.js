@@ -19,7 +19,7 @@ import "./index.scss"
 const DashboardLayout = ({ match }) => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
-  
+
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
 
@@ -28,7 +28,6 @@ const DashboardLayout = ({ match }) => {
       dispatch(fetchRequirements(token))
     ])
   }, [dispatch])
-  console.log(user)
   return (
     <div className="dashboard">
       <DashboardHeader></DashboardHeader>

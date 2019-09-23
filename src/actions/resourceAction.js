@@ -1,27 +1,27 @@
-import { getRequirements } from "../api"
-import { loadAuthDataFromLocalStorage } from "./../store"
+// import { getRequirements } from "../api"
+// import { loadAuthDataFromLocalStorage } from "./../store"
 
-export const RESOURCE_FETCH_IN_PROGRESS = "RESOURCE_FETCH_IN_PROGRESS"
-export const RESOURCE_FETCH_SUCCESS = "RESOURCE_FETCH_SUCCESS"
-export const RESOURCE_FETCH_FAILURE = "RESOURCE_FETCH_FAILURE"
+// export const RESOURCE_FETCH_IN_PROGRESS = "RESOURCE_FETCH_IN_PROGRESS"
+// export const RESOURCE_FETCH_SUCCESS = "RESOURCE_FETCH_SUCCESS"
+// export const RESOURCE_FETCH_FAILURE = "RESOURCE_FETCH_FAILURE"
 
-const { token } = loadAuthDataFromLocalStorage()
+// const { token } = loadAuthDataFromLocalStorage()
 
-export const getResources = reqId => dispatch => {
-  dispatch({
-    type: RESOURCE_FETCH_IN_PROGRESS
-  })
-  return getResources(token, reqId)
-    .then(resources => {
-      dispatch({
-        type: RESOURCE_FETCH_SUCCESS,
-        payload: resources
-      })
-    })
-    .catch(err =>
-      dispatch({
-        type: RESOURCE_FETCH_FAILURE,
-        payload: err.response.data
-      })
-    )
-}
+// export const getResources = reqId => dispatch => {
+//   dispatch({
+//     type: RESOURCE_FETCH_IN_PROGRESS
+//   })
+//   return getResources(token, reqId)
+//     .then(resources => {
+//       dispatch({
+//         type: RESOURCE_FETCH_SUCCESS,
+//         payload: resources
+//       })
+//     })
+//     .catch(err =>
+//       dispatch({
+//         type: RESOURCE_FETCH_FAILURE,
+//         payload: err.response.data
+//       })
+//     )
+// }
