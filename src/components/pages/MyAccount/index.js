@@ -38,18 +38,20 @@ const MyAccount = () => {
       </div>
       <div className="account-info">
         <table className="account-details">
-          <tr>
-            <td className="labels">First name</td>
-            <td className="content">{user.first_name}</td>
-          </tr>
-          <tr>
-            <td className="labels">Last name</td>
-            <td className="content">{user.last_name}</td>
-          </tr>
-          <tr>
-            <td className="labels">Track</td>
-            <td className="content">{user.tracks_title}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td className="labels">First name</td>
+              <td className="content">{user.first_name}</td>
+            </tr>
+            <tr>
+              <td className="labels">Last name</td>
+              <td className="content">{user.last_name}</td>
+            </tr>
+            <tr>
+              <td className="labels">Track</td>
+              <td className="content">{user.tracks_title}</td>
+            </tr>
+          </tbody>
         </table>
         <NavLink to="/auth/reset-password">Change Password</NavLink>
       </div>
