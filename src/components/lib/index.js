@@ -13,9 +13,7 @@ import ResourceList from "./ResourceList"
 import SupportLinks from "./SupportLinks"
 import RequirementStep from "./RequirementStep"
 import RequirementStepList from "./RequirementStepList"
-import Percentage from "./Percentage"
 import AssignmentStep from "./AssignmentStep"
-import UserInfo from "./UserInfo"
 import SideBarRequirements from "./SideBarRequirements"
 import Profile from "./Profile"
 import SidebarHeader from "./SidebarHeader"
@@ -37,9 +35,7 @@ export {
   SupportLinks,
   RequirementStep,
   RequirementStepList,
-  Percentage,
   AssignmentStep,
-  UserInfo,
   SideBarRequirements,
   Profile,
   SidebarHeader,

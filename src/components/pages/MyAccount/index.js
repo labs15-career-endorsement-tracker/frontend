@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
-import Percentage from "../../../components/lib/Percentage"
+import { ProgressRing } from "../../../components/lib"
 
 import { fetchUser, fetchRequirements } from "../../../actions"
 
@@ -31,7 +31,7 @@ const MyAccount = () => {
         <div className="meter-wrapper">
           <div className="meter-box">
             <div className="meter">
-              <Percentage progress={user.progress} />
+              <ProgressRing progressValue={user.progress}></ProgressRing>
             </div>
           </div>
         </div>
