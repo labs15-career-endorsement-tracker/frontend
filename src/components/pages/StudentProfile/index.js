@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import { getUserById } from "../../../api"
 
 import { history, loadAuthDataFromLocalStorage } from "../../../store"
-import { fetchUser, fetchRequirements } from "../../../actions"
 
 const StudentProfile = () => {
   const user = useSelector(state => state.userReducer.user)
