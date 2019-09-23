@@ -1,25 +1,15 @@
-import React, { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
+import React from "react"
+import { useSelector } from "react-redux"
 
 import "./index.scss"
-
-import { fetchRequirements, fetchUser } from "../../../actions"
-import { loadAuthDataFromLocalStorage } from "../../../store"
 
 import { RequirementCard } from "../../lib"
 
 const RequirementsList = () => {
-  const dispatch = useDispatch()
   const requirements = useSelector(
     state => state.requirementReducer.requirements
   )
   const { tracks_title } = useSelector(state => state.userReducer.user)
-
-  useEffect(() => {
-    const { userId, token } = loadAuthDataFromLocalStorage()
-    dispatch(fetchRequirements(token))
-    dispatch(fetchUser(token, userId))
-  }, [dispatch])
 
   return (
     <section className="requirement-card-container">

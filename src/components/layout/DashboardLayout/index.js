@@ -1,7 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
-
-import "./index.scss"
+import { useDispatch } from "react-redux"
 
 import MyAccount from "../../pages/MyAccount"
 import RequirementsList from "../../pages/RequirementsList"
@@ -10,7 +9,23 @@ import FindStudent from "../../pages/FindStudent"
 import { DashboardHeader } from "../../lib"
 import { Sidebar } from "../../layout"
 
+import { loadAuthDataFromLocalStorage } from "../../../store"
+import { fetchUser, fetchRequirements } from "../../../actions"
+
+import "./index.scss"
+
 const DashboardLayout = ({ match }) => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const { token, userId } = loadAuthDataFromLocalStorage()
+
+    Promise.all([
+      dispatch(fetchUser(token, userId)),
+      dispatch(fetchRequirements(token))
+    ])
+  }, [dispatch])
+
   return (
     <div className="dashboard">
       <DashboardHeader></DashboardHeader>
