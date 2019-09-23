@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom"
 import "./index.scss"
 
 import { fetchUser, fetchRequirements } from "../../../actions"
+import { history } from "../../../store"
 
 const MyAccount = () => {
   const dispatch = useDispatch()
@@ -16,8 +17,6 @@ const MyAccount = () => {
     dispatch(fetchRequirements(token))
     dispatch(fetchUser(token, userId))
   }, [dispatch])
-
-  console.log(`user`, user, user.is_admin)
 
   return (
     <div className="myaccount-container">
@@ -45,6 +44,14 @@ const MyAccount = () => {
           </tbody>
         </table>
         <NavLink to="/auth/reset-password">Change Password</NavLink>
+        <button
+          onClick={() => {
+            localStorage.clear()
+            history.push("/")
+          }}
+        >
+          Logout
+        </button>
       </div>
     </div>
   )

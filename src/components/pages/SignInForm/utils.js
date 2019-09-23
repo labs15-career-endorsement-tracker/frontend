@@ -15,7 +15,7 @@ export const handleSubmit = async (values, { setSubmitting, resetForm }) => {
       toast(`Please update your password.`)
     }
   } catch (error) {
-    const { status } = error.response
+    const status = error.response && error.response.status
     switch (status) {
       case 401:
         toast("Incorrect email and/or password!")

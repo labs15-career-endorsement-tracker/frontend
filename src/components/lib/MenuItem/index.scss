@@ -1,0 +1,80 @@
+@import "../../../styles/variables";
+
+.menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.25s;
+  font-family: $font-stack-body;
+  font-size: 1.4rem;
+}
+
+.menu-item > a {
+  width: 100%;
+  color: $white;
+  transition: all 0.25s;
+
+  display: flex;
+  justify-content: flex-start;
+
+  position: relative;
+  padding: 0.8rem 0;
+
+  i {
+    padding-left: 2rem;
+  }
+
+  p {
+    padding-left: 1.6rem;
+  }
+
+  &.is-active {
+    color: $white;
+  }
+
+  &.is-active:before {
+    content: "";
+    display: block;
+    width: 0.4rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #6dde8b;
+  }
+}
+
+.menu-item:hover > a {
+  color: #6dde8b;
+}
+
+.child-menu-items {
+  transition: all 0.25s;
+  margin: 0.8rem 0;
+  a:hover {
+    color: #6dde8b;
+  }
+}
+
+.child-menu-items > a {
+  display: block;
+  margin-left: 2rem;
+  position: relative;
+  padding: 0.8rem 0.8rem 0.8rem 3.6rem;
+  color: $white;
+  line-height: 1.25;
+
+  &.is-active {
+    background: rgba(109, 222, 139, 0.1);
+  }
+
+  &.is-active:before {
+    content: "";
+    display: block;
+    width: 0.4rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #6dde8b;
+  }
+}

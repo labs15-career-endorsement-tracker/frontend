@@ -1,23 +1,31 @@
+@import "../../../styles/variables";
+
 .sidebar__header {
   display: flex;
   flex-direction: column;
   font-weight: bold;
   position: relative;
-  padding: 2.4rem 0;
+  padding: 0 1.6rem;
+  margin-bottom: 3.2rem;
 }
 
 .sidebar__header .greeting {
-  font-size: 1.6rem;
+  font-family: $font-stack-heading;
+  color: $white;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
 }
 
 .sidebar__header .greeting-name {
-  font-size: 3.2rem;
+  font-family: $font-stack-body;
+  font-size: 3.6rem;
+  color: #6dde8b;
 }
 
 .sidebar__header .progress-ring {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 1.6rem;
   display: block;
   margin: auto;
   width: 25%;

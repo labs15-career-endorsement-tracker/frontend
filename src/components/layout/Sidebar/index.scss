@@ -2,6 +2,11 @@
 
 .dashboard-sidebar {
   display: none;
+  flex-direction: column;
+  grid-area: sidebar;
+  height: 100vh;
+  padding: 2.4rem 0;
+  background: #081534;
 
   .my-account-link {
     color: $green-500;
@@ -12,9 +17,10 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: column;
-    grid-area: sidebar;
-    height: calc(100vh - 12rem);
-    padding: 1.6rem;
   }
+}
+
+.dashboard-sidebar .logo {
+  width: 53%;
+  margin: 0 auto 4.4rem;
 }
