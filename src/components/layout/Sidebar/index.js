@@ -2,22 +2,15 @@ import React from "react"
 
 import "./index.scss"
 
-import {
-  SupportLinks,
-  SideBarRequirements,
-  Profile,
-  SidebarHeader,
-  Logo
-} from "../../lib"
+import { SupportLinks, SidebarHeader, SidebarMenu, Logo } from "../../lib"
 
 const Sidebar = () => {
   return (
     <aside className="dashboard-sidebar">
       <Logo></Logo>
       <SidebarHeader></SidebarHeader>
+      <SidebarMenu></SidebarMenu>
       <SupportLinks></SupportLinks>
-      <SideBarRequirements></SideBarRequirements>
-      <Profile />
     </aside>
   )
 }

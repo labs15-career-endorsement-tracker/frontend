@@ -14,10 +14,11 @@ import SupportLinks from "./SupportLinks"
 import RequirementStep from "./RequirementStep"
 import RequirementStepList from "./RequirementStepList"
 import AssignmentStep from "./AssignmentStep"
-import SideBarRequirements from "./SideBarRequirements"
 import Profile from "./Profile"
 import SidebarHeader from "./SidebarHeader"
 import ProgressRing from "./ProgressRing"
+import SidebarMenu from "./SidebarMenu"
+import MenuItem from "./MenuItem"
 
 export {
   FormField,
@@ -36,8 +37,9 @@ export {
   RequirementStep,
   RequirementStepList,
   AssignmentStep,
-  SideBarRequirements,
   Profile,
   SidebarHeader,
-  ProgressRing
+  ProgressRing,
+  SidebarMenu,
+  MenuItem
 }
