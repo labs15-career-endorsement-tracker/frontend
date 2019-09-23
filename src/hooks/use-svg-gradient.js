@@ -47,7 +47,7 @@ const useSvgGradient = (svgClassName, startColor, endColor) => {
     return () => {
       $defs.remove()
     }
-  }, [cssId, startColor, endColor])
+  }, [cssId, startColor, endColor, svgClassName])
 
   return cssId
 }
