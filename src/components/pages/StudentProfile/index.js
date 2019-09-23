@@ -20,12 +20,7 @@ const StudentProfile = () => {
 
   return (
     <div>
-      <h1>
-        <span>This guy right here is the ID of the student from the URL: </span>
-        {studentId}
-      </h1>
-      <span>This guy is the user from state: </span>
-      {user.first_name}
+      <h1></h1>
     </div>
   )
 }
