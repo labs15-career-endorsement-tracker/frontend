@@ -28,7 +28,6 @@ const DashboardLayout = ({ match }) => {
       dispatch(fetchRequirements(token))
     ])
   }, [dispatch])
-  console.log(user)
   return (
     <div className="dashboard">
       <DashboardHeader></DashboardHeader>
