@@ -12,7 +12,6 @@ const { token } = loadAuthDataFromLocalStorage()
 
 const handleToggle = e => {
   e.preventDefault()
-  console.log("toggle")
   dispatch(togglePinnedStudent(token, user.id))
 }
 

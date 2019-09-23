@@ -21,7 +21,6 @@ const MenuItem = ({ menuItem }) => {
 
   const handleOpen = () => {
     setIsOpen(!isOpen)
-    console.log(isOpen)
   }
 
   return (
