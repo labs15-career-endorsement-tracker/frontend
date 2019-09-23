@@ -22,7 +22,7 @@ const ProgressRing = ({
 
   useEffect(() => {
     setProgress(progressValue)
-  }, [])
+  }, [progressValue, setProgress])
 
   return (
     <div className="progress-ring">
