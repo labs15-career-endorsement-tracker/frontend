@@ -25,11 +25,8 @@ const DashboardLayout = ({ match }) => {
             path={`${match.path}requirements`}
             component={RequirementsList}
           ></Route>
-          <Route
-            path={`${match.path}find-student`}
-            component={FindStudent}
-          ></Route>
-          <Route path={`${match.path}myaccount`} component={MyAccount}></Route>
+          <Route path={`${match.path}students`} component={FindStudent}></Route>
+          <Route path={`${match.path}profile`} component={MyAccount}></Route>
           <Redirect to={`${match.path}requirements`}></Redirect>
         </Switch>
       </main>
