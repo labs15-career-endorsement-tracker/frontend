@@ -12,7 +12,7 @@ const useCountUpToProgress = progressValue => {
 
   useEffect(() => {
     update(progressValue)
-  }, [progressValue])
+  }, [progressValue, update])
 
   return [countUp, update]
 }
