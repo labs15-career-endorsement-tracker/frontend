@@ -6,13 +6,12 @@ const useCountUpToProgress = progressValue => {
     start: 0,
     end: progressValue,
     delay: 0,
-    duration: 0.5,
-    onUpdate: () => console.log("Count:", countUp)
+    duration: 0.5
   })
 
   useEffect(() => {
     update(progressValue)
-  }, [progressValue])
+  }, [progressValue, update])
 
   return [countUp, update]
 }

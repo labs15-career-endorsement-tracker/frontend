@@ -27,7 +27,7 @@ const createLinearGradientSvg = (namespace, id, startColor, endColor) => {
 const useSvgGradient = (svgClassName, startColor, endColor) => {
   const [cssId] = useState(() =>
     uuid()
-      .replace(/\-/g, "")
+      .replace(/-/g, "")
       .replace(/\d/g, "")
   )
 
@@ -47,7 +47,7 @@ const useSvgGradient = (svgClassName, startColor, endColor) => {
     return () => {
       $defs.remove()
     }
-  }, [cssId, startColor, endColor])
+  }, [cssId, startColor, endColor, svgClassName])
 
   return cssId
 }
