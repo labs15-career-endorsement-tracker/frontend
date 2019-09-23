@@ -14,7 +14,7 @@ const ProgressRing = ({
 }) => {
   const [progressId] = useState(() =>
     uuid()
-      .replace(/\-/g, "")
+      .replace(/-/g, "")
       .replace(/\d/g, "")
   )
   const [progress, setProgress] = useCountUpToProgress(progressValue)
