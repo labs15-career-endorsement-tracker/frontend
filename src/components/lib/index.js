@@ -20,6 +20,7 @@ import ProgressRing from "./ProgressRing"
 import SidebarMenu from "./SidebarMenu"
 import MenuItem from "./MenuItem"
 import SearchResults from "./SearchResults"
+import PinnedStudentCard from "./PinnedStudentCard"
 
 export {
   FormField,
@@ -43,5 +44,6 @@ export {
   ProgressRing,
   SidebarMenu,
   MenuItem,
-  SearchResults
+  SearchResults,
+  PinnedStudentCard
 }

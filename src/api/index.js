@@ -6,7 +6,7 @@ import { getSteps, toggleStepComplete } from "./steps"
 import { getResources } from "./resources"
 import { sendEmail } from "./sendEmail"
 import { searchAll } from "./search"
-import { toggleStudent } from "./student"
+import { toggleStudent, getPinnedStudents } from "./student"
 
 export {
   loginUser,
@@ -20,5 +20,6 @@ export {
   updateUserPassword,
   sendEmail,
   searchAll,
-  toggleStudent
+  toggleStudent,
+  getPinnedStudents
 }
