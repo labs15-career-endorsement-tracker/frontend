@@ -18,6 +18,8 @@ import AssignmentStep from "./AssignmentStep"
 import UserInfo from "./UserInfo"
 import SideBarRequirements from "./SideBarRequirements"
 import Profile from "./Profile"
+import SidebarHeader from "./SidebarHeader"
+import ProgressRing from "./ProgressRing"
 
 export {
   FormField,
@@ -39,5 +41,7 @@ export {
   AssignmentStep,
   UserInfo,
   SideBarRequirements,
-  Profile
+  Profile,
+  SidebarHeader,
+  ProgressRing
 }
