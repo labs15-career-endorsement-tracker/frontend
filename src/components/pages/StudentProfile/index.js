@@ -2,10 +2,13 @@ import React from "react"
 import { history } from "../../../store"
 
 const StudentProfile = () => {
-  console.log(history)
+  const location = history.location.pathname
+  const { ...values } = location.split("/")
+  const student = Number(values[2])
+  console.log(student)
   return (
     <div>
-      <h1>test</h1>
+      <h1>{student}</h1>
     </div>
   )
 }
