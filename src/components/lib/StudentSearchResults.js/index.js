@@ -1,17 +1,17 @@
 import React from 'react';
+import StudentProgress from './StudentProgress'
 
-import uuid from "uuid/v4"
 
-const StudentSearchResults = ({ foundStudents }) => {
-  console.log(foundStudents)
+const StudentSearchResults = ({ foundStudent }) => {
     return (
         <div>
-            {foundStudents.map(({ first_name, last_name }) => (
-          <div key={uuid()}>
-            {first_name} {last_name}
+          <div>
+            {foundStudent.first_name} {foundStudent.last_name}
+            <div>
+              <StudentProgress userId={foundStudent.id}/>
+            </div>
+            <i className="far fa-plus"></i>
           </div>
-          
-        ))}
         </div>
     )
 }

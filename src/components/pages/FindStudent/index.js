@@ -47,7 +47,9 @@ const FindStudent = () => {
         </button>
       </form>
       <div>
-       <StudentSearchResults foundStudents={foundStudents}/>
+        {foundStudents.map(student => 
+          <StudentSearchResults foundStudent={student} />
+        )}
       </div>
     </section>
   )
