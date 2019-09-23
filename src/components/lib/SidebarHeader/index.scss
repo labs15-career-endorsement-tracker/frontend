@@ -1,0 +1,32 @@
+.sidebar__header {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  position: relative;
+  padding: 2.4rem 0;
+}
+
+.sidebar__header .greeting {
+  font-size: 1.6rem;
+}
+
+.sidebar__header .greeting-name {
+  font-size: 3.2rem;
+}
+
+.sidebar__header .progress-ring {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+  width: 25%;
+
+  .progress-ring__content .progress-number {
+    font-size: 1.6rem;
+  }
+
+  .progress-ring__content .progress-label {
+    font-size: 0.8rem;
+  }
+}

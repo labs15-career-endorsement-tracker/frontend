@@ -5,8 +5,6 @@ import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
-import Percentage from "../../../components/lib/Percentage"
-
 import { fetchUser, fetchRequirements } from "../../../actions"
 
 const MyAccount = () => {
@@ -27,13 +25,6 @@ const MyAccount = () => {
         <div className="account-text">
           <h1>My Account</h1>
           <p>Update your account settings</p>
-        </div>
-        <div className="meter-wrapper">
-          <div className="meter-box">
-            <div className="meter">
-              <Percentage progress={user.progress} />
-            </div>
-          </div>
         </div>
       </div>
       <div className="account-info">

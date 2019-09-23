@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
-import { RequirementStep, Percentage, AssignmentStep } from "../../lib"
+import { RequirementStep, AssignmentStep, ProgressRing } from "../../lib"
 
 import {
   toggleStep,
@@ -53,7 +53,10 @@ const StepList = ({
             {requirement ? requirement.title : "Steps to complete"}
           </h1>
         </div>
-        <Percentage progress={requirement ? requirement.progress : 0} />
+        <ProgressRing
+          progressValue={requirement ? requirement.progress : 0}
+        ></ProgressRing>
+        {/* <Percentage progress={requirement ? requirement.progress : 0} /> */}
       </div>
       <div className="step-description">
         <p>{requirement.tasks_description}</p>
