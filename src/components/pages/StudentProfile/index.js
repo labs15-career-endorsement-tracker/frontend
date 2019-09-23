@@ -18,9 +18,12 @@ const StudentProfile = () => {
     })
   }, [studentId])
 
+  console.log(student)
   return (
     <div>
-      <h1></h1>
+      <h1>
+        <span>This guy.</span>
+      </h1>
     </div>
   )
 }
