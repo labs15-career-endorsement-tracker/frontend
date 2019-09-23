@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import { getUserById } from "../../../api"
 
 import { history, loadAuthDataFromLocalStorage } from "../../../store"
 import { fetchUser, fetchRequirements } from "../../../actions"
@@ -13,13 +14,11 @@ const StudentProfile = () => {
 
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
-    setStudent(fetchUser(token, studentId))
+    getUserById(token, studentId).then(student => {
+      setStudent(student)
+    })
   }, [studentId])
 
-  console.log(
-    `This guy is from the useEffect, he is my student thing I made with a hook?:`,
-    student
-  )
   return (
     <div>
       <h1>
