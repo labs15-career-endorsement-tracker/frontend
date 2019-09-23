@@ -19,7 +19,7 @@ import "./index.scss"
 const DashboardLayout = ({ match }) => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
-  
+
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
 

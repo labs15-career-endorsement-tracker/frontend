@@ -1,19 +1,19 @@
 import React from "react"
-import { useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux"
 import { NavLink } from "react-router-dom"
 import { loadAuthDataFromLocalStorage } from "../../../store"
 
-import { togglePinnedStudent } from '../../../actions'
+import { togglePinnedStudent } from "../../../actions"
 
 const SearchResult = ({ user }) => {
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-const { token } = loadAuthDataFromLocalStorage()
+  const { token } = loadAuthDataFromLocalStorage()
 
-const handleToggle = e => {
-  e.preventDefault()
-  dispatch(togglePinnedStudent(token, user.id))
-}
+  const handleToggle = e => {
+    e.preventDefault()
+    dispatch(togglePinnedStudent(token, user.id))
+  }
 
   return (
     <NavLink to={`/profile/${user.id}`}>
