@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from "react-redux"
 import { fetchPinnedStudents } from "../../../actions"
 import { Link } from "react-router-dom"
 import ProfileCard from "../../lib/ProfileCard"
-import "./index.scss"
 import FindStudent from "../../pages/FindStudent"
+
+import "./index.scss"
 
 const MyStudents = () => {
   const pinnedStudents = useSelector(
