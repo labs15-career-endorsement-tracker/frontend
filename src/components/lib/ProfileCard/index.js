@@ -13,12 +13,12 @@ const ProfileCard = ({ student, requirements, showFull }) => {
         <p className="profile-last">{student.last_name}</p>
       </div>
       <div className="profile-actions">
-        <p>
-          <i class="fas fa-user-minus"></i>Unassign
-        </p>
         {showFull === "false" ? (
           <div className="overall-progress" key={uuid()}>
             {/* <p>Overall Progress:</p> */}
+            <p>
+              <i class="fas fa-user-minus"></i>Unassign
+            </p>
             <ProgressRing progressValue={student.progress}></ProgressRing>
           </div>
         ) : (
