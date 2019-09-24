@@ -1,0 +1,26 @@
+.big-container {
+  margin: 0 auto;
+  .overall-progress {
+    width: 25%;
+  }
+  .test {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    align-items: center;
+    flex-direction: column;
+    .req-container {
+      display: flex;
+    }
+    .req-title {
+      padding: 1rem;
+    }
+    .progress-card {
+      margin: 2rem;
+      width: 50%;
+    }
+    .progress-number {
+      color: red;
+    }
+  }
+}

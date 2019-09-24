@@ -7,6 +7,7 @@ import RequirementsList from "../../pages/RequirementsList"
 import RequirementDetails from "../../pages/RequirementDetails"
 import FindStudent from "../../pages/FindStudent"
 import Forbidden from "../../pages/Forbidden"
+import StudentProfile from "../../pages/StudentProfile"
 import { DashboardHeader } from "../../lib"
 import { Sidebar } from "../../layout"
 import CoachRoute from "../../CoachRoute"
@@ -29,6 +30,7 @@ const DashboardLayout = ({ match }) => {
       dispatch(fetchRequirements(token))
     ])
   }, [dispatch])
+
   return (
     <div className="dashboard">
       <DashboardHeader></DashboardHeader>
@@ -52,6 +54,10 @@ const DashboardLayout = ({ match }) => {
             component={MyStudents}
           ></CoachRoute>
           <Route path={`${match.path}profile`} component={MyAccount}></Route>
+          <Route
+            path={`${match.path}student`}
+            component={StudentProfile}
+          ></Route>
           <Route path="/forbidden" component={Forbidden}></Route>
           <Redirect
             to={

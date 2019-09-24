@@ -16,7 +16,7 @@ const SearchResult = ({ user }) => {
   }
 
   return (
-    <NavLink to={`/profile/${user.id}`}>
+    <NavLink to={`/student/${user.id}`}>
       <li className="search-result">
         <div className="name">
           <h4>{user.first_name}</h4>
