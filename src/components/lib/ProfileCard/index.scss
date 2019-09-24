@@ -2,20 +2,17 @@
 
 .big-container {
   margin: 2rem auto;
-
   color: $black;
   font-weight: 600;
   background: $blue-100;
   border-radius: 15px;
   line-height: 2.5rem;
   flex-direction: column;
-
-  width: 100%;
+  width: 25%;
   padding: 2.5rem 1.5rem 0.5rem 1.5rem;
   .profile-info {
     .profile-track {
       color: $blue-200;
-      width: 100%;
     }
     .profile-first {
       font-size: 2.8rem;
