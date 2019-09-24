@@ -1,10 +1,11 @@
 import React from "react"
 
 const ProfileCard = ({ student }) => {
-  console.log(student)
   return (
     <div>
-      <p></p>
+      <p>
+        {student.first_name} {student.last_name}
+      </p>
     </div>
   )
 }
