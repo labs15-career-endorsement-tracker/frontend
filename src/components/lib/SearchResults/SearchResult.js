@@ -27,7 +27,9 @@ const SearchResult = ({ user }) => {
           <strong>Endorsed</strong>
         </p> */}
         {/* <i onClick={handleToggle} className={`fas fa-user-plus`}></i> */}
-        <i onClick={handleToggle} className={`fad fa-thumbtack`}></i>
+        <div onClick={handleToggle} >
+          {user.isPinnedBy === null ? <i className={`fad fa-thumbtack`}></i> : <p>{user.isPinnedBy}</p>}
+        </div>
       </li>
     </NavLink>
   )
