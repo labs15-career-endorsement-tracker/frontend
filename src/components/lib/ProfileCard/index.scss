@@ -3,15 +3,18 @@
 .big-container {
   margin: 0 auto;
   background: $blue-100;
-  border: 1px solid red;
+  color: $black;
+  // border: 1px solid red;
   width: 100%;
+  .profile-track {
+    color: $blue-200;
+  }
   .overall-progress {
     width: 25%;
   }
   .test {
     display: flex;
     margin: 0 auto;
-
     align-items: center;
     flex-direction: column;
 

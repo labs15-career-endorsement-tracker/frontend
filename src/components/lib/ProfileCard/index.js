@@ -10,7 +10,7 @@ const ProfileCard = ({ student, requirements, showFull }) => {
   console.log(showFull)
   return (
     <div className="big-container">
-      <p>Full-Stack Web Development</p>
+      <p className="profile-track">Full-Stack Web Development</p>
       <p>
         {student.first_name} {student.last_name}
       </p>
