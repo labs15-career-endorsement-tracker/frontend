@@ -24,7 +24,7 @@ const ProfileCard = ({ student, requirements, showFull }) => {
       ) : (
         <div className="req-container" key={`$student.id`}>
           <div className="overall-progress">
-            {/* <p>Overall Progress:</p> */}
+            <p>Overall Progress:</p>
             <ProgressRing progressValue={student.progress}></ProgressRing>
           </div>
           {requirements.map(req => (

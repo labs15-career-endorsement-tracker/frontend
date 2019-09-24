@@ -8,17 +8,17 @@
   border-radius: 15px;
   line-height: 2.5rem;
   flex-direction: column;
-  padding: 2.5rem 0.5rem 0 0.5rem;
+  padding: 2.5rem 1rem;
+  border: 1px solid purple;
 
   .profile-info {
     .profile-track {
       color: $blue-200;
     }
     .profile-first {
-      font-size: 2.8rem;
+      font-size: 3rem;
     }
   }
-
   .toggle-assign {
     color: $pink-100;
   }
@@ -30,8 +30,8 @@
     justify-content: flex-end;
     flex-direction: column;
     .req-container {
-      // justify-content: flex-end;
       // display: flex;
+      // justify-content: flex-end;
     }
     .req-title {
       padding: 1rem;
@@ -50,6 +50,5 @@
 }
 
 .overall-progress {
-  width: 25%;
-  // display: flex;
+  width: 10%;
 }
