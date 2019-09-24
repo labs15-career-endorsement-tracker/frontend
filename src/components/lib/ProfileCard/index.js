@@ -5,11 +5,12 @@ import uuid from "uuid/v4"
 import "./index.scss"
 
 const ProfileCard = ({ student, requirements, showFull }) => {
-  console.log(student, requirements)
+  console.log(`***********`, student, requirements)
 
   console.log(showFull)
   return (
     <div className="big-container">
+      <p>Full-Stack Web Development</p>
       <p>
         {student.first_name} {student.last_name}
       </p>

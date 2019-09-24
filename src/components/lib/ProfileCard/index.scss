@@ -1,14 +1,20 @@
+@import "../../../styles/variables";
+
 .big-container {
   margin: 0 auto;
+  background: $blue-100;
+  border: 1px solid red;
+  width: 33%;
   .overall-progress {
     width: 25%;
   }
   .test {
     display: flex;
     margin: 0 auto;
-    width: 500px;
+
     align-items: center;
     flex-direction: column;
+
     .req-container {
       display: flex;
     }
@@ -20,7 +26,7 @@
       width: 50%;
     }
     .progress-number {
-      color: red;
+      color: $black;
     }
   }
 }
