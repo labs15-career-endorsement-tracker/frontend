@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import { PinnedStudentCard } from "../../lib"
 import ProfileCard from "../../lib/ProfileCard"
 import "./index.scss"
+import FindStudent from "../../pages/FindStudent"
 
 const MyStudents = () => {
   const pinnedStudents = useSelector(
@@ -285,18 +286,21 @@ const MyStudents = () => {
     dispatch(fetchPinnedStudents())
   }, [dispatch])
   return (
-    <section className="my-pinned-students">
-      {pinnedStudents.map(student => (
-        <Link to={`/student/${student.id}`}>
-          <ProfileCard
-            student={student}
-            key={student.id}
-            requirements={reqs}
-            showFull={"false"}
-          />
-        </Link>
-      ))}
-    </section>
+    <>
+      <FindStudent />
+      <section className="my-pinned-students">
+        {pinnedStudents.map(student => (
+          <Link to={`/student/${student.id}`}>
+            <ProfileCard
+              student={student}
+              key={student.id}
+              requirements={reqs}
+              showFull={"false"}
+            />
+          </Link>
+        ))}
+      </section>
+    </>
   )
 }
 
