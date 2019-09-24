@@ -12,7 +12,7 @@ const ProfileCard = ({ student, requirements }) => {
         {student.first_name} {student.last_name}
       </p>
       <p>{student.email}</p>
-      <div class="test">
+      <div className="test">
         <div className="overall-progress">
           <p>Overall Progress:</p>
           <ProgressRing progressValue={student.progress}></ProgressRing>
