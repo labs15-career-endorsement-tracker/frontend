@@ -3,8 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  width: 100%;
   .student-profile-card {
     display: flex;
     margin: 1rem;
+    width: 25%;
   }
 }
