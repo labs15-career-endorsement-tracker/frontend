@@ -22,10 +22,10 @@ const SearchResult = ({ user }) => {
           <h4>{user.first_name}</h4>
           <small>{user.last_name}</small>
         </div>
-        <p className="progress">
+        {/* <p className="progress">
           <span>{user.progress || 0}</span>
           <strong>Endorsed</strong>
-        </p>
+        </p> */}
         <i onClick={handleToggle} className={`fas fa-user-plus`}></i>
       </li>
     </NavLink>
