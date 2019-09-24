@@ -17,12 +17,12 @@ const StudentProfile = () => {
     getUserById(token, studentId).then(student => {
       setStudent(student)
     })
-  }, [])
+  })
 
   return (
     <div>
       {!student ? (
-        <h1>loading...</h1>
+        <h1>Loading</h1>
       ) : (
         <ProfileCard student={student}></ProfileCard>
       )}
