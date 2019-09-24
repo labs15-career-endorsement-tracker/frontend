@@ -26,7 +26,8 @@ const SearchResult = ({ user }) => {
           <span>{user.progress || 0}</span>
           <strong>Endorsed</strong>
         </p> */}
-        <i onClick={handleToggle} className={`fas fa-user-plus`}></i>
+        {/* <i onClick={handleToggle} className={`fas fa-user-plus`}></i> */}
+        <i onClick={handleToggle} className={`fad fa-thumbtack`}></i>
       </li>
     </NavLink>
   )

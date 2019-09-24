@@ -68,10 +68,13 @@
 // }
 
 .search-result i {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 0.8rem;
   &:hover {
     cursor: pointer;
     color: #6dde8b;
+  }
+  &:active {
+    transform: translateY(4px);
   }
 }
