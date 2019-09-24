@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { getUserById } from "../../../api"
-import { StepGauge } from "../../lib"
 
 import { history, loadAuthDataFromLocalStorage } from "../../../store"
 
 import ProfileCard from "../../lib/ProfileCard"
 import { fetchRequirements } from "../../../actions"
 
-/* todo
--- figure out how to connect requirements to a coach view.
-*/
-
 const StudentProfile = () => {
-  const user = useSelector(state => state.userReducer.user)
   const reqs = [
     {
       id: 1,
@@ -288,7 +282,7 @@ const StudentProfile = () => {
   const studentId = Number(values[2])
 
   const [student, setStudent] = useState()
-  const [requirements, setRequirements] = useState(reqs)
+  const [requirements] = useState(reqs)
 
   useEffect(() => {
     const { token } = loadAuthDataFromLocalStorage()
@@ -296,7 +290,7 @@ const StudentProfile = () => {
       setStudent(student)
     })
     dispatch(fetchRequirements(token))
-  }, [studentId])
+  }, [studentId, dispatch])
 
   return (
     <div>

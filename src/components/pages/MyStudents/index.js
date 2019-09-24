@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { fetchPinnedStudents } from "../../../actions"
 import { Link } from "react-router-dom"
-import { PinnedStudentCard } from "../../lib"
 import ProfileCard from "../../lib/ProfileCard"
 import "./index.scss"
 import FindStudent from "../../pages/FindStudent"
@@ -290,7 +289,7 @@ const MyStudents = () => {
       <FindStudent />
       <section className="my-pinned-students">
         {pinnedStudents.map(student => (
-          <Link to={`/student/${student.id}`}>
+          <Link to={`/student/${student.id}`} key={`$student.id`}>
             <ProfileCard
               student={student}
               key={student.id}

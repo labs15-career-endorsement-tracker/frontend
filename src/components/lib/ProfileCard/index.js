@@ -1,5 +1,6 @@
 import React from "react"
 import { ProgressRing } from "../../lib"
+import uuid from "uuid/v4"
 
 import "./index.scss"
 
@@ -15,23 +16,21 @@ const ProfileCard = ({ student, requirements, showFull }) => {
       <p>{student.email}</p>
       <div className="test">
         {showFull === "false" ? (
-          <div className="overall-progress">
+          <div className="overall-progress" key={uuid()}>
             <p>Overall Progress:</p>
             <ProgressRing progressValue={student.progress}></ProgressRing>
           </div>
         ) : (
-          <div className="req-container">
+          <div className="req-container" key={`$student.id`}>
             <div className="overall-progress">
               <p>Overall Progress:</p>
               <ProgressRing progressValue={student.progress}></ProgressRing>
             </div>
             {requirements.map(req => (
-              <>
-                <div className="progress-card">
-                  <p className="req-title">{req.title}</p>
-                  <ProgressRing progressValue={req.progress}></ProgressRing>
-                </div>
-              </>
+              <div className="progress-card" key={uuid()}>
+                <p className="req-title">{req.title}</p>
+                <ProgressRing progressValue={req.progress}></ProgressRing>
+              </div>
             ))}
           </div>
         )}
