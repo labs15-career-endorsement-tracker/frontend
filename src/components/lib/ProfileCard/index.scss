@@ -9,6 +9,9 @@
   line-height: 2.5rem;
   flex-direction: column;
   padding: 2.5rem 1rem;
+  .temp-container {
+    width: 100%;
+  }
 
   .profile-info {
     .profile-track {
@@ -28,11 +31,6 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    .req-container {
-      // display: flex;
-      // justify-content: flex-end;
-      // border: 5px solid red;
-    }
   }
 }
 
@@ -42,14 +40,22 @@
 
 .overall-progress {
   width: 25%;
+}
+.progress-number {
+  color: $black;
+}
 
-  .progress-card {
-    margin: 2rem;
-    .req-title {
-      padding: 1rem;
-    }
-  }
-  .progress-number {
-    color: $black;
-  }
+.progress-card {
+  width: 33%;
+  margin: 1rem;
+  align-items: center;
+}
+
+.req-container {
+  display: flex;
+}
+
+.progress-ring {
+  justify-content: center;
+  align-items: center;
 }
