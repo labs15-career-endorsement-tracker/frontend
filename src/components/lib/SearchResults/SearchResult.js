@@ -28,7 +28,18 @@ const SearchResult = ({ user }) => {
         </p> */}
         {/* <i onClick={handleToggle} className={`fas fa-user-plus`}></i> */}
         <div onClick={handleToggle} >
-          {user.isPinnedBy === null ? <i className={`fad fa-thumbtack`}></i> : <p>{user.isPinnedBy}</p>}
+          {user.isPinnedBy === null 
+          ? 
+          <div className='pin-status'>
+            <p>Pin Student</p>
+            <i className={`fad fa-thumbtack`}></i> 
+          </div>
+          : 
+          <div className='pin-status'>
+            <p>Coach: {user.isPinnedBy}</p>
+            <i className="far fa-times-circle"></i>
+          </div>
+          }
         </div>
       </li>
     </NavLink>

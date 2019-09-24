@@ -66,6 +66,10 @@
 //     margin-top: 0.8rem;
 //   }
 // }
+.pin-status {
+  display: flex;
+  align-items: center;
+}
 
 .search-result i {
   font-size: 2.5rem;
@@ -74,7 +78,8 @@
     cursor: pointer;
     color: #6dde8b;
   }
-  &:active {
+  
+}
+.fa-thumbtack:active {
     transform: translateY(4px);
   }
-}
