@@ -3,16 +3,20 @@
 .big-container {
   margin: 0 auto;
   color: $black;
+  font-weight: 600;
   .profile-track {
     color: $blue-200;
     width: 100%;
   }
-
+  .profile-first {
+    font-size: 2.5rem;
+  }
   .test {
     display: flex;
     margin: 0 auto;
     align-items: center;
     flex-direction: column;
+
     .req-container {
       display: flex;
     }
