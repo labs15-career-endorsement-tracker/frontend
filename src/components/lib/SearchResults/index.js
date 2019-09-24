@@ -10,7 +10,7 @@ const SearchResults = ({ results }) => {
   return (
     <ul className="search-results">
       {results.map(result => (
-        <SearchResult key={result.id} user={result} ></SearchResult>
+        <SearchResult key={result.id} user={result}></SearchResult>
       ))}
     </ul>
   )

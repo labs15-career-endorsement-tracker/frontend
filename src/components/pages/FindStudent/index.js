@@ -10,7 +10,9 @@ import "./index.scss"
 const FindStudent = () => {
   const [searchField, setSearchField] = useState("")
   const [foundStudents, setFoundStudents] = useState([])
-  const pinnedStudents = useSelector( state => state.studentReducer.pinnedStudents)
+  const pinnedStudents = useSelector(
+    state => state.studentReducer.pinnedStudents
+  )
 
   const handleChanges = e => {
     setSearchField(e.target.value)
