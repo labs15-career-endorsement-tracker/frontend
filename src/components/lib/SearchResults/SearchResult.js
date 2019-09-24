@@ -26,21 +26,19 @@ const SearchResult = ({ user }) => {
           <span>{user.progress || 0}</span>
           <strong>Endorsed</strong>
         </p> */}
-        {/* <i onClick={handleToggle} className={`fas fa-user-plus`}></i> */}
-        <div onClick={handleToggle} >
-          {user.isPinnedBy === null 
-          ? 
           <div className='pin-status'>
-            <p className="label">Pin Student</p>
-            <i className={`fad fa-thumbtack`}></i> 
+              {user.isPinnedBy === null ?
+              <div className="has-coach">
+                <p className="coach-name">Pin Student</p>
+              </div>
+              :
+                <div className='has-coach'>
+                  <p className="coach-label">Coach: </p>
+                  <p className="coach-name"> {user.isPinnedBy}</p>
+                </div>
+              } 
+            <i onClick={handleToggle} className={`fad fa-thumbtack`}></i> 
           </div>
-          : 
-          <div className='pin-status'>
-            <p className="label"><span className="coach-label">Coach: </span>{user.isPinnedBy}</p>
-            <i className={`fad fa-thumbtack`}></i>
-          </div>
-          }
-        </div>
       </li>
     </NavLink>
   )

@@ -13,8 +13,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.6rem 3.2rem;
+  padding: 1rem 2.5rem;
   border-bottom: 2px solid hsla(224, 15%, 53%, 0.2);
+  @media screen and(min-width: $breakpoint-small) {
+    padding: 1.6rem 3.2rem;
+  }
 }
 
 .search-result {
@@ -77,6 +80,17 @@
   // }
 }
 
+.has-coach {
+  align-items: baseline;
+  // border: 1px solid red;
+  width: 100px;
+  @media screen and(max-width: $breakpoint-small) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70px;
+  }
+}
+
 // @keyframes load {
 //   from {opacity: 0;}
 //   to {opacity: 1;}
@@ -86,6 +100,9 @@
   font-family: $font-stack-heading;
   font-size: 2rem;
   font-weight: bold;
+  // @media screen and(max-width: $breakpoint-small) {
+  //   padding-right: .2em;
+  // }
 }
 
 .search-result i {
