@@ -1,0 +1,9 @@
+.my-pinned-students {
+  margin: 0 auto;
+  display: flex;
+  .student-profile-card {
+    display: flex;
+    margin: 1rem;
+    background: red;
+  }
+}
