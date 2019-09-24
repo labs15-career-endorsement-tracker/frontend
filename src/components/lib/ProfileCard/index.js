@@ -16,7 +16,7 @@ const ProfileCard = ({ student, requirements, showFull }) => {
         {showFull === "false" ? (
           <div className="overall-progress" key={uuid()}>
             {/* <p>Overall Progress:</p> */}
-            <p>
+            <p className="toggle-assign">
               <i class="fas fa-user-minus"></i>Unassign
             </p>
             <ProgressRing progressValue={student.progress}></ProgressRing>

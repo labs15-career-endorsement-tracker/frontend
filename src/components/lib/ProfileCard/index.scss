@@ -9,6 +9,7 @@
   line-height: 2.5rem;
   flex-direction: column;
   padding: 2.5rem 0.5rem 0 0.5rem;
+
   .profile-info {
     .profile-track {
       color: $blue-200;
@@ -19,6 +20,10 @@
   }
   .profile-actions {
     display: flex;
+
+    .toggle-assign {
+      color: $pink-100;
+    }
     .test {
       width: 100%;
       display: flex;
@@ -26,7 +31,6 @@
       align-items: center;
       justify-content: flex-end;
       flex-direction: column;
-
       .req-container {
         // justify-content: flex-end;
         // display: flex;
