@@ -11,6 +11,7 @@ import StudentProfile from "../../pages/StudentProfile"
 import { DashboardHeader } from "../../lib"
 import { Sidebar } from "../../layout"
 import CoachRoute from "../../CoachRoute"
+import MyStudents from "../../pages/MyStudents"
 
 import { loadAuthDataFromLocalStorage } from "../../../store"
 import { fetchUser, fetchRequirements } from "../../../actions"
@@ -47,6 +48,10 @@ const DashboardLayout = ({ match }) => {
           <CoachRoute
             path={`${match.path}students`}
             component={FindStudent}
+          ></CoachRoute>
+          <CoachRoute
+            path={`${match.path}my-students`}
+            component={MyStudents}
           ></CoachRoute>
           <Route path={`${match.path}profile`} component={MyAccount}></Route>
           <Route
