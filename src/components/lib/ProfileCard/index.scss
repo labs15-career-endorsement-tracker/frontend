@@ -4,15 +4,16 @@
   margin: 0 auto;
   color: $black;
   font-weight: 600;
-
-  line-height: 2.2rem;
-  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  background: $blue-100;
+  border-radius: 15px;
+  line-height: 2.5rem;
+  padding: 2.5rem 1.5rem 0.5rem 1.5rem;
   .profile-track {
     color: $blue-200;
     width: 100%;
   }
   .profile-first {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .test {
     display: flex;
