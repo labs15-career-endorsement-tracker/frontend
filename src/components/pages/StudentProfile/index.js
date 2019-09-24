@@ -17,7 +17,7 @@ const StudentProfile = () => {
     getUserById(token, studentId).then(student => {
       setStudent(student)
     })
-  })
+  }, [studentId])
 
   return (
     <div>
