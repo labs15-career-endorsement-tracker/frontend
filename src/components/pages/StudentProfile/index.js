@@ -306,6 +306,7 @@ const StudentProfile = () => {
         <ProfileCard
           student={student}
           requirements={requirements}
+          showFull="true"
         ></ProfileCard>
       )}
     </div>
