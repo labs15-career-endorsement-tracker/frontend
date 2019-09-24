@@ -2,8 +2,11 @@
 
 .find-student-page {
   header {
-    border-bottom: 1px solid $green-500;
     margin-bottom: 2rem;
+    color: $white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     h3 {
       padding: 0 0 1rem;
       font-size: 3.8rem;
