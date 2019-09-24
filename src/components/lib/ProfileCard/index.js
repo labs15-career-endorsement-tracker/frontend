@@ -11,9 +11,8 @@ const ProfileCard = ({ student, requirements, showFull }) => {
   return (
     <div className="big-container">
       <p className="profile-track">Full-Stack Web Development</p>
-      <p className="profile-first">{student.first_name}</p>{" "}
+      <p className="profile-first">{student.first_name}</p>
       <p className="profile-last">{student.last_name}</p>
-      {/* <p>{student.email}</p> */}
       <div className="test">
         {showFull === "false" ? (
           <div className="overall-progress" key={uuid()}>
