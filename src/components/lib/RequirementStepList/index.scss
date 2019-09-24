@@ -22,41 +22,6 @@
   .step-description {
     padding: 0 0.4rem 1rem;
   }
-  .list-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0 1rem;
-    @media screen and (max-width: $breakpoint-small) {
-    }
-  }
-
-  .icon-title {
-    display: flex;
-    align-items: center;
-    @media screen and(max-width: $breakpoint-small) {
-      width: 100%;
-    }
-  }
-
-  .fa-clipboard-list-check {
-    color: $green-500;
-    font-size: 3.5rem;
-    padding-right: 0.3em;
-    @media screen and(max-width: $breakpoint-small) {
-      display: none;
-    }
-  }
-  .title {
-    background: none;
-    color: $green-500;
-    font-size: 3.2rem;
-    font-weight: 800;
-    color: $green-500;
-    @media screen and(max-width: $breakpoint-small) {
-      padding-top: 0;
-    }
-  }
 
   // .percentage {
   //   width: 25%;
