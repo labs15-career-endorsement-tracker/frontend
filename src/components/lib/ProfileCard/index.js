@@ -29,7 +29,9 @@ const ProfileCard = ({ student, requirements, showFull }) => {
             </div>
             {requirements.map(req => (
               <div className="progress-card" key={uuid()}>
-                <p className="req-title">{req.title}</p>
+                <div className="req-title">
+                  <p>{req.title}</p>
+                </div>
                 <div className="progress-ring">
                   <ProgressRing progressValue={req.progress}></ProgressRing>
                 </div>

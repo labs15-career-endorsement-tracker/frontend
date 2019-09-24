@@ -17,23 +17,15 @@
     .profile-track {
       color: $blue-200;
     }
-    .profile-first {
-      font-size: 3rem;
-    }
   }
   .toggle-assign {
     color: $pink-100;
   }
-  .test {
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-  }
 }
 
+.req-title {
+  margin: 1rem;
+}
 .profile-card-container {
   width: 25%;
 }
@@ -47,7 +39,6 @@
 
 .progress-card {
   width: 33%;
-  margin: 1rem;
   align-items: center;
 }
 
@@ -58,4 +49,5 @@
 .progress-ring {
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
