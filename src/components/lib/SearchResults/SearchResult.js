@@ -31,13 +31,13 @@ const SearchResult = ({ user }) => {
           {user.isPinnedBy === null 
           ? 
           <div className='pin-status'>
-            <p>Pin Student</p>
+            <p className="label">Pin Student</p>
             <i className={`fad fa-thumbtack`}></i> 
           </div>
           : 
           <div className='pin-status'>
-            <p>Coach: {user.isPinnedBy}</p>
-            <i className="far fa-times-circle"></i>
+            <p className="label"><span className="coach-label">Coach: </span>{user.isPinnedBy}</p>
+            <i className={`fad fa-thumbtack`}></i>
           </div>
           }
         </div>

@@ -69,6 +69,23 @@
 .pin-status {
   display: flex;
   align-items: center;
+  font-family: $font-stack-body;
+  
+  // &:active {
+  //   animation-name: load;
+  //   animation-duration: 4s;
+  // }
+}
+
+// @keyframes load {
+//   from {opacity: 0;}
+//   to {opacity: 1;}
+// }
+
+.coach-label {
+  font-family: $font-stack-heading;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .search-result i {
@@ -83,3 +100,5 @@
 .fa-thumbtack:active {
     transform: translateY(4px);
   }
+
+
