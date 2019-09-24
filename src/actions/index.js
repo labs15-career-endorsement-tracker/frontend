@@ -6,7 +6,8 @@ import {
   getSteps,
   toggleStepComplete,
   getResources,
-  getUserById
+  getUserById,
+  toggleStudent
 } from "../api"
 
 export const createUser = createAsyncAction("CREATE_USER", addUser)
@@ -23,3 +24,8 @@ export const fetchSteps = createAsyncAction("FETCH_STEPS", getSteps)
 export const toggleStep = createAsyncAction("TOGGLE_STEP", toggleStepComplete)
 
 export const fetchUser = createAsyncAction("FETCH_USER", getUserById)
+
+export const togglePinnedStudent = createAsyncAction(
+  "TOGGLE_STUDENT",
+  toggleStudent
+)

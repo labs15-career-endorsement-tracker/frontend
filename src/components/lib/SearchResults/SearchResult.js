@@ -1,7 +1,20 @@
 import React from "react"
+import { useDispatch } from "react-redux"
 import { NavLink } from "react-router-dom"
+import { loadAuthDataFromLocalStorage } from "../../../store"
+
+import { togglePinnedStudent } from "../../../actions"
 
 const SearchResult = ({ user }) => {
+  const dispatch = useDispatch()
+
+  const { token } = loadAuthDataFromLocalStorage()
+
+  const handleToggle = e => {
+    e.preventDefault()
+    dispatch(togglePinnedStudent(token, user.id))
+  }
+
   return (
     <NavLink to={`/student/${user.id}`}>
       <li className="search-result">
@@ -13,7 +26,7 @@ const SearchResult = ({ user }) => {
           <span>{user.progress || 0}</span>
           <strong>Endorsed</strong>
         </p>
-        <i className={`fas fa-user-plus`}></i>
+        <i onClick={handleToggle} className={`fas fa-user-plus`}></i>
       </li>
     </NavLink>
   )
