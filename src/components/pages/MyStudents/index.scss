@@ -4,9 +4,9 @@
   flex-wrap: wrap;
   flex-grow: 1;
   width: 100%;
+  justify-content: center;
   .student-profile-card {
     display: flex;
-    margin: 1rem;
-    width: 25%;
+    margin: 5rem;
   }
 }
