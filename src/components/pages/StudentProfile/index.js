@@ -8,9 +8,8 @@ import ProfileCard from "../../lib/ProfileCard"
 
 const StudentProfile = () => {
   const user = useSelector(state => state.userReducer.user)
-  const location = history.location.pathname
-  const [...values] = location.split("/")
-  const studentId = Number(values.length - 1)
+  const [...values] = history.location.pathname.split("/")
+  const studentId = Number(values[2])
   const [student, setStudent] = useState()
 
   useEffect(() => {
