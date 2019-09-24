@@ -18,32 +18,29 @@
       font-size: 2.8rem;
     }
   }
-  .profile-actions {
-    display: flex;
 
-    .toggle-assign {
-      color: $pink-100;
+  .toggle-assign {
+    color: $pink-100;
+  }
+  .test {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    .req-container {
+      // justify-content: flex-end;
+      // display: flex;
     }
-    .test {
-      width: 100%;
-      display: flex;
-      margin: 0 auto;
-      align-items: center;
-      justify-content: flex-end;
-      flex-direction: column;
-      .req-container {
-        // justify-content: flex-end;
-        // display: flex;
-      }
-      .req-title {
-        padding: 1rem;
-      }
-      .progress-card {
-        margin: 2rem;
-      }
-      .progress-number {
-        color: $black;
-      }
+    .req-title {
+      padding: 1rem;
+    }
+    .progress-card {
+      margin: 2rem;
+    }
+    .progress-number {
+      color: $black;
     }
   }
 }
@@ -54,4 +51,5 @@
 
 .overall-progress {
   width: 25%;
+  // display: flex;
 }
