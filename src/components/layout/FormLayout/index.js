@@ -21,6 +21,7 @@ const FormLayout = ({ match, image = defaultHeroImgData }) => {
   return (
     <main>
       <div className="l-two-column">
+        <div className="sign-in-banner">Banner</div>
         <div className="left">
           <Logo></Logo>
           <Switch>
