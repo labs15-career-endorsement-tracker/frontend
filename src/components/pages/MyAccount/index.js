@@ -9,6 +9,8 @@ import { fetchUser, fetchRequirements, logout } from "../../../actions"
 import { history, clearAuthDataFromLocalStorage } from "../../../store"
 import { updateUserCalendly } from "../../../api"
 
+import {DashboardContent, ContentHeader} from "../../layout"
+
 const MyAccount = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
@@ -36,6 +38,12 @@ const MyAccount = () => {
   }
 
   return (
+    <DashboardContent>
+      <ContentHeader
+        title={"My Account"}
+        prompt={"View or update your account details here"}
+        progress={user && !user.is_admin ? user.progress : -1 }
+      ></ContentHeader>
     <div className="myaccount-container">
       <div className="user-info-container">
         <div className="account-text">
@@ -54,10 +62,13 @@ const MyAccount = () => {
               <td className="labels">Last name</td>
               <td className="content">{user.last_name}</td>
             </tr>
-            <tr>
-              <td className="labels">Track</td>
-              <td className="content">{user.tracks_title}</td>
-            </tr>
+            {
+              !user.is_admin && (<tr>
+                <td className="labels">Track</td>
+                <td className="content">{user.tracks_title}</td>
+              </tr>)
+            }
+            
           </tbody>
         </table>
         <NavLink to="/auth/reset-password">Change Password</NavLink>
@@ -83,6 +94,7 @@ const MyAccount = () => {
         </form>
       </div>
     </div>
+    </DashboardContent>
   )
 }
 

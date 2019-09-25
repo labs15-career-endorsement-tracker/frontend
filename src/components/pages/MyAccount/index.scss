@@ -48,11 +48,36 @@
   }
   .account-details {
     width: 50%;
+
     .labels {
       width: 25%;
+      margin: 0 1rem;
     }
     .content {
       width: 75%;
+      background: none;
+      padding: 1rem 0;
+    }
+  }
+  a {
+    margin-right: 1rem;
+  }
+  button {
+    background: $blue-300;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 0 1rem;
+  }
+  form {
+    margin: 1rem auto;
+    label {
+      margin-right: 1rem;
+    }
+    input {
+      padding: 1rem;
+      border-radius: 5px;
     }
   }
 }
