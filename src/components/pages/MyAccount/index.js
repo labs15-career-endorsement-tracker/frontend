@@ -28,6 +28,14 @@ const MyAccount = () => {
     })
   }
 
+  const handleSubmit = async e => {
+    e.preventDefault()
+    const { token } = loadAuthDataFromLocalStorage()
+
+    await updateUserCalendly(token, userData.calendly_link)
+
+  }
+
   return (
     <div className="myaccount-container">
       <div className="user-info-container">
@@ -64,7 +72,7 @@ const MyAccount = () => {
           Logout
         </button>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Calendly Link</label>
           <input
             name="calendly_link"
@@ -72,6 +80,7 @@ const MyAccount = () => {
             value={userData.calendly_link}
             onChange={handleChange}
           />
+          <button>Upload</button>
         </form>
 
       </div>
