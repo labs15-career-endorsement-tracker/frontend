@@ -10,7 +10,7 @@ import Forbidden from "../../pages/Forbidden"
 import StudentProfile from "../../pages/StudentProfile"
 import { DashboardHeader } from "../../lib"
 import { Sidebar } from "../../layout"
-import CoachRoute from "../../CoachRoute"
+import { CoachRoute, StudentRoute, PublicRoute } from "../../routes"
 import MyStudents from "../../pages/MyStudents"
 
 import { loadAuthDataFromLocalStorage } from "../../../store"
@@ -37,14 +37,14 @@ const DashboardLayout = ({ match }) => {
       <Sidebar></Sidebar>
       <main className="dashboard-content">
         <Switch>
-          <Route
+          <StudentRoute
             path={`${match.path}requirements/:id`}
             component={RequirementDetails}
-          ></Route>
-          <Route
+          ></StudentRoute>
+          <StudentRoute
             path={`${match.path}requirements`}
             component={RequirementsList}
-          ></Route>
+          ></StudentRoute>
           <CoachRoute
             path={`${match.path}students`}
             component={FindStudent}
@@ -54,11 +54,11 @@ const DashboardLayout = ({ match }) => {
             component={MyStudents}
           ></CoachRoute>
           <Route path={`${match.path}profile`} component={MyAccount}></Route>
-          <Route
+          <CoachRoute
             path={`${match.path}student`}
             component={StudentProfile}
-          ></Route>
-          <Route path="/forbidden" component={Forbidden}></Route>
+          ></CoachRoute>
+          <PublicRoute path="/forbidden" component={Forbidden}></PublicRoute>
           <Redirect
             to={
               user.is_admin
