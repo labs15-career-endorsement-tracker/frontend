@@ -100,13 +100,45 @@
   //   margin: 0 1rem;
   // }
   form {
-    margin: 1rem auto;
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $breakpoint-medium) {
+      flex-direction: row;
+      // justify-content: space-between;
+      align-items: center;
+    }
     label {
-      margin-right: 1rem;
+      // text-align: center;
+      display: block;
+
+      line-height: 1;
+      @media screen and (min-width: $breakpoint-medium) {
+        text-align: left;
+        margin-right: 1rem;
+      }
     }
     input {
       padding: 1rem;
       border-radius: 5px;
+      border: 1px solid $green-400;
+      margin: 1rem 0;
+    }
+    div {
+      width: 100%;
+      // margin: auto;
+      @media screen and (min-width: $breakpoint-medium) {
+        width: auto;
+      }
+      button {
+        // display: block;
+        // margin: auto;
+        @media screen and (min-width: $breakpoint-medium) {
+          display: inline-block;
+          margin: 0;
+        }
+      }
     }
   }
 }

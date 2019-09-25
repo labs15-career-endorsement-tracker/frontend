@@ -15,7 +15,6 @@ const MyAccount = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
   const [userData, setUserData] = useState({ calendly_link: "" })
-  console.log(user)
 
   useEffect(() => {
     const { userId, token } = loadAuthDataFromLocalStorage()
@@ -32,9 +31,13 @@ const MyAccount = () => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const { token } = loadAuthDataFromLocalStorage()
-
+    const { token, userId } = loadAuthDataFromLocalStorage()
     await updateUserCalendly(token, userData.calendly_link)
+    dispatch(fetchUser(token, userId))
+    setUserData({
+      ...userData,
+      calendly_link: ""
+    })
   }
   console.log(user)
   return (
@@ -44,47 +47,66 @@ const MyAccount = () => {
         prompt={"View or update your account details here"}
         progress={user && !user.is_admin ? user.progress : -1}
       ></ContentHeader>
-    <div className="myaccount-container">
-      <div className="user-info-container">
-        <div className="account-text">
-          <h1>{user.first_name}</h1>
-          <p>{user.last_name}</p>
+      <div className="myaccount-container">
+        <div className="user-info-container">
+          <div className="account-text">
+            <h1>{user.first_name}</h1>
+            <p>{user.last_name}</p>
           </div>
           <p>
             {user.tracks_title}
           </p>
         </div>
-      
-      <div className="account-info">
-        {user.coach ? (<div className="coach-calendly">
-          <p>Your coach is <span className="coach-name">Coach Name</span></p>
-          <button>Schedule a meeting</button>
-        </div>) : <p>When you have been assigned to a coach, you'll be able to schedule a meeting here</p>}
-        <NavLink to="/auth/reset-password">Change Password</NavLink>
-        <button
-          onClick={() => {
-            clearAuthDataFromLocalStorage()
-            dispatch(logout())
-            setTimeout(() => history.push("/"), 300)
-          }}
-        >
-          Logout
-        </button>
 
-          {user.is_admin ? (
+        <div className="account-info">
+        <div className="coach-calendly">
+        {user.is_admin ? (
             <form onSubmit={handleSubmit}>
-              <label>Calendly Link</label>
+              <label htmlFor="coach-calendly-link">Update Your Calendly Link</label>
+              {/* <div> */}
               <input
+              id="coach-calendly-link"
                 name="calendly_link"
-                placeholder={user.calendly_link}
+                placeholder={user.calendly_link || "Enter Your Calendly Link"}
                 value={userData.calendly_link}
                 onChange={handleChange}
               />
               <button>Upload</button>
+              {/* </div> */}
             </form>
-          ) : (
-            <h2>Coach calendly Link</h2>
-          )}
+          ) :
+            user.coach ?
+            (
+              <>
+              <p>Your coach is <span className="coach-name">Coach Name</span></p>
+              <button>Schedule a meeting</button>
+              </>
+            )
+            :
+            <p>
+              When you have been assigned to a coach, you'll be able to schedule a meeting here
+            </p>
+          }
+          </div>
+          <div className="password-logout">
+            <div className="reset-password">
+            <i className="fas fa-key"></i>
+            <NavLink to="/auth/reset-password">Change Password</NavLink>
+            </div>
+            <div className="logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <button
+            onClick={() => {
+              clearAuthDataFromLocalStorage()
+              dispatch(logout())
+              setTimeout(() => history.push("/"), 300)
+            }}
+          >
+            Logout
+          </button> 
+            </div>
+
+          </div> 
         </div>
       </div>
 
