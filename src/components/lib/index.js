@@ -5,7 +5,6 @@ import SelectFormField from "./SelectFormField"
 import FormLayout from "../layout/FormLayout"
 import Form from "./Form"
 import FormButton from "./FormButton"
-import DashboardHeader from "./DashboardHeader"
 import RequirementCard from "./RequirementCard"
 import StepGauge from "./StepGauge"
 import ResourceCard from "./ResourceCard"
@@ -30,7 +29,6 @@ export {
   Form,
   Logo,
   FormButton,
-  DashboardHeader,
   RequirementCard,
   StepGauge,
   ResourceCard,
