@@ -71,16 +71,19 @@ const MyAccount = () => {
           Logout
         </button>
 
-        <form onSubmit={handleSubmit}>
-          <label>Calendly Link</label>
-          <input
-            name="calendly_link"
-            placeholder={user.calendly_link}
-            value={userData.calendly_link}
-            onChange={handleChange}
-          />
-          <button>Upload</button>
-        </form>
+        {user.is_admin ? 
+           <form onSubmit={handleSubmit}>
+           <label>Calendly Link</label>
+           <input
+             name="calendly_link"
+             placeholder={user.calendly_link}
+             value={userData.calendly_link}
+             onChange={handleChange}
+           />
+           <button>Upload</button>
+         </form>
+          : <></>} 
+       
       </div>
     </div>
   )
