@@ -6,7 +6,6 @@ import FormLayout from "../layout/FormLayout"
 import Form from "./Form"
 import FormButton from "./FormButton"
 import RequirementCard from "./RequirementCard"
-import StepGauge from "./StepGauge"
 import ResourceCard from "./ResourceCard"
 import ResourceList from "./ResourceList"
 import SupportLinks from "./SupportLinks"
@@ -30,7 +29,6 @@ export {
   Logo,
   FormButton,
   RequirementCard,
-  StepGauge,
   ResourceCard,
   ResourceList,
   SupportLinks,
