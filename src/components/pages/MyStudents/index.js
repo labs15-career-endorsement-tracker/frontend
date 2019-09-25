@@ -5,6 +5,10 @@ import { Link } from "react-router-dom"
 import ProfileCard from "../../lib/ProfileCard"
 import FindStudent from "../../pages/FindStudent"
 
+import { ContentHeader, DashboardContent } from "../../layout"
+
+import {} from "../../lib"
+
 import "./index.scss"
 
 const MyStudents = () => {
@@ -287,6 +291,12 @@ const MyStudents = () => {
   }, [dispatch])
   return (
     <>
+    <DashboardContent>
+      <ContentHeader
+        title={"Find a Student"}
+        prompt={ "Search for a student by name"}
+        progress={-1}
+      ></ContentHeader>
       <FindStudent />
       <section className="my-pinned-students">
         {pinnedStudents.map(student => (
@@ -304,6 +314,7 @@ const MyStudents = () => {
           </div>
         ))}
       </section>
+      </DashboardContent>
     </>
   )
 }
