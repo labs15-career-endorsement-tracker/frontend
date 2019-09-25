@@ -56,6 +56,11 @@ const MyAccount = () => {
         </div>
       
       <div className="account-info">
+        {user.coach ? (<div className="coach-calendly">
+          <p>Your coach is <span className="coach-name">Coach Name</span></p>
+          <button>Schedule a meeting</button>
+        </div>) : <p>When you have been assigned to a coach, you'll be able to schedule a meeting here</p>}
+        
         {/* <table className="account-details">
           <tbody>
             <tr>
