@@ -1,18 +1,12 @@
 import React from "react"
 
-import { withRouter, Redirect } from "react-router"
+import { withRouter } from "react-router"
 
 import "./index.scss"
 
 import { RequirementStep } from "../../lib"
 
-
-const StepList = ({
-  requirement,
-  steps,
-  toggleStep,
-  fetchUser
-}) => {
+const StepList = ({ requirement, steps, toggleStep, fetchUser }) => {
   // if (!requirement) return <Redirect to="/requirements"></Redirect>
   return (
     <div className="step-list-container">
@@ -32,6 +26,4 @@ const StepList = ({
   )
 }
 
-
-
-export default (withRouter(StepList))
+export default withRouter(StepList)
