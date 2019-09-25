@@ -9,46 +9,45 @@
   line-height: 2.5rem;
   flex-direction: column;
   padding: 2.5rem 1rem;
-  border: 1px solid purple;
+  .temp-container {
+    width: 100%;
+  }
 
   .profile-info {
     .profile-track {
       color: $blue-200;
     }
-    .profile-first {
-      font-size: 3rem;
-    }
   }
   .toggle-assign {
     color: $pink-100;
   }
-  .test {
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    .req-container {
-      // display: flex;
-      // justify-content: flex-end;
-    }
-    .req-title {
-      padding: 1rem;
-    }
-    .progress-card {
-      margin: 2rem;
-    }
-    .progress-number {
-      color: $black;
-    }
-  }
 }
 
+.req-title {
+  margin: 1rem;
+}
 .profile-card-container {
   width: 25%;
 }
 
 .overall-progress {
-  width: 10%;
+  width: 25%;
+}
+.progress-number {
+  color: $black;
+}
+
+.progress-card {
+  width: 33%;
+  align-items: center;
+}
+
+.req-container {
+  display: flex;
+}
+
+.progress-ring {
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
 }

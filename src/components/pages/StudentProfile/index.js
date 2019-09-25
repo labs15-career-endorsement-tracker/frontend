@@ -4,6 +4,8 @@ import { getUserById } from "../../../api"
 
 import { history, loadAuthDataFromLocalStorage } from "../../../store"
 
+import "./index.scss"
+
 import ProfileCard from "../../lib/ProfileCard"
 import { fetchRequirements } from "../../../actions"
 
@@ -293,7 +295,7 @@ const StudentProfile = () => {
   }, [studentId, dispatch])
 
   return (
-    <div>
+    <div className="student-profile-container">
       {!student ? (
         <h1>Loading</h1>
       ) : (
