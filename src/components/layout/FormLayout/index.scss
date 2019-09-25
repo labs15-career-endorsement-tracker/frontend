@@ -29,7 +29,7 @@
   flex-direction: column;
   width: 90%;
   min-height: 60vh;
-  padding: 6rem 5rem 3rem;
+  padding: 6rem 5rem 4rem;
   margin: 3rem auto;
   @media screen and (min-width: $breakpoint-tiny) {
     width: 70%;
@@ -39,12 +39,11 @@
   @media screen and (min-width: $breakpoint-medium) {
     width: 40%;
     position: absolute;
-
     top: 15%;
     left: 15%;
   }
   @media screen and (min-width: $breakpoint-large) {
-    width: 30%;
+    width: 35%;
     left: 25%;
   }
 }
@@ -85,6 +84,6 @@
   text-align: center;
   color: $blue-300;
   font-weight: 600;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   display: block;
 }
