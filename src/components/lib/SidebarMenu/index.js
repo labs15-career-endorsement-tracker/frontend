@@ -46,13 +46,13 @@ const SidebarMenu = () => {
           [],
           "coach"
         ),
-        new MenuItemData(
-          "My Pinned Students",
-          "fas fa-thumbtack",
-          "/my-students",
-          [],
-          "coach"
-        ),
+        // new MenuItemData(
+        //   "My Pinned Students",
+        //   "fas fa-thumbtack",
+        //   "/my-students",
+        //   [],
+        //   "coach"
+        // ),
         new MenuItemData("Account", "fas fa-user-circle", "/profile", [])
       ].filter(data => {
         switch (data.user) {

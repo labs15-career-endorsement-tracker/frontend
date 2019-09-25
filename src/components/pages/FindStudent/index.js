@@ -33,10 +33,10 @@ const FindStudent = () => {
   }
   return (
     <section className="find-student-page">
-      <header>
+      {/* <header>
         <h3>Find a Student</h3>
         <p>Search for a student by name</p>
-      </header>
+      </header> */}
       <form onSubmit={e => handleSubmit(e)}>
         <Debounce time="400" handler="onChange">
           <input

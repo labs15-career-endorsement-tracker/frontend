@@ -36,7 +36,7 @@ const MyAccount = () => {
 
     await updateUserCalendly(token, userData.calendly_link)
   }
-
+  console.log(user)
   return (
     <DashboardContent>
       <ContentHeader
@@ -47,11 +47,26 @@ const MyAccount = () => {
       <div className="myaccount-container">
         <div className="user-info-container">
           <div className="account-text">
-            <h1>Account Info</h1>
-            {/* <p>Update your account settings</p> */}
+            <h1>{user.first_name}</h1>
+            <p>{user.last_name}</p>
           </div>
+          <p>{user.tracks_title}</p>
         </div>
+
         <div className="account-info">
+          {user.coach ? (
+            <div className="coach-calendly">
+              <p>
+                Your coach is <span className="coach-name">Coach Name</span>
+              </p>
+              <button>Schedule a meeting</button>
+            </div>
+          ) : (
+            <p>
+              When you have been assigned to a coach, you'll be able to schedule
+              a meeting here
+            </p>
+          )}
           <NavLink to="/auth/reset-password">Change Password</NavLink>
           <button
             onClick={() => {
