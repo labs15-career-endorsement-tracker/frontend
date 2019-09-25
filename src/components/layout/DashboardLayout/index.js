@@ -42,12 +42,12 @@ const DashboardLayout = ({ match }) => {
           path={`${match.path}requirements`}
           component={RequirementsList}
         ></StudentRoute>
-        <CoachRoute
+        {/* <CoachRoute
           path={`${match.path}students`}
           component={FindStudent}
-        ></CoachRoute>
+        ></CoachRoute> */}
         <CoachRoute
-          path={`${match.path}my-students`}
+          path={`${match.path}students`}
           component={MyStudents}
         ></CoachRoute>
         <Route path={`${match.path}profile`} component={MyAccount}></Route>
