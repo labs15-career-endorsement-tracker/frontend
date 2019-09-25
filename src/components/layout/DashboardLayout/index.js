@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux"
 import MyAccount from "../../pages/MyAccount"
 import RequirementsList from "../../pages/RequirementsList"
 import RequirementDetails from "../../pages/RequirementDetails"
-import FindStudent from "../../pages/FindStudent"
 import Forbidden from "../../pages/Forbidden"
 import StudentProfile from "../../pages/StudentProfile"
 import { Sidebar } from "../../layout"
@@ -42,10 +41,6 @@ const DashboardLayout = ({ match }) => {
           path={`${match.path}requirements`}
           component={RequirementsList}
         ></StudentRoute>
-        {/* <CoachRoute
-          path={`${match.path}students`}
-          component={FindStudent}
-        ></CoachRoute> */}
         <CoachRoute
           path={`${match.path}students`}
           component={MyStudents}

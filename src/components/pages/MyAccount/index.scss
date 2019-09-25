@@ -10,6 +10,26 @@
   background: $white;
   color: $black;
   padding: 5rem;
+  button {
+    font-family: Barlow Condensed;
+    background: #aef1c0;
+    color: #04591b;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .coach-calendly {
+    display: flex;
+    p {
+      margin-right: 1rem;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
   .user-info-container {
     display: flex;
     justify-content: space-between;
@@ -17,6 +37,7 @@
     align-content: center;
     padding: 1rem 0;
     border-bottom: 2px solid $blue-200;
+    margin-bottom: 1rem;
     h1 {
       font-size: 3.2rem;
       font-weight: 800;
@@ -70,14 +91,14 @@
   a {
     margin-right: 1rem;
   }
-  button {
-    background: $blue-300;
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    margin: 0 1rem;
-  }
+  // button {
+  //   background: $blue-300;
+  //   color: white;
+  //   border: none;
+  //   padding: 1rem;
+  //   border-radius: 5px;
+  //   margin: 0 1rem;
+  // }
   form {
     margin: 1rem auto;
     label {
