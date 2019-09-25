@@ -22,11 +22,23 @@ const SearchResult = ({ user }) => {
           <h4>{user.first_name}</h4>
           <small>{user.last_name}</small>
         </div>
-        <p className="progress">
+        {/* <p className="progress">
           <span>{user.progress || 0}</span>
           <strong>Endorsed</strong>
-        </p>
-        <i onClick={handleToggle} className={`fas fa-user-plus`}></i>
+        </p> */}
+        <div className="pin-status">
+          {user.isPinnedBy === null ? (
+            <div className="has-coach">
+              <p className="coach-name">Pin Student</p>
+            </div>
+          ) : (
+            <div className="has-coach">
+              <p className="coach-label">Coach: </p>
+              <p className="coach-name"> {user.isPinnedBy}</p>
+            </div>
+          )}
+          <i onClick={handleToggle} className={`fad fa-thumbtack`}></i>
+        </div>
       </li>
     </NavLink>
   )

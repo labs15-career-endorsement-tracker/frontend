@@ -24,9 +24,12 @@
       display: block;
       width: 100%;
       padding: 1rem 0;
+      margin-bottom: 0.4em;
       font-size: 1.6rem;
       border: none;
       outline: none;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       &:focus {
         border: 0.2rem solid $green-500;
       }

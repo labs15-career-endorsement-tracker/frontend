@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react"
+import { useSelector } from "react-redux"
 import { searchAll } from "../../../api"
 import { Debounce } from "react-throttle"
 
@@ -9,6 +10,9 @@ import "./index.scss"
 const FindStudent = () => {
   const [searchField, setSearchField] = useState("")
   const [foundStudents, setFoundStudents] = useState([])
+  const pinnedStudents = useSelector(
+    state => state.studentReducer.pinnedStudents
+  )
 
   const handleChanges = e => {
     setSearchField(e.target.value)
@@ -21,11 +25,11 @@ const FindStudent = () => {
 
   useEffect(() => {
     search()
-  }, [searchField, search])
+  }, [searchField, search, pinnedStudents])
 
   const handleSubmit = async e => {
     e.preventDefault()
-    search(searchField)
+    search()
   }
   return (
     <section className="find-student-page">

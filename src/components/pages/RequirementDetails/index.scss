@@ -1,16 +1,83 @@
 @import "../../../styles/variables";
 
 .requirement-detail-container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  @media screen and(max-width: $breakpoint-medium) {
-    flex-direction: column;
-    align-items: center;
-    left: 0;
+  width: 100%;
+  .resources-steps {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    @media screen and(max-width: $breakpoint-medium) {
+      flex-direction: column;
+      align-items: center;
+      left: 0;
+      width: 100%;
+    }
   }
-  @media screen and(max-width: $breakpoint-medium) {
+
+  .list-header {
+    color: white;
     width: 100%;
+    text-align: center;
+    @media screen and (min-width: $breakpoint-medium) {
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    @media screen and (min-width: $breakpoint-large) {
+    }
+    .step-description {
+      @media screen and (min-width: $breakpoint-medium) {
+        align-self: center;
+        grid-column: 2 / span 3;
+      }
+
+      .title {
+        font-size: 3.2rem;
+        font-weight: 800;
+        @media screen and (min-width: $breakpoint-large) {
+          font-size: 4rem;
+        }
+      }
+      p {
+        padding-top: 1rem;
+        line-height: 1.2;
+
+        @media screen and (min-width: $breakpoint-large) {
+          font-size: 2rem;
+        }
+      }
+    }
+    .progress-ring {
+      margin: auto;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 3rem;
+      font-size: 3rem;
+      max-width: 150px;
+      @media screen and (min-width: $breakpoint-medium) {
+        grid-column: 5 / span 1;
+        padding: 2rem;
+        font-size: 3.5rem;
+        justify-self: end;
+        margin: 0;
+      }
+      @media screen and (min-width: $breakpoint-large) {
+        padding: 3rem;
+        font-size: 4.5rem;
+        max-width: 200px;
+      }
+      .progress-number,
+      .progress-label {
+        position: relative;
+        top: -0.2rem;
+        @media screen and (min-width: $breakpoint-medium) {
+        }
+        @media screen and (min-width: $breakpoint-large) {
+          top: 0;
+          // top: -0.3rem;
+        }
+      }
+    }
   }
 }
