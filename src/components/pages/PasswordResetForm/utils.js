@@ -1,6 +1,6 @@
 import { toast } from "react-toastify"
 
-import { updateUserPassword } from "../../../api"
+import { updateUser } from "../../../api"
 import queryString from "query-string"
 import { history } from "../../../store"
 
@@ -8,7 +8,7 @@ export const handleSubmit = async (values, { setSubmitting, resetForm }) => {
   const key = queryString.parse(history.location.search)
   const authToken = key.token
   try {
-    await updateUserPassword(authToken, values.password)
+    await updateUser(authToken, values.password)
     resetForm()
     history.push("/auth/sign-in")
   } catch (error) {

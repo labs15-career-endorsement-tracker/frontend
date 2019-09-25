@@ -10,7 +10,7 @@ export const getUserById = async (authToken, userId) => {
   return data
 }
 
-export const updateUserPassword = async (authToken, password) => {
-  const { data } = await requestWithAuth(authToken).put("/users", { password })
+export const updateUser = async (authToken, userData) => {
+  const { data } = await requestWithAuth(authToken).put("/users", { userData })
   return data
 }
