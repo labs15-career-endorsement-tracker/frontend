@@ -13,6 +13,20 @@
   .user-info-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid $blue-200;
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+    }
+    p {
+      font-weight: 800;
+      line-height: 1;
+    }
+    .account-text {
+    }
     .meter-wrapper {
       display: flex;
       justify-content: flex-end;
@@ -37,12 +51,6 @@
       .percentage {
         width: 100%;
         max-width: 200px;
-      }
-    }
-    .account-text {
-      h1 {
-        font-size: 3.2rem;
-        font-weight: 800;
       }
     }
   }
