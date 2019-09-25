@@ -9,7 +9,7 @@ import { fetchUser, fetchRequirements, logout } from "../../../actions"
 import { history, clearAuthDataFromLocalStorage } from "../../../store"
 import { updateUserCalendly } from "../../../api"
 
-import {DashboardContent, ContentHeader} from "../../layout"
+import { DashboardContent, ContentHeader } from "../../layout"
 
 const MyAccount = () => {
   const dispatch = useDispatch()
@@ -42,61 +42,43 @@ const MyAccount = () => {
       <ContentHeader
         title={"My Account"}
         prompt={"View or update your account details here"}
-        progress={user && !user.is_admin ? user.progress : -1 }
+        progress={user && !user.is_admin ? user.progress : -1}
       ></ContentHeader>
-    <div className="myaccount-container">
-      <div className="user-info-container">
-        <div className="account-text">
-          <h1>Account Info</h1>
-          {/* <p>Update your account settings</p> */}
+      <div className="myaccount-container">
+        <div className="user-info-container">
+          <div className="account-text">
+            <h1>Account Info</h1>
+            {/* <p>Update your account settings</p> */}
+          </div>
+        </div>
+        <div className="account-info">
+          <NavLink to="/auth/reset-password">Change Password</NavLink>
+          <button
+            onClick={() => {
+              clearAuthDataFromLocalStorage()
+              dispatch(logout())
+              setTimeout(() => history.push("/"), 300)
+            }}
+          >
+            Logout
+          </button>
+
+          {user.is_admin ? (
+            <form onSubmit={handleSubmit}>
+              <label>Calendly Link</label>
+              <input
+                name="calendly_link"
+                placeholder={user.calendly_link}
+                value={userData.calendly_link}
+                onChange={handleChange}
+              />
+              <button>Upload</button>
+            </form>
+          ) : (
+            <h2>Coach calendly Link</h2>
+          )}
         </div>
       </div>
-      <div className="account-info">
-        <table className="account-details">
-          <tbody>
-            <tr>
-              <td className="labels">First name</td>
-              <td className="content">{user.first_name}</td>
-            </tr>
-            <tr>
-              <td className="labels">Last name</td>
-              <td className="content">{user.last_name}</td>
-            </tr>
-            {
-              !user.is_admin && (<tr>
-                <td className="labels">Track</td>
-                <td className="content">{user.tracks_title}</td>
-              </tr>)
-            }
-            
-          </tbody>
-        </table>
-        <NavLink to="/auth/reset-password">Change Password</NavLink>
-        <button
-          onClick={() => {
-            clearAuthDataFromLocalStorage()
-            dispatch(logout())
-            setTimeout(() => history.push("/"), 300)
-          }}
-        >
-          Logout
-        </button>
-
-        {user.is_admin ? 
-           <form onSubmit={handleSubmit}>
-           <label>Calendly Link</label>
-           <input
-             name="calendly_link"
-             placeholder={user.calendly_link}
-             value={userData.calendly_link}
-             onChange={handleChange}
-           />
-           <button>Upload</button>
-         </form>
-          : <h2>Coach calendly Link</h2>} 
-       
-      </div>
-    </div>
     </DashboardContent>
   )
 }
