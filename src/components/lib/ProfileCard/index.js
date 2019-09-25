@@ -1,7 +1,7 @@
 import React from "react"
 import { ProgressRing } from "../../lib"
 import uuid from "uuid/v4"
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { loadAuthDataFromLocalStorage } from "../../../store"
 
 import { togglePinnedStudent } from "../../../actions"
