@@ -3,28 +3,19 @@
 .dashboard {
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 30% 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "sidebar header header header header"
+      "sidebar content content content content"
       "sidebar content content content content";
   }
-}
 
-.dashboard .dashboard-content {
-  padding: 1.6rem;
-  margin: auto;
-  background: $blue-300;
-
-  @media screen and (min-width: 480px) {
-    max-width: 75%;
-  }
-  @media screen and (min-width: 540px) {
-    max-width: 60%;
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-template-columns: 25% 1fr 1fr 1fr 1fr;
   }
 
-  @media screen and (min-width: 768px) {
-    max-width: 100%;
-    margin: 0;
-    grid-area: content;
+  @media screen and (min-width: 1140px) {
+    display: grid;
+    grid-template-columns: 18% 1fr 1fr 1fr 1fr;
   }
 }

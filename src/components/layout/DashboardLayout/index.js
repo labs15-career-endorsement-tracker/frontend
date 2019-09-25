@@ -33,41 +33,38 @@ const DashboardLayout = ({ match }) => {
 
   return (
     <div className="dashboard">
-      <DashboardHeader></DashboardHeader>
       <Sidebar></Sidebar>
-      <main className="dashboard-content">
-        <Switch>
-          <StudentRoute
-            path={`${match.path}requirements/:id`}
-            component={RequirementDetails}
-          ></StudentRoute>
-          <StudentRoute
-            path={`${match.path}requirements`}
-            component={RequirementsList}
-          ></StudentRoute>
-          <CoachRoute
-            path={`${match.path}students`}
-            component={FindStudent}
-          ></CoachRoute>
-          <CoachRoute
-            path={`${match.path}my-students`}
-            component={MyStudents}
-          ></CoachRoute>
-          <Route path={`${match.path}profile`} component={MyAccount}></Route>
-          <CoachRoute
-            path={`${match.path}student`}
-            component={StudentProfile}
-          ></CoachRoute>
-          <PublicRoute path="/forbidden" component={Forbidden}></PublicRoute>
-          <Redirect
-            to={
-              user.is_admin
-                ? `${match.path}students`
-                : `${match.path}requirements`
-            }
-          ></Redirect>
-        </Switch>
-      </main>
+      <Switch>
+        <StudentRoute
+          path={`${match.path}requirements/:id`}
+          component={RequirementDetails}
+        ></StudentRoute>
+        <StudentRoute
+          path={`${match.path}requirements`}
+          component={RequirementsList}
+        ></StudentRoute>
+        <CoachRoute
+          path={`${match.path}students`}
+          component={FindStudent}
+        ></CoachRoute>
+        <CoachRoute
+          path={`${match.path}my-students`}
+          component={MyStudents}
+        ></CoachRoute>
+        <Route path={`${match.path}profile`} component={MyAccount}></Route>
+        <CoachRoute
+          path={`${match.path}student`}
+          component={StudentProfile}
+        ></CoachRoute>
+        <PublicRoute path="/forbidden" component={Forbidden}></PublicRoute>
+        <Redirect
+          to={
+            user.is_admin
+              ? `${match.path}students`
+              : `${match.path}requirements`
+          }
+        ></Redirect>
+      </Switch>
     </div>
   )
 }

@@ -10,7 +10,8 @@ import {
 
 import "./index.scss"
 
-import { ResourceList, RequirementStepList, ProgressRing } from "../../lib"
+import { ResourceList, RequirementStepList } from "../../lib"
+import { ContentHeader, DashboardContent } from "../../layout"
 
 import { loadAuthDataFromLocalStorage } from "../../../store"
 
@@ -42,28 +43,24 @@ const RequirementDetail = ({
     setSteps(stepsByTask)
   }, [stepsByTask])
   return (
-    <div className="requirement-detail-container">
-      <div className="list-header">
-        <div className="step-description">
-          <h1 className="title">
-            {requirement ? requirement.title : "Steps to complete"}
-          </h1>
-          <p>{requirement ? requirement.tasks_description : ""}</p>
+    <DashboardContent>
+      <ContentHeader
+        title={requirement ? requirement.title : "Steps to complete"}
+        prompt={requirement ? requirement.tasks_description : ""}
+        progress={requirement ? requirement.progress : 0}
+      ></ContentHeader>
+      <div className="requirement-detail-container">
+        <div className="resources-steps">
+          <RequirementStepList
+            steps={steps}
+            requirement={requirement}
+            fetchUser={fetchUser}
+            toggleStep={toggleStep}
+          />
+          <ResourceList></ResourceList>
         </div>
-        <ProgressRing
-          progressValue={requirement ? requirement.progress : 0}
-        ></ProgressRing>
       </div>
-      <div className="resources-steps">
-        <RequirementStepList
-          steps={steps}
-          requirement={requirement}
-          fetchUser={fetchUser}
-          toggleStep={toggleStep}
-        />
-        <ResourceList></ResourceList>
-      </div>
-    </div>
+    </DashboardContent>
   )
 }
 
