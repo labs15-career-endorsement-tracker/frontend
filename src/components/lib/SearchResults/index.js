@@ -1,5 +1,4 @@
 import React from "react"
-import uuid from "uuid/v4"
 
 import SearchResult from "./SearchResult"
 
@@ -11,7 +10,7 @@ const SearchResults = ({ results }) => {
   return (
     <ul className="search-results">
       {results.map(result => (
-        <SearchResult key={uuid()} user={result}></SearchResult>
+        <SearchResult key={result.id} user={result}></SearchResult>
       ))}
     </ul>
   )
