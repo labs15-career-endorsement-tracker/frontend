@@ -5,8 +5,6 @@ import { Debounce } from "react-throttle"
 
 import { SearchResults } from "../../lib"
 
-import { ContentHeader, DashboardContent } from "../../layout"
-
 import "./index.scss"
 
 const FindStudent = () => {
@@ -34,12 +32,6 @@ const FindStudent = () => {
     search()
   }
   return (
-    // <DashboardContent>
-    //   <ContentHeader
-    //     title={"Steps to complete"}
-    //     prompt={ ""}
-    //     progress={0}
-    //   ></ContentHeader>
     <section className="find-student-page">
       {/* <header>
         <h3>Find a Student</h3>
@@ -61,7 +53,6 @@ const FindStudent = () => {
       </form>
       <SearchResults results={foundStudents}></SearchResults>
     </section>
-    // </DashboardContent>
   )
 }
 
