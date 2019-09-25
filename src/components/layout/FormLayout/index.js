@@ -1,11 +1,12 @@
 import React from "react"
-import { Switch, Route, Redirect, withRouter } from "react-router-dom"
+import { Switch, Redirect, withRouter } from "react-router-dom"
 
 import "./index.scss"
 
 import heroImg from "../../../assets/images/alien.png"
 
 import { Logo } from "../../lib/index"
+import { PublicRoute } from "../../routes"
 
 import SignInForm from "../../pages/SignInForm"
 import SignUpForm from "../../pages/SignUpForm"
@@ -24,10 +25,19 @@ const FormLayout = ({ match, image = defaultHeroImgData }) => {
         <div className="left">
           <Logo></Logo>
           <Switch>
-            <Route path={`${match.path}/sign-in`} component={SignInForm} />
-            <Route path={`${match.path}/sign-up`} component={SignUpForm} />
-            <Route path={`${match.path}/reset`} component={PasswordResetForm} />
-            <Route
+            <PublicRoute
+              path={`${match.path}/sign-in`}
+              component={SignInForm}
+            />
+            <PublicRoute
+              path={`${match.path}/sign-up`}
+              component={SignUpForm}
+            />
+            <PublicRoute
+              path={`${match.path}/reset`}
+              component={PasswordResetForm}
+            />
+            <PublicRoute
               path={`${match.path}/reset-password`}
               component={EmailForm}
             />
