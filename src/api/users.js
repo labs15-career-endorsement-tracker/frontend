@@ -15,6 +15,8 @@ export const updateUserPassword = async (authToken, password) => {
   return data
 }
 export const updateUserCalendly = async (authToken, calendly_link) => {
-  const { data } = await requestWithAuth(authToken).put("/users", { calendly_link })
+  const { data } = await requestWithAuth(authToken).put("/users", {
+    calendly_link
+  })
   return data
 }

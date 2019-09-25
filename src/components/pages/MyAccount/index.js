@@ -7,12 +7,12 @@ import "./index.scss"
 
 import { fetchUser, fetchRequirements, logout } from "../../../actions"
 import { history, clearAuthDataFromLocalStorage } from "../../../store"
-import { updateUserCalendly } from '../../../api'
+import { updateUserCalendly } from "../../../api"
 
 const MyAccount = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
-  const [ userData, setUserData ] = useState({calendly_link: ''})
+  const [userData, setUserData] = useState({ calendly_link: "" })
   console.log(user)
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const MyAccount = () => {
 
   const handleChange = e => {
     setUserData({
-      ...userData, 
+      ...userData,
       [e.target.name]: e.target.value
     })
   }
@@ -33,7 +33,6 @@ const MyAccount = () => {
     const { token } = loadAuthDataFromLocalStorage()
 
     await updateUserCalendly(token, userData.calendly_link)
-
   }
 
   return (
@@ -82,7 +81,6 @@ const MyAccount = () => {
           />
           <button>Upload</button>
         </form>
-
       </div>
     </div>
   )
