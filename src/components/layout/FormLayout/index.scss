@@ -1,43 +1,36 @@
 @import "../../../styles/variables";
 
 .l-two-column {
-  display: flex;
+  width: 100%;
   z-index: 100;
 }
 
 .sign-in-banner {
   display: flex;
-  flex-direction: column;
-  width: 100vw;
+  align-items: center;
+  width: 100%;
   height: 10vh;
-  background-color: $green-300;
-  opacity: 0.95;
+  background-color: rgba(109, 222, 139, 0.8);
   z-index: 1000;
-
+  position: fixed;
+  top: 0;
   .logo {
-    position: absolute;
-    left: 10%;
-    top: 3%;
     width: 15rem;
     color: white;
+    margin: 0 4rem;
   }
 }
 
 .l-two-column .left {
+  box-sizing: border-box;
   background-color: white;
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  // display: flex;
+  position: relative;
+  top: 10vh;
   flex-direction: column;
-  // width: 60%;
-  height: 60vh;
+  width: 90%;
+  min-height: 60vh;
   padding: 6rem 5rem 3rem;
-  // margin-left: 10rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  z-index: 1000;
-
+  margin: 3rem auto;
   @media screen and (min-width: $breakpoint-tiny) {
     width: 70%;
     padding: 4.8rem 6rem 3.2rem;
@@ -45,17 +38,20 @@
 
   @media screen and (min-width: $breakpoint-medium) {
     width: 40%;
-  }
+    position: absolute;
 
+    top: 15%;
+    left: 15%;
+  }
   @media screen and (min-width: $breakpoint-large) {
-    padding: 6rem 5rem 3rem;
-    width: 35%;
+    width: 30%;
+    left: 25%;
   }
 }
 
 .l-two-column .right {
   display: none;
-  position: absolute;
+  position: fixed;
   right: 0;
   width: 50%;
   height: 100vh;
@@ -66,10 +62,29 @@
   @media screen and (min-width: $breakpoint-medium) {
     display: block;
   }
+  @media screen and (min-width: 2000px) {
+    // width: 70%;
+    position: absolute;
+    overflow-x: visible;
+    overflow-y: visible;
+    // overflow: auto;
+  }
 
   img {
     object-fit: cover;
     height: 100vmax;
     z-index: inherit;
+    @media screen and (min-width: 2000px) {
+      // position: absolute;
+      // height: 200vh;
+      // width: 30%;
+    }
   }
+}
+.forgot-password {
+  text-align: center;
+  color: $blue-300;
+  font-weight: 600;
+  margin: 0 auto;
+  display: block;
 }
