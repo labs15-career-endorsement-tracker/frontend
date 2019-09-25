@@ -20,3 +20,10 @@ export const updateUserCalendly = async (authToken, calendly_link) => {
   })
   return data
 }
+
+export const getRequirementsByUserId = async (authToken, userId) => {
+  const { data } = await requestWithAuth(authToken).get(
+    `/users/${userId}/requirements`
+  )
+  return data
+}
