@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { loadAuthDataFromLocalStorage } from "../../../store"
 import { NavLink } from "react-router-dom"
@@ -11,6 +11,8 @@ import { history, clearAuthDataFromLocalStorage } from "../../../store"
 const MyAccount = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
+  const [ calendlyLink, setCalendlyLink ] = useState('')
+  console.log(user)
 
   useEffect(() => {
     const { userId, token } = loadAuthDataFromLocalStorage()
@@ -53,6 +55,16 @@ const MyAccount = () => {
         >
           Logout
         </button>
+
+        <form>
+          <label>Calendly Link</label>
+          <input
+            name="calendlyLink"
+            placeholder={user.calendly_link}
+            value={calendlyLink}
+          />
+        </form>
+        
       </div>
     </div>
   )
