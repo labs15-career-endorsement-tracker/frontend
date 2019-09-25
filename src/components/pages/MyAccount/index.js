@@ -82,7 +82,7 @@ const MyAccount = () => {
            />
            <button>Upload</button>
          </form>
-          : <></>} 
+          : <h2>Coach calendly Link</h2>} 
        
       </div>
     </div>
