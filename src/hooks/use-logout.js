@@ -18,7 +18,7 @@ const useLogout = () => {
       return setIsLoggedIn(false)
     if (!user) setIsLoggedIn(false)
     setIsLoggedIn(true)
-  }, [setIsLoggedIn])
+  }, [setIsLoggedIn, user])
 
   useEffect(() => {
     if (!isLoggedIn) {
@@ -26,7 +26,7 @@ const useLogout = () => {
       clearAuthDataFromLocalStorage()
       setTimeout(() => history.push("/auth/sign-in"), 100)
     }
-  }, [isLoggedIn])
+  }, [isLoggedIn, dispatch])
 }
 
 export default useLogout
