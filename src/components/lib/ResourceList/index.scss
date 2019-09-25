@@ -1,41 +1,83 @@
 @import "../../../styles/variables";
 
-.temp-container {
-  @media screen and(max-width: $breakpoint-large) {
-    flex-direction: column;
-    align-items: center;
+.resources {
+  color: $white;
+  margin-top: 3.2rem;
+  width: 100%;
+
+  @media screen and (min-width: 375px) {
+    max-width: 80%;
   }
-  @media screen and(min-width: $breakpoint-medium) {
-    padding-right: 0;
+
+  @media screen and (min-width: 570px) {
+    max-width: 60%;
   }
-  @media screen and(max-width: $breakpoint-medium) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 33%;
   }
-  .resource-card-container {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    border-top: 8px solid $green-500;
-    background: $white;
-    box-shadow: $drop-shadow-lg;
-    @media screen and(max-width: $breakpoint-medium) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+
+  @media screen and (min-width: 960px) {
+    max-width: 30%;
+  }
+
+  @media screen and (min-width: 960px) {
+    max-width: 25%;
+  }
+
+  h4 {
+    position: relative;
+    font-family: $font-stack-heading;
+    font-size: 2.4rem;
+    font-weight: bold;
+    border-bottom: 0.4rem solid $white;
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    &:after {
+      font-family: "Font Awesome 5 Pro";
+      content: "\f0c1";
+      font-size: 1.6rem;
+      position: absolute;
+      right: 0;
+      bottom: 0.8rem;
     }
-    .resource-cards {
-      width: 100%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    position: relative;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.25s ease-in-out;
+    padding: 0.8rem 0;
+    font-size: 1.4rem;
+
+    &:before {
+      font-family: "Font Awesome 5 Pro";
+      content: "\f08e";
+      font-size: 1.4rem;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      left: -3.2rem;
+      opacity: 0;
     }
-    .resource-header {
-      font-family: $font-stack-heading;
-      color: $green-500;
-      background: $white;
-      padding: 2rem 1.5rem 2rem 3.5rem;
-      h1 {
-        font-size: 3.2rem;
-        font-weight: 800;
+
+    &:hover {
+      color: $green-300;
+      padding-left: 3.2rem;
+
+      &:before {
+        opacity: 1;
+        left: 0;
       }
     }
   }

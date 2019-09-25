@@ -21,11 +21,9 @@ const RequirementsList = () => {
         prompt={tracks_title}
         progress={progress}
       ></ContentHeader>
-      <section className="requirement-card-container">
+      <section className="requirements-list">
         {requirements.map(req => (
-          <div key={req.id} className="req-card-area">
-            <RequirementCard requirement={req} />
-          </div>
+          <RequirementCard key={req.id} requirement={req} />
         ))}
       </section>
     </DashboardContent>

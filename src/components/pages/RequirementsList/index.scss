@@ -1,26 +1,21 @@
 @import "../../../styles/variables";
 
-.requirement-card-container {
-  // position: relative;
+.requirements-list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 2.5rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-  @media screen and(min-width: $breakpoint-small) {
+  gap: 1.6rem;
+
+  @media screen and (min-width: 375px) {
+    padding: 0 1.6rem;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding: 0;
     grid-template-columns: 1fr 1fr;
   }
-  @media screen and(min-width: $breakpoint-medium) {
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-    padding: 0 2rem;
-  }
-  @media screen and(min-width: $breakpoint-large) {
+
+  @media screen and (min-width: 960px) {
+    padding: 0;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  .component-title {
-    padding: 1em;
   }
 }
