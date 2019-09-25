@@ -1,94 +1,91 @@
 @import "../../../styles/variables";
 
-.requirement-card {
-  height: 100%;
-  font-family: $font-stack-heading;
-  .title-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    align-content: center;
-    box-shadow: $drop-shadow-lg;
-    height: calc(100% - 15px - 1rem);
-    background: $white;
-    color: $gradient-green;
-    // padding: 2rem 0;
-    // padding: 4rem 1rem;
-    // padding: 1rem;
-    cursor: pointer;
-    p {
-      padding: 2rem 1rem;
-      font-family: $font-stack-body;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 1.6rem;
-      line-height: 1.4rem;
-      text-align: center;
-    }
-    &:hover {
-      animation: hoverEffect 0.3s;
-      animation-fill-mode: forwards;
-    }
-  }
-  .title {
-    padding: 4rem 0;
-    font-size: 3rem;
-    text-align: center;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .icon-circle {
-    font-size: 3rem;
-    padding: 0.5rem 0.5rem 0.3rem;
-    width: fit-content;
-    background: white;
-    margin-top: 1rem;
-    border-radius: 50%;
-    i {
-      line-height: 1.1;
-      background: $gradient-green;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-  .white-text {
-    color: white;
-  }
-  .incomplete {
-    margin-top: 1rem;
-    background: $white;
-  }
-  .complete {
-    margin-top: 0;
-    background: $gradient-green;
-    padding-bottom: 1rem;
-  }
-  .requirement-description-container {
-    min-height: 50px;
-    .requirement-description-tooltip {
-      background: $white;
-      color: $green-500;
-      width: 250px;
-      height: auto;
-      line-height: 1;
-      letter-spacing: 1px;
-      font-weight: 300;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-      border-radius: 3px;
-    }
-  }
-}
+.requirement {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $gradient-green;
+  width: 100%;
+  height: 52vw;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.125s;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-@keyframes hoverEffect {
-  0% {
-    box-shadow: $drop-shadow-lg;
+  @media screen and (min-width: 375px) {
+    height: 40vw;
   }
-  100% {
-    box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.3);
+
+  @media screen and (min-width: 768px) {
+    height: 20vw;
+  }
+
+  @media screen and (min-width: 1140px) {
+    max-height: 15vw;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  .requirement-title {
+    display: block;
+    background: rgba($white, 0.85);
+    width: 70%;
+    font-family: $font-stack-heading;
+    color: $green-400;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    line-height: 1.2;
+    text-decoration: none;
+    border-radius: 0.2rem;
+  }
+
+  .progress-bar {
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    bottom: 0px;
+    left: 0;
+    background: $blue-300;
+
+    .track,
+    .path {
+      width: 100%;
+      height: 70%;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      background: rgba($white, 0.4);
+      border-bottom-right-radius: 0.4rem;
+      border-bottom-left-radius: 0.4rem;
+    }
+
+    .path {
+      transition: all 0.5s ease-in-out;
+      width: 75%;
+      background: $gradient-green;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .fa-check-circle {
+    display: block;
+    color: $white;
+    width: 8%;
+    font-size: 3.2rem;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
