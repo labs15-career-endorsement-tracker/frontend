@@ -12,7 +12,7 @@ const DashboardHeader = ({ title, prompt, progress }) => {
         <h1>{title}</h1>
         <h2>{prompt}</h2>
       </hgroup>
-      {progress && <ProgressRing progressValue={progress}></ProgressRing>}
+      {progress >= 0 && <ProgressRing progressValue={progress}></ProgressRing>}
     </header>
   )
 }
