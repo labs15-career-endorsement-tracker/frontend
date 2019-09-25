@@ -53,7 +53,7 @@ const SidebarMenu = () => {
           [],
           "coach"
         ),
-        new MenuItemData("My Profile", "fas fa-user-circle", "/profile", [])
+        new MenuItemData("Account", "fas fa-user-circle", "/profile", [])
       ].filter(data => {
         switch (data.user) {
           case null:

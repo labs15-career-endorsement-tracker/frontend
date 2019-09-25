@@ -1,26 +1,54 @@
+@import "../../../styles/variables";
+
 .big-container {
-  margin: 0 auto;
-  .overall-progress {
-    width: 25%;
+  margin: 2rem auto;
+  color: $black;
+  font-weight: 600;
+  background: $blue-100;
+  border-radius: 15px;
+  line-height: 2.5rem;
+  flex-direction: column;
+  padding: 2.5rem 1rem;
+  border: 1px solid purple;
+
+  .profile-info {
+    .profile-track {
+      color: $blue-200;
+    }
+    .profile-first {
+      font-size: 3rem;
+    }
+  }
+  .toggle-assign {
+    color: $pink-100;
   }
   .test {
+    width: 100%;
     display: flex;
     margin: 0 auto;
-    width: 500px;
     align-items: center;
+    justify-content: flex-end;
     flex-direction: column;
     .req-container {
-      display: flex;
+      // display: flex;
+      // justify-content: flex-end;
     }
     .req-title {
       padding: 1rem;
     }
     .progress-card {
       margin: 2rem;
-      width: 50%;
     }
     .progress-number {
-      color: red;
+      color: $black;
     }
   }
+}
+
+.profile-card-container {
+  width: 25%;
+}
+
+.overall-progress {
+  width: 10%;
 }

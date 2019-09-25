@@ -22,8 +22,8 @@ const MyAccount = () => {
     <div className="myaccount-container">
       <div className="user-info-container">
         <div className="account-text">
-          <h1>My Account</h1>
-          <p>Update your account settings</p>
+          <h1>Account Info</h1>
+          {/* <p>Update your account settings</p> */}
         </div>
       </div>
       <div className="account-info">

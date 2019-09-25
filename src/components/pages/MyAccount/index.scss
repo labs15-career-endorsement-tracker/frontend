@@ -7,6 +7,9 @@
   box-sizing: border-box;
   flex-direction: column;
   line-height: 3.5rem;
+  background: $white;
+  color: $black;
+  padding: 5rem;
   .user-info-container {
     display: flex;
     justify-content: space-between;

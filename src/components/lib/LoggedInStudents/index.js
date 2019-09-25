@@ -1,17 +1,8 @@
-import React, { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
-import { fetchPinnedStudents } from "../../../actions"
+import React from "react"
 import { Link } from "react-router-dom"
 import ProfileCard from "../../lib/ProfileCard"
-import FindStudent from "../../pages/FindStudent"
 
-import "./index.scss"
-
-const MyStudents = () => {
-  const pinnedStudents = useSelector(
-    state => state.studentReducer.pinnedStudents
-  )
-
+const LoggedInStudents = ({ pinnedStudents }) => {
   const reqs = [
     {
       id: 1,
@@ -280,30 +271,22 @@ const MyStudents = () => {
       ]
     }
   ]
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(fetchPinnedStudents())
-  }, [dispatch])
   return (
-    <>
-      <FindStudent />
+    <div>
       <section className="my-pinned-students">
         {pinnedStudents.map(student => (
-          <div className="student-profile-card">
-            <Link to={`/student/${student.id}`} key={`$student.id`}>
-              <ProfileCard
-                student={student}
-                key={student.id}
-                requirements={reqs}
-                showFull={"false"}
-              />
-            </Link>
-          </div>
+          <Link to={`/student/${student.id}`} key={`$student.id`}>
+            <ProfileCard
+              student={student}
+              key={student.id}
+              requirements={reqs}
+              showFull={"false"}
+            />
+          </Link>
         ))}
       </section>
-    </>
+    </div>
   )
 }
 
-export default MyStudents
+export default LoggedInStudents
