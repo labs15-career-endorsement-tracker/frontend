@@ -14,7 +14,8 @@ import { ResourceList, RequirementStepList, ProgressRing } from "../../lib"
 
 import { loadAuthDataFromLocalStorage } from "../../../store"
 
-const RequirementDetail = ({ fetchSteps,
+const RequirementDetail = ({
+  fetchSteps,
   toggleStep,
   stepsByTask,
   match,
@@ -28,7 +29,7 @@ const RequirementDetail = ({ fetchSteps,
   const [steps, setSteps] = useState([])
 
   useEffect(() => {
-    ; (async function () {
+    ;(async function() {
       await fetchRequirements(token)
     })()
   }, [fetchRequirements, token, stepsByTask])
@@ -54,7 +55,12 @@ const RequirementDetail = ({ fetchSteps,
         ></ProgressRing>
       </div>
       <div className="resources-steps">
-        <RequirementStepList steps={steps} requirement={requirement} fetchUser={fetchUser} toggleStep={toggleStep} />
+        <RequirementStepList
+          steps={steps}
+          requirement={requirement}
+          fetchUser={fetchUser}
+          toggleStep={toggleStep}
+        />
         <ResourceList></ResourceList>
       </div>
     </div>
@@ -74,4 +80,3 @@ export default connect(
   mapStateToProps,
   { toggleStep, fetchSteps, fetchUser, fetchRequirements }
 )(RequirementDetail)
-

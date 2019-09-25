@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
-import { fetchUser, fetchRequirements } from "../../../actions"
-import { history } from "../../../store"
+import { fetchUser, fetchRequirements, logout } from "../../../actions"
+import { history, clearAuthDataFromLocalStorage } from "../../../store"
 
 const MyAccount = () => {
   const dispatch = useDispatch()
@@ -46,8 +46,9 @@ const MyAccount = () => {
         <NavLink to="/auth/reset-password">Change Password</NavLink>
         <button
           onClick={() => {
-            localStorage.clear()
-            history.push("/")
+            clearAuthDataFromLocalStorage()
+            dispatch(logout())
+            setTimeout(() => history.push("/"), 300)
           }}
         >
           Logout
