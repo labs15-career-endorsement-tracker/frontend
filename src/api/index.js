@@ -3,7 +3,8 @@ import {
   addUser,
   getUserById,
   updateUserPassword,
-  updateUserCalendly
+  updateUserCalendly,
+  getRequirementsByUserId
 } from "./users"
 import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
@@ -27,5 +28,6 @@ export {
   sendEmail,
   searchAll,
   toggleStudent,
-  getPinnedStudents
+  getPinnedStudents,
+  getRequirementsByUserId
 }
