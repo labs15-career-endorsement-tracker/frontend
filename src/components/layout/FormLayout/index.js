@@ -21,9 +21,10 @@ const FormLayout = ({ match, image = defaultHeroImgData }) => {
   return (
     <main>
       <div className="l-two-column">
-        <div className="sign-in-banner">Banner</div>
+        <div className="sign-in-banner">
+          <Logo className="logo"></Logo>
+        </div>
         <div className="left">
-          <Logo></Logo>
           <Switch>
             <Route path={`${match.path}/sign-in`} component={SignInForm} />
             <Route path={`${match.path}/sign-up`} component={SignUpForm} />
