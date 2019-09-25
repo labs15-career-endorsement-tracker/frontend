@@ -1,10 +1,22 @@
 import React from "react"
 import { ProgressRing } from "../../lib"
 import uuid from "uuid/v4"
+import { useSelector, useDispatch } from "react-redux"
+import { loadAuthDataFromLocalStorage } from "../../../store"
+
+import { togglePinnedStudent } from "../../../actions"
 
 import "./index.scss"
 
 const ProfileCard = ({ student, requirements, showFull }) => {
+  const dispatch = useDispatch()
+
+  const { token } = loadAuthDataFromLocalStorage()
+
+  const handleToggle = e => {
+    e.preventDefault()
+    dispatch(togglePinnedStudent(token, student.id))
+  }
   return (
     <div className="big-container">
       <div className="profile-info">
@@ -17,7 +29,7 @@ const ProfileCard = ({ student, requirements, showFull }) => {
         {showFull === "false" ? (
           <div className="overall-progress" key={uuid()}>
             <p className="toggle-assign">
-              <i className="fas fa-user-minus"></i>Unassign
+              <i onClick={handleToggle} className={`fad fa-thumbtack`}></i>
             </p>
             <ProgressRing progressValue={student.progress}></ProgressRing>
           </div>
