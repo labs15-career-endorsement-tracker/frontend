@@ -22,8 +22,10 @@ const FormLayout = ({ match, image = defaultHeroImgData }) => {
   return (
     <main>
       <div className="l-two-column">
+        <div className="sign-in-banner">
+          <Logo className="logo"></Logo>
+        </div>
         <div className="left">
-          <Logo></Logo>
           <Switch>
             <PublicRoute
               path={`${match.path}/sign-in`}

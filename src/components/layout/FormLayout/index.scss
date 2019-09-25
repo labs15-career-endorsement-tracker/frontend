@@ -2,18 +2,45 @@
 
 .l-two-column {
   display: flex;
+  z-index: 100;
+}
+
+.sign-in-banner {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 10vh;
+  background-color: $green-300;
+  opacity: 0.95;
+  z-index: 1000;
+
+  .logo {
+    position: absolute;
+    left: 10%;
+    top: 3%;
+    width: 15rem;
+    color: white;
+  }
 }
 
 .l-two-column .left {
-  display: flex;
+  background-color: white;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  // display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 4.8rem 1.6rem 1.6rem;
+  // width: 60%;
+  height: 60vh;
+  padding: 6rem 5rem 3rem;
+  // margin-left: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  z-index: 1000;
 
   @media screen and (min-width: $breakpoint-tiny) {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 70%;
+    padding: 4.8rem 6rem 3.2rem;
   }
 
   @media screen and (min-width: $breakpoint-medium) {
@@ -21,19 +48,20 @@
   }
 
   @media screen and (min-width: $breakpoint-large) {
-    padding: 4.8rem 3.2rem 3.2rem;
-  }
-
-  .logo {
-    margin-bottom: 8.8rem;
-    width: 50%;
+    padding: 6rem 5rem 3rem;
+    width: 35%;
   }
 }
 
 .l-two-column .right {
   display: none;
-  width: 60%;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: -10;
 
   @media screen and (min-width: $breakpoint-medium) {
     display: block;
@@ -42,5 +70,6 @@
   img {
     object-fit: cover;
     height: 100vmax;
+    z-index: inherit;
   }
 }
