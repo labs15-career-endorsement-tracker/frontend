@@ -43,6 +43,10 @@
     top: 15%;
     left: 15%;
   }
+  @media screen and (min-width: $breakpoint-large) {
+    width: 30%;
+    left: 25%;
+  }
 }
 
 .l-two-column .right {
@@ -76,4 +80,11 @@
       // width: 30%;
     }
   }
+}
+.forgot-password {
+  text-align: center;
+  color: $blue-300;
+  font-weight: 600;
+  margin: 0 auto;
+  display: block;
 }

@@ -29,8 +29,11 @@ const SignInForm = ({ isSubmitting, values }) => {
         labelText="Enter your password"
         placeholderText="e.g. Password1234!"
       ></FormField>
-
+      <FormButton disabled={isSubmitting} type="submit">
+        Sign In!
+      </FormButton>
       <Link
+      className="forgot-password"
         to={{
           pathname: "/auth/reset-password",
           state: { email: values.email }
@@ -38,9 +41,6 @@ const SignInForm = ({ isSubmitting, values }) => {
       >
         Forgot Your Password?
       </Link>
-      <FormButton disabled={isSubmitting} type="submit">
-        Sign In!
-      </FormButton>
     </Form>
   )
 }
