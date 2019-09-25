@@ -1,5 +1,5 @@
 import { loginUser } from "./auth"
-import { addUser, getUserById, updateUserPassword } from "./users"
+import { addUser, getUserById, updateUserPassword, updateUserCalendly } from "./users"
 import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
 import { getSteps, toggleStepComplete } from "./steps"
@@ -18,6 +18,7 @@ export {
   toggleStepComplete,
   getResources,
   updateUserPassword,
+  updateUserCalendly,
   sendEmail,
   searchAll,
   toggleStudent,

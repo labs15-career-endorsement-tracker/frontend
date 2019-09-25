@@ -7,11 +7,12 @@ import "./index.scss"
 
 import { fetchUser, fetchRequirements, logout } from "../../../actions"
 import { history, clearAuthDataFromLocalStorage } from "../../../store"
+import { updateUserCalendly } from '../../../api'
 
 const MyAccount = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
-  const [ calendlyLink, setCalendlyLink ] = useState('')
+  const [ userData, setUserData ] = useState({calendly_link: ''})
   console.log(user)
 
   useEffect(() => {
@@ -19,6 +20,13 @@ const MyAccount = () => {
     dispatch(fetchRequirements(token))
     dispatch(fetchUser(token, userId))
   }, [dispatch])
+
+  const handleChange = e => {
+    setUserData({
+      ...userData, 
+      [e.target.name]: e.target.value
+    })
+  }
 
   return (
     <div className="myaccount-container">
@@ -59,12 +67,13 @@ const MyAccount = () => {
         <form>
           <label>Calendly Link</label>
           <input
-            name="calendlyLink"
+            name="calendly_link"
             placeholder={user.calendly_link}
-            value={calendlyLink}
+            value={userData.calendly_link}
+            onChange={handleChange}
           />
         </form>
-        
+
       </div>
     </div>
   )
