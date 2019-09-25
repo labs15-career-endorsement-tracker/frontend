@@ -2,7 +2,7 @@ import axios from "axios"
 
 import { configureBaseUrl } from "./utils"
 
-import { history } from "../store"
+import { history, clearAuthDataFromLocalStorage } from "../store"
 
 const { REACT_APP_STAGE, REACT_APP_LOCAL_API_PORT } = process.env
 
@@ -24,6 +24,7 @@ export const requestWithAuth = authToken => {
         } else {
           history.push("/auth/sign-in")
         }
+        clearAuthDataFromLocalStorage()
       }
       return Promise.reject(error)
     }

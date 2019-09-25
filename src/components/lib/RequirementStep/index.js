@@ -12,13 +12,20 @@ const RequirementStep = ({ step, toggle, fetchUser }) => {
 
   return (
     <div className="each-step">
-      <div className={`top-line ${step.is_complete ? "line-complete" : ""}`}></div>
-      <div className={`check-box ${step.is_complete ? "check-box-complete" : ""}`} onClick={handleToggle}>
+      <div
+        className={`top-line ${step.is_complete ? "line-complete" : ""}`}
+      ></div>
+      <div
+        className={`check-box ${step.is_complete ? "check-box-complete" : ""}`}
+        onClick={handleToggle}
+      >
         <div className={step.is_complete ? "complete" : "incomplete"}>
           <i className="fas fa-check"></i>
         </div>
       </div>
-      <div className={`bottom-line ${step.is_complete ? "line-complete" : ""}`}></div>
+      <div
+        className={`bottom-line ${step.is_complete ? "line-complete" : ""}`}
+      ></div>
       <div className="description">{step.steps_description}</div>
     </div>
   )

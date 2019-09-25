@@ -6,10 +6,18 @@ import { resourceReducer } from "./resourceReducer"
 import { userReducer } from "./userReducer"
 import { studentReducer } from "./studentReducer"
 
-export default combineReducers({
+const appReducer = combineReducers({
   requirementReducer,
   stepReducer,
   resourceReducer,
   userReducer,
   studentReducer
 })
+
+export default (state, action) => {
+  if (action.type === "LOGOUT") {
+    state = undefined
+  }
+
+  return appReducer(state, action)
+}

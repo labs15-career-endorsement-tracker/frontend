@@ -7,12 +7,14 @@ import { ProgressRing } from "../../lib"
 import "./index.scss"
 
 const SidebarHeader = () => {
-  const { first_name, progress } = useSelector(state => state.userReducer.user)
+  const { first_name, progress, is_admin } = useSelector(
+    state => state.userReducer.user
+  )
   const greeting = useGreeting()
 
   return (
     <header className="sidebar__header">
-      <ProgressRing progressValue={progress}></ProgressRing>
+      {!is_admin && <ProgressRing progressValue={progress}></ProgressRing>}
       <h3 className="greeting">{greeting + ","}</h3>
       <h2 className="greeting-name">{first_name}</h2>
     </header>

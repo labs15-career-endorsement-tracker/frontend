@@ -13,6 +13,8 @@ import {
 
 export const createUser = createAsyncAction("CREATE_USER", addUser)
 
+export const logout = () => ({ type: "LOGOUT", payload: null })
+
 export const fetchRequirements = createAsyncAction(
   "FETCH_REQUIREMENTS",
   getRequirements

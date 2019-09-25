@@ -1,19 +1,20 @@
 import React from "react"
-import { Route, Switch } from "react-router-dom"
+import { Switch } from "react-router-dom"
 
 import "./styles/index.scss"
 
 import NotFound from "./components/pages/NotFound"
 import FormLayout from "./components/layout/FormLayout"
 import DashboardLayout from "./components/layout/DashboardLayout"
+import { PublicRoute } from "./components/routes"
 
 const App = () => {
   return (
     <>
       <Switch>
-        <Route path="/auth" component={FormLayout}></Route>
-        <Route path="/" component={DashboardLayout}></Route>
-        <Route component={NotFound}></Route>
+        <PublicRoute path="/auth" component={FormLayout}></PublicRoute>
+        <PublicRoute path="/" component={DashboardLayout}></PublicRoute>
+        <PublicRoute component={NotFound}></PublicRoute>
       </Switch>
     </>
   )
