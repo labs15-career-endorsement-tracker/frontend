@@ -34,7 +34,9 @@
 .l-two-column .right {
   display: none;
   width: 60%;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
 
   @media screen and (min-width: $breakpoint-medium) {
     display: block;
