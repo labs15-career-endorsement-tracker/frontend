@@ -34,7 +34,10 @@ const MyStudents = () => {
             <h1>Pinned students</h1>
           </div>
           {pinnedStudents.map(student => (
-            <PinnedStudentCard key={student.id} student={student}></PinnedStudentCard>
+            <PinnedStudentCard
+              key={student.id}
+              student={student}
+            ></PinnedStudentCard>
           ))}
         </div>
       </div>
