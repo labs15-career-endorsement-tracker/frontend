@@ -4,9 +4,9 @@ import "./index.scss"
 
 import { SupportLinks, SidebarHeader, SidebarMenu, Logo } from "../../lib"
 
-const Sidebar = () => {
+const Sidebar = ({isOpen}) => {
   return (
-    <aside className="dashboard-sidebar">
+    <aside className="dashboard-sidebar" style={{display: isOpen ? "flex" : "none"}}>
       <Logo></Logo>
       <SidebarHeader></SidebarHeader>
       <SidebarMenu></SidebarMenu>
