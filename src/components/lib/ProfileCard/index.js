@@ -11,7 +11,7 @@ const ProfileCard = ({ student, requirements }) => {
       <ContentHeader
         title={`${student.first_name} ${student.last_name}`}
         prompt={"Individual Requirements Breakdown"}
-        progress={student.progress}
+        progress={-1}
       ></ContentHeader>
       <div className="individual-cards">
         {requirements.map(req => (
@@ -21,9 +21,12 @@ const ProfileCard = ({ student, requirements }) => {
             </div>
             <div className="progress-ring">
               <ProgressRing
-                strokeOpacity={1}
-                trailColor="#fff"
+                startColor="#081534"
+                endColor="#081534"
                 progressValue={req.progress}
+                trailColor="#ffffff"
+                strokeOpacity={0.2}
+                strokeLinecap="butt"
               ></ProgressRing>
             </div>
           </div>
