@@ -12,6 +12,13 @@
   left: 0;
   box-sizing: border-box;
   z-index: 999;
+  .burger {
+    // height: 2.3em;
+    top: 2rem;
+    font-size: 1rem;
+    position: absolute;
+    right: 1.2rem;
+  }
   .my-account-link {
     color: $green-500;
     font-size: 2rem;

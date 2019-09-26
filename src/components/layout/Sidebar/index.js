@@ -2,7 +2,11 @@ import React, {useEffect, useState} from "react"
 
 import "./index.scss"
 
-import { SupportLinks, SidebarHeader, SidebarMenu, Logo } from "../../lib"
+import { SupportLinks, SidebarHeader, SidebarMenu, Logo, MenuBurger } from "../../lib"
+
+
+
+
 
 const Sidebar = ({isOpen, width}) => {
   console.log(isOpen, width)
@@ -22,6 +26,7 @@ const Sidebar = ({isOpen, width}) => {
   return (
     <aside className="dashboard-sidebar" style={{display: display}}>
       <Logo></Logo>
+      <MenuBurger isOpen={isOpen} />
       <SidebarHeader></SidebarHeader>
       <SidebarMenu></SidebarMenu>
       <SupportLinks></SupportLinks>
