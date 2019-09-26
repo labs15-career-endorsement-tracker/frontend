@@ -28,11 +28,13 @@ const MyStudents = () => {
         prompt={"Search for a student by name"}
         progress={-1}
       ></ContentHeader>
-      <FindStudent />
-      <div className="pinned-students-container">
-        {pinnedStudents.map(student => (
-          <PinnedStudentCard student={student}></PinnedStudentCard>
-        ))}
+      <div className="search-pinned-students-wrapper">
+        <FindStudent />
+        <div className="pinned-students-container">
+          {pinnedStudents.map(student => (
+            <PinnedStudentCard student={student}></PinnedStudentCard>
+          ))}
+        </div>
       </div>
     </DashboardContent>
   )
