@@ -28,7 +28,7 @@ export const getRequirementsByUserId = async (authToken, userId) => {
   return data
 }
 
-export const deleteUser = async (authToken) => {
-  const { data } = await requestWithAuth(authToken).delete('/users')
+export const deleteUser = async authToken => {
+  const { data } = await requestWithAuth(authToken).delete("/users")
   return data
 }
