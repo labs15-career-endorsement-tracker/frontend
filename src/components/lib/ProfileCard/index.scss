@@ -1,11 +1,17 @@
 @import "../../../styles/variables";
 .individual-cards {
   display: flex;
+  border-radius: 7px;
+  background: $white;
+  flex-wrap: wrap;
+  justify-content: center;
   .progress-card {
     display: flex;
+    margin: 1rem 0;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 33%;
   }
   .profile-info {
     .profile-track {
@@ -18,12 +24,9 @@
 
   .req-title {
     margin: 1rem;
-  }
-  .profile-card-container {
-    width: 25%;
-  }
-  .progress-number {
     color: $black;
+    font-weight: 800;
+    font-size: 1.8rem;
   }
 
   .progress-ring {
@@ -33,6 +36,7 @@
     width: 150px;
     .progress-number {
       font-size: 3.2rem;
+      color: $black;
     }
   }
 }

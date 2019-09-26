@@ -9,9 +9,9 @@ const ProfileCard = ({ student, requirements }) => {
   return (
     <DashboardContent>
       <ContentHeader
-        title={student.first_name}
-        prompt={"Search for a student by name"}
-        progress={-1}
+        title={`${student.first_name} ${student.last_name}`}
+        prompt={"Individual Requirements Breakdown"}
+        progress={student.progress}
       ></ContentHeader>
       <div className="individual-cards">
         {requirements.map(req => (
