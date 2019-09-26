@@ -1,0 +1,69 @@
+@import "../../../styles/variables";
+
+.pinned-student-card {
+  display: flex;
+  width: 80%;
+  margin-top: 5rem;
+  background: $white;
+  border-radius: 7px;
+  margin: 1rem;
+  @media screen and (max-width: $breakpoint-medium) {
+    justify-content: center;
+    width: 60%;
+    flex-wrap: wrap;
+    margin: 2;
+  }
+  @media screen and (max-width: $breakpoint-large) {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  .inner-pinned-student-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    color: $black;
+    font-size: 2.4rem;
+    font-weight: 800;
+    align-items: flex-end;
+    margin: 0.5rem;
+    @media screen and (max-width: $breakpoint-large) {
+      width: 80%;
+    }
+    .inner-student-name {
+      font-size: 1.6rem;
+    }
+    .pinned-student-info {
+      width: 100%;
+
+      margin: 0.5rem;
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .inner-pinned-student-progress {
+        width: 30%;
+        p {
+          color: $black;
+          font-size: 2.4rem;
+        }
+        @media screen and (max-width: $breakpoint-large) {
+          width: 25%;
+        }
+      }
+      .toggle-assign {
+        color: $pink-100;
+        font-size: 2.4rem;
+        cursor: pointer;
+        margin: 1rem;
+        .unassign {
+          font-size: 1.6rem;
+          padding: 0.3rem;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@ import { getUserById, getRequirementsByUserId } from "../../../api"
 
 import { history, loadAuthDataFromLocalStorage } from "../../../store"
 
+import { ContentHeader, DashboardContent } from "../../layout"
+
 import "./index.scss"
 
 import ProfileCard from "../../lib/ProfileCard"
@@ -30,17 +32,18 @@ const StudentProfile = () => {
   }, [studentId, dispatch])
 
   return (
-    <div className="student-profile-container">
-      {!student || !requirements ? (
-        <h1>Loading</h1>
-      ) : (
-        <ProfileCard
-          student={student}
-          requirements={requirements}
-          showFull="true"
-        ></ProfileCard>
-      )}
-    </div>
+    <DashboardContent>
+      <div className="student-profile-container">
+        {!student || !requirements ? (
+          <h1>Loading</h1>
+        ) : (
+          <ProfileCard
+            student={student}
+            requirements={requirements}
+          ></ProfileCard>
+        )}
+      </div>
+    </DashboardContent>
   )
 }
 
