@@ -41,10 +41,11 @@
       p {
         position: relative;
         color: $blue-300;
-        font-size: 4rem;
+        font-size: 3.2rem;
         top: -1.2rem;
         @media screen and (min-width: $breakpoint-medium) {
           top: -1.5rem;
+          font-size: 3rem;
         }
       }
       // min-height: 100px;
