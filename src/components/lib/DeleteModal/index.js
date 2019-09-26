@@ -1,16 +1,23 @@
 import React, { useState } from 'react'
 
 import { deleteUser } from '../../../api'
-import { loadAuthDataFromLocalStorage } from '../../../store'
+import { loadAuthDataFromLocalStorage, history } from '../../../store'
 
 import "./index.scss"
+import { toast } from 'react-toastify'
 
 const DeleteModal = () => {
     const [open, setOpen] = useState(false)
 
 const handleClick = () => {
     const { token } = loadAuthDataFromLocalStorage()
-    console.log(token)
+    deleteUser(token)
+    if(deleteUser) {
+        toast("😢😢😢 We'll miss you 😭😭😭")
+    }
+    setTimeout(() => {
+        history.push("/auth/sign-up")
+    }, 1000)
 }
 
     return (
