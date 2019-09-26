@@ -9,12 +9,14 @@
   margin: 1rem;
   @media screen and (max-width: $breakpoint-medium) {
     justify-content: center;
-    width: 80%;
+    width: 60%;
     flex-wrap: wrap;
+    margin: 2;
   }
   @media screen and (max-width: $breakpoint-large) {
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 80%;
     flex-wrap: wrap;
   }
   .inner-pinned-student-card {

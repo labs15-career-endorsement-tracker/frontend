@@ -8,9 +8,10 @@
   background: $white;
   flex-wrap: wrap;
   justify-content: center;
-  height: 70vh;
+
   @media screen and (max-width: $breakpoint-large) {
     flex-direction: column;
+    width: 100%;
     margin: 0;
     align-items: center;
   }
@@ -21,6 +22,12 @@
     flex-direction: column;
     align-items: center;
     width: 33%;
+    @media screen and (max-width: $breakpoint-large) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      align-items: center;
+    }
   }
   .profile-info {
     .profile-track {
