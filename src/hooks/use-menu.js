@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 
-import { toggleMenu } from "../actions"
 
 const useMenu = () => {
-  const dispatch = useDispatch()
   const isOpen = useSelector(state => state.menuReducer.isOpen)
   const [width, setWidth] = useState(window.innerWidth)
   useEffect(() => {
