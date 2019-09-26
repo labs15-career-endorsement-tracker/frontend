@@ -93,6 +93,7 @@ const MyAccount = () => {
             <h2>Coach calendly Link</h2>
           )}
         </div>
+        <DeleteModel />
       </div>
     </DashboardContent>
   )

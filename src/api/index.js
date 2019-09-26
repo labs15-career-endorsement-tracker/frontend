@@ -4,7 +4,8 @@ import {
   getUserById,
   updateUserPassword,
   updateUserCalendly,
-  getRequirementsByUserId
+  getRequirementsByUserId,
+  deleteUser
 } from "./users"
 import { getTracks } from "./tracks"
 import { getRequirements } from "./requirements"
@@ -29,5 +30,6 @@ export {
   searchAll,
   toggleStudent,
   getPinnedStudents,
-  getRequirementsByUserId
+  getRequirementsByUserId,
+  deleteUser
 }
