@@ -1,15 +1,67 @@
 @import "../../../styles/variables";
 
 .myaccount-container {
-  display: flex;
-  justify-content: center;
   position: relative;
   box-sizing: border-box;
-  flex-direction: column;
   line-height: 3.5rem;
   background: $white;
   color: $black;
   padding: 5rem;
+  .password-logout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "progress"
+      "reset"
+      "logout";
+    justify-items: center;
+    align-items: center;
+    margin-top: 4rem;
+    @media screen and (min-width: $breakpoint-medium) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "reset progress logout";
+    }
+    .reset-password {
+      grid-area: reset;
+      @media screen and (min-width: $breakpoint-medium) {
+        justify-self: start;
+      }
+      a {
+        font-family: Barlow Condensed;
+        margin-left: 1rem;
+        font-weight: bold;
+      }
+    }
+    .progress-ring {
+      grid-area: progress;
+      width: 50%;
+      max-width: 100px;
+
+      p {
+        position: relative;
+        color: $blue-300;
+        font-size: 4rem;
+        top: -1.2rem;
+        @media screen and (min-width: $breakpoint-medium) {
+          top: -1.5rem;
+        }
+      }
+      // min-height: 100px;
+      // width: auto;
+    }
+    .logout {
+      grid-area: logout;
+      color: #9e3609;
+      @media screen and (min-width: $breakpoint-medium) {
+        justify-self: end;
+      }
+      button {
+        background: none;
+        color: #9e3609;
+      }
+    }
+  }
   button {
     font-family: Barlow Condensed;
     background: #aef1c0;
@@ -25,6 +77,7 @@
     display: flex;
     p {
       margin-right: 1rem;
+      line-height: 1;
     }
     span {
       font-weight: 600;
@@ -48,32 +101,32 @@
     }
     .account-text {
     }
-    .meter-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      align-items: center;
-      @media screen and (max-width: $breakpoint-medium) {
-        width: 50%;
-      }
-      .meter-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-      }
-      .meter {
-        margin: 0 0.3em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .percentage {
-        width: 100%;
-        max-width: 200px;
-      }
-    }
+    // .meter-wrapper {
+    //   display: flex;
+    //   justify-content: flex-end;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   @media screen and (max-width: $breakpoint-medium) {
+    //     width: 50%;
+    //   }
+    //   .meter-box {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: 50%;
+    //   }
+    //   .meter {
+    //     margin: 0 0.3em;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //   }
+    //   .percentage {
+    //     width: 100%;
+    //     max-width: 200px;
+    //   }
+    // }
   }
   .account-details {
     width: 50%;
@@ -91,14 +144,6 @@
   a {
     margin-right: 1rem;
   }
-  // button {
-  //   background: $blue-300;
-  //   color: white;
-  //   border: none;
-  //   padding: 1rem;
-  //   border-radius: 5px;
-  //   margin: 0 1rem;
-  // }
   form {
     margin: 1rem 0;
     width: 100%;
