@@ -3,25 +3,39 @@
 .pinned-student-card {
   display: flex;
   width: 33%;
-  flex-wrap: wrap;
+  height: 250px;
   background: $white;
   border-radius: 7px;
   margin: 1rem;
   .inner-pinned-student-card {
-    height: 250px;
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 1rem;
     color: $black;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     font-weight: 800;
-    .inner-pinned-student-progress {
-      width: 25%;
-    }
-    .toggle-assign {
-      color: $pink-100;
-      font-size: 2.4rem;
-      cursor: pointer;
+    align-items: flex-end;
+    margin: 0.5rem;
+    .pinned-student-info {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      .inner-pinned-student-progress {
+        width: 50%;
+      }
+      .toggle-assign {
+        color: $pink-100;
+        font-size: 2.4rem;
+        cursor: pointer;
+        .unassign {
+          font-size: 1.6rem;
+          padding: 0.3rem;
+        }
+      }
     }
   }
 }

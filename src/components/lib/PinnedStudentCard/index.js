@@ -24,13 +24,18 @@ const PinnedStudentCard = ({ student }) => {
         <Link to={`student/${student.id}`}>
           {student.first_name} {student.last_name}
         </Link>
-        <p className="toggle-assign">
-          <i onClick={handleToggle} className={`fad fa-thumbtack`}></i>
-        </p>
-        <div className="inner-pinned-student-progress">
-          <Link to={`student/${student.id}`}>
-            <ProgressRing progressValue={student.progress}></ProgressRing>
-          </Link>
+        <div className="pinned-student-info">
+          <div className="inner-toggle-student" onClick={handleToggle}>
+            <p className="toggle-assign">
+              <i className={`fad fa-thumbtack`}></i>
+              <span className="unassign">Unassign</span>
+            </p>
+          </div>
+          <div className="inner-pinned-student-progress">
+            <Link to={`student/${student.id}`}>
+              <ProgressRing progressValue={student.progress}></ProgressRing>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
