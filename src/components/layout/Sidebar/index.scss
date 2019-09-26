@@ -7,6 +7,10 @@
   height: 100vh;
   padding: 2.4rem 0;
   background: #081534;
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
 
   .my-account-link {
     color: $green-500;
