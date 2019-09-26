@@ -1,12 +1,4 @@
 .my-pinned-students {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  width: 100%;
-  justify-content: center;
-  .student-profile-card {
-    display: flex;
-    margin: 3rem 3rem 0rem 3rem;
-  }
+  margin: 1rem;
+  width: 250px;
 }

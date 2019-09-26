@@ -1,0 +1,12 @@
+@import "../../../styles/variables";
+
+.pinned-student-card {
+  width: 33%;
+  flex-wrap: wrap;
+  background: $white;
+  border-radius: 7px;
+  margin: 1rem;
+  .inner-pinned-student-card {
+    padding: 1rem;
+  }
+}
