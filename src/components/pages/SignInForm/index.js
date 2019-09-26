@@ -33,7 +33,7 @@ const SignInForm = ({ isSubmitting, values }) => {
         Sign In!
       </FormButton>
       <Link
-      className="forgot-password"
+        className="forgot-password"
         to={{
           pathname: "/auth/reset-password",
           state: { email: values.email }
