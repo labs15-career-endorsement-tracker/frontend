@@ -18,12 +18,29 @@ const PinnedStudentCard = ({ student }) => {
     dispatch(togglePinnedStudent(token, student.id))
   }
 
+  const trackName = track => {
+    switch (track) {
+      case 1:
+        return <p className="student-track-name">Full Stack Web Development</p>
+      case 2:
+        return <p className="student-track-name">iOS</p>
+      case 3:
+        return <p className="student-track-name">Data Science</p>
+      case 4:
+        return <p className="student-track-name">Android</p>
+      case 5:
+        return <p className="student-track-name">UX Design</p>
+      default:
+        return null
+    }
+  }
   return (
     <div className="pinned-student-card" key={uuid()}>
       <div className="inner-pinned-student-card">
         <div className="inner-student-name">
           <Link to={`student/${student.id}`}>
-            <p className="student-first-name">{student.first_name}</p>{" "}
+            {trackName(student.tracks_id)}
+            <p className="student-first-name">{student.first_name}</p>
             <p className="student-last-name">{student.last_name}</p>
           </Link>
         </div>
