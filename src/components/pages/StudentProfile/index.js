@@ -4,7 +4,7 @@ import { getUserById, getRequirementsByUserId } from "../../../api"
 
 import { history, loadAuthDataFromLocalStorage } from "../../../store"
 
-import { ContentHeader, DashboardContent } from "../../layout"
+import { DashboardContent } from "../../layout"
 
 import "./index.scss"
 
