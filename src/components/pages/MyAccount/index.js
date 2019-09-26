@@ -82,7 +82,7 @@ const MyAccount = () => {
                   <>
                     <p>Your coach is <span className="coach-name">{`${user.coach.first_name} ${user.coach.last_name}`}</span></p>
                     {/* If the user's coach has a calendly link show the schedule a meeting button */}
-                    {user.coach.calendly_link && <a className="schedule-coach" href={user.coach && user.coach.calendly_link} target="_blank">Schedule a meeting</a>}
+                    {user.coach.calendly_link && <a className="schedule-coach" href={user.coach && user.coach.calendly_link} target="_blank" rel="noopener noreferrer">Schedule a meeting</a>}
                   </>
                 )
                 // else display the you'll be able to schedule a meeting soon message
