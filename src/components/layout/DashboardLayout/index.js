@@ -16,7 +16,7 @@ import { fetchUser, fetchRequirements } from "../../../actions"
 
 import "./index.scss"
 
-const DashboardLayout = ({ match }) => {
+const DashboardLayout = ({ match, isOpen, width }) => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
 
@@ -31,7 +31,7 @@ const DashboardLayout = ({ match }) => {
 
   return (
     <div className="dashboard">
-      <Sidebar></Sidebar>
+      <Sidebar isOpen={isOpen} width={width}></Sidebar>
       <Switch>
         <StudentRoute
           path={`${match.path}requirements/:id`}

@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   box-sizing: border-box;
-
+  z-index: 999;
   .my-account-link {
     color: $green-500;
     font-size: 2rem;
@@ -20,7 +20,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
+    // display: flex;
   }
 }
 
