@@ -8,6 +8,12 @@
   background: $white;
   flex-wrap: wrap;
   justify-content: center;
+  height: 70vh;
+  @media screen and (max-width: $breakpoint-large) {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+  }
   .progress-card {
     display: flex;
     margin: 1rem 0;

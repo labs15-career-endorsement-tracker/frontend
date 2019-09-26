@@ -2,7 +2,7 @@
 
 .search-pinned-students-wrapper {
   display: grid;
-  grid-template-columns: dashboard;
+  grid-template-columns: 1fr 1fr;
   .pinned-students-container {
     justify-content: center;
     width: 100%;
@@ -17,6 +17,7 @@
     }
     @media screen and (max-width: $breakpoint-medium) {
       flex-direction: column;
+      width: 80%;
       align-items: center;
     }
   }
