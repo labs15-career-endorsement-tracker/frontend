@@ -1,4 +1,12 @@
+@import "../../../styles/variables";
+
 .pinned-students-container {
+  justify-content: center;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $breakpoint-medium) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

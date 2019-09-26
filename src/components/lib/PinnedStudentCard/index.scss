@@ -2,11 +2,15 @@
 
 .pinned-student-card {
   display: flex;
-  width: 25%;
+  width: 33%;
   height: 250px;
   background: $white;
   border-radius: 7px;
   margin: 1rem;
+  @media screen and (max-width: $breakpoint-large) {
+    justify-content: center;
+    width: 70%;
+  }
   .inner-pinned-student-card {
     display: flex;
     flex-direction: column;
@@ -17,6 +21,7 @@
     font-weight: 800;
     align-items: flex-end;
     margin: 0.5rem;
+
     .pinned-student-info {
       width: 100%;
       height: 100%;
@@ -24,11 +29,15 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
+
       .inner-pinned-student-progress {
         width: 50%;
         p {
           color: $black;
           font-size: 2.4rem;
+        }
+        @media screen and (max-width: $breakpoint-large) {
+          width: 25%;
         }
       }
       .toggle-assign {
