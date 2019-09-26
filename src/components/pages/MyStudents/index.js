@@ -33,7 +33,7 @@ const MyStudents = () => {
         <section className="my-pinned-students">
           {pinnedStudents.map(student => (
             <div className="student-profile-card" key={student.id}>
-              <Link to={`/student/${student.id}`} key={`$student.id`}>
+              <Link to={`/student/${student.id}`}>
                 <ProfileCard student={student} showFull={"false"} />
               </Link>
             </div>

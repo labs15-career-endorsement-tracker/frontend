@@ -55,9 +55,7 @@ const MyAccount = () => {
             <h1>{user.first_name}</h1>
             <p>{user.last_name}</p>
           </div>
-          <p>
-            {user.tracks_title}
-          </p>
+          <p>{user.tracks_title}</p>
         </div>
 
         <div className="account-info">
@@ -116,7 +114,6 @@ const MyAccount = () => {
           </div>
         </div>
       </div>
-
     </DashboardContent>
   )
 }
