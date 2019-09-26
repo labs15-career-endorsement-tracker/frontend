@@ -11,7 +11,7 @@ import { updateUserCalendly } from "../../../api"
 
 import { DashboardContent, ContentHeader } from "../../layout"
 
-import { ProgressRing }from '../../lib'
+import { ProgressRing } from '../../lib'
 
 const MyAccount = () => {
   const dispatch = useDispatch()
@@ -74,16 +74,17 @@ const MyAccount = () => {
                   value={userData.calendly_link}
                   onChange={handleChange}
                 />
-                <button>Upload</button>
+                <button className="schedule-coach">Upload</button>
                 {/* </div> */}
               </form>
             ) :
-            // If the user has a coach display the schedule a meeting button 
+              // If the user has a coach display the schedule a meeting button 
               user.coach ?
                 (
                   <>
-                    <p>Your coach is <span className="coach-name">Coach Name</span></p>
-                    <button>Schedule a meeting</button>
+                    <p>Your coach is <span className="coach-name">{`${user.coach.first_name} ${user.coach.last_name}`}</span></p>
+                    {/* If the user's coach has a calendly link show the schedule a meeting button */}
+                    {user.coach.calendly_link && <a className="schedule-coach" href={user.coach && user.coach.calendly_link} target="_blank">Schedule a meeting</a>}
                   </>
                 )
                 // else display the you'll be able to schedule a meeting soon message
@@ -98,8 +99,8 @@ const MyAccount = () => {
               <i className="fas fa-key"></i>
               <NavLink to="/auth/reset-password">Reset Password</NavLink>
             </div>
-
-            {!user.is_admin && <ProgressRing startColor="#081534" endColor="#081534" progressValue={25} trailColor="#ffffff" strokeOpacity={1} strokeLinecap = "butt"></ProgressRing>}
+            {/* coaches don't need to see the progress ring */}
+            {!user.is_admin && <ProgressRing startColor="#081534" endColor="#081534" progressValue={25} trailColor="#ffffff" strokeOpacity={1} strokeLinecap="butt"></ProgressRing>}
             <div className="logout">
               <i className="fas fa-sign-out-alt"></i>
               <button

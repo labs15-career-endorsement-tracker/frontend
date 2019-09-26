@@ -37,19 +37,26 @@
       grid-area: progress;
       width: 50%;
       max-width: 100px;
-
+      font-size: 3.2rem;
+      // p,
+      // span {
+      //   top: -1.2rem;
+      // }
+      span {
+        color: $blue-300;
+        top: -0.5rem;
+        position: relative;
+        font-weight: bold;
+      }
       p {
         position: relative;
         color: $blue-300;
-        font-size: 3.2rem;
-        top: -1.2rem;
+        top: -0.5rem;
         @media screen and (min-width: $breakpoint-medium) {
-          top: -1.5rem;
+          // top: -1.5rem;
           font-size: 3rem;
         }
       }
-      // min-height: 100px;
-      // width: auto;
     }
     .logout {
       grid-area: logout;
@@ -58,24 +65,35 @@
         justify-self: end;
       }
       button {
+        cursor: pointer;
+        border: none;
         background: none;
         color: #9e3609;
+        font-weight: bold;
+        font-family: Barlow Condensed;
+        font-size: 1.6rem;
       }
     }
   }
-  button {
-    font-family: Barlow Condensed;
-    background: #aef1c0;
-    color: #04591b;
-    font-weight: 600;
-    font-size: 1.4rem;
-    border: none;
-    border-radius: 5px;
-    padding: 1rem;
-    cursor: pointer;
-  }
   .coach-calendly {
     display: flex;
+    align-items: center;
+    .schedule-coach {
+      font-family: Barlow Condensed;
+      background: #aef1c0;
+      color: #04591b;
+      font-weight: 600;
+      font-size: 1.4rem;
+      border: none;
+      border-radius: 5px;
+      padding: 1rem;
+      cursor: pointer;
+      line-height: 1;
+      text-align: center;
+      border: 1px solid #aef1c0;
+    }
+    button.schedule-coach {
+    }
     p {
       margin-right: 1rem;
       line-height: 1;
@@ -100,38 +118,9 @@
       font-weight: 800;
       line-height: 1;
     }
-    .account-text {
-    }
-    // .meter-wrapper {
-    //   display: flex;
-    //   justify-content: flex-end;
-    //   flex-direction: column;
-    //   align-items: center;
-    //   @media screen and (max-width: $breakpoint-medium) {
-    //     width: 50%;
-    //   }
-    //   .meter-box {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     width: 50%;
-    //   }
-    //   .meter {
-    //     margin: 0 0.3em;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //   }
-    //   .percentage {
-    //     width: 100%;
-    //     max-width: 200px;
-    //   }
-    // }
   }
   .account-details {
     width: 50%;
-
     .labels {
       width: 25%;
       margin: 0 1rem;
@@ -162,7 +151,7 @@
       line-height: 1;
       @media screen and (min-width: $breakpoint-medium) {
         text-align: left;
-        margin-right: 1rem;
+        // margin-right: 1rem;
       }
     }
     input {
@@ -170,6 +159,9 @@
       border-radius: 5px;
       border: 1px solid $green-400;
       margin: 1rem 0;
+      @media screen and (min-width: $breakpoint-medium) {
+        margin: 1rem 1rem;
+      }
     }
     div {
       width: 100%;
