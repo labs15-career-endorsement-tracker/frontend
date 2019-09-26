@@ -2,11 +2,11 @@
 
 .pinned-student-card {
   display: flex;
-  width: 80%;
-  margin-top: 5rem;
+  width: 60%;
+  height: 250px;
+  margin: 1rem;
   background: $white;
   border-radius: 7px;
-  margin: 1rem;
   @media screen and (max-width: $breakpoint-medium) {
     justify-content: center;
     width: 60%;
@@ -28,25 +28,36 @@
     font-size: 2.4rem;
     font-weight: 800;
     align-items: flex-end;
+    justify-content: space-between;
     margin: 0.5rem;
     @media screen and (max-width: $breakpoint-large) {
       width: 80%;
     }
     .inner-student-name {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
       font-size: 1.6rem;
+      text-align: left;
+      .student-first-name {
+        font-size: 3.2rem;
+        font-weight: 800;
+      }
+      .student-last-name {
+        font-size: 1.6rem;
+        font-weight: 800;
+      }
     }
     .pinned-student-info {
       width: 100%;
-
       margin: 0.5rem;
       display: flex;
-
       justify-content: space-between;
       align-items: flex-end;
-
       .inner-pinned-student-progress {
-        width: 30%;
-        p {
+        width: 25%;
+        p,
+        .progress-label {
           color: $black;
           font-size: 2.4rem;
         }
@@ -61,7 +72,7 @@
         margin: 1rem;
         .unassign {
           font-size: 1.6rem;
-          padding: 0.3rem;
+          margin: 1rem;
         }
       }
     }
