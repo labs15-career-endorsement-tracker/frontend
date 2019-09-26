@@ -1,8 +1,8 @@
 @import "../../../styles/variables";
 
 .pinned-student-card {
-  width: 100%;
   display: flex;
+  width: 33%;
   flex-wrap: wrap;
   background: $white;
   border-radius: 7px;
@@ -18,10 +18,10 @@
     .inner-pinned-student-progress {
       width: 25%;
     }
-  }
-  .toggle-assign {
-    color: $pink-100;
-    font-size: 2.4rem;
-    cursor: pointer;
+    .toggle-assign {
+      color: $pink-100;
+      font-size: 2.4rem;
+      cursor: pointer;
+    }
   }
 }

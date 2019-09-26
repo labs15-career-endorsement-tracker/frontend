@@ -29,11 +29,11 @@ const MyStudents = () => {
         progress={-1}
       ></ContentHeader>
       <FindStudent />
-      {pinnedStudents.map(student => (
-        <div className="student-profile-card" key={student.id}>
+      <div className="pinned-students-container">
+        {pinnedStudents.map(student => (
           <PinnedStudentCard student={student}></PinnedStudentCard>
-        </div>
-      ))}
+        ))}
+      </div>
     </DashboardContent>
   )
 }
