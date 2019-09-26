@@ -26,6 +26,10 @@
       align-items: flex-end;
       .inner-pinned-student-progress {
         width: 50%;
+        p {
+          color: $black;
+          font-size: 2.4rem;
+        }
       }
       .toggle-assign {
         color: $pink-100;
