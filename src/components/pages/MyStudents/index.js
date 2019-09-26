@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { fetchPinnedStudents } from "../../../actions"
-import { Link } from "react-router-dom"
 import PinnedStudentCard from "../../lib/PinnedStudentCard"
 import FindStudent from "../../pages/FindStudent"
 
@@ -35,7 +34,7 @@ const MyStudents = () => {
             <h1>Pinned students</h1>
           </div>
           {pinnedStudents.map(student => (
-            <PinnedStudentCard student={student}></PinnedStudentCard>
+            <PinnedStudentCard key={student.id} student={student}></PinnedStudentCard>
           ))}
         </div>
       </div>
