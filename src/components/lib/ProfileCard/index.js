@@ -20,7 +20,11 @@ const ProfileCard = ({ student, requirements }) => {
               <p>{req.title}</p>
             </div>
             <div className="progress-ring">
-              <ProgressRing progressValue={req.progress}></ProgressRing>
+              <ProgressRing
+                strokeOpacity={1}
+                trailColor="#fff"
+                progressValue={req.progress}
+              ></ProgressRing>
             </div>
           </div>
         ))}

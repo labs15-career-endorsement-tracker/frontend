@@ -35,7 +35,11 @@ const PinnedStudentCard = ({ student }) => {
           </div>
           <div className="inner-pinned-student-progress">
             <Link to={`student/${student.id}`}>
-              <ProgressRing progressValue={student.progress}></ProgressRing>
+              <ProgressRing
+                strokeOpacity={1}
+                trailColor="#fff"
+                progressValue={student.progress}
+              ></ProgressRing>
             </Link>
           </div>
         </div>
