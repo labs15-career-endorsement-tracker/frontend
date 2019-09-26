@@ -11,7 +11,7 @@ export const handleSubmit = async ({ email }, { setSubmitting, resetForm }) => {
     }
     await sendEmail(userData)
     resetForm({ email: "" })
-    history.push("/reset-password", { sentEmail: true })
+    history.push("/auth/reset-password", { sentEmail: true })
   } catch (error) {
     const { status } = error.response
     switch (status) {
