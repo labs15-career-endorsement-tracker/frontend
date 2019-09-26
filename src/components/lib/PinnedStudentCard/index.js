@@ -21,9 +21,11 @@ const PinnedStudentCard = ({ student }) => {
   return (
     <div className="pinned-student-card" key={uuid()}>
       <div className="inner-pinned-student-card">
-        <Link to={`student/${student.id}`}>
-          {student.first_name} {student.last_name}
-        </Link>
+        <div className="inner-student-name">
+          <Link to={`student/${student.id}`}>
+            {student.first_name} {student.last_name}
+          </Link>
+        </div>
         <div className="pinned-student-info">
           <div className="inner-toggle-student" onClick={handleToggle}>
             <p className="toggle-assign">

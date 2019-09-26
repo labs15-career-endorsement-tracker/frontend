@@ -21,17 +21,20 @@
     font-weight: 800;
     align-items: flex-end;
     margin: 0.5rem;
-
+    .inner-student-name {
+      margin: 0.5rem;
+    }
     .pinned-student-info {
       width: 100%;
       height: 100%;
+      margin: 0.5rem;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
 
       .inner-pinned-student-progress {
-        width: 40%;
+        width: 30%;
         p {
           color: $black;
           font-size: 2.4rem;
@@ -44,6 +47,7 @@
         color: $pink-100;
         font-size: 2.4rem;
         cursor: pointer;
+        margin: 1rem;
         .unassign {
           font-size: 1.6rem;
           padding: 0.3rem;
