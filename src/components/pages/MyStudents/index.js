@@ -290,10 +290,7 @@ const MyStudents = () => {
       <FindStudent />
       <section className="my-pinned-students">
         {pinnedStudents.map(student => (
-          <div 
-            className="student-profile-card" 
-            key={student.id}
-          >
+          <div className="student-profile-card" key={student.id}>
             <Link to={`/student/${student.id}`} key={`$student.id`}>
               <ProfileCard
                 student={student}
