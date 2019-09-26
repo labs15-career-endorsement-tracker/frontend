@@ -20,12 +20,24 @@
     min-height: 9.6rem;
     margin-bottom: 3.2rem;
   }
-
+  .burger {
+    position: absolute;
+    top: -0.4rem;
+    left: 1rem;
+    font-size: 1rem;
+    // height: 1.8em;
+    // width: 2em;
+    color: blue;
+    grid-column: 2 / span 1;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
   .logo {
     margin: auto;
     margin-bottom: 4.4rem;
     width: 50%;
-
+    grid-column: 1 / span 1;
     @media screen and (min-width: 450px) {
       width: 40%;
     }
@@ -116,6 +128,12 @@
 
     @media screen and (min-width: 1140px) {
       max-width: 10%;
+    }
+    @media screen and (min-width: 1140px) {
+      max-width: 10%;
+    }
+    @media screen and (min-width: 1440px) {
+      max-width: 8%;
     }
   }
 }

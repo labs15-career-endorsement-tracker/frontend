@@ -19,7 +19,7 @@ import MenuItem from "./MenuItem"
 import SearchResults from "./SearchResults"
 import PinnedStudentCard from "./PinnedStudentCard"
 import DeleteModal from "./DeleteModal"
-
+import MenuBurger from "./MenuBurger"
 export {
   FormField,
   SelectFormField,
@@ -41,5 +41,6 @@ export {
   MenuItem,
   SearchResults,
   PinnedStudentCard,
-  DeleteModal
+  DeleteModal,
+  MenuBurger
 }

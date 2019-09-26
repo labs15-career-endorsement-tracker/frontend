@@ -5,13 +5,15 @@ import { stepReducer } from "./stepsReducer"
 import { resourceReducer } from "./resourceReducer"
 import { userReducer } from "./userReducer"
 import { studentReducer } from "./studentReducer"
+import { menuReducer } from "./menuReducer"
 
 const appReducer = combineReducers({
   requirementReducer,
   stepReducer,
   resourceReducer,
   userReducer,
-  studentReducer
+  studentReducer,
+  menuReducer
 })
 
 export default (state, action) => {
