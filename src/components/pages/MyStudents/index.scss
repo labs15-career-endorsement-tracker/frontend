@@ -11,9 +11,9 @@
   .pinned-students-container {
     justify-content: center;
     width: 100%;
-    height: 80vh;
+
     display: flex;
-    overflow: scroll;
+
     flex-direction: column;
     align-items: flex-end;
     &::-webkit-scrollbar {
