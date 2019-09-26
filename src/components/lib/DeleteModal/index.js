@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
 
 import { deleteUser } from '../../../api'
+import { loadAuthDataFromLocalStorage } from '../../../store'
 
 import "./index.scss"
 
 const DeleteModal = () => {
     const [open, setOpen] = useState(false)
-    console.log(open)
 
 const handleClick = () => {
-    console.log("delete")
+    const { token } = loadAuthDataFromLocalStorage()
+    console.log(token)
 }
-const toggleModal = () => {
-    setOpen(!open)
-  }
+
     return (
         <>
             <h2 
                 id="delete-account"
-                onClick={() => toggleModal()}
+                onClick={() => setOpen(!open)}
                 >
                 Close my ENDRSD account
             </h2>
