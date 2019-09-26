@@ -13,7 +13,10 @@ const EmailForm = props => {
     <>
       {props.location.state && props.location.state.sentEmail && (
         <div className="email-success">
-          <p>We have sent you a password reset email</p>
+          <p>
+            We have sent you an email with instructions for updating your
+            password
+          </p>
         </div>
       )}
       <Form
