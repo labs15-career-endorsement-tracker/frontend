@@ -5,7 +5,6 @@ import { ProgressRing, Logo } from "../../lib"
 import "./index.scss"
 
 const DashboardHeader = ({ title, prompt, progress = 0 }) => {
-
   return (
     <header className="header">
       <Logo></Logo>
