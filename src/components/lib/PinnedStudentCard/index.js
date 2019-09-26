@@ -21,11 +21,17 @@ const PinnedStudentCard = ({ student }) => {
   return (
     <div className="pinned-student-card" key={uuid()}>
       <div className="inner-pinned-student-card">
-        {student.first_name} {student.last_name}
+        <Link to={`student/${student.id}`}>
+          {student.first_name} {student.last_name}
+        </Link>
         <p className="toggle-assign">
           <i onClick={handleToggle} className={`fad fa-thumbtack`}></i>
         </p>
-        <ProgressRing progressValue={student.progress}></ProgressRing>
+        <div className="inner-pinned-student-progress">
+          <Link to={`student/${student.id}`}>
+            <ProgressRing progressValue={student.progress}></ProgressRing>
+          </Link>
+        </div>
       </div>
     </div>
   )

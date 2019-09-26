@@ -31,9 +31,7 @@ const MyStudents = () => {
       <FindStudent />
       {pinnedStudents.map(student => (
         <div className="student-profile-card" key={student.id}>
-          <Link to={`/student/${student.id}`}>
-            <PinnedStudentCard student={student}></PinnedStudentCard>
-          </Link>
+          <PinnedStudentCard student={student}></PinnedStudentCard>
         </div>
       ))}
     </DashboardContent>
