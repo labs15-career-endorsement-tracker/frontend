@@ -13,7 +13,7 @@ import { updateUserCalendly } from "../../../api"
 
 import { DashboardContent, ContentHeader } from "../../layout"
 
-import { ProgressRing } from '../../lib'
+import { ProgressRing } from "../../lib"
 
 const MyAccount = () => {
   const dispatch = useDispatch()
@@ -43,7 +43,7 @@ const MyAccount = () => {
       calendly_link: ""
     })
   }
-  console.log(user)
+
   return (
     <DashboardContent>
       <ContentHeader
@@ -65,7 +65,9 @@ const MyAccount = () => {
             {/* if the user is an admin display the update calendly form */}
             {user.is_admin ? (
               <form onSubmit={handleSubmit}>
-                <label htmlFor="coach-calendly-link">Update Your Calendly Link</label>
+                <label htmlFor="coach-calendly-link">
+                  Update Your Calendly Link
+                </label>
                 {/* <div> */}
                 <input
                   id="coach-calendly-link"
@@ -77,22 +79,32 @@ const MyAccount = () => {
                 <button className="schedule-coach">Upload</button>
                 {/* </div> */}
               </form>
-            ) :
-              // If the user has a coach display the schedule a meeting button 
-              user.coach ?
-                (
-                  <>
-                    <p>Your coach is <span className="coach-name">{`${user.coach.first_name} ${user.coach.last_name}`}</span></p>
-                    {/* If the user's coach has a calendly link show the schedule a meeting button */}
-                    {user.coach.calendly_link && <a className="schedule-coach" href={user.coach && user.coach.calendly_link} target="_blank" rel="noopener noreferrer">Schedule a meeting</a>}
-                  </>
-                )
-                // else display the you'll be able to schedule a meeting soon message
-                :
+            ) : // If the user has a coach display the schedule a meeting button
+            user.coach ? (
+              <>
                 <p>
-                  When you have been assigned to a coach, you'll be able to schedule a meeting here
-            </p>
-            }
+                  Your coach is{" "}
+                  <span className="coach-name">{`${user.coach.first_name} ${user.coach.last_name}`}</span>
+                </p>
+                {/* If the user's coach has a calendly link show the schedule a meeting button */}
+                {user.coach.calendly_link && (
+                  <a
+                    className="schedule-coach"
+                    href={user.coach && user.coach.calendly_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Schedule a meeting
+                  </a>
+                )}
+              </>
+            ) : (
+              // else display the you'll be able to schedule a meeting soon message
+              <p>
+                When you have been assigned to a coach, you'll be able to
+                schedule a meeting here
+              </p>
+            )}
           </div>
           <div className="password-logout">
             <div className="reset-password">
@@ -100,7 +112,16 @@ const MyAccount = () => {
               <NavLink to="/auth/reset-password">Reset Password</NavLink>
             </div>
             {/* coaches don't need to see the progress ring */}
-            {!user.is_admin && <ProgressRing startColor="#081534" endColor="#081534" progressValue={25} trailColor="#ffffff" strokeOpacity={1} strokeLinecap="butt"></ProgressRing>}
+            {!user.is_admin && (
+              <ProgressRing
+                startColor="#081534"
+                endColor="#081534"
+                progressValue={user.progress}
+                trailColor="#ffffff"
+                strokeOpacity={1}
+                strokeLinecap="butt"
+              ></ProgressRing>
+            )}
             <div className="logout">
               <i className="fas fa-sign-out-alt"></i>
               <button
@@ -111,7 +132,7 @@ const MyAccount = () => {
                 }}
               >
                 Logout
-            </button>
+              </button>
             </div>
           </div>
         </div>

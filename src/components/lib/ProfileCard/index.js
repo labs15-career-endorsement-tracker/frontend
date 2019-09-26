@@ -1,58 +1,38 @@
 import React from "react"
+import { DashboardContent, ContentHeader } from "../../layout"
 import { ProgressRing } from "../../lib"
 import uuid from "uuid/v4"
-import { useDispatch } from "react-redux"
-import { loadAuthDataFromLocalStorage } from "../../../store"
-
-import { togglePinnedStudent } from "../../../actions"
 
 import "./index.scss"
 
-const ProfileCard = ({ student, requirements, showFull }) => {
-  const dispatch = useDispatch()
-
-  const { token } = loadAuthDataFromLocalStorage()
-
-  const handleToggle = e => {
-    e.preventDefault()
-    dispatch(togglePinnedStudent(token, student.id))
-  }
+const ProfileCard = ({ student, requirements }) => {
   return (
-    <div className="big-container">
-      <div className="profile-info">
-        <p className="profile-first">
-          {student.first_name} {student.last_name}
-        </p>
-      </div>
-
-      <div className="temp-container">
-        {showFull === "false" ? (
-          <div className="overall-progress" key={uuid()}>
-            <p className="toggle-assign">
-              <i onClick={handleToggle} className={`fad fa-thumbtack`}></i>
-            </p>
-            <ProgressRing progressValue={student.progress}></ProgressRing>
-          </div>
-        ) : (
-          <div className="req-container" key={`$student.id`}>
-            <div className="progress-card">
-              <p>Overall Progress</p>
-              <ProgressRing progressValue={student.progress}></ProgressRing>
+    <DashboardContent>
+      <ContentHeader
+        title={`${student.first_name} ${student.last_name}`}
+        prompt={"Individual Requirements Breakdown"}
+        progress={-1}
+      ></ContentHeader>
+      <div className="individual-cards">
+        {requirements.map(req => (
+          <div className="progress-card" key={uuid()}>
+            <div className="req-title">
+              <p>{req.title}</p>
             </div>
-            {requirements.map(req => (
-              <div className="progress-card" key={uuid()}>
-                <div className="req-title">
-                  <p>{req.title}</p>
-                </div>
-                <div className="progress-ring">
-                  <ProgressRing progressValue={req.progress}></ProgressRing>
-                </div>
-              </div>
-            ))}
+            <div className="progress-ring">
+              <ProgressRing
+                startColor="#081534"
+                endColor="#081534"
+                progressValue={req.progress}
+                trailColor="#ffffff"
+                strokeOpacity={0.2}
+                strokeLinecap="butt"
+              ></ProgressRing>
+            </div>
           </div>
-        )}
+        ))}
       </div>
-    </div>
+    </DashboardContent>
   )
 }
 

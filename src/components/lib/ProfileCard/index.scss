@@ -1,53 +1,55 @@
 @import "../../../styles/variables";
 
-.big-container {
-  margin: 2rem auto;
-  color: $black;
-  font-weight: 600;
-  background: $blue-100;
-  border-radius: 15px;
-  line-height: 2.5rem;
-  flex-direction: column;
-  padding: 2.5rem 1rem;
-  .temp-container {
-    width: 100%;
-  }
+.individual-cards {
+  margin: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  border-radius: 7px;
+  background: $white;
+  flex-wrap: wrap;
+  justify-content: center;
 
+  @media screen and (max-width: $breakpoint-large) {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+  .progress-card {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    @media screen and (max-width: $breakpoint-large) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      align-items: center;
+    }
+  }
   .profile-info {
     .profile-track {
       color: $blue-200;
     }
   }
-  .toggle-assign {
-    color: $pink-100;
+
+  .req-title {
+    margin: 1rem;
+    color: $black;
+    font-weight: 800;
+    font-size: 1.8rem;
   }
-}
 
-.req-title {
-  margin: 1rem;
-}
-.profile-card-container {
-  width: 25%;
-}
-
-.overall-progress {
-  width: 25%;
-}
-.progress-number {
-  color: $black;
-}
-
-.progress-card {
-  width: 33%;
-  align-items: center;
-}
-
-.req-container {
-  display: flex;
-}
-
-.progress-ring {
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
+  .progress-ring {
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 150px;
+    .progress-number {
+      font-size: 3.2rem;
+      color: $black;
+    }
+  }
 }
