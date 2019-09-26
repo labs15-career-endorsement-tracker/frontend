@@ -12,7 +12,7 @@ import "./index.scss"
 const PinnedStudentCard = ({ student }) => {
   const dispatch = useDispatch()
   const { token } = loadAuthDataFromLocalStorage()
-
+  console.log(student)
   const handleToggle = e => {
     e.preventDefault()
     dispatch(togglePinnedStudent(token, student.id))
