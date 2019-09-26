@@ -12,12 +12,10 @@ const DeleteModal = () => {
   const handleClick = () => {
     const { token } = loadAuthDataFromLocalStorage()
     deleteUser(token)
-    if (deleteUser) {
-      toast("😢😢😢 We'll miss you 😭😭😭")
-    }
+    toast("😢😢😢 We'll miss you 😭😭😭")
     setTimeout(() => {
       history.push("/auth/sign-up")
-    }, 1000)
+    }, 2000)
   }
 
   return (
