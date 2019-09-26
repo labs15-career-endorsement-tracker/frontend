@@ -16,10 +16,9 @@ import { fetchUser, fetchRequirements } from "../../../actions"
 
 import "./index.scss"
 
-const DashboardLayout = ({ match, isOpen, width }) => {
+const DashboardLayout = ({ match }) => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
-
   useEffect(() => {
     const { token, userId } = loadAuthDataFromLocalStorage()
 
@@ -31,7 +30,7 @@ const DashboardLayout = ({ match, isOpen, width }) => {
 
   return (
     <div className="dashboard">
-      <Sidebar isOpen={isOpen} width={width}></Sidebar>
+      <Sidebar></Sidebar>
       <Switch>
         <StudentRoute
           path={`${match.path}requirements/:id`}

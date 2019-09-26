@@ -2,14 +2,14 @@ import React from "react"
 
 import { ProgressRing, Logo } from "../../lib"
 
-import {useSelector} from "react-redux"
+import {useMenu} from "../../../hooks"
 
 import {MenuBurger} from "../../lib"
 import "./index.scss"
 
 
 const DashboardHeader = ({ title, prompt, progress }) => {
-  const isOpen = useSelector(state => state.menuReducer.isOpen)
+  const {isOpen} = useMenu()
   return (
     <header className="header">
       <MenuBurger isOpen={isOpen} />

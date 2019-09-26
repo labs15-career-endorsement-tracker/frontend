@@ -3,30 +3,32 @@ import React, {useEffect, useState} from "react"
 import "./index.scss"
 
 import { SupportLinks, SidebarHeader, SidebarMenu, Logo, MenuBurger } from "../../lib"
+import {useMenu} from "../../../hooks"
 
-
-
-
-
-const Sidebar = ({isOpen, width}) => {
-  console.log(isOpen, width)
-  const [display, setDisplay] = useState('none')
+const Sidebar = () => {
+  const {isOpen, width} = useMenu()
+  const [left, setLeft] = useState('-2000px')
+  const [position, setPosition] = useState("absolute")
   useEffect(() => {
-    console.log(width, isOpen)
     if (width > 768) {
-      setDisplay('flex')
+      setLeft(0)
+      setPosition('sticky')
     }
     else if (isOpen) {
-      setDisplay('flex')
+      setLeft(0)
+      setPosition('fixed')
     }
     else {
-      setDisplay('none')
+      setLeft('-2000px')
+      setPosition('absolute')
     }
   }, [width, isOpen])
   return (
-    <aside className="dashboard-sidebar" style={{display: display}}>
+    <aside className="dashboard-sidebar" style={{left: left, position: position}}>
+      <div className="logo-area">
       <Logo></Logo>
-      <MenuBurger isOpen={isOpen} />
+      {width <= 768 && <MenuBurger isOpen={isOpen} />}
+      </div>
       <SidebarHeader></SidebarHeader>
       <SidebarMenu></SidebarMenu>
       <SupportLinks></SupportLinks>
