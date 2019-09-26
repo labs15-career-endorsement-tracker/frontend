@@ -116,7 +116,7 @@ const MyAccount = () => {
               <ProgressRing
                 startColor="#081534"
                 endColor="#081534"
-                progressValue={25}
+                progressValue={user.progress}
                 trailColor="#ffffff"
                 strokeOpacity={1}
                 strokeLinecap="butt"
