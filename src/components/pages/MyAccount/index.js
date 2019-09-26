@@ -43,7 +43,7 @@ const MyAccount = () => {
       calendly_link: ""
     })
   }
-  console.log(user)
+
   return (
     <DashboardContent>
       <ContentHeader

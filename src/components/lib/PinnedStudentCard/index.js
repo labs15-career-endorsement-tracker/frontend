@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { ContentHeader, DashboardContent } from "../../layout"
 
 import { ProgressRing } from "../../lib"
 import uuid from "uuid/v4"
@@ -12,7 +11,6 @@ import "./index.scss"
 const PinnedStudentCard = ({ student }) => {
   const dispatch = useDispatch()
   const { token } = loadAuthDataFromLocalStorage()
-  console.log(student)
   const handleToggle = e => {
     e.preventDefault()
     dispatch(togglePinnedStudent(token, student.id))
