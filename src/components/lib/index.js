@@ -18,6 +18,7 @@ import SidebarMenu from "./SidebarMenu"
 import MenuItem from "./MenuItem"
 import SearchResults from "./SearchResults"
 import PinnedStudentCard from "./PinnedStudentCard"
+import DeleteModal from "./DeleteModal"
 
 export {
   FormField,
@@ -39,5 +40,6 @@ export {
   SidebarMenu,
   MenuItem,
   SearchResults,
-  PinnedStudentCard
+  PinnedStudentCard,
+  DeleteModal
 }

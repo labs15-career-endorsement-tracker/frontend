@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
+import { DeleteModal } from '../../lib'
+
 import { fetchUser, fetchRequirements, logout } from "../../../actions"
 import { history, clearAuthDataFromLocalStorage } from "../../../store"
 import { updateUserCalendly } from "../../../api"
@@ -15,7 +17,6 @@ const MyAccount = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
   const [userData, setUserData] = useState({ calendly_link: "" })
-  console.log(user)
 
   useEffect(() => {
     const { userId, token } = loadAuthDataFromLocalStorage()
@@ -92,8 +93,9 @@ const MyAccount = () => {
           ) : (
             <h2>Coach calendly Link</h2>
           )}
+
         </div>
-        <DeleteModel />
+          <DeleteModal />
       </div>
     </DashboardContent>
   )
