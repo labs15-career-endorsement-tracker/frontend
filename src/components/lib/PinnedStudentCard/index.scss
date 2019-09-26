@@ -66,6 +66,9 @@
         .progress-label {
           color: $black;
           font-size: 2.4rem;
+          @media screen and (max-width: $breakpoint-medium) {
+            font-size: 1.6rem;
+          }
         }
         @media screen and (max-width: $breakpoint-large) {
           width: 25%;
