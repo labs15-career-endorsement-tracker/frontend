@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom"
 
 import "./index.scss"
 
+import { DeleteModal } from "../../lib"
+
 import { fetchUser, fetchRequirements, logout } from "../../../actions"
 import { history, clearAuthDataFromLocalStorage } from "../../../store"
 import { updateUserCalendly } from "../../../api"
@@ -113,6 +115,7 @@ const MyAccount = () => {
             </div>
           </div>
         </div>
+        <DeleteModal />
       </div>
     </DashboardContent>
   )
