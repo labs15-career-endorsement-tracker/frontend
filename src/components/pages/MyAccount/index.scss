@@ -1,30 +1,102 @@
 @import "../../../styles/variables";
 
 .myaccount-container {
-  display: flex;
-  justify-content: center;
   position: relative;
   box-sizing: border-box;
-  flex-direction: column;
   line-height: 3.5rem;
   background: $white;
   color: $black;
   padding: 5rem;
-  button {
-    font-family: Barlow Condensed;
-    background: #aef1c0;
-    color: #04591b;
-    font-weight: 600;
-    font-size: 1.4rem;
-    border: none;
-    border-radius: 5px;
-    padding: 1rem;
-    cursor: pointer;
+  .password-logout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "progress"
+      "reset"
+      "logout";
+    justify-items: center;
+    align-items: center;
+    margin-top: 4rem;
+    @media screen and (min-width: $breakpoint-medium) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "reset progress logout";
+    }
+    .reset-password {
+      grid-area: reset;
+      @media screen and (min-width: $breakpoint-medium) {
+        justify-self: start;
+      }
+      a {
+        font-family: Barlow Condensed;
+        margin-left: 1rem;
+        font-weight: bold;
+      }
+    }
+    .progress-ring {
+      grid-area: progress;
+      width: 50%;
+      max-width: 100px;
+      font-size: 3.2rem;
+      // p,
+      // span {
+      //   top: -1.2rem;
+      // }
+      span {
+        color: $blue-300;
+        top: -0.5rem;
+        position: relative;
+        font-weight: bold;
+      }
+      p {
+        position: relative;
+        color: $blue-300;
+        top: -0.5rem;
+        @media screen and (min-width: $breakpoint-medium) {
+          // top: -1.5rem;
+          font-size: 3rem;
+        }
+      }
+    }
+    .logout {
+      grid-area: logout;
+      color: #9e3609;
+      @media screen and (min-width: $breakpoint-medium) {
+        justify-self: end;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: #9e3609;
+        font-weight: bold;
+        font-family: Barlow Condensed;
+        font-size: 1.6rem;
+      }
+    }
   }
   .coach-calendly {
     display: flex;
+    align-items: center;
+    .schedule-coach {
+      font-family: Barlow Condensed;
+      background: #aef1c0;
+      color: #04591b;
+      font-weight: 600;
+      font-size: 1.4rem;
+      border: none;
+      border-radius: 5px;
+      padding: 1rem;
+      cursor: pointer;
+      line-height: 1;
+      text-align: center;
+      border: 1px solid #aef1c0;
+    }
+    button.schedule-coach {
+    }
     p {
       margin-right: 1rem;
+      line-height: 1;
     }
     span {
       font-weight: 600;
@@ -46,38 +118,9 @@
       font-weight: 800;
       line-height: 1;
     }
-    .account-text {
-    }
-    .meter-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      align-items: center;
-      @media screen and (max-width: $breakpoint-medium) {
-        width: 50%;
-      }
-      .meter-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-      }
-      .meter {
-        margin: 0 0.3em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .percentage {
-        width: 100%;
-        max-width: 200px;
-      }
-    }
   }
   .account-details {
     width: 50%;
-
     .labels {
       width: 25%;
       margin: 0 1rem;
@@ -91,22 +134,49 @@
   a {
     margin-right: 1rem;
   }
-  // button {
-  //   background: $blue-300;
-  //   color: white;
-  //   border: none;
-  //   padding: 1rem;
-  //   border-radius: 5px;
-  //   margin: 0 1rem;
-  // }
   form {
-    margin: 1rem auto;
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $breakpoint-medium) {
+      flex-direction: row;
+      // justify-content: space-between;
+      align-items: center;
+    }
     label {
-      margin-right: 1rem;
+      // text-align: center;
+      display: block;
+
+      line-height: 1;
+      @media screen and (min-width: $breakpoint-medium) {
+        text-align: left;
+        // margin-right: 1rem;
+      }
     }
     input {
       padding: 1rem;
       border-radius: 5px;
+      border: 1px solid $green-400;
+      margin: 1rem 0;
+      @media screen and (min-width: $breakpoint-medium) {
+        margin: 1rem 1rem;
+      }
+    }
+    div {
+      width: 100%;
+      // margin: auto;
+      @media screen and (min-width: $breakpoint-medium) {
+        width: auto;
+      }
+      button {
+        // display: block;
+        // margin: auto;
+        @media screen and (min-width: $breakpoint-medium) {
+          display: inline-block;
+          margin: 0;
+        }
+      }
     }
   }
 }

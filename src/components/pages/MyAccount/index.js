@@ -11,11 +11,12 @@ import { updateUserCalendly } from "../../../api"
 
 import { DashboardContent, ContentHeader } from "../../layout"
 
+import { ProgressRing } from '../../lib'
+
 const MyAccount = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.userReducer.user)
   const [userData, setUserData] = useState({ calendly_link: "" })
-  console.log(user)
 
   useEffect(() => {
     const { userId, token } = loadAuthDataFromLocalStorage()
@@ -32,9 +33,13 @@ const MyAccount = () => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const { token } = loadAuthDataFromLocalStorage()
-
+    const { token, userId } = loadAuthDataFromLocalStorage()
     await updateUserCalendly(token, userData.calendly_link)
+    dispatch(fetchUser(token, userId))
+    setUserData({
+      ...userData,
+      calendly_link: ""
+    })
   }
   console.log(user)
   return (
@@ -54,44 +59,59 @@ const MyAccount = () => {
         </div>
 
         <div className="account-info">
-          {user.coach ? (
-            <div className="coach-calendly">
-              <p>
-                Your coach is <span className="coach-name">Coach Name</span>
-              </p>
-              <button>Schedule a meeting</button>
-            </div>
-          ) : (
-            <p>
-              When you have been assigned to a coach, you'll be able to schedule
-              a meeting here
+          <div className="coach-calendly">
+            {/* if the user is an admin display the update calendly form */}
+            {user.is_admin ? (
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="coach-calendly-link">Update Your Calendly Link</label>
+                {/* <div> */}
+                <input
+                  id="coach-calendly-link"
+                  name="calendly_link"
+                  placeholder={user.calendly_link || "Enter Your Calendly Link"}
+                  value={userData.calendly_link}
+                  onChange={handleChange}
+                />
+                <button className="schedule-coach">Upload</button>
+                {/* </div> */}
+              </form>
+            ) :
+              // If the user has a coach display the schedule a meeting button 
+              user.coach ?
+                (
+                  <>
+                    <p>Your coach is <span className="coach-name">{`${user.coach.first_name} ${user.coach.last_name}`}</span></p>
+                    {/* If the user's coach has a calendly link show the schedule a meeting button */}
+                    {user.coach.calendly_link && <a className="schedule-coach" href={user.coach && user.coach.calendly_link} target="_blank" rel="noopener noreferrer">Schedule a meeting</a>}
+                  </>
+                )
+                // else display the you'll be able to schedule a meeting soon message
+                :
+                <p>
+                  When you have been assigned to a coach, you'll be able to schedule a meeting here
             </p>
-          )}
-          <NavLink to="/auth/reset-password">Change Password</NavLink>
-          <button
-            onClick={() => {
-              clearAuthDataFromLocalStorage()
-              dispatch(logout())
-              setTimeout(() => history.push("/"), 300)
-            }}
-          >
-            Logout
-          </button>
-
-          {user.is_admin ? (
-            <form onSubmit={handleSubmit}>
-              <label>Calendly Link</label>
-              <input
-                name="calendly_link"
-                placeholder={user.calendly_link}
-                value={userData.calendly_link}
-                onChange={handleChange}
-              />
-              <button>Upload</button>
-            </form>
-          ) : (
-            <h2>Coach calendly Link</h2>
-          )}
+            }
+          </div>
+          <div className="password-logout">
+            <div className="reset-password">
+              <i className="fas fa-key"></i>
+              <NavLink to="/auth/reset-password">Reset Password</NavLink>
+            </div>
+            {/* coaches don't need to see the progress ring */}
+            {!user.is_admin && <ProgressRing startColor="#081534" endColor="#081534" progressValue={25} trailColor="#ffffff" strokeOpacity={1} strokeLinecap="butt"></ProgressRing>}
+            <div className="logout">
+              <i className="fas fa-sign-out-alt"></i>
+              <button
+                onClick={() => {
+                  clearAuthDataFromLocalStorage()
+                  dispatch(logout())
+                  setTimeout(() => history.push("/"), 300)
+                }}
+              >
+                Logout
+            </button>
+            </div>
+          </div>
         </div>
       </div>
     </DashboardContent>

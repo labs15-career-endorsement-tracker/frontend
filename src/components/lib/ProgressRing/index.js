@@ -10,7 +10,10 @@ import { useCountUpToProgress, useSvgGradient } from "../../../hooks"
 const ProgressRing = ({
   progressValue = 0,
   startColor = "#57EC75",
-  endColor = "#20CD8A"
+  endColor = "#20CD8A",
+  trailColor = "#efffff",
+  strokeOpacity = 0.2,
+  strokeLinecap = "round"
 }) => {
   const [progressId] = useState(() =>
     uuid()
@@ -31,8 +34,8 @@ const ProgressRing = ({
         strokeWidth={12}
         classes={{ root: progressId }}
         styles={{
-          path: { stroke: `url(#${gradientId})`, strokeLinecap: "round" },
-          trail: { stroke: "#efffff", strokeOpacity: 0.2 }
+          path: { stroke: `url(#${gradientId})`, strokeLinecap: strokeLinecap },
+          trail: { stroke: trailColor, strokeOpacity: strokeOpacity }
         }}
       >
         <ProgressPercentage progressValue={progress}></ProgressPercentage>
