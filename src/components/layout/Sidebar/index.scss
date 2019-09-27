@@ -12,6 +12,7 @@
   width: 100%;
   z-index: 999;
   transition: all 0.25s ease-in-out;
+  top: 0;
   .logo-area {
     width: 100%;
     display: grid;
@@ -34,7 +35,9 @@
     font-weight: 800;
     padding: 1rem;
   }
-
+  .progress-ring {
+    // font-size: 10rem;
+  }
   @media screen and (min-width: 768px) {
     // position: sticky;
   }

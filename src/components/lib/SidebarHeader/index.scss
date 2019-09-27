@@ -29,12 +29,18 @@
   display: block;
   margin: auto;
   width: 25%;
-
-  .progress-ring__content .progress-number {
-    font-size: 1.6rem;
+  max-width: 120px;
+  font-size: 4rem;
+  @media screen and(min-width: $breakpoint-medium) {
+    font-size: 2.4rem;
   }
 
+  .progress-ring__content .progress-number,
   .progress-ring__content .progress-label {
-    font-size: 0.8rem;
+    position: relative;
+    top: -0.4rem;
+    @media screen and(min-width: $breakpoint-medium) {
+      top: -0.1rem;
+    }
   }
 }
