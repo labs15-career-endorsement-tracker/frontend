@@ -1,11 +1,10 @@
 import React, { useState } from "react"
-import {useDispatch} from "react-redux" 
+import { useDispatch } from "react-redux"
 import { NavLink } from "react-router-dom"
 
-import {toggleMenu} from "../../../actions"
+import { toggleMenu } from "../../../actions"
 
 import "./index.scss"
-
 
 const ChildMenuItem = ({ menuItem }) => {
   return (
@@ -20,7 +19,7 @@ const ChildMenuItem = ({ menuItem }) => {
 }
 
 const MenuItem = ({ menuItem }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const hasChildren = menuItem.children.length > 0
   const [isOpen, setIsOpen] = useState(false)
   const handleOpen = () => {

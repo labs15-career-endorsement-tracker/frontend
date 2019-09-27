@@ -15,7 +15,7 @@ export const createUser = createAsyncAction("CREATE_USER", addUser)
 
 export const logout = () => ({ type: "LOGOUT", payload: null })
 
-export const toggleMenu = (isOpen) => ({ type: "TOGGLE_MENU", payload: isOpen })
+export const toggleMenu = isOpen => ({ type: "TOGGLE_MENU", payload: isOpen })
 
 export const fetchRequirements = createAsyncAction(
   "FETCH_REQUIREMENTS",

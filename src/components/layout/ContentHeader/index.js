@@ -2,14 +2,13 @@ import React from "react"
 
 import { ProgressRing, Logo } from "../../lib"
 
-import {useMenu} from "../../../hooks"
+import { useMenu } from "../../../hooks"
 
-import {MenuBurger} from "../../lib"
+import { MenuBurger } from "../../lib"
 import "./index.scss"
 
-
 const DashboardHeader = ({ title, prompt, progress }) => {
-  const {isOpen} = useMenu()
+  const { isOpen } = useMenu()
   return (
     <header className="header">
       <MenuBurger isOpen={isOpen} />
