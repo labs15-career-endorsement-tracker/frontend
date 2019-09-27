@@ -14,5 +14,5 @@ export const configureBaseUrl = (stage, localApiPort = 5000) => {
       baseUrl += `http://localhost:${localApiPort}`
   }
 
-  return baseUrl + "/api/v1/"
+  return baseUrl + "/api/v2/"
 }
