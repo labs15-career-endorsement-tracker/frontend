@@ -1,0 +1,50 @@
+@import "../../../styles/variables";
+
+.dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+  height: 100vh;
+  padding: 2.4rem 0;
+  background: #081534;
+  // position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.25s ease-in-out;
+  top: 0;
+  .logo-area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem 0 2rem;
+  }
+  .burger {
+    // height: 2.3em;
+    // top: 4.5rem;
+    font-size: 1rem;
+    // position: absolute;
+    // right: 1.2rem;
+    grid-column: 3 / span 1;
+  }
+  .my-account-link {
+    color: $green-500;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 1rem;
+  }
+  .progress-ring {
+    // font-size: 10rem;
+  }
+  @media screen and (min-width: 768px) {
+    // position: sticky;
+  }
+}
+
+.dashboard-sidebar .logo {
+  width: 100%;
+  grid-column: 2 / span 1;
+  // margin: 0 auto 4.4rem;
+}

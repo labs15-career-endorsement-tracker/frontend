@@ -1,0 +1,104 @@
+@import "../../../styles/variables";
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  overflow: scroll;
+  background: $white;
+  color: $black;
+}
+
+.search-results .search-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  border-bottom: 2px solid hsla(224, 15%, 53%, 0.2);
+  @media screen and(min-width: $breakpoint-small) {
+    padding: 1.6rem 3.2rem;
+  }
+}
+
+.search-result {
+  position: relative;
+  transition: all 0.25;
+}
+
+.search-result .name {
+  font-weight: bold;
+
+  h4 {
+    font-family: $font-stack-heading;
+    font-size: 3.2rem;
+  }
+
+  small {
+    font-family: $font-stack-body;
+    font-size: 1.6rem;
+    display: block;
+    padding-top: 0.8rem;
+  }
+}
+
+// .search-result .progress {
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+
+// position: absolute;
+// top: 50%;
+// left: 50%;
+// transform: translate(-50%, -50%);
+
+// span:first-child {
+//   font-family: $font-stack-heading;
+//   font-size: 3.2rem;
+//   font-weight: bold;
+//   display: block;
+
+//   &:after {
+//     content: "%";
+//     font-size: 1.6rem;
+//   }
+// }
+
+//   strong {
+//     font-weight: bold;
+//     font-size: 1.6rem;
+//     margin-top: 0.8rem;
+//   }
+// }
+.pin-status {
+  display: flex;
+  align-items: center;
+  font-family: $font-stack-body;
+}
+
+.has-coach {
+  align-items: baseline;
+  width: 100px;
+  @media screen and(max-width: $breakpoint-small) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70px;
+  }
+}
+
+.coach-label {
+  font-family: $font-stack-heading;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.search-result i {
+  font-size: 2.5rem;
+  padding: 0.8rem;
+  &:hover {
+    cursor: pointer;
+    color: #6dde8b;
+  }
+}
+.fa-thumbtack:active {
+  transform: translateY(4px);
+}

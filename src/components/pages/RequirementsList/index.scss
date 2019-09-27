@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+
+.requirements-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+
+  @media screen and (min-width: 375px) {
+    padding: 0 1.6rem;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 960px) {
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
