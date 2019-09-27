@@ -6,8 +6,8 @@ $font-stack-meta: "Barlow Condensed", "Gill Sans", "Gill Sans MT", Calibri,
   "Trebuchet MS", sans-serif;
 
 // Colors - Neutral
-$black: #034310;
-$white: #fbfeff;
+$black: #081534;
+$white: #efffff;
 
 // Colors - Brand
 $green-100: #e6ece7;
@@ -16,13 +16,24 @@ $green-300: #57ec75;
 $green-400: #29ad44;
 $green-500: #236330;
 
+// Colors - Brand 2
+$blue-100: #ebf1fd;
+$blue-200: #5f6883;
+$blue-300: #19274d;
+$green-600: #f2fff6;
+$green-700: #e1fee9;
+$green-800: #6dde8b;
+$green-900: #10a337;
+$green-1000: #597d63;
+$pink-100: #bf295f;
+
 // Colors - Semantic
 $error-100: #ffe8e8;
 $error-200: #e0bfbf;
 $error-300: #990e0e;
 
 // Colors - Gradients
-$gradient-green: linear-gradient(98.62deg, $green-300 1.9%, #20cd8a 100%);
+$gradient-green: linear-gradient(180deg, #6dde8b 0%, #59deb3 100%);
 
 // Shadows
 $drop-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),

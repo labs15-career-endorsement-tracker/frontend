@@ -1,0 +1,46 @@
+@import "../../../styles/variables";
+
+.sidebar__header {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  position: relative;
+  padding: 0 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.sidebar__header .greeting {
+  font-family: $font-stack-heading;
+  color: $white;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.sidebar__header .greeting-name {
+  font-family: $font-stack-body;
+  font-size: 3.6rem;
+  color: #6dde8b;
+}
+
+.sidebar__header .progress-ring {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  display: block;
+  margin: auto;
+  width: 25%;
+  max-width: 120px;
+  font-size: 4rem;
+  @media screen and(min-width: $breakpoint-medium) {
+    font-size: 2.4rem;
+  }
+
+  .progress-ring__content .progress-number,
+  .progress-ring__content .progress-label {
+    position: relative;
+    top: -0.4rem;
+    @media screen and(min-width: $breakpoint-medium) {
+      top: -0.1rem;
+    }
+  }
+}

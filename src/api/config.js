@@ -2,7 +2,7 @@ import axios from "axios"
 
 import { configureBaseUrl } from "./utils"
 
-import { history } from "../store"
+import { history, clearAuthDataFromLocalStorage } from "../store"
 
 const { REACT_APP_STAGE, REACT_APP_LOCAL_API_PORT } = process.env
 
@@ -15,12 +15,16 @@ export const requestWithAuth = authToken => {
     ...axiosConfig,
     headers: { Authorization: `Bearer ${authToken}` }
   })
-
   instance.interceptors.response.use(
     response => response,
     error => {
-      if (error.response.status === 401) {
-        history.push("/sign-in")
+      if (error.response && error.response.status === 401) {
+        if (history.location.pathname === "/auth/reset-password") {
+          history.push("/auth/sign-up")
+        } else {
+          history.push("/auth/sign-in")
+        }
+        clearAuthDataFromLocalStorage()
       }
       return Promise.reject(error)
     }

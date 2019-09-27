@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+
+.dashboard {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 30% 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "sidebar content content content content"
+      "sidebar content content content content";
+  }
+
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-template-columns: 25% 1fr 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1140px) {
+    display: grid;
+    grid-template-columns: 18% 1fr 1fr 1fr 1fr;
+  }
+}

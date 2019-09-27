@@ -3,7 +3,8 @@ import history from "./history"
 import {
   loadFromLocalStorage,
   saveToLocalStorage,
-  loadAuthDataFromLocalStorage
+  loadAuthDataFromLocalStorage,
+  clearAuthDataFromLocalStorage
 } from "./local-storage"
 
 export {
@@ -11,5 +12,6 @@ export {
   history,
   loadFromLocalStorage,
   saveToLocalStorage,
-  loadAuthDataFromLocalStorage
+  loadAuthDataFromLocalStorage,
+  clearAuthDataFromLocalStorage
 }

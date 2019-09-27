@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+
+.dashboard-sidebar {
+  position: relative;
+}
+.dashboard-sidebar .support-link-icons {
+  color: $green-400;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  position: absolute;
+  bottom: 1.5rem;
+}
