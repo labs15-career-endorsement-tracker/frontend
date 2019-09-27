@@ -1,16 +1,21 @@
 import React from "react"
-import {useDispatch} from "react-redux"
-import {toggleMenu} from "../../../actions"
+import { useDispatch } from "react-redux"
+import { toggleMenu } from "../../../actions"
 
-import Burger from '@animated-burgers/burger-rotate';
+import Burger from "@animated-burgers/burger-rotate"
 
-import '@animated-burgers/burger-rotate/dist/styles.css' 
+import "@animated-burgers/burger-rotate/dist/styles.css"
 
-const MenuBurger = ({isOpen}) => {
-    const dispatch = useDispatch()
-    return <Burger isOpen={isOpen} onClick={() => {
+const MenuBurger = ({ isOpen }) => {
+  const dispatch = useDispatch()
+  return (
+    <Burger
+      isOpen={isOpen}
+      onClick={() => {
         dispatch(toggleMenu(!isOpen))
-      }}/>
+      }}
+    />
+  )
 }
 
 export default MenuBurger
