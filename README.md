@@ -77,7 +77,7 @@ Demo the project by clicking the ENDRSD logo (above the "Contributors" section) 
 - Components can house their own logic and controls.
 - Testing with React.js is very straight-forward and comes with great documentation.
 
-#### Front end deployed to [Netlify](https://endrsd.com)
+#### Front end deployed to [Netlify](https://labs15.netlify.app/auth/sign-in)
 
 #### [Back end](https://github.com/labs15-career-endorsement-tracker/backend) built using:
 
